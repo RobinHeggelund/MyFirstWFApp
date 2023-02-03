@@ -7,11 +7,11 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageIcon>ingeniørrollen.png</PackageIcon>
+    <PackageIcon>AdvancedProductionBreakpointOn.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\Pictures\ingeniørrollen.png">
+    <None Include="..\..\..\..\Pictures\VisualStudio2022\images\AdvancedProductionBreakpointOn.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

@@ -1,7 +1,10 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Media;
+using System.Net.Sockets;
+using System.Net;
 using System.Xml.Linq;
+using System.Text;
 
 namespace MyFirstWFApp
 {
@@ -26,6 +29,10 @@ namespace MyFirstWFApp
         int analogIndex = 0;
         int digitalIndex = 0;
         int fieldbusIndex = 0;
+
+        List<string> servers = new List<string>();
+        List<Instrument> instrumentList = new List<Instrument>();
+ 
 
 
         DateTime sessionStartTime;
@@ -82,6 +89,17 @@ namespace MyFirstWFApp
             textBoxURV.Text = 0.ToString();
 
             sessionStartTime = DateTime.Now;
+
+            // get IP adresses
+
+            IPAddress[] addresslist = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress address in addresslist)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    servers.Add(address.ToString());
+                }
+            }
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -327,6 +345,9 @@ namespace MyFirstWFApp
                 this.Width = 1089;
 
                 EnterDataIntoTextPreviewBox();
+
+
+
             }
 
 
@@ -369,43 +390,87 @@ namespace MyFirstWFApp
         {
             // General sensor registration data
 
-            RegisterIndex += 1;
-            textBoxPreview.AppendText("Sensor Index: " + RegisterIndex + "\r\n");
-            textBoxPreview.AppendText("Sensor Name: " + textBoxSensorName.Text + "\r\n");
-            textBoxPreview.AppendText("Serial Number: " + maskedTextBoxSerialNumber.Text + "\r\n");
-            textBoxPreview.AppendText("Registered: " + checkBoxRegistered.CheckState + "\r\n");
-            textBoxPreview.AppendText("Registration Date: " + dateTimePickerRegDate.Text + "\r\n");
-            textBoxPreview.AppendText("Signal Type: " + comboBoxSignalType.Text + "\r\n");
-            textBoxPreview.AppendText("Measure Type: "+ comboBoxMeasureType.Text + "\r\n");
-            textBoxPreview.AppendText("Protocol: " + listBoxOptions.Text + "\r\n");
-            textBoxPreview.AppendText("Comment: " + textBoxComments.Text + "\r\n");
-            
-            // Specific sensor registration data
 
-            if (comboBoxSignalType.Text == "Analog")
+            if (NewInstrument(textBoxSensorName.Text))
+
             {
-                analogIndex += 1;
 
-                textBoxPreview.AppendText("Lower Range: : " + textBoxLVR.Text + "\r\n");
-                textBoxPreview.AppendText("Upper Range: " + textBoxURV.Text + "\r\n");
-                textBoxPreview.AppendText("Span: " + spanRange + "\r\n");
-                textBoxPreview.AppendText("Measure Unit: " + textBoxUnit.Text + "\r\n");
+                // Create new instrument and add to list
+
+                Instrument instrument = new Instrument(textBoxSensorName.Text,
+                                                  maskedTextBoxSerialNumber.Text,
+                                                  comboBoxSignalType.Text,
+                                                  comboBoxMeasureType.Text,
+                                                  listBoxOptions.Text,
+                                                  textBoxComments.Text,
+                                                  lvrValue,
+                                                  uvrValue,
+                                                  textBoxUnit.Text);
+
+
+                instrumentList.Add(instrument);
+
+                // Update register preview
+
+                RegisterIndex += 1;
+                textBoxPreview.AppendText("Sensor Index: " + RegisterIndex + "\r\n");
+                textBoxPreview.AppendText("Sensor Name: " + textBoxSensorName.Text + "\r\n");
+                textBoxPreview.AppendText("Serial Number: " + maskedTextBoxSerialNumber.Text + "\r\n");
+                textBoxPreview.AppendText("Registered: " + checkBoxRegistered.CheckState + "\r\n");
+                textBoxPreview.AppendText("Registration Date: " + dateTimePickerRegDate.Text + "\r\n");
+                textBoxPreview.AppendText("Signal Type: " + comboBoxSignalType.Text + "\r\n");
+                textBoxPreview.AppendText("Measure Type: " + comboBoxMeasureType.Text + "\r\n");
+                textBoxPreview.AppendText("Protocol: " + listBoxOptions.Text + "\r\n");
+                textBoxPreview.AppendText("Comment: " + textBoxComments.Text + "\r\n");
+
+                // Specific sensor registration data
+
+                if (comboBoxSignalType.Text == "Analog")
+                {
+                    analogIndex += 1;
+
+                    textBoxPreview.AppendText("Lower Range: : " + textBoxLVR.Text + "\r\n");
+                    textBoxPreview.AppendText("Upper Range: " + textBoxURV.Text + "\r\n");
+                    textBoxPreview.AppendText("Span: " + spanRange + "\r\n");
+                    textBoxPreview.AppendText("Measure Unit: " + textBoxUnit.Text + "\r\n");
+                }
+
+                else if (comboBoxSignalType.Text == "Digital")
+                {
+                    digitalIndex += 1;
+                }
+
+                else if (comboBoxSignalType.Text == "Fieldbus")
+                {
+                    fieldbusIndex += 1;
+                }
+                else { }
+
+                textBoxPreview.AppendText("----------------------------" + "\r\n");
+
             }
 
-            else if (comboBoxSignalType.Text == "Digital")
+            else
             {
-                digitalIndex += 1;
+                MessageBox.Show("Error: Sensor already registered", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
-            else if (comboBoxSignalType.Text == "Fieldbus")
+        public bool NewInstrument(string sensorName)
+        {
+            bool newInstrument = true;
+
+            instrumentList.ForEach(delegate (Instrument instrument)
             {
-                fieldbusIndex+= 1;
-            }
-            else { }
+                if (instrument.SensorName == sensorName)
+                {
+                    newInstrument = false;
+                }
 
-            textBoxPreview.AppendText("----------------------------" + "\r\n");
+           
+            });
 
-
+            return newInstrument;
         }
 
 
@@ -669,9 +734,110 @@ namespace MyFirstWFApp
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
+            //compare two text inputs
+
+            // compare upper and lower case
+
+            bool textEqual = false;
+
+            if (checkBoxCaseSensitive.Checked)
+            {
+                if (textBoxIP.Text.Equals(textBoxInputPort.Text))
+                {
+                    textBoxCommunication.Text = "Strings are equal \r\n";
+                }
+
+                else
+                {
+                    textBoxCommunication.Text = "Strings are not equal \r\n";
+                }
+            }
+
+            else
+            {
+                if (textBoxIP.Text.Equals(textBoxInputPort.Text, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    textBoxCommunication.Text = "Strings are equal \r\n";
+                }
+
+                else
+                {
+                    textBoxCommunication.Text = "Strings are not equal \r\n";
+                }
+            }
+
+            //TCP Server start
+            // make an endpoint for communication:
+            IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse(textBoxIP.Text),Convert.ToInt32(textBoxInputPort.Text));
+            Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+            client.Connect(endpoint);
+            textBoxCommunication.AppendText("Connected to server.");
+
+            //client send
+            client.Send(Encoding.ASCII.GetBytes(textBoxSend.Text));
 
 
-        }
+            //client recieve
+            byte[] buffer = new byte[1024];
+            int bytesRecieved = client.Receive(buffer);
+            textBoxCommunication.AppendText("Recieved: " + Encoding.ASCII.GetString(buffer, 0, bytesRecieved));
+
+            
+
+            //output info
+            Console.WriteLine("Server started. Waiting for connection..");
+            //if (logging) { Console.WriteLine()}
+
+            // compare alphabetically
+
+            int stringCompareResult;
+
+            stringCompareResult = string.Compare(textBoxIP.Text, textBoxInputPort.Text, false);
+
+            if (stringCompareResult > 0)
+
+            {
+                textBoxCommunication.AppendText(string.Format("{0} is after {1}", textBoxIP.Text, textBoxInputPort.Text) + "\r\n");
+            }
+
+            else if (stringCompareResult == 0)
+            {
+                textBoxCommunication.AppendText(string.Format("{0} is equal to {1}", textBoxIP.Text, textBoxInputPort.Text) + "\r\n");
+            }
+
+            else
+            {
+                textBoxCommunication.AppendText(string.Format("{0} is before {1}", textBoxIP.Text, textBoxInputPort.Text) + "\r\n");
+            }
+
+            // search string for substring
+
+            string recievedString = "Unit345;90.0;12.5;10;Havoc";
+
+            if (textBoxIP.Text.IndexOf(";")>0)
+            {
+                string[] textSeperateParts = textBoxIP.Text.Split(";");
+
+                foreach (string part in textSeperateParts)
+                {
+                    textBoxCommunication.AppendText(part+"\r\n");
+                }
+            }
+
+            // list
+
+
+
+
+
+
+
+
+
+        }   
+
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -989,6 +1155,16 @@ namespace MyFirstWFApp
         private void textBoxUnit_Leave(object sender, EventArgs e)
         {
             labelUnit.Font = fontNormalSmall; 
+        }
+
+        private void tabControlList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlList.SelectedIndex == 2) 
+            {
+                listBoxIpAdress.Items.Clear();
+                listBoxIpAdress.Items.AddRange(servers.ToArray());
+            }
+
         }
     }
     

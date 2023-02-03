@@ -36,6 +36,7 @@
             this.pictureBoxErrorSerialNumber = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorSensorName = new System.Windows.Forms.PictureBox();
             this.groupBoxSignalRange = new System.Windows.Forms.GroupBox();
+            this.labelAnalogValueRange = new System.Windows.Forms.Label();
             this.pictureBoxErrorUnit = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorURV = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorLVR = new System.Windows.Forms.PictureBox();
@@ -75,19 +76,22 @@
             this.clearToolStripMenuRegister = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlList = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonTest = new System.Windows.Forms.Button();
+            this.textBoxSend = new System.Windows.Forms.TextBox();
+            this.checkBoxCaseSensitive = new System.Windows.Forms.CheckBox();
+            this.textBoxCommunication = new System.Windows.Forms.TextBox();
+            this.textBoxIP = new System.Windows.Forms.TextBox();
+            this.textBoxInputPort = new System.Windows.Forms.TextBox();
+            this.buttonSend = new System.Windows.Forms.Button();
+            this.List = new System.Windows.Forms.TabPage();
+            this.listBoxIpAdress = new System.Windows.Forms.ListBox();
             this.textBoxPreview = new System.Windows.Forms.TextBox();
             this.labelPreview = new System.Windows.Forms.Label();
             this.buttonSummary = new System.Windows.Forms.Button();
             this.textBoxSummary = new System.Windows.Forms.TextBox();
             this.labelSummary = new System.Windows.Forms.Label();
-            this.labelAnalogValueRange = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorMeasureType)).BeginInit();
@@ -101,9 +105,10 @@
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlList.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.List.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -131,11 +136,9 @@
             this.groupBox1.Controls.Add(this.dateTimePickerRegDate);
             this.groupBox1.Controls.Add(this.maskedTextBoxSerialNumber);
             this.groupBox1.Controls.Add(this.textBoxSensorName);
-            this.groupBox1.Location = new System.Drawing.Point(4, -3);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(6, -5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(549, 287);
+            this.groupBox1.Size = new System.Drawing.Size(784, 478);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -144,9 +147,10 @@
             // pictureBoxErrorOptions
             // 
             this.pictureBoxErrorOptions.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorOptions.Location = new System.Drawing.Point(109, 150);
+            this.pictureBoxErrorOptions.Location = new System.Drawing.Point(156, 250);
+            this.pictureBoxErrorOptions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorOptions.Name = "pictureBoxErrorOptions";
-            this.pictureBoxErrorOptions.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorOptions.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorOptions.TabIndex = 21;
             this.pictureBoxErrorOptions.TabStop = false;
             this.pictureBoxErrorOptions.Visible = false;
@@ -154,9 +158,10 @@
             // pictureBoxErrorMeasureType
             // 
             this.pictureBoxErrorMeasureType.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorMeasureType.Location = new System.Drawing.Point(109, 125);
+            this.pictureBoxErrorMeasureType.Location = new System.Drawing.Point(156, 208);
+            this.pictureBoxErrorMeasureType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorMeasureType.Name = "pictureBoxErrorMeasureType";
-            this.pictureBoxErrorMeasureType.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorMeasureType.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorMeasureType.TabIndex = 20;
             this.pictureBoxErrorMeasureType.TabStop = false;
             this.pictureBoxErrorMeasureType.Visible = false;
@@ -164,9 +169,10 @@
             // pictureBoxErrorSignalType
             // 
             this.pictureBoxErrorSignalType.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorSignalType.Location = new System.Drawing.Point(109, 100);
+            this.pictureBoxErrorSignalType.Location = new System.Drawing.Point(156, 167);
+            this.pictureBoxErrorSignalType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorSignalType.Name = "pictureBoxErrorSignalType";
-            this.pictureBoxErrorSignalType.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorSignalType.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorSignalType.TabIndex = 19;
             this.pictureBoxErrorSignalType.TabStop = false;
             this.pictureBoxErrorSignalType.Visible = false;
@@ -174,9 +180,10 @@
             // pictureBoxErrorSerialNumber
             // 
             this.pictureBoxErrorSerialNumber.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorSerialNumber.Location = new System.Drawing.Point(109, 50);
+            this.pictureBoxErrorSerialNumber.Location = new System.Drawing.Point(156, 83);
+            this.pictureBoxErrorSerialNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorSerialNumber.Name = "pictureBoxErrorSerialNumber";
-            this.pictureBoxErrorSerialNumber.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorSerialNumber.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorSerialNumber.TabIndex = 19;
             this.pictureBoxErrorSerialNumber.TabStop = false;
             this.pictureBoxErrorSerialNumber.Visible = false;
@@ -185,9 +192,10 @@
             // 
             this.pictureBoxErrorSensorName.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxErrorSensorName.ErrorImage")));
             this.pictureBoxErrorSensorName.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorSensorName.Location = new System.Drawing.Point(109, 25);
+            this.pictureBoxErrorSensorName.Location = new System.Drawing.Point(156, 42);
+            this.pictureBoxErrorSensorName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorSensorName.Name = "pictureBoxErrorSensorName";
-            this.pictureBoxErrorSensorName.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorSensorName.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorSensorName.TabIndex = 18;
             this.pictureBoxErrorSensorName.TabStop = false;
             this.pictureBoxErrorSensorName.Visible = false;
@@ -204,22 +212,31 @@
             this.groupBoxSignalRange.Controls.Add(this.labelUpperValue);
             this.groupBoxSignalRange.Controls.Add(this.textBoxLVR);
             this.groupBoxSignalRange.Controls.Add(this.labelLowerValue);
-            this.groupBoxSignalRange.Location = new System.Drawing.Point(356, 12);
-            this.groupBoxSignalRange.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxSignalRange.Location = new System.Drawing.Point(509, 20);
             this.groupBoxSignalRange.Name = "groupBoxSignalRange";
-            this.groupBoxSignalRange.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxSignalRange.Size = new System.Drawing.Size(188, 132);
+            this.groupBoxSignalRange.Size = new System.Drawing.Size(269, 220);
             this.groupBoxSignalRange.TabIndex = 17;
             this.groupBoxSignalRange.TabStop = false;
             this.groupBoxSignalRange.Visible = false;
             this.groupBoxSignalRange.Enter += new System.EventHandler(this.groupBoxLVR_Enter);
             // 
+            // labelAnalogValueRange
+            // 
+            this.labelAnalogValueRange.AutoSize = true;
+            this.labelAnalogValueRange.Location = new System.Drawing.Point(49, 27);
+            this.labelAnalogValueRange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAnalogValueRange.Name = "labelAnalogValueRange";
+            this.labelAnalogValueRange.Size = new System.Drawing.Size(171, 25);
+            this.labelAnalogValueRange.TabIndex = 22;
+            this.labelAnalogValueRange.Text = "Analog Value Range";
+            // 
             // pictureBoxErrorUnit
             // 
             this.pictureBoxErrorUnit.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorUnit.Location = new System.Drawing.Point(163, 91);
+            this.pictureBoxErrorUnit.Location = new System.Drawing.Point(233, 152);
+            this.pictureBoxErrorUnit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorUnit.Name = "pictureBoxErrorUnit";
-            this.pictureBoxErrorUnit.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorUnit.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorUnit.TabIndex = 21;
             this.pictureBoxErrorUnit.TabStop = false;
             this.pictureBoxErrorUnit.Visible = false;
@@ -227,9 +244,10 @@
             // pictureBoxErrorURV
             // 
             this.pictureBoxErrorURV.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorURV.Location = new System.Drawing.Point(163, 65);
+            this.pictureBoxErrorURV.Location = new System.Drawing.Point(233, 108);
+            this.pictureBoxErrorURV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorURV.Name = "pictureBoxErrorURV";
-            this.pictureBoxErrorURV.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorURV.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorURV.TabIndex = 20;
             this.pictureBoxErrorURV.TabStop = false;
             this.pictureBoxErrorURV.Visible = false;
@@ -237,19 +255,19 @@
             // pictureBoxErrorLVR
             // 
             this.pictureBoxErrorLVR.Image = global::MyFirstWFApp.Properties.Resources.pngegg__2_;
-            this.pictureBoxErrorLVR.Location = new System.Drawing.Point(163, 41);
+            this.pictureBoxErrorLVR.Location = new System.Drawing.Point(233, 68);
+            this.pictureBoxErrorLVR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxErrorLVR.Name = "pictureBoxErrorLVR";
-            this.pictureBoxErrorLVR.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxErrorLVR.Size = new System.Drawing.Size(24, 28);
             this.pictureBoxErrorLVR.TabIndex = 19;
             this.pictureBoxErrorLVR.TabStop = false;
             this.pictureBoxErrorLVR.Visible = false;
             // 
             // textBoxUnit
             // 
-            this.textBoxUnit.Location = new System.Drawing.Point(73, 87);
-            this.textBoxUnit.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxUnit.Location = new System.Drawing.Point(104, 145);
             this.textBoxUnit.Name = "textBoxUnit";
-            this.textBoxUnit.Size = new System.Drawing.Size(85, 23);
+            this.textBoxUnit.Size = new System.Drawing.Size(120, 31);
             this.textBoxUnit.TabIndex = 10;
             this.textBoxUnit.TextChanged += new System.EventHandler(this.textBoxUnit_TextChanged);
             this.textBoxUnit.Enter += new System.EventHandler(this.textBoxUnit_Enter);
@@ -260,19 +278,17 @@
             // labelUnit
             // 
             this.labelUnit.AutoSize = true;
-            this.labelUnit.Location = new System.Drawing.Point(43, 91);
-            this.labelUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUnit.Location = new System.Drawing.Point(61, 152);
             this.labelUnit.Name = "labelUnit";
-            this.labelUnit.Size = new System.Drawing.Size(29, 15);
+            this.labelUnit.Size = new System.Drawing.Size(44, 25);
             this.labelUnit.TabIndex = 4;
             this.labelUnit.Text = "Unit";
             // 
             // textBoxURV
             // 
-            this.textBoxURV.Location = new System.Drawing.Point(73, 63);
-            this.textBoxURV.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxURV.Location = new System.Drawing.Point(104, 105);
             this.textBoxURV.Name = "textBoxURV";
-            this.textBoxURV.Size = new System.Drawing.Size(85, 23);
+            this.textBoxURV.Size = new System.Drawing.Size(120, 31);
             this.textBoxURV.TabIndex = 9;
             this.textBoxURV.TextChanged += new System.EventHandler(this.textBoxURV_TextChanged);
             this.textBoxURV.Enter += new System.EventHandler(this.textBoxURV_Enter);
@@ -284,19 +300,17 @@
             // labelUpperValue
             // 
             this.labelUpperValue.AutoSize = true;
-            this.labelUpperValue.Location = new System.Drawing.Point(4, 67);
-            this.labelUpperValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUpperValue.Location = new System.Drawing.Point(6, 112);
             this.labelUpperValue.Name = "labelUpperValue";
-            this.labelUpperValue.Size = new System.Drawing.Size(70, 15);
+            this.labelUpperValue.Size = new System.Drawing.Size(108, 25);
             this.labelUpperValue.TabIndex = 2;
             this.labelUpperValue.Text = "Upper Value";
             // 
             // textBoxLVR
             // 
-            this.textBoxLVR.Location = new System.Drawing.Point(73, 39);
-            this.textBoxLVR.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxLVR.Location = new System.Drawing.Point(104, 65);
             this.textBoxLVR.Name = "textBoxLVR";
-            this.textBoxLVR.Size = new System.Drawing.Size(85, 23);
+            this.textBoxLVR.Size = new System.Drawing.Size(120, 31);
             this.textBoxLVR.TabIndex = 8;
             this.textBoxLVR.TextChanged += new System.EventHandler(this.textBoxLVR_TextChanged);
             this.textBoxLVR.Enter += new System.EventHandler(this.textBoxLVR_Enter);
@@ -308,20 +322,18 @@
             // labelLowerValue
             // 
             this.labelLowerValue.AutoSize = true;
-            this.labelLowerValue.Location = new System.Drawing.Point(4, 43);
-            this.labelLowerValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLowerValue.Location = new System.Drawing.Point(6, 72);
             this.labelLowerValue.Name = "labelLowerValue";
-            this.labelLowerValue.Size = new System.Drawing.Size(70, 15);
+            this.labelLowerValue.Size = new System.Drawing.Size(106, 25);
             this.labelLowerValue.TabIndex = 0;
             this.labelLowerValue.Text = "Lower Value";
             // 
             // comboBoxMeasureType
             // 
             this.comboBoxMeasureType.FormattingEnabled = true;
-            this.comboBoxMeasureType.Location = new System.Drawing.Point(129, 120);
-            this.comboBoxMeasureType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxMeasureType.Location = new System.Drawing.Point(184, 200);
             this.comboBoxMeasureType.Name = "comboBoxMeasureType";
-            this.comboBoxMeasureType.Size = new System.Drawing.Size(222, 23);
+            this.comboBoxMeasureType.Size = new System.Drawing.Size(315, 33);
             this.comboBoxMeasureType.TabIndex = 5;
             this.comboBoxMeasureType.TextChanged += new System.EventHandler(this.comboBoxMeasureType_TextChanged);
             this.comboBoxMeasureType.Enter += new System.EventHandler(this.comboBoxMeasureType_Enter);
@@ -334,20 +346,18 @@
             // 
             this.labelMeasureType.AutoSize = true;
             this.labelMeasureType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMeasureType.Location = new System.Drawing.Point(20, 125);
-            this.labelMeasureType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelMeasureType.Location = new System.Drawing.Point(29, 208);
             this.labelMeasureType.Name = "labelMeasureType";
-            this.labelMeasureType.Size = new System.Drawing.Size(79, 15);
+            this.labelMeasureType.Size = new System.Drawing.Size(121, 25);
             this.labelMeasureType.TabIndex = 15;
             this.labelMeasureType.Text = "Measure Type";
             // 
             // checkBoxRegistered
             // 
             this.checkBoxRegistered.AutoSize = true;
-            this.checkBoxRegistered.Location = new System.Drawing.Point(82, 235);
-            this.checkBoxRegistered.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxRegistered.Location = new System.Drawing.Point(117, 392);
             this.checkBoxRegistered.Name = "checkBoxRegistered";
-            this.checkBoxRegistered.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxRegistered.Size = new System.Drawing.Size(22, 21);
             this.checkBoxRegistered.TabIndex = 2;
             this.checkBoxRegistered.UseVisualStyleBackColor = true;
             this.checkBoxRegistered.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -360,11 +370,10 @@
             // 
             this.labelRegistered.AutoSize = true;
             this.labelRegistered.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRegistered.Location = new System.Drawing.Point(20, 234);
-            this.labelRegistered.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRegistered.Location = new System.Drawing.Point(29, 390);
             this.labelRegistered.Name = "labelRegistered";
             this.labelRegistered.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelRegistered.Size = new System.Drawing.Size(62, 15);
+            this.labelRegistered.Size = new System.Drawing.Size(95, 25);
             this.labelRegistered.TabIndex = 13;
             this.labelRegistered.Text = "Registered";
             this.labelRegistered.Click += new System.EventHandler(this.labelRegistered_Click);
@@ -375,10 +384,9 @@
             // 
             this.labelComments.AutoSize = true;
             this.labelComments.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelComments.Location = new System.Drawing.Point(20, 200);
-            this.labelComments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelComments.Location = new System.Drawing.Point(29, 333);
             this.labelComments.Name = "labelComments";
-            this.labelComments.Size = new System.Drawing.Size(66, 15);
+            this.labelComments.Size = new System.Drawing.Size(99, 25);
             this.labelComments.TabIndex = 12;
             this.labelComments.Text = "Comments";
             this.labelComments.MouseEnter += new System.EventHandler(this.labelComments_MouseEnter);
@@ -390,21 +398,18 @@
             this.groupBox2.Controls.Add(this.radioButtonDelete);
             this.groupBox2.Controls.Add(this.radioButtonSave);
             this.groupBox2.Controls.Add(this.radioButtonRegisterNew);
-            this.groupBox2.Location = new System.Drawing.Point(356, 137);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(509, 228);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(188, 138);
+            this.groupBox2.Size = new System.Drawing.Size(269, 230);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
             // buttonRegisterNew
             // 
             this.buttonRegisterNew.Enabled = false;
-            this.buttonRegisterNew.Location = new System.Drawing.Point(10, 94);
-            this.buttonRegisterNew.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRegisterNew.Location = new System.Drawing.Point(14, 157);
             this.buttonRegisterNew.Name = "buttonRegisterNew";
-            this.buttonRegisterNew.Size = new System.Drawing.Size(172, 30);
+            this.buttonRegisterNew.Size = new System.Drawing.Size(246, 50);
             this.buttonRegisterNew.TabIndex = 14;
             this.buttonRegisterNew.Text = "Confirm";
             this.buttonRegisterNew.UseVisualStyleBackColor = true;
@@ -415,10 +420,9 @@
             // radioButtonDelete
             // 
             this.radioButtonDelete.AutoSize = true;
-            this.radioButtonDelete.Location = new System.Drawing.Point(11, 67);
-            this.radioButtonDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonDelete.Location = new System.Drawing.Point(16, 112);
             this.radioButtonDelete.Name = "radioButtonDelete";
-            this.radioButtonDelete.Size = new System.Drawing.Size(58, 19);
+            this.radioButtonDelete.Size = new System.Drawing.Size(87, 29);
             this.radioButtonDelete.TabIndex = 13;
             this.radioButtonDelete.TabStop = true;
             this.radioButtonDelete.Text = "Delete";
@@ -430,10 +434,9 @@
             // radioButtonSave
             // 
             this.radioButtonSave.AutoSize = true;
-            this.radioButtonSave.Location = new System.Drawing.Point(11, 43);
-            this.radioButtonSave.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonSave.Location = new System.Drawing.Point(16, 72);
             this.radioButtonSave.Name = "radioButtonSave";
-            this.radioButtonSave.Size = new System.Drawing.Size(49, 19);
+            this.radioButtonSave.Size = new System.Drawing.Size(74, 29);
             this.radioButtonSave.TabIndex = 12;
             this.radioButtonSave.TabStop = true;
             this.radioButtonSave.Text = "Save";
@@ -445,10 +448,9 @@
             // radioButtonRegisterNew
             // 
             this.radioButtonRegisterNew.AutoSize = true;
-            this.radioButtonRegisterNew.Location = new System.Drawing.Point(11, 19);
-            this.radioButtonRegisterNew.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonRegisterNew.Location = new System.Drawing.Point(16, 32);
             this.radioButtonRegisterNew.Name = "radioButtonRegisterNew";
-            this.radioButtonRegisterNew.Size = new System.Drawing.Size(94, 19);
+            this.radioButtonRegisterNew.Size = new System.Drawing.Size(140, 29);
             this.radioButtonRegisterNew.TabIndex = 11;
             this.radioButtonRegisterNew.TabStop = true;
             this.radioButtonRegisterNew.Text = "Register New";
@@ -461,10 +463,9 @@
             // 
             this.labelOptions.AutoSize = true;
             this.labelOptions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelOptions.Location = new System.Drawing.Point(20, 150);
-            this.labelOptions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelOptions.Location = new System.Drawing.Point(29, 250);
             this.labelOptions.Name = "labelOptions";
-            this.labelOptions.Size = new System.Drawing.Size(49, 15);
+            this.labelOptions.Size = new System.Drawing.Size(76, 25);
             this.labelOptions.TabIndex = 11;
             this.labelOptions.Text = "Options";
             this.labelOptions.MouseEnter += new System.EventHandler(this.labelOptions_MouseEnter);
@@ -474,10 +475,9 @@
             // 
             this.labelSignalType.AutoSize = true;
             this.labelSignalType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSignalType.Location = new System.Drawing.Point(20, 100);
-            this.labelSignalType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSignalType.Location = new System.Drawing.Point(29, 167);
             this.labelSignalType.Name = "labelSignalType";
-            this.labelSignalType.Size = new System.Drawing.Size(66, 15);
+            this.labelSignalType.Size = new System.Drawing.Size(102, 25);
             this.labelSignalType.TabIndex = 10;
             this.labelSignalType.Text = "Signal Type";
             this.labelSignalType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -488,10 +488,9 @@
             // 
             this.labelRegDate.AutoSize = true;
             this.labelRegDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRegDate.Location = new System.Drawing.Point(20, 75);
-            this.labelRegDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRegDate.Location = new System.Drawing.Point(29, 125);
             this.labelRegDate.Name = "labelRegDate";
-            this.labelRegDate.Size = new System.Drawing.Size(97, 15);
+            this.labelRegDate.Size = new System.Drawing.Size(148, 25);
             this.labelRegDate.TabIndex = 9;
             this.labelRegDate.Text = "Registration Date";
             this.labelRegDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -503,11 +502,10 @@
             // 
             this.labelSerialNumber.AutoSize = true;
             this.labelSerialNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSerialNumber.Location = new System.Drawing.Point(20, 50);
-            this.labelSerialNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSerialNumber.Location = new System.Drawing.Point(29, 83);
             this.labelSerialNumber.Name = "labelSerialNumber";
             this.labelSerialNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelSerialNumber.Size = new System.Drawing.Size(82, 15);
+            this.labelSerialNumber.Size = new System.Drawing.Size(124, 25);
             this.labelSerialNumber.TabIndex = 8;
             this.labelSerialNumber.Text = "Serial Number";
             this.labelSerialNumber.MouseEnter += new System.EventHandler(this.labelSerialNumber_MouseEnter);
@@ -517,10 +515,9 @@
             // 
             this.labelSensorName.AutoSize = true;
             this.labelSensorName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSensorName.Location = new System.Drawing.Point(20, 25);
-            this.labelSensorName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSensorName.Location = new System.Drawing.Point(29, 42);
             this.labelSensorName.Name = "labelSensorName";
-            this.labelSensorName.Size = new System.Drawing.Size(77, 15);
+            this.labelSensorName.Size = new System.Drawing.Size(118, 25);
             this.labelSensorName.TabIndex = 7;
             this.labelSensorName.Text = "Sensor Name";
             this.labelSensorName.Click += new System.EventHandler(this.label1_Click);
@@ -529,11 +526,10 @@
             // 
             // textBoxComments
             // 
-            this.textBoxComments.Location = new System.Drawing.Point(129, 196);
-            this.textBoxComments.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxComments.Location = new System.Drawing.Point(184, 327);
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
-            this.textBoxComments.Size = new System.Drawing.Size(222, 78);
+            this.textBoxComments.Size = new System.Drawing.Size(315, 127);
             this.textBoxComments.TabIndex = 7;
             this.textBoxComments.Enter += new System.EventHandler(this.textBoxComments_Enter);
             this.textBoxComments.Leave += new System.EventHandler(this.textBoxComments_Leave);
@@ -543,15 +539,14 @@
             // listBoxOptions
             // 
             this.listBoxOptions.FormattingEnabled = true;
-            this.listBoxOptions.ItemHeight = 15;
+            this.listBoxOptions.ItemHeight = 25;
             this.listBoxOptions.Items.AddRange(new object[] {
             "None",
             "HART Protocol",
             "GIGA Protocol"});
-            this.listBoxOptions.Location = new System.Drawing.Point(129, 145);
-            this.listBoxOptions.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxOptions.Location = new System.Drawing.Point(184, 242);
             this.listBoxOptions.Name = "listBoxOptions";
-            this.listBoxOptions.Size = new System.Drawing.Size(222, 49);
+            this.listBoxOptions.Size = new System.Drawing.Size(315, 79);
             this.listBoxOptions.TabIndex = 6;
             this.listBoxOptions.Enter += new System.EventHandler(this.listBoxOptions_Enter);
             this.listBoxOptions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listBoxOptions_KeyPress);
@@ -566,10 +561,9 @@
             "Analog",
             "Digital",
             "Fieldbus"});
-            this.comboBoxSignalType.Location = new System.Drawing.Point(129, 95);
-            this.comboBoxSignalType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSignalType.Location = new System.Drawing.Point(184, 158);
             this.comboBoxSignalType.Name = "comboBoxSignalType";
-            this.comboBoxSignalType.Size = new System.Drawing.Size(222, 23);
+            this.comboBoxSignalType.Size = new System.Drawing.Size(315, 33);
             this.comboBoxSignalType.TabIndex = 4;
             this.comboBoxSignalType.SelectedIndexChanged += new System.EventHandler(this.comboBoxSignalType_SelectedIndexChanged);
             this.comboBoxSignalType.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSignalType_SelectionChangeCommitted);
@@ -582,10 +576,9 @@
             // 
             // dateTimePickerRegDate
             // 
-            this.dateTimePickerRegDate.Location = new System.Drawing.Point(129, 70);
-            this.dateTimePickerRegDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerRegDate.Location = new System.Drawing.Point(184, 117);
             this.dateTimePickerRegDate.Name = "dateTimePickerRegDate";
-            this.dateTimePickerRegDate.Size = new System.Drawing.Size(222, 23);
+            this.dateTimePickerRegDate.Size = new System.Drawing.Size(315, 31);
             this.dateTimePickerRegDate.TabIndex = 3;
             this.dateTimePickerRegDate.Enter += new System.EventHandler(this.dateTimePickerRegDate_Enter);
             this.dateTimePickerRegDate.Leave += new System.EventHandler(this.dateTimePickerRegDate_Leave);
@@ -594,12 +587,11 @@
             // 
             // maskedTextBoxSerialNumber
             // 
-            this.maskedTextBoxSerialNumber.Location = new System.Drawing.Point(129, 45);
-            this.maskedTextBoxSerialNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.maskedTextBoxSerialNumber.Location = new System.Drawing.Point(184, 75);
             this.maskedTextBoxSerialNumber.Mask = "000-00-0000";
             this.maskedTextBoxSerialNumber.Name = "maskedTextBoxSerialNumber";
             this.maskedTextBoxSerialNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.maskedTextBoxSerialNumber.Size = new System.Drawing.Size(222, 23);
+            this.maskedTextBoxSerialNumber.Size = new System.Drawing.Size(315, 31);
             this.maskedTextBoxSerialNumber.TabIndex = 1;
             this.maskedTextBoxSerialNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.maskedTextBoxSerialNumber.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxSerialNumber_MaskInputRejected);
@@ -611,11 +603,11 @@
             // 
             // textBoxSensorName
             // 
-            this.textBoxSensorName.Location = new System.Drawing.Point(129, 20);
-            this.textBoxSensorName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSensorName.Location = new System.Drawing.Point(184, 33);
             this.textBoxSensorName.Name = "textBoxSensorName";
-            this.textBoxSensorName.Size = new System.Drawing.Size(222, 23);
+            this.textBoxSensorName.Size = new System.Drawing.Size(315, 31);
             this.textBoxSensorName.TabIndex = 0;
+            this.textBoxSensorName.UseSystemPasswordChar = true;
             this.textBoxSensorName.TextChanged += new System.EventHandler(this.textBoxSensorName_TextChanged);
             this.textBoxSensorName.Enter += new System.EventHandler(this.textBoxSensorName_Enter);
             this.textBoxSensorName.Leave += new System.EventHandler(this.textBoxSensorName_Leave);
@@ -627,17 +619,16 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 347);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 583);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1073, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1533, 32);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStripMain";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(139, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(208, 25);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabelMain";
             // 
             // menuStrip1
@@ -648,8 +639,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1073, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1533, 33);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -662,13 +652,13 @@
             this.toolStripMenuItem1,
             this.summaryToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(190, 34);
             this.closeToolStripMenuItem.Text = "&Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -678,116 +668,149 @@
             this.clearToolStripMenuRegister,
             this.dataToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(190, 34);
             this.toolStripMenuItem1.Text = "&Data";
             // 
             // clearToolStripMenuRegister
             // 
             this.clearToolStripMenuRegister.Name = "clearToolStripMenuRegister";
-            this.clearToolStripMenuRegister.Size = new System.Drawing.Size(116, 22);
+            this.clearToolStripMenuRegister.Size = new System.Drawing.Size(177, 34);
             this.clearToolStripMenuRegister.Text = "&Register";
             this.clearToolStripMenuRegister.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // dataToolStripMenuItem
             // 
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(177, 34);
             this.dataToolStripMenuItem.Text = "&Data";
             // 
             // summaryToolStripMenuItem
             // 
             this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
-            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(190, 34);
             this.summaryToolStripMenuItem.Text = "&Summary";
             this.summaryToolStripMenuItem.Click += new System.EventHandler(this.summaryToolStripMenuItem_Click);
             // 
-            // tabControl1
+            // tabControlList
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(6, 26);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(565, 317);
-            this.tabControl1.TabIndex = 14;
+            this.tabControlList.Controls.Add(this.tabPage1);
+            this.tabControlList.Controls.Add(this.tabPage2);
+            this.tabControlList.Controls.Add(this.List);
+            this.tabControlList.Location = new System.Drawing.Point(9, 43);
+            this.tabControlList.Name = "tabControlList";
+            this.tabControlList.SelectedIndex = 0;
+            this.tabControlList.Size = new System.Drawing.Size(807, 528);
+            this.tabControlList.TabIndex = 14;
+            this.tabControlList.SelectedIndexChanged += new System.EventHandler(this.tabControlList_SelectedIndexChanged);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(557, 289);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(799, 490);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sensor Data";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBoxResult);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.buttonTest);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Controls.Add(this.textBoxSend);
+            this.tabPage2.Controls.Add(this.checkBoxCaseSensitive);
+            this.tabPage2.Controls.Add(this.textBoxCommunication);
+            this.tabPage2.Controls.Add(this.textBoxIP);
+            this.tabPage2.Controls.Add(this.textBoxInputPort);
+            this.tabPage2.Controls.Add(this.buttonSend);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(557, 289);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(799, 490);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Connection";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // textBoxResult
+            // textBoxSend
             // 
-            this.textBoxResult.Location = new System.Drawing.Point(190, 38);
-            this.textBoxResult.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxResult.Multiline = true;
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.Size = new System.Drawing.Size(323, 110);
-            this.textBoxResult.TabIndex = 3;
+            this.textBoxSend.Location = new System.Drawing.Point(271, 250);
+            this.textBoxSend.Multiline = true;
+            this.textBoxSend.Name = "textBoxSend";
+            this.textBoxSend.Size = new System.Drawing.Size(460, 38);
+            this.textBoxSend.TabIndex = 5;
             // 
-            // textBox2
+            // checkBoxCaseSensitive
             // 
-            this.textBox2.Location = new System.Drawing.Point(8, 38);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 23);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.checkBoxCaseSensitive.AutoSize = true;
+            this.checkBoxCaseSensitive.Location = new System.Drawing.Point(41, 28);
+            this.checkBoxCaseSensitive.Name = "checkBoxCaseSensitive";
+            this.checkBoxCaseSensitive.Size = new System.Drawing.Size(149, 29);
+            this.checkBoxCaseSensitive.TabIndex = 4;
+            this.checkBoxCaseSensitive.Text = "Case Sensitive";
+            this.checkBoxCaseSensitive.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxCommunication
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 60);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 23);
-            this.textBox1.TabIndex = 1;
+            this.textBoxCommunication.Location = new System.Drawing.Point(271, 63);
+            this.textBoxCommunication.Multiline = true;
+            this.textBoxCommunication.Name = "textBoxCommunication";
+            this.textBoxCommunication.Size = new System.Drawing.Size(460, 181);
+            this.textBoxCommunication.TabIndex = 3;
             // 
-            // buttonTest
+            // textBoxIP
             // 
-            this.buttonTest.Location = new System.Drawing.Point(8, 82);
-            this.buttonTest.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(157, 65);
-            this.buttonTest.TabIndex = 0;
-            this.buttonTest.Text = "Test";
-            this.buttonTest.UseVisualStyleBackColor = true;
-            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            this.textBoxIP.Location = new System.Drawing.Point(11, 63);
+            this.textBoxIP.Name = "textBoxIP";
+            this.textBoxIP.Size = new System.Drawing.Size(224, 31);
+            this.textBoxIP.TabIndex = 2;
+            this.textBoxIP.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBoxInputPort
+            // 
+            this.textBoxInputPort.Location = new System.Drawing.Point(11, 100);
+            this.textBoxInputPort.Name = "textBoxInputPort";
+            this.textBoxInputPort.Size = new System.Drawing.Size(224, 31);
+            this.textBoxInputPort.TabIndex = 1;
+            // 
+            // buttonSend
+            // 
+            this.buttonSend.Location = new System.Drawing.Point(11, 137);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(224, 108);
+            this.buttonSend.TabIndex = 0;
+            this.buttonSend.Text = "Send";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonTest_Click);
+            // 
+            // List
+            // 
+            this.List.Controls.Add(this.listBoxIpAdress);
+            this.List.Location = new System.Drawing.Point(4, 34);
+            this.List.Name = "List";
+            this.List.Size = new System.Drawing.Size(799, 490);
+            this.List.TabIndex = 2;
+            this.List.Text = "Network";
+            this.List.UseVisualStyleBackColor = true;
+            // 
+            // listBoxIpAdress
+            // 
+            this.listBoxIpAdress.FormattingEnabled = true;
+            this.listBoxIpAdress.ItemHeight = 25;
+            this.listBoxIpAdress.Location = new System.Drawing.Point(39, 88);
+            this.listBoxIpAdress.Name = "listBoxIpAdress";
+            this.listBoxIpAdress.Size = new System.Drawing.Size(279, 304);
+            this.listBoxIpAdress.TabIndex = 0;
             // 
             // textBoxPreview
             // 
             this.textBoxPreview.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxPreview.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPreview.Location = new System.Drawing.Point(575, 50);
-            this.textBoxPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPreview.Location = new System.Drawing.Point(821, 83);
             this.textBoxPreview.Multiline = true;
             this.textBoxPreview.Name = "textBoxPreview";
             this.textBoxPreview.ReadOnly = true;
             this.textBoxPreview.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxPreview.Size = new System.Drawing.Size(263, 233);
+            this.textBoxPreview.Size = new System.Drawing.Size(374, 386);
             this.textBoxPreview.TabIndex = 20;
             this.textBoxPreview.TabStop = false;
             this.textBoxPreview.TextChanged += new System.EventHandler(this.textBoxPreview_TextChanged);
@@ -796,20 +819,18 @@
             // 
             this.labelPreview.AutoSize = true;
             this.labelPreview.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPreview.Location = new System.Drawing.Point(673, 33);
-            this.labelPreview.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPreview.Location = new System.Drawing.Point(961, 55);
             this.labelPreview.Name = "labelPreview";
-            this.labelPreview.Size = new System.Drawing.Size(48, 15);
+            this.labelPreview.Size = new System.Drawing.Size(72, 25);
             this.labelPreview.TabIndex = 14;
             this.labelPreview.Text = "Preview";
             this.labelPreview.Click += new System.EventHandler(this.labelPreview_Click);
             // 
             // buttonSummary
             // 
-            this.buttonSummary.Location = new System.Drawing.Point(860, 291);
-            this.buttonSummary.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSummary.Location = new System.Drawing.Point(1229, 485);
             this.buttonSummary.Name = "buttonSummary";
-            this.buttonSummary.Size = new System.Drawing.Size(178, 30);
+            this.buttonSummary.Size = new System.Drawing.Size(254, 50);
             this.buttonSummary.TabIndex = 16;
             this.buttonSummary.TabStop = false;
             this.buttonSummary.Text = "Show Summary";
@@ -820,12 +841,11 @@
             // 
             this.textBoxSummary.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxSummary.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSummary.Location = new System.Drawing.Point(842, 50);
-            this.textBoxSummary.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSummary.Location = new System.Drawing.Point(1203, 83);
             this.textBoxSummary.Multiline = true;
             this.textBoxSummary.Name = "textBoxSummary";
             this.textBoxSummary.ReadOnly = true;
-            this.textBoxSummary.Size = new System.Drawing.Size(220, 233);
+            this.textBoxSummary.Size = new System.Drawing.Size(313, 386);
             this.textBoxSummary.TabIndex = 21;
             this.textBoxSummary.TabStop = false;
             // 
@@ -833,27 +853,16 @@
             // 
             this.labelSummary.AutoSize = true;
             this.labelSummary.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSummary.Location = new System.Drawing.Point(908, 33);
-            this.labelSummary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSummary.Location = new System.Drawing.Point(1297, 55);
             this.labelSummary.Name = "labelSummary";
-            this.labelSummary.Size = new System.Drawing.Size(100, 15);
+            this.labelSummary.Size = new System.Drawing.Size(153, 25);
             this.labelSummary.TabIndex = 18;
             this.labelSummary.Text = "Session Summary";
             // 
-            // labelAnalogValueRange
-            // 
-            this.labelAnalogValueRange.AutoSize = true;
-            this.labelAnalogValueRange.Location = new System.Drawing.Point(34, 16);
-            this.labelAnalogValueRange.Name = "labelAnalogValueRange";
-            this.labelAnalogValueRange.Size = new System.Drawing.Size(112, 15);
-            this.labelAnalogValueRange.TabIndex = 22;
-            this.labelAnalogValueRange.Text = "Analog Value Range";
-            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 369);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1533, 615);
             this.Controls.Add(this.labelSummary);
             this.Controls.Add(this.textBoxSummary);
             this.Controls.Add(this.buttonSummary);
@@ -861,10 +870,9 @@
             this.Controls.Add(this.textBoxPreview);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.Text = "SuperSensor";
             this.Activated += new System.EventHandler(this.Form1_Activated);
@@ -891,10 +899,11 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlList.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.List.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -925,7 +934,7 @@
         private StatusStrip statusStrip1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
-        private TabControl tabControl1;
+        private TabControl tabControlList;
         private TabPage tabPage1;
         private TabPage tabPage2;
         private ToolStripStatusLabel toolStripStatusLabel1;
@@ -935,10 +944,10 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem clearToolStripMenuRegister;
         private ToolStripMenuItem dataToolStripMenuItem;
-        private TextBox textBoxResult;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button buttonTest;
+        private TextBox textBoxCommunication;
+        private TextBox textBoxIP;
+        private TextBox textBoxInputPort;
+        private Button buttonSend;
         private Label labelMeasureType;
         private ComboBox comboBoxMeasureType;
         private GroupBox groupBoxSignalRange;
@@ -961,5 +970,9 @@
         private PictureBox pictureBoxErrorLVR;
         private ToolStripMenuItem summaryToolStripMenuItem;
         private Label labelAnalogValueRange;
+        private CheckBox checkBoxCaseSensitive;
+        private TabPage List;
+        private ListBox listBoxIpAdress;
+        private TextBox textBoxSend;
     }
 }
