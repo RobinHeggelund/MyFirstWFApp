@@ -153,12 +153,24 @@ namespace MyFirstWFApp
         }
 
         private void textBoxInputPort_KeyPress(object sender, KeyPressEventArgs e)
+            
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                InvokeOnClick(buttonConnect, null);
+            }
+            
+            else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-  
+
+            else if (textBoxInputPort.Text.Length > 3 && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Enter))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void pictureBoxButtonSearch_Click(object sender, EventArgs e)

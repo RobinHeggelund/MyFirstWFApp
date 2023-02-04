@@ -85,7 +85,7 @@ namespace MyFirstWFApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = "Ready - No Connection";
 
             // set defaut tab
 
@@ -122,7 +122,7 @@ namespace MyFirstWFApp
 
         private void Form1_Activated(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = "Ready - No Connection";
         }
 
        
@@ -680,7 +680,7 @@ namespace MyFirstWFApp
         private void pictureBoxUserImage_Click(object sender, EventArgs e)
         {
             panelUserProfile.Visible = true;
-           this.panelUserProfile.Location = new Point(217, 85);
+           this.panelUserProfile.Location = new Point(280,85);
         }
 
         // Simulate tab-panel buttonclick
@@ -859,16 +859,29 @@ namespace MyFirstWFApp
 
         private void buttonIPSearchConfirm_Click(object sender, EventArgs e)
         {
-            textBoxUserName.Text = textBoxUpdateUserName.Text + labelUserNumber.Text;
+            textBoxUserName.Text = char.ToUpper(textBoxUpdateUserName.Text[0])  
+            + textBoxUpdateUserName.Text.Substring(1) + labelUserNumber.Text;
+
+
             pictureBoxUserImage.Image = pictureBoxUserImageBig.Image;
             panelUserProfile.Visible = false;
-        }
 
+        }
+        
         private void buttonIPSearchCancle_Click(object sender, EventArgs e)
         {
-            textBoxUpdateUserName.Text = textBoxUserName.Text;
+            string input = textBoxUserName.Text;
+            string[] parts = input.Split('#');
+            string firstPart = parts[0];
+            string secondPart = parts[1];
+
+            textBoxUpdateUserName.Text = firstPart;
             pictureBoxUserImageBig.Image = pictureBoxUserImage.Image;
             panelUserProfile.Visible = false;
+
+            
+
+
         }
 
         private void panelBoarderUserProfileClose_Click(object sender, EventArgs e)
@@ -906,6 +919,32 @@ namespace MyFirstWFApp
         private void panelBoarderUserProfileClose_MouseLeave(object sender, EventArgs e)
         {
             panelBoarderUserProfileClose.BackColor = MediumDark;
+        }
+
+        private void textBoxUpdateUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBoxUpdateUserName.Text.Length > 8 && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Enter))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                InvokeOnClick(buttonIPSearchConfirm, null);
+            }
+        }
+
+        private void panelBoarder_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                InvokeOnClick(panelBoarderFullScreen, null); 
+            }
+
+            else
+            {
+                InvokeOnClick(panelBoarderFullScreen, null);
+            }
         }
     }
 

@@ -102,8 +102,8 @@ namespace MyFirstWFApp
             comboBoxSignalType.SelectedIndex = 0;
             listBoxOptions.SelectedIndex = 0;
 
-            textBoxLVR.Text = 0.ToString();
-            textBoxURV.Text = 0.ToString();
+            //textBoxLVR.Text = 0.0.ToString();
+            //textBoxURV.Text = 0.0.ToString();
 
             sessionStartTime = DateTime.Now;
 
@@ -645,6 +645,8 @@ namespace MyFirstWFApp
 
                     this.panelOptionsCommentsBack.Location = new Point(13, 266);
 
+                  
+
 
                     break;
 
@@ -654,6 +656,8 @@ namespace MyFirstWFApp
                     panelValueRangesBack.Visible = false;
                     this.panelOptionsCommentsBack.Location = new Point(13, 216);
 
+                  
+
 
                     break;
 
@@ -662,6 +666,8 @@ namespace MyFirstWFApp
                     comboBoxMeasureType.Items.AddRange(fieldbusSignals);
                     panelValueRangesBack.Visible = false;
                     this.panelOptionsCommentsBack.Location = new Point(13, 216);
+
+                  
 
 
                     break;
@@ -786,6 +792,11 @@ namespace MyFirstWFApp
             buttonMT_Fieldbus_3.BackColor = Medium;
             buttonMT_Fieldbus_4.BackColor = Medium;
 
+            textBoxLVR.Enabled = true;
+            textBoxURV.Enabled = true;
+            textBoxUnit.Enabled = true;
+            
+
         }
 
         private void buttonDigital_Click_1(object sender, EventArgs e)
@@ -809,6 +820,10 @@ namespace MyFirstWFApp
             buttonMT_Fieldbus_3.BackColor = Medium;
             buttonMT_Fieldbus_4.BackColor = Medium;
 
+            textBoxLVR.Enabled = false;
+            textBoxURV.Enabled = false;
+            textBoxUnit.Enabled = false;
+            
         }
 
         private void buttonFieldbus_Click_1(object sender, EventArgs e)
@@ -830,6 +845,11 @@ namespace MyFirstWFApp
 
             buttonMT_Digital_1.BackColor = Medium;
             buttonMT_Digital_2.BackColor = Medium;
+
+            textBoxLVR.Enabled = false;
+            textBoxURV.Enabled = false;
+            textBoxUnit.Enabled = false;
+            
 
         }
 
@@ -957,6 +977,46 @@ namespace MyFirstWFApp
             }
         }
 
+        private void textBoxLVR_Enter(object sender, EventArgs e)
+        {
+            textBoxLVR.SelectAll();
+        }
+
+        private void textBoxURV_Enter(object sender, EventArgs e)
+        {
+            textBoxURV.SelectAll();
+        }
+
+        private void textBoxLVR_Click(object sender, EventArgs e)
+        {
+            textBoxLVR.SelectAll();
+        }
+
+        private void textBoxURV_Click(object sender, EventArgs e)
+        {
+            textBoxURV.SelectAll();
+
+        }
+
+        private void textBoxSensorName_TextChanged(object sender, EventArgs e)
+        {
+            
+            // Converts the first letter to upper case
+            
+            if (textBoxSensorName.Text.Length == 1)
+            {
+
+                char[] textArray = textBoxSensorName.Text.ToCharArray();
+                textArray[0] = char.ToUpper(textArray[0]);
+                textBoxSensorName.Text = new string(textArray);
+
+                textBoxSensorName.SelectionStart = textBoxSensorName.Text.Length;
+                textBoxSensorName.SelectionLength = 0;
+
+
+            }
+
+        }
     }
 }
 

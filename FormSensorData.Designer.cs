@@ -175,6 +175,7 @@
             this.toolStripStatusLabel1.TabIndex = 47;
             this.toolStripStatusLabel1.Text = "statusText";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusLabel1.Visible = false;
             // 
             // comboBoxMeasureType
             // 
@@ -215,7 +216,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(272, 578);
+            this.button1.Location = new System.Drawing.Point(319, 578);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 40);
             this.button1.TabIndex = 44;
@@ -504,6 +505,7 @@
             this.textBoxSensorName.Name = "textBoxSensorName";
             this.textBoxSensorName.Size = new System.Drawing.Size(329, 22);
             this.textBoxSensorName.TabIndex = 0;
+            this.textBoxSensorName.TextChanged += new System.EventHandler(this.textBoxSensorName_TextChanged);
             // 
             // buttonRegisterNew
             // 
@@ -511,7 +513,7 @@
             this.buttonRegisterNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRegisterNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegisterNew.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonRegisterNew.Location = new System.Drawing.Point(450, 578);
+            this.buttonRegisterNew.Location = new System.Drawing.Point(497, 578);
             this.buttonRegisterNew.Name = "buttonRegisterNew";
             this.buttonRegisterNew.Size = new System.Drawing.Size(159, 40);
             this.buttonRegisterNew.TabIndex = 14;
@@ -630,6 +632,9 @@
             this.textBoxLVR.Name = "textBoxLVR";
             this.textBoxLVR.Size = new System.Drawing.Size(63, 22);
             this.textBoxLVR.TabIndex = 8;
+            this.textBoxLVR.Text = "0.0";
+            this.textBoxLVR.Click += new System.EventHandler(this.textBoxLVR_Click);
+            this.textBoxLVR.Enter += new System.EventHandler(this.textBoxLVR_Enter);
             // 
             // textBoxURV
             // 
@@ -641,6 +646,9 @@
             this.textBoxURV.Name = "textBoxURV";
             this.textBoxURV.Size = new System.Drawing.Size(55, 22);
             this.textBoxURV.TabIndex = 9;
+            this.textBoxURV.Text = "0.0";
+            this.textBoxURV.Click += new System.EventHandler(this.textBoxURV_Click);
+            this.textBoxURV.Enter += new System.EventHandler(this.textBoxURV_Enter);
             // 
             // textBoxUnit
             // 

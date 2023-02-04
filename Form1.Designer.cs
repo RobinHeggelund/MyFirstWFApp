@@ -146,6 +146,7 @@
             this.buttonSummary.TabStop = false;
             this.buttonSummary.Text = "Show Summary";
             this.buttonSummary.UseVisualStyleBackColor = true;
+            this.buttonSummary.Visible = false;
             this.buttonSummary.Click += new System.EventHandler(this.buttonSummary_Click);
             // 
             // textBoxSummary
@@ -426,7 +427,7 @@
             this.panelUserProfile.Controls.Add(this.panelBoarderSearch);
             this.panelUserProfile.Controls.Add(this.buttonUserProfileCancle);
             this.panelUserProfile.Controls.Add(this.buttonIPSearchConfirm);
-            this.panelUserProfile.Location = new System.Drawing.Point(217, 85);
+            this.panelUserProfile.Location = new System.Drawing.Point(280, 85);
             this.panelUserProfile.Name = "panelUserProfile";
             this.panelUserProfile.Size = new System.Drawing.Size(806, 496);
             this.panelUserProfile.TabIndex = 55;
@@ -492,6 +493,7 @@
             this.textBoxUpdateUserName.Size = new System.Drawing.Size(157, 31);
             this.textBoxUpdateUserName.TabIndex = 3;
             this.textBoxUpdateUserName.Text = "Guest";
+            this.textBoxUpdateUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUpdateUserName_KeyPress);
             // 
             // labelUserNumber
             // 
@@ -650,6 +652,7 @@
             this.panelBoarder.Name = "panelBoarder";
             this.panelBoarder.Size = new System.Drawing.Size(982, 35);
             this.panelBoarder.TabIndex = 30;
+            this.panelBoarder.DoubleClick += new System.EventHandler(this.panelBoarder_DoubleClick);
             this.panelBoarder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel27_MouseDown);
             // 
             // panelBoarderMinimize
