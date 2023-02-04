@@ -7,14 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageIcon>AdvancedProductionBreakpointOn.png</PackageIcon>
+    <PackageIcon></PackageIcon>
+    <AssemblyName>Lizard</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\Pictures\VisualStudio2022\images\AdvancedProductionBreakpointOn.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <EmbeddedResource Include="Form1.1" />
   </ItemGroup>
 
   <ItemGroup>

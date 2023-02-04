@@ -1,0 +1,970 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Globalization;
+using System.Linq;
+using System.Media;
+using System.Net.Sockets;
+using System.Net;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace MyFirstWFApp
+{
+    public partial class FormSensorData : Form
+    {
+        public FormSensorData()
+        {
+            InitializeComponent();
+        }
+        Font fontNormal = new Font("Segoe UI", 9, FontStyle.Regular);
+        Font fontBold = new Font("Segoe UI", 9, FontStyle.Bold);
+
+        Font fontNormalSmall = new Font("Segoe UI", 9, FontStyle.Regular);
+        Font fontBoldSmall = new Font("Segoe UI", 9, FontStyle.Bold);
+
+        // Creating color pallet
+
+        Color DiscordBlue = Color.FromArgb(114, 137, 218);
+        Color Light = Color.FromArgb(71, 74, 78);
+        Color MediumLight = Color.FromArgb(66, 69, 73);
+        Color Medium = Color.FromArgb(54, 57, 62);
+        Color MediumDark = Color.FromArgb(40, 43, 48);
+        Color Dark = Color.FromArgb(30, 33, 36);
+
+        // Creating Singal Types
+
+
+        string[] analogSignals = new string[] { "0-5VDC", "230V-AC", "2-12V_DC", };
+        string[] digitalSignals = new string[] { "Digital TCP", "Omega Digital" };
+        string[] fieldbusSignals = new string[] { "BussRP", "Modbus RTU", "Modbus TCP", "Profibus" };
+
+        // Creating Variables
+
+        double lvrValue = 0.0;
+        double uvrValue = 0.0;
+        double spanRange = 0.0;
+        string unitValue = string.Empty;
+
+        int RegisterIndex = 0;
+        int analogIndex = 0;
+        int digitalIndex = 0;
+        int fieldbusIndex = 0;
+
+        // Creating Lists
+
+        List<string> servers = new List<string>();
+        List<Instrument> instrumentList = new List<Instrument>();
+
+        // Setting DateTime
+
+        DateTime sessionStartTime;
+
+
+        // Custom Boarder
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonRegisterNew.Enabled = true;
+        }
+
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '+')
+            {
+                this.Height += 15;
+                this.Width += 20;
+            }
+
+            if (e.KeyChar == '-')
+            {
+                this.Height -= 15;
+                this.Width -= 20;
+            }
+        }
+
+        private void FormSensorData_Load(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+
+            comboBoxSignalType.SelectedIndex = 0;
+            listBoxOptions.SelectedIndex = 0;
+
+            textBoxLVR.Text = 0.ToString();
+            textBoxURV.Text = 0.ToString();
+
+            sessionStartTime = DateTime.Now;
+
+            InvokeOnClick(buttonAnalog, null);
+
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+
+            else if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void Form1_Deactivate(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Out of focus";
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void labelSensorName_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Define the sensors name.";
+
+        }
+
+        private void textBoxSensorName_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Define the sensors name.";
+        }
+
+        private void textBoxSensorName_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelSensorName_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+
+        private void maskedTextBoxSerialNumber_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Type in sensor serial number, 9 characters.";
+
+        }
+
+        private void maskedTextBoxSerialNumber_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelSerialNumber_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Type in sensor serial number, 9 characters.";
+        }
+
+        private void labelSerialNumber_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void checkBoxRegistered_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Check this box if the sensor has previously been registered";
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void checkBoxRegistered_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelRegistered_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Check this box if the sensor has previously been registered";
+        }
+
+        private void labelRegistered_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void dateTimePickerRegDate_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Choose the date of registration";
+            
+        }
+
+        private void dateTimePickerRegDate_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelRegDate_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Choose the date of registration";
+        }
+
+        private void labelRegDate_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void comboBoxSignalType_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Select the sensor signal type";
+
+        }
+
+        private void comboBoxSignalType_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelSignalType_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Select the sensor signal type";
+        }
+
+        private void labelSignalType_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void listBoxOptions_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Select the corresponding sensor protocol";
+
+        }
+
+        private void listBoxOptions_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelOptions_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Select the corresponding sensor protocol";
+        }
+
+        private void labelOptions_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void textBoxComments_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Leave additional information that might be relevant for the registration process";
+
+        }
+
+        private void textBoxComments_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void labelComments_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Leave additional information that might be relevant for the registration process";
+
+        }
+
+        private void labelComments_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void radioButtonRegisterNew_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Register a new sensor";
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void radioButtonRegisterNew_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void radioButtonSave_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Save the registration to file";
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void radioButtonSave_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void radioButtonDelete_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Delete a previously saved registration file";
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void radioButtonDelete_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void buttonRegisterNew_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Confirm selected action";
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonRegisterNew_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void buttonRegisterNew_Click(object sender, EventArgs e)
+        {
+            if (DataEntryIsValid() == true)
+
+            {
+                // Register new sensor
+                EnterDataIntoTextPreviewBox();
+            }
+
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+
+        }
+
+        private void EnterDataIntoTextPreviewBox()
+        {
+            // General sensor registration data
+
+
+            if (NewInstrument(textBoxSensorName.Text))
+
+            {
+
+                // Create new instrument and add to list
+
+                Instrument instrument = new Instrument(textBoxSensorName.Text,
+                                                  maskedTextBoxSerialNumber.Text,
+                                                  comboBoxSignalType.Text,
+                                                  comboBoxMeasureType.Text,
+                                                  listBoxOptions.Text,
+                                                  textBoxComments.Text,
+                                                  lvrValue,
+                                                  uvrValue,
+                                                  textBoxUnit.Text);
+
+
+                instrumentList.Add(instrument);
+
+                // Update register preview
+
+                RegisterIndex += 1;
+                textBoxPreview.AppendText("Sensor Index: " + RegisterIndex + "\r\n");
+                textBoxPreview.AppendText("Sensor Name: " + textBoxSensorName.Text + "\r\n");
+                textBoxPreview.AppendText("Serial Number: " + maskedTextBoxSerialNumber.Text + "\r\n");
+
+                textBoxPreview.AppendText("Registration Date: " + DateTime.Now + "\r\n");
+                textBoxPreview.AppendText("Signal Type: " + comboBoxSignalType.Text + "\r\n");
+                textBoxPreview.AppendText("Measure Type: " + comboBoxMeasureType.Text + "\r\n");
+                textBoxPreview.AppendText("Protocol: " + listBoxOptions.Text + "\r\n");
+                textBoxPreview.AppendText("Comment: " + textBoxComments.Text + "\r\n");
+
+                // Specific sensor registration data
+
+                if (comboBoxSignalType.Text == "Analog")
+                {
+                    analogIndex += 1;
+
+                    textBoxPreview.AppendText("Lower Range: : " + textBoxLVR.Text + "\r\n");
+                    textBoxPreview.AppendText("Upper Range: " + textBoxURV.Text + "\r\n");
+                    textBoxPreview.AppendText("Span: " + spanRange + "\r\n");
+                    textBoxPreview.AppendText("Measure Unit: " + textBoxUnit.Text + "\r\n");
+                }
+
+                else if (comboBoxSignalType.Text == "Digital")
+                {
+                    digitalIndex += 1;
+                }
+
+                else if (comboBoxSignalType.Text == "Fieldbus")
+                {
+                    fieldbusIndex += 1;
+                }
+                else { }
+
+                textBoxPreview.AppendText("----------------------------" + "\r\n");
+
+            }
+
+            else
+            {
+                MessageBox.Show("Error: Sensor already registered", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public bool NewInstrument(string sensorName)
+        {
+            bool newInstrument = true;
+
+            instrumentList.ForEach(delegate (Instrument instrument)
+            {
+                if (instrument.SensorName == sensorName)
+                {
+                    newInstrument = false;
+                }
+
+
+            });
+
+            return newInstrument;
+        }
+
+
+        private bool DataEntryIsValid()
+        {
+
+            lvrValue = Convert.ToDouble(textBoxLVR.Text, CultureInfo.InvariantCulture);
+            uvrValue = Convert.ToDouble(textBoxURV.Text, CultureInfo.InvariantCulture);
+            spanRange = uvrValue - lvrValue;
+
+            bool sensorNameValid = false;
+            bool serialNumberValid = false;
+            bool signalTypeValid = false;
+            bool measureTypeValid = false;
+            bool optionsValid = false;
+            bool lvrValueValid = false;
+            bool uvrValueValid = false;
+            bool spanValueValid = false;
+            bool unitValueValid = false;
+
+            // Check if every data entry is valid and returns a boolean value, enables error icons
+
+            // Sensor Name
+
+
+            if (textBoxSensorName.Text.Length > 0)
+
+            {
+                sensorNameValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+            // Serial Number
+
+            if (maskedTextBoxSerialNumber.Text != "   -  -")
+
+            {
+                serialNumberValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+            // Signal Type
+
+            if (comboBoxSignalType.Text != "")
+            {
+                signalTypeValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+            // Measure Type
+
+            if (comboBoxMeasureType.Text.Length > 0)
+            {
+                measureTypeValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+            // Options
+
+            if (listBoxOptions.SelectedIndex >= 0)
+            {
+                optionsValid = true;
+
+            }
+            else
+            {
+
+            }
+
+            // Lower range value
+
+            if (textBoxLVR.Text.Length > 0 || comboBoxSignalType.Text != "Analog")
+            {
+                lvrValueValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+            // Upper range value
+
+            if (textBoxURV.Text.Length > 0 || comboBoxSignalType.Text != "Analog")
+            {
+                uvrValueValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+
+            // Unit value
+
+            if (textBoxUnit.Text.Length > 0 || comboBoxSignalType.Text != "Analog")
+            {
+                unitValueValid = true;
+
+            }
+
+            else
+            {
+
+            }
+
+            // Span value
+
+            if (uvrValue - lvrValue > 0 || comboBoxSignalType.Text != "Analog")
+            {
+                spanValueValid = true;
+            }
+
+            else
+            {
+                sensorNameValid = false;
+                MessageBox.Show("Error: Invalid sensor range. Upper analog sensor value needs to be higher th lower analog sensor value");
+                textBoxURV.Focus();
+            }
+
+
+            // Return boolean value
+
+            if (sensorNameValid && serialNumberValid && signalTypeValid && measureTypeValid && unitValueValid  && lvrValueValid && uvrValueValid)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+
+            }
+
+
+        }
+
+        private void textBoxPreview_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonRegisterNew.PerformClick();
+        }
+
+        private void maskedTextBoxSerialNumber_Enter(object sender, EventArgs e)
+        {
+
+            maskedTextBoxSerialNumber.Select(maskedTextBoxSerialNumber.TextLength, 8);
+        }
+
+
+
+
+
+        private void radioButtonRegisterNew_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonRegisterNew.Enabled = true;
+        }
+
+
+
+        private void comboBoxSignalType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxMeasureType.Items.Clear();
+            comboBoxMeasureType.Text = "";
+
+            switch (comboBoxSignalType.Text)
+
+
+
+            {
+
+                case "Analog":
+                    comboBoxMeasureType.Items.Clear();
+                    comboBoxMeasureType.Items.AddRange(analogSignals);
+                    panelValueRangesBack.Visible = true;
+                    //this.panelOptionsCommentsBack.Location = new Point(this.panelOptionsCommentsBack.213, this.panelOptionsCommentsBack.300);
+
+                    this.panelOptionsCommentsBack.Location = new Point(13, 266);
+
+
+                    break;
+
+                case "Digital":
+                    comboBoxMeasureType.Items.Clear();
+                    comboBoxMeasureType.Items.AddRange(digitalSignals);
+                    panelValueRangesBack.Visible = false;
+                    this.panelOptionsCommentsBack.Location = new Point(13, 216);
+
+
+                    break;
+
+                case "Fieldbus":
+                    comboBoxMeasureType.Items.Clear();
+                    comboBoxMeasureType.Items.AddRange(fieldbusSignals);
+                    panelValueRangesBack.Visible = false;
+                    this.panelOptionsCommentsBack.Location = new Point(13, 216);
+
+
+                    break;
+
+                default:
+
+
+                    break;
+
+            }
+        }
+
+
+
+
+
+        private void textBoxLVR_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+
+
+            // if (e.KeyChar != '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9' || ',')
+        }
+
+        private void textBoxURV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void comboBoxSignalType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBoxMeasureType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void listBoxOptions_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+
+
+
+        private void comboBoxMeasureType_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Select sensor measure type";
+        }
+
+        private void comboBoxMeasureType_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void textBoxLVR_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Specify analog sensor lower range";
+        }
+
+        private void textBoxLVR_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void textBoxURV_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Specify analog sensor upper range";
+        }
+
+        private void textBoxURV_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+        private void textBoxUnit_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Specify analog sensor unit type";
+        }
+
+        private void textBoxUnit_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Ready";
+        }
+
+
+
+
+
+
+
+
+
+
+
+        private void buttonAnalog_Click_1(object sender, EventArgs e)
+        {
+            buttonAnalog.BackColor = Dark;
+            buttonDigital.BackColor = Medium;
+            buttonFieldbus.BackColor = Medium;
+
+            comboBoxSignalType.Text = "Analog";
+
+            panelMeasureTypeAnalogBack.Visible = true;
+            panelMeasureTypeDigitalBack.Visible = false;
+            panelMeasureTypeFieldbusBack.Visible = false;
+
+            buttonMT_Digital_1.BackColor = Medium;
+            buttonMT_Digital_2.BackColor = Medium;
+
+            buttonMT_Fieldbus_1.BackColor = Medium;
+            buttonMT_Fieldbus_2.BackColor = Medium;
+            buttonMT_Fieldbus_3.BackColor = Medium;
+            buttonMT_Fieldbus_4.BackColor = Medium;
+
+        }
+
+        private void buttonDigital_Click_1(object sender, EventArgs e)
+        {
+            buttonAnalog.BackColor = Medium;
+            buttonDigital.BackColor = Dark;
+            buttonFieldbus.BackColor = Medium;
+
+            comboBoxSignalType.Text = "Digital";
+
+            panelMeasureTypeAnalogBack.Visible = false;
+            panelMeasureTypeDigitalBack.Visible = true;
+            panelMeasureTypeFieldbusBack.Visible = false;
+
+            buttonMT_Analog_1.BackColor = Medium;
+            buttonMT_Analog_2.BackColor = Medium;
+            buttonMT_Analog_3.BackColor = Medium;
+
+            buttonMT_Fieldbus_1.BackColor = Medium;
+            buttonMT_Fieldbus_2.BackColor = Medium;
+            buttonMT_Fieldbus_3.BackColor = Medium;
+            buttonMT_Fieldbus_4.BackColor = Medium;
+
+        }
+
+        private void buttonFieldbus_Click_1(object sender, EventArgs e)
+        {
+            buttonAnalog.BackColor = Medium;
+            buttonDigital.BackColor = Medium;
+            buttonFieldbus.BackColor = Dark;
+
+            comboBoxSignalType.Text = "Fieldbus";
+
+            panelMeasureTypeAnalogBack.Visible = false;
+            panelMeasureTypeDigitalBack.Visible = false;
+            panelMeasureTypeFieldbusBack.Visible = true;
+
+            buttonMT_Analog_1.BackColor = Medium;
+            buttonMT_Analog_2.BackColor = Medium;
+            buttonMT_Analog_3.BackColor = Medium;
+
+
+            buttonMT_Digital_1.BackColor = Medium;
+            buttonMT_Digital_2.BackColor = Medium;
+
+        }
+
+        private void buttonMT_Analog_1_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Analog_1.BackColor = Dark;
+            buttonMT_Analog_2.BackColor = Medium;
+            buttonMT_Analog_3.BackColor = Medium;
+
+            comboBoxMeasureType.Text = "0-5VDC";
+        }
+
+        private void buttonMT_Analog_2_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Analog_1.BackColor = Medium;
+            buttonMT_Analog_2.BackColor = Dark;
+            buttonMT_Analog_3.BackColor = Medium;
+
+            comboBoxMeasureType.Text = "230V-AC";
+        }
+
+        private void buttonMT_Analog_3_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Analog_1.BackColor = Medium;
+            buttonMT_Analog_2.BackColor = Medium;
+            buttonMT_Analog_3.BackColor = Dark;
+
+            comboBoxMeasureType.Text = "2-12V_DC";
+        }
+
+        private void buttonMT_Digital_1_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Digital_1.BackColor = Dark;
+            buttonMT_Digital_2.BackColor = Medium;
+
+            comboBoxMeasureType.Text = "Digital TCP";
+
+        }
+
+        private void buttonMT_Digital_2_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Digital_1.BackColor = Medium;
+            buttonMT_Digital_2.BackColor = Dark;
+
+            comboBoxMeasureType.Text = "Omega Digital";
+        }
+
+        private void buttonMT_Fieldbus_1_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Fieldbus_1.BackColor = Dark;
+            buttonMT_Fieldbus_2.BackColor = Medium;
+            buttonMT_Fieldbus_3.BackColor = Medium;
+            buttonMT_Fieldbus_4.BackColor = Medium;
+
+            comboBoxMeasureType.Text = "BussRP";
+        }
+
+        private void buttonMT_Fieldbus_2_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Fieldbus_1.BackColor = Medium;
+            buttonMT_Fieldbus_2.BackColor = Dark;
+            buttonMT_Fieldbus_3.BackColor = Medium;
+            buttonMT_Fieldbus_4.BackColor = Medium;
+
+            comboBoxMeasureType.Text = "Modbus RTU";
+        }
+
+        private void buttonMT_Fieldbus_3_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Fieldbus_1.BackColor = Medium;
+            buttonMT_Fieldbus_2.BackColor = Medium;
+            buttonMT_Fieldbus_3.BackColor = Dark;
+            buttonMT_Fieldbus_4.BackColor = Medium;
+
+            comboBoxMeasureType.Text = "ModbusTCP";
+        }
+
+        private void buttonMT_Fieldbus_4_Click_1(object sender, EventArgs e)
+        {
+            buttonMT_Fieldbus_1.BackColor = Medium;
+            buttonMT_Fieldbus_2.BackColor = Medium;
+            buttonMT_Fieldbus_3.BackColor = Medium;
+            buttonMT_Fieldbus_4.BackColor = Dark;
+
+            comboBoxMeasureType.Text = "Profibus";
+        }
+
+        private void comboBoxSignalType_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxMeasureType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRegisterNew_Click_1(object sender, EventArgs e)
+        {
+            if (DataEntryIsValid())
+            {
+                // Register new sensor
+
+
+
+                EnterDataIntoTextPreviewBox();
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+        }
+
+    }
+}
+
+       
+
+       
+
+
+
+      
+

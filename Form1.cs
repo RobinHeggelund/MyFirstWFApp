@@ -5,63 +5,68 @@ using System.Net.Sockets;
 using System.Net;
 using System.Xml.Linq;
 using System.Text;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace MyFirstWFApp
 {
-    public partial class FormMain : Form
+    public partial class Form1 : Form
     {
+        
+        // Creating Fonts
+        
+        
         Font fontNormal = new Font("Segoe UI", 9, FontStyle.Regular);
         Font fontBold = new Font("Segoe UI", 9, FontStyle.Bold);
 
         Font fontNormalSmall = new Font("Segoe UI", 9, FontStyle.Regular);
         Font fontBoldSmall = new Font("Segoe UI", 9, FontStyle.Bold);
 
-        string[] analogSignals = new string[] { "0-5VDC", "OmegaAnalog","0-8VDC EchoSensor","MicrosoftKinnect" };
-        string[] digitalSignals = new string[] { "SuperDigital", "GIGA", "0-10Vs" };
-        string[] fieldbusSignals = new string[] { "BussRP", "Modbus RTU", "Modbus TCP", "Profibus" };
+        // Creating color pallet
+        
+        Color DiscordBlue = Color.FromArgb(114,137,218);
+        Color Light = Color.FromArgb(71, 74, 78);
+        Color MediumLight = Color.FromArgb(66,69,73);
+        Color Medium = Color.FromArgb(54, 57, 62);
+        Color MediumDark = Color.FromArgb(40, 43, 48);
+        Color Dark = Color.FromArgb(30, 33, 36);
 
-        double lvrValue = 0.0;
-        double uvrValue = 0.0;
-        double spanRange = 0.0;
-        string unitValue = string.Empty;
+        // PanelButton Pushed Variables
 
-        int RegisterIndex = 0;
-        int analogIndex = 0;
-        int digitalIndex = 0;
-        int fieldbusIndex = 0;
+        bool sensorDataPushed;
+        bool ConnectionPushed;
+        bool NetworkPushed;
+        bool SettingsPushed;
+
+        // Create sub panels
+
+ 
+
+
+
+        // Creating Lists
 
         List<string> servers = new List<string>();
         List<Instrument> instrumentList = new List<Instrument>();
- 
 
+        // Setting DateTime
 
         DateTime sessionStartTime;
 
 
-        public FormMain()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
+        // Custom Boarder
 
-        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonRegisterNew.Enabled = true;
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -81,14 +86,11 @@ namespace MyFirstWFApp
         private void Form1_Load(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = "Ready";
-            this.Width = 587;
-            comboBoxSignalType.SelectedIndex= 0;
-            listBoxOptions.SelectedIndex = 0;
-            
-            textBoxLVR.Text = 0.ToString();
-            textBoxURV.Text = 0.ToString();
 
-            sessionStartTime = DateTime.Now;
+            // set defaut tab
+
+            InvokeOnClick(panelSensorData, null);
+
 
             // get IP adresses
 
@@ -102,10 +104,7 @@ namespace MyFirstWFApp
             }
         }
 
-        private void Form1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Form1_DoubleClick(object sender, EventArgs e)
         {
@@ -126,335 +125,9 @@ namespace MyFirstWFApp
             toolStripStatusLabel1.Text = "Ready";
         }
 
-        private void Form1_Deactivate(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Out of focus";
-        }
+       
 
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void labelSensorName_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Define the sensors name.";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void textBoxSensorName_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Define the sensors name.";
-        }
-
-        private void textBoxSensorName_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelSensorName_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void maskedTextBoxSerialNumber_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void maskedTextBoxSerialNumber_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Type in sensor serial number, 9 characters.";
-            
-        }
-
-        private void maskedTextBoxSerialNumber_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelSerialNumber_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Type in sensor serial number, 9 characters.";
-        }
-
-        private void labelSerialNumber_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void checkBoxRegistered_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Check this box if the sensor has previously been registered";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void checkBoxRegistered_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelRegistered_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Check this box if the sensor has previously been registered";
-        }
-
-        private void labelRegistered_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void dateTimePickerRegDate_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Choose the date of registration";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void dateTimePickerRegDate_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelRegDate_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Choose the date of registration";
-        }
-
-        private void labelRegDate_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void comboBoxSignalType_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Select the sensor signal type";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void comboBoxSignalType_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelSignalType_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Select the sensor signal type";
-        }
-
-        private void labelSignalType_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void listBoxOptions_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Select the corresponding sensor protocol";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void listBoxOptions_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelOptions_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Select the corresponding sensor protocol";
-        }
-
-        private void labelOptions_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void textBoxComments_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Leave additional information that might be relevant for the registration process";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void textBoxComments_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void labelComments_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Leave additional information that might be relevant for the registration process";
-
-        }
-
-        private void labelComments_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void radioButtonRegisterNew_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Register a new sensor";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void radioButtonRegisterNew_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void radioButtonSave_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Save the registration to file";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void radioButtonSave_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void radioButtonDelete_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Delete a previously saved registration file";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void radioButtonDelete_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void buttonRegisterNew_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Confirm selected action";
-            this.Cursor = Cursors.Hand;
-        }
-
-        private void buttonRegisterNew_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void buttonRegisterNew_Click(object sender, EventArgs e)
-        {
-
-
-
-            if (radioButtonRegisterNew.Checked && DataEntryIsValid())
-            {
-                // Register new sensor
-
-                this.Width = 1089;
-
-                EnterDataIntoTextPreviewBox();
-
-
-
-            }
-
-
-            
-            else if (radioButtonSave.Checked)
-            {
-                // Update an already registered sensor
-            }
-
-            else if (radioButtonDelete.Checked)
-
-            {
-                var confirmResult = MessageBox.Show("Are you sure you want to delete all data?","Confirm Delete",MessageBoxButtons.YesNo);
-
-                if (confirmResult == DialogResult.Yes)
-                {
-                    // Delete data
-
-                    textBoxPreview.Clear();
-                    textBoxSummary.Clear();
-                    RegisterIndex = 0;
-                    analogIndex = 0;
-                    digitalIndex= 0;
-                    fieldbusIndex= 0;
-
-                }
-
-
-
-            }
-
-            else
-            {
-                SystemSounds.Beep.Play();
-            }
-
-        }
-
-        private void EnterDataIntoTextPreviewBox()
-        {
-            // General sensor registration data
-
-
-            if (NewInstrument(textBoxSensorName.Text))
-
-            {
-
-                // Create new instrument and add to list
-
-                Instrument instrument = new Instrument(textBoxSensorName.Text,
-                                                  maskedTextBoxSerialNumber.Text,
-                                                  comboBoxSignalType.Text,
-                                                  comboBoxMeasureType.Text,
-                                                  listBoxOptions.Text,
-                                                  textBoxComments.Text,
-                                                  lvrValue,
-                                                  uvrValue,
-                                                  textBoxUnit.Text);
-
-
-                instrumentList.Add(instrument);
-
-                // Update register preview
-
-                RegisterIndex += 1;
-                textBoxPreview.AppendText("Sensor Index: " + RegisterIndex + "\r\n");
-                textBoxPreview.AppendText("Sensor Name: " + textBoxSensorName.Text + "\r\n");
-                textBoxPreview.AppendText("Serial Number: " + maskedTextBoxSerialNumber.Text + "\r\n");
-                textBoxPreview.AppendText("Registered: " + checkBoxRegistered.CheckState + "\r\n");
-                textBoxPreview.AppendText("Registration Date: " + dateTimePickerRegDate.Text + "\r\n");
-                textBoxPreview.AppendText("Signal Type: " + comboBoxSignalType.Text + "\r\n");
-                textBoxPreview.AppendText("Measure Type: " + comboBoxMeasureType.Text + "\r\n");
-                textBoxPreview.AppendText("Protocol: " + listBoxOptions.Text + "\r\n");
-                textBoxPreview.AppendText("Comment: " + textBoxComments.Text + "\r\n");
-
-                // Specific sensor registration data
-
-                if (comboBoxSignalType.Text == "Analog")
-                {
-                    analogIndex += 1;
-
-                    textBoxPreview.AppendText("Lower Range: : " + textBoxLVR.Text + "\r\n");
-                    textBoxPreview.AppendText("Upper Range: " + textBoxURV.Text + "\r\n");
-                    textBoxPreview.AppendText("Span: " + spanRange + "\r\n");
-                    textBoxPreview.AppendText("Measure Unit: " + textBoxUnit.Text + "\r\n");
-                }
-
-                else if (comboBoxSignalType.Text == "Digital")
-                {
-                    digitalIndex += 1;
-                }
-
-                else if (comboBoxSignalType.Text == "Fieldbus")
-                {
-                    fieldbusIndex += 1;
-                }
-                else { }
-
-                textBoxPreview.AppendText("----------------------------" + "\r\n");
-
-            }
-
-            else
-            {
-                MessageBox.Show("Error: Sensor already registered", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         public bool NewInstrument(string sensorName)
         {
@@ -474,263 +147,12 @@ namespace MyFirstWFApp
         }
 
 
-        private bool DataEntryIsValid()
-        {
-
-            lvrValue = Convert.ToDouble(textBoxLVR.Text, CultureInfo.InvariantCulture);
-            uvrValue = Convert.ToDouble(textBoxURV.Text, CultureInfo.InvariantCulture);
-            spanRange = uvrValue - lvrValue;
-
-            bool sensorNameValid   = false;
-            bool serialNumberValid = false;
-            bool signalTypeValid   = false;
-            bool measureTypeValid  = false;
-            bool optionsValid      = false;
-            bool lvrValueValid     = false;
-            bool uvrValueValid     = false;
-            bool spanValueValid    = false;
-            bool unitValueValid = false;
-
-            // Check if every data entry is valid and returns a boolean value, enables error icons
-
-            // Sensor Name
-
-
-            if (textBoxSensorName.Text.Length > 0)
-
-            {
-                sensorNameValid = true;
-                pictureBoxErrorSensorName.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorSensorName.Visible = true;
-            }
-
-            // Serial Number
-
-            if (maskedTextBoxSerialNumber.Text != "   -  -" )
-
-            {
-                serialNumberValid = true;
-                pictureBoxErrorSerialNumber.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorSerialNumber.Visible = true;
-            }
-
-            // Signal Type
-
-            if (comboBoxSignalType.Text != "")
-            {
-                signalTypeValid = true;
-                pictureBoxErrorSignalType.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorSignalType.Visible = true;
-            }
-
-            // Measure Type
-
-            if (comboBoxMeasureType.SelectedIndex >= 0)
-            {
-                measureTypeValid = true;
-                pictureBoxErrorMeasureType.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorMeasureType.Visible = true;
-            }
-
-            // Options
-
-            if (listBoxOptions.SelectedIndex >=0)
-            {
-                optionsValid = true;
-                pictureBoxErrorOptions.Visible = false;
-            }
-            else
-            {
-                pictureBoxErrorOptions.Visible = true;
-            }
-
-            // Lower range value
-
-            if (textBoxLVR.Text.Length > 0 || comboBoxSignalType.Text != "Analog")
-            {
-                lvrValueValid = true;
-                pictureBoxErrorLVR.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorLVR.Visible = true;
-            }
-
-            // Upper range value
-
-            if (textBoxURV.Text.Length > 0 || comboBoxSignalType.Text != "Analog")
-            {
-                uvrValueValid= true;
-                pictureBoxErrorURV.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorURV.Visible = true;
-            }
+       
 
             
-            // Unit value
+        
 
-            if (textBoxUnit.Text.Length > 0 || comboBoxSignalType.Text != "Analog")
-            {
-                unitValueValid = true;
-                pictureBoxErrorUnit.Visible = false;
-            }
-
-            else
-            {
-                pictureBoxErrorUnit.Visible = true;
-            }
-
-            // Span value
-
-            if (uvrValue - lvrValue > 0 || comboBoxSignalType.Text != "Analog")
-            {
-                spanValueValid = true;
-            }
-
-            else
-            {
-                sensorNameValid = false;
-                MessageBox.Show("Error: Invalid sensor range. Upper analog sensor value needs to be higher th lower analog sensor value");
-                textBoxURV.Focus();
-            }
-
-
-            // Return boolean value
-
-            if (sensorNameValid && serialNumberValid && signalTypeValid && measureTypeValid && optionsValid && lvrValueValid && uvrValueValid  )
-            {
-                return true;
-            }
-
-            else
-            {
-                return false;
-
-            }
-
-            
-        }
-
-        private void textBoxPreview_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            buttonRegisterNew.PerformClick();
-        }
-
-        private void menuStrip1_MouseHover(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.Default;
-        }
-
-        private void groupBox1_MouseHover(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.Default;
-        }
-
-        private void textBoxSensorName_Enter(object sender, EventArgs e)
-        {
-            labelSensorName.Font = fontBold;
-        }
-
-        private void textBoxSensorName_Leave(object sender, EventArgs e)
-        {
-            labelSensorName.Font = fontNormal;
-        }
-
-        private void maskedTextBoxSerialNumber_Enter(object sender, EventArgs e)
-        {
-            labelSerialNumber.Font = fontBold;
-            maskedTextBoxSerialNumber.Select(maskedTextBoxSerialNumber.TextLength, 8);
-        }
-
-        private void maskedTextBoxSerialNumber_Leave(object sender, EventArgs e)
-        {
-            labelSerialNumber.Font = fontNormal;
-        }
-
-        private void checkBoxRegistered_Enter(object sender, EventArgs e)
-        {
-            //labelRegistered.Font = fontBold;
-        }
-
-        private void checkBoxRegistered_Leave(object sender, EventArgs e)
-        {
-            //labelRegistered.Font = fontNormal;
-        }
-
-        private void dateTimePickerRegDate_Enter(object sender, EventArgs e)
-        {
-            labelRegDate.Font = fontBold;
-        }
-
-        private void dateTimePickerRegDate_Leave(object sender, EventArgs e)
-        {
-            labelRegDate.Font = fontNormal;
-        }
-
-        private void comboBoxSignalType_Enter(object sender, EventArgs e)
-        {
-            labelSignalType.Font = fontBold;
-        }
-
-        private void comboBoxSignalType_Leave(object sender, EventArgs e)
-        {
-            labelSignalType.Font = fontNormal;
-        }
-
-        private void listBoxOptions_Enter(object sender, EventArgs e)
-        {
-            labelOptions.Font = fontBold;
-        }
-
-        private void listBoxOptions_Leave(object sender, EventArgs e)
-        {
-            labelOptions.Font = fontNormal;
-        }
-
-        private void textBoxComments_Enter(object sender, EventArgs e)
-        {
-            labelComments.Font = fontBold;
-        }
-
-        private void textBoxComments_Leave(object sender, EventArgs e)
-        {
-            labelComments.Font = fontNormal;
-        }
-
-        private void radioButtonRegisterNew_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonRegisterNew.Enabled = true;
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
@@ -839,323 +261,20 @@ namespace MyFirstWFApp
 
 
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxSignalType_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-        }
-
-        private void groupBoxLVR_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxSignalType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxMeasureType.Items.Clear();
-            comboBoxMeasureType.Text = "";
-
-            switch (comboBoxSignalType.Text)
-
-
-
-            {
-
-                case "Analog":
-                    comboBoxMeasureType.Items.Clear();
-                    comboBoxMeasureType.Items.AddRange(analogSignals);
-                    groupBoxSignalRange.Visible = true;
-
-
-                    break;
-
-                case "Digital":
-                    comboBoxMeasureType.Items.Clear();
-                    comboBoxMeasureType.Items.AddRange(digitalSignals);
-                    groupBoxSignalRange.Visible = false;
-                    break;
-
-                case "Fieldbus":
-                    comboBoxMeasureType.Items.Clear();
-                    comboBoxMeasureType.Items.AddRange(fieldbusSignals);
-                    groupBoxSignalRange.Visible = false;
-                    break;
-
-                default:
-
-
-                    break;
-
-            }
-        }
+        
 
         private void buttonSummary_Click(object sender, EventArgs e)
         {
             System.TimeSpan sessionTime = DateTime.Now.Subtract(sessionStartTime);
             double sessionTimeSeconds = Math.Ceiling(sessionTime.TotalSeconds);
             textBoxSummary.Clear();
-            textBoxSummary.AppendText("Session time: "+sessionTimeSeconds.ToString() +" seconds."+ "\r\n");
-            textBoxSummary.AppendText("Sensors registered: "+RegisterIndex.ToString() + "\r\n");
-            textBoxSummary.AppendText("Analog sensors registered: " + analogIndex.ToString() + "\r\n");
-            textBoxSummary.AppendText("Digital sensors registered: " + digitalIndex.ToString() + "\r\n");
-            textBoxSummary.AppendText("Fieldbus sensors registered: " + fieldbusIndex.ToString() + "\r\n");
+
 
         }
 
-        private void textBoxSensorName_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorSensorName.Visible)
-            {
-                pictureBoxErrorSensorName.Visible = false;
-            }
+        
 
-            else if (textBoxSensorName.Text.Length == 0)
-            {
-                pictureBoxErrorSensorName.Visible = true;
-            }
-        }
-
-        private void labelRegDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxLVR_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-
-
-            // if (e.KeyChar != '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9' || ',')
-        }
-
-        private void textBoxURV_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void comboBoxSignalType_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void comboBoxMeasureType_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void listBoxOptions_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void maskedTextBoxSerialNumber_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorSerialNumber.Visible)
-            {
-                pictureBoxErrorSerialNumber.Visible = false;
-            }
-
-            else if (maskedTextBoxSerialNumber.Text == "   -  -")
-            {
-                pictureBoxErrorSerialNumber.Visible = true;
-            }
-        }
-
-        private void comboBoxSignalType_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorSignalType.Visible)
-            {
-                pictureBoxErrorSignalType.Visible = false;
-            }
-
-            else if (comboBoxSignalType.Text.Length == 0)
-            {
-                pictureBoxErrorSerialNumber.Visible = true;
-            }
-
-        }
-
-        private void comboBoxMeasureType_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorMeasureType.Visible)
-            {
-                pictureBoxErrorMeasureType.Visible = false;
-            }
-
-            else if (comboBoxMeasureType.Text.Length == 0)
-            {
-                pictureBoxErrorMeasureType.Visible = true;
-            }
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void summaryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            buttonSummary.PerformClick();
-        }
-
-        private void comboBoxMeasureType_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Select sensor measure type";
-        }
-
-        private void comboBoxMeasureType_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void textBoxLVR_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Specify analog sensor lower range";
-        }
-
-        private void textBoxLVR_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void textBoxURV_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Specify analog sensor upper range";
-        }
-
-        private void textBoxURV_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void textBoxUnit_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Specify analog sensor unit type";
-        }
-
-        private void textBoxUnit_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabel1.Text = "Ready";
-        }
-
-        private void textBoxUnit_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorUnit.Visible)
-            {
-                pictureBoxErrorUnit.Visible = false;
-            }
-
-            else if (textBoxUnit.Text.Length == 0)
-            {
-                pictureBoxErrorUnit.Visible = true;
-            }
-        }
-
-        private void textBoxLVR_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorLVR.Visible)
-            {
-                pictureBoxErrorLVR.Visible = false;
-            }
-
-            else if (textBoxLVR.Text == "")
-            {
-                textBoxLVR.Text = 0.ToString();
-                textBoxLVR.SelectAll();
-            }
-        }
-
-        private void textBoxURV_TextChanged(object sender, EventArgs e)
-        {
-            if (pictureBoxErrorURV.Visible)
-            {
-                pictureBoxErrorURV.Visible = false;
-               
-            }
-
-            else if (textBoxURV.Text == "")
-            {
-                textBoxURV.Text = 0.ToString();
-                textBoxURV.SelectAll();
-            }
-
-        }
-
-        private void radioButtonSave_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonRegisterNew.Enabled = true;
-        }
-
-        private void labelRegistered_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxMeasureType_Enter(object sender, EventArgs e)
-        {
-            labelMeasureType.Font = fontBold;
-        }
-
-        private void comboBoxMeasureType_Leave(object sender, EventArgs e)
-        {
-            labelMeasureType.Font = fontNormal;
-        }
-
-        private void textBoxLVR_Enter(object sender, EventArgs e)
-        {
-            labelLowerValue.Font = fontBoldSmall;
-        }
-
-        private void textBoxLVR_Leave(object sender, EventArgs e)
-        {
-            labelLowerValue.Font = fontNormalSmall;
-        }
-
-        private void textBoxURV_Enter(object sender, EventArgs e)
-        {
-            labelUpperValue.Font = fontBoldSmall;
-        }
-
-        private void textBoxURV_Leave(object sender, EventArgs e)
-        {
-            labelUpperValue.Font = fontNormalSmall; 
-        }
-
-        private void textBoxUnit_Enter(object sender, EventArgs e)
-        {
-            labelUnit.Font = fontBoldSmall;
-        }
-
-        private void textBoxUnit_Leave(object sender, EventArgs e)
-        {
-            labelUnit.Font = fontNormalSmall; 
-        }
+       
 
         private void tabControlList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1166,6 +285,633 @@ namespace MyFirstWFApp
             }
 
         }
+        
+        //ColorChange Tab Buttons
+        
+            // Network
+            
+        private void panelNetwork_MouseEnter(object sender, EventArgs e)
+        {
+            panelNetwork.BackColor = Dark;
+        }
+
+        private void panelNetwork_MouseLeave(object sender, EventArgs e)
+        {
+            if (NetworkPushed == false)
+            {
+                panelNetwork.BackColor = MediumDark;
+            }
+        }
+
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            panelNetwork.BackColor = Dark;
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            panelNetwork.BackColor = Dark;
+        }
+        
+            // Sensor Data
+
+        private void panelSensorData_MouseEnter(object sender, EventArgs e)
+        {
+            panelSensorData.BackColor = Dark;
+        }
+
+        private void panelSensorData_MouseLeave(object sender, EventArgs e)
+        {
+            if (sensorDataPushed == false)
+            {
+                panelSensorData.BackColor = MediumDark;
+            }
+            
+        }
+
+        private void labelSensorDataTab_MouseEnter(object sender, EventArgs e)
+        {
+            panelSensorData.BackColor = Dark;
+        }
+
+        private void pictureBoxSensorDataTab_MouseEnter(object sender, EventArgs e)
+        {
+            panelSensorData.BackColor = Dark;
+
+        }
+        
+            // Connection
+
+        private void panelConnection_MouseEnter(object sender, EventArgs e)
+        {
+            panelConnection.BackColor = Dark;
+
+        }
+
+        private void panelConnection_MouseLeave(object sender, EventArgs e)
+        {
+            if (ConnectionPushed == false)
+            {
+                panelConnection.BackColor = MediumDark;
+            }
+
+        }
+
+        private void labelConnectionTab_MouseEnter(object sender, EventArgs e)
+        {
+            panelConnection.BackColor = Dark;
+
+        }
+
+        private void pictureBoxConnectionTab_MouseEnter(object sender, EventArgs e)
+        {
+            panelConnection.BackColor = Dark;
+
+        }
+
+        private void panelSettings_MouseEnter(object sender, EventArgs e)
+        {
+            panelSettings.BackColor = Dark;
+
+        }
+
+        private void panelSettings_MouseLeave(object sender, EventArgs e)
+        {
+            if (SettingsPushed == false)
+            {
+                panelSettings.BackColor = MediumDark;
+            }
+
+        }
+
+        private void labelSettingsTab_MouseEnter(object sender, EventArgs e)
+        {
+            panelSettings.BackColor = Dark;
+
+        }
+
+        private void pictureBoxSettingsTab_MouseEnter(object sender, EventArgs e)
+        {
+            panelSettings.BackColor = Dark;
+
+        }
+
+
+
+        private void labelMeasureType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel27_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelBoarderClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderClose.BackColor = Dark;
+        }
+
+        private void panelBoarderClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderClose.BackColor = MediumDark;
+
+        }
+
+        private void pictureBoxBoarderClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderClose.BackColor = Dark;
+
+        }
+
+        private void pictureBoxBoarderClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderClose.BackColor = Dark;
+
+        }
+
+        private void panelBoarderFullScreen_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderFullScreen.BackColor = Dark;
+
+        }
+
+        private void panelBoarderFullScreen_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderFullScreen.BackColor = MediumDark;
+
+        }
+
+        private void pictureBoxBoarderFullscreen_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderFullScreen.BackColor = Dark;
+
+        }
+
+        private void panelBoarderMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderMinimize.BackColor = Dark;
+
+        }
+
+        private void panelBoarderMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderMinimize.BackColor = MediumDark;
+
+        }
+
+        private void pictureBoxBoarderMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderMinimize.BackColor = Dark;
+
+        }
+
+        private void pictureBoxBoarderClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void panelBoarderClose_Click(object sender, EventArgs e)
+        {
+            Close();
+            
+        }
+
+
+
+        private void pictureBoxBoarderFullscreen_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal) 
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+
+        }
+
+        private void panelBoarderFullScreen_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void pictureBoxBoarderMinimize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void panelBoarderMinimize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        
+
+        private void panelSensorData_Click(object sender, EventArgs e)
+        {
+
+            // Switching Forms
+
+            if (sensorDataPushed == false)
+            {
+                // create panel
+
+                this.panelMain.Controls.Clear();
+                FormSensorData FrmSensorData = new FormSensorData();
+                FrmSensorData.TopLevel = false;
+                FrmSensorData.Dock = DockStyle.Fill;
+                FrmSensorData.TopMost = true;
+
+                this.panelMain.Controls.Add(FrmSensorData);
+                FrmSensorData.Show();
+
+                // set pushed bool
+
+                sensorDataPushed = true;
+                ConnectionPushed = false;
+                NetworkPushed = false;
+                SettingsPushed = false;
+
+                // darken background color
+
+                panelSensorData.BackColor = Dark;
+                panelConnection.BackColor = MediumDark;
+                panelNetwork.BackColor = MediumDark;
+                panelSettings.BackColor = MediumDark;
+
+            }
+        }
+
+        private void panelConnection_Click(object sender, EventArgs e)
+        {
+            // Switching Forms
+
+            if (ConnectionPushed == false)
+
+            {
+                // create panel
+
+                this.panelMain.Controls.Clear();
+                FormConnection FrmConnection = new FormConnection();
+                FrmConnection.TopLevel = false;
+                FrmConnection.Dock = DockStyle.Fill;
+                FrmConnection.TopMost = true;
+
+                this.panelMain.Controls.Add(FrmConnection);
+                FrmConnection.Show();
+
+                // set pushed bool
+
+                sensorDataPushed = false;
+                ConnectionPushed = true;
+                NetworkPushed = false;
+                SettingsPushed = false;
+
+                // darken background color
+
+                panelSensorData.BackColor = MediumDark;
+                panelConnection.BackColor = Dark;
+                panelNetwork.BackColor = MediumDark;
+                panelSettings.BackColor = MediumDark;
+            }
+
+            
+        }
+
+        private void panelNetwork_Click(object sender, EventArgs e)
+        {
+            // Switching Forms
+
+            if (NetworkPushed == false)
+            {
+                // create panel
+
+                this.panelMain.Controls.Clear();
+                FormNetwork FrmNetwork = new FormNetwork();
+                FrmNetwork.TopLevel = false;
+                FrmNetwork.Dock = DockStyle.Fill;
+                FrmNetwork.TopMost = true;
+
+                this.panelMain.Controls.Add(FrmNetwork);
+                FrmNetwork.Show();
+
+                // set pushed bool
+
+                sensorDataPushed = false;
+                ConnectionPushed = false;
+                NetworkPushed = true;
+                SettingsPushed = false;
+
+                // darken background color
+
+                panelSensorData.BackColor = MediumDark;
+                panelConnection.BackColor = MediumDark;
+                panelNetwork.BackColor = Dark;
+                panelSettings.BackColor = MediumDark;
+
+            }
+
+        }
+
+        private void panelSettings_Click(object sender, EventArgs e)
+        {
+            // Switching Forms
+
+            if (SettingsPushed == false)
+            {
+                // create panel
+
+                this.panelMain.Controls.Clear();
+                FormSettings FrmSettings = new FormSettings();
+                FrmSettings.TopLevel = false;
+                FrmSettings.Dock = DockStyle.Fill;
+                FrmSettings.TopMost = true;
+
+                this.panelMain.Controls.Add(FrmSettings);
+                FrmSettings.Show();
+
+                // set pushed bool
+
+                sensorDataPushed = false;
+                ConnectionPushed = false;
+                NetworkPushed = false;
+                SettingsPushed = true;
+
+                // darken background color
+
+                panelSensorData.BackColor = MediumDark;
+                panelConnection.BackColor = MediumDark;
+                panelNetwork.BackColor = MediumDark;
+                panelSettings.BackColor = Dark;
+
+            }
+
+        }
+
+        private void pictureBoxUserImage_Click(object sender, EventArgs e)
+        {
+            panelUserProfile.Visible = true;
+           this.panelUserProfile.Location = new Point(217, 85);
+        }
+
+        // Simulate tab-panel buttonclick
+
+
+        private void labelSensorDataTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelSensorData, null);
+        }
+
+        private void pictureBoxSensorDataTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelSensorData, null);
+        }
+
+        private void labelConnectionTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelConnection, null);
+        }
+
+        private void pictureBoxConnectionTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelConnection, null);
+        }
+
+        private void labelNetworkTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelNetwork, null);
+        }
+
+
+
+        private void pictureBoxNetworkTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelNetwork, null);
+        }
+
+        private void labelSettingsTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelSettings, null);
+        }
+
+        private void pictureBoxSettingsTab_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(panelSettings, null);
+        }
+
+        private void pictureBoxUserImage_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxUserImage.Width = 96;
+            pictureBoxUserImage.Height = 96;
+
+            this.pictureBoxUserImage.Location = new Point(46, 23);
+        }
+
+        private void pictureBoxUserImage_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxUserImage.Width = 90;
+            pictureBoxUserImage.Height = 90;
+
+            this.pictureBoxUserImage.Location = new Point(49, 26);
+
+        }
+
+        private void pictureBoxAvatar1_MouseEnter(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar1.Location.X;
+            int y = pictureBoxAvatar1.Location.Y;
+
+            pictureBoxAvatar1.Width = 130;
+            pictureBoxAvatar1.Height = 130;
+
+            this.pictureBoxAvatar1.Location = new Point(x - 5, y - 5);
+        }
+
+        private void pictureBoxAvatar1_MouseLeave(object sender, EventArgs e)
+
+        {
+
+            int x = pictureBoxAvatar1.Location.X;
+            int y = pictureBoxAvatar1.Location.Y;
+
+            pictureBoxAvatar1.Width = 120;
+            pictureBoxAvatar1.Height = 120;
+
+            this.pictureBoxAvatar1.Location = new Point(x + 5, y + 5);
+        }
+
+        private void pictureBoxAvatar2_MouseEnter(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar2.Location.X;
+            int y = pictureBoxAvatar2.Location.Y;
+
+            pictureBoxAvatar2.Width = 130;
+            pictureBoxAvatar2.Height = 130;
+
+            this.pictureBoxAvatar2.Location = new Point(x - 5, y - 5);
+        }
+
+        private void pictureBoxAvatar2_MouseLeave(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar2.Location.X;
+            int y = pictureBoxAvatar2.Location.Y;
+
+            pictureBoxAvatar2.Width = 120;
+            pictureBoxAvatar2.Height = 120;
+
+            this.pictureBoxAvatar2.Location = new Point(x + 5, y + 5);
+        }
+
+        private void pictureBoxAvatar3_MouseEnter(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar3.Location.X;
+            int y = pictureBoxAvatar3.Location.Y;
+
+            pictureBoxAvatar3.Width = 130;
+            pictureBoxAvatar3.Height = 130;
+
+            this.pictureBoxAvatar3.Location = new Point(x - 5, y - 5);
+        }
+
+        private void pictureBoxAvatar3_MouseLeave(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar3.Location.X;
+            int y = pictureBoxAvatar3.Location.Y;
+
+            pictureBoxAvatar3.Width = 120;
+            pictureBoxAvatar3.Height = 120;
+
+            this.pictureBoxAvatar3.Location = new Point(x + 5, y + 5);
+        }
+
+        private void pictureBoxAvatar4_MouseEnter(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar4.Location.X;
+            int y = pictureBoxAvatar4.Location.Y;
+
+            pictureBoxAvatar4.Width = 130;
+            pictureBoxAvatar4.Height = 130;
+
+            this.pictureBoxAvatar4.Location = new Point(x - 5, y - 5);
+        }
+
+        private void pictureBoxAvatar4_MouseLeave(object sender, EventArgs e)
+        {
+            int x = pictureBoxAvatar4.Location.X;
+            int y = pictureBoxAvatar4.Location.Y;
+
+            pictureBoxAvatar4.Width = 120;
+            pictureBoxAvatar4.Height = 120;
+
+            this.pictureBoxAvatar4.Location = new Point(x + 5, y + 5);
+        }
+
+        private void pictureBoxAvatar1_Click(object sender, EventArgs e)
+        {
+            pictureBoxUserImageBig.Image = pictureBoxAvatar1.Image;
+        }
+
+        private void pictureBoxAvatar2_Click(object sender, EventArgs e)
+        {
+            pictureBoxUserImageBig.Image = pictureBoxAvatar2.Image;
+        }
+
+        private void pictureBoxAvatar3_Click(object sender, EventArgs e)
+        {
+            pictureBoxUserImageBig.Image = pictureBoxAvatar3.Image;
+        }
+
+        private void pictureBoxAvatar4_Click(object sender, EventArgs e)
+        {
+            pictureBoxUserImageBig.Image = pictureBoxAvatar4.Image;
+        }
+
+
+
+        private void buttonIPSearchConfirm_Click(object sender, EventArgs e)
+        {
+            textBoxUserName.Text = textBoxUpdateUserName.Text + labelUserNumber.Text;
+            pictureBoxUserImage.Image = pictureBoxUserImageBig.Image;
+            panelUserProfile.Visible = false;
+        }
+
+        private void buttonIPSearchCancle_Click(object sender, EventArgs e)
+        {
+            textBoxUpdateUserName.Text = textBoxUserName.Text;
+            pictureBoxUserImageBig.Image = pictureBoxUserImage.Image;
+            panelUserProfile.Visible = false;
+        }
+
+        private void panelBoarderUserProfileClose_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(buttonUserProfileCancle, null);
+        }
+
+        private void pictureBoxSearchBoarderClose_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(buttonUserProfileCancle, null);
+
+        }
+
+        private void panelBoarderSearch_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(panelUserProfile.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBoxSearchBoarderClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderUserProfileClose.BackColor = Dark;
+        }
+
+        private void pictureBoxSearchBoarderClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderUserProfileClose.BackColor = MediumDark;
+        }
+
+        private void panelBoarderUserProfileClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderUserProfileClose.BackColor = Dark;
+        }
+
+        private void panelBoarderUserProfileClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderUserProfileClose.BackColor = MediumDark;
+        }
     }
-    
+
+
+
+
+
+
 }
