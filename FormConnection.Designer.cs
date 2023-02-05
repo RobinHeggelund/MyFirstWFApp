@@ -379,7 +379,7 @@
             this.panelIPSearch.Controls.Add(this.panel10);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchCancle);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchConfirm);
-            this.panelIPSearch.Location = new System.Drawing.Point(243, 158);
+            this.panelIPSearch.Location = new System.Drawing.Point(522, 265);
             this.panelIPSearch.Name = "panelIPSearch";
             this.panelIPSearch.Size = new System.Drawing.Size(467, 325);
             this.panelIPSearch.TabIndex = 54;

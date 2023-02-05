@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.panelBackgroundTabSensorData = new System.Windows.Forms.Panel();
+            this.panelSensorSearch = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearch = new System.Windows.Forms.Panel();
+            this.panelBoarderSearchClose = new System.Windows.Forms.Panel();
+            this.pictureBoxSearchBoarderClose = new System.Windows.Forms.PictureBox();
+            this.panelSensorSearchListBackground = new System.Windows.Forms.Panel();
+            this.listBoxSensorList = new System.Windows.Forms.ListBox();
+            this.buttonSensorSearchCancle = new System.Windows.Forms.Button();
+            this.buttonSensorSearchConfirm = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.Label();
             this.comboBoxMeasureType = new System.Windows.Forms.ComboBox();
             this.comboBoxSignalType = new System.Windows.Forms.ComboBox();
@@ -55,6 +63,7 @@
             this.textBoxPreview = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSensorNameBack = new System.Windows.Forms.Panel();
+            this.pictureBoxButtonSearch = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.labelSensorName = new System.Windows.Forms.Label();
@@ -112,6 +121,11 @@
             this.labelMeasureTypeDigital = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panelBackgroundTabSensorData.SuspendLayout();
+            this.panelSensorSearch.SuspendLayout();
+            this.panelBoarderSensorSearch.SuspendLayout();
+            this.panelBoarderSearchClose.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchBoarderClose)).BeginInit();
+            this.panelSensorSearchListBackground.SuspendLayout();
             this.panelOptionsCommentsBack.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
@@ -123,6 +137,7 @@
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSensorNameBack.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).BeginInit();
             this.panel11.SuspendLayout();
             this.panelValueRangesBack.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -143,6 +158,7 @@
             // panelBackgroundTabSensorData
             // 
             this.panelBackgroundTabSensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.panelBackgroundTabSensorData.Controls.Add(this.panelSensorSearch);
             this.panelBackgroundTabSensorData.Controls.Add(this.toolStripStatusLabel1);
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxMeasureType);
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxSignalType);
@@ -162,6 +178,108 @@
             this.panelBackgroundTabSensorData.Name = "panelBackgroundTabSensorData";
             this.panelBackgroundTabSensorData.Size = new System.Drawing.Size(982, 635);
             this.panelBackgroundTabSensorData.TabIndex = 46;
+            // 
+            // panelSensorSearch
+            // 
+            this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearch);
+            this.panelSensorSearch.Controls.Add(this.panelSensorSearchListBackground);
+            this.panelSensorSearch.Controls.Add(this.buttonSensorSearchCancle);
+            this.panelSensorSearch.Controls.Add(this.buttonSensorSearchConfirm);
+            this.panelSensorSearch.Location = new System.Drawing.Point(503, 24);
+            this.panelSensorSearch.Name = "panelSensorSearch";
+            this.panelSensorSearch.Size = new System.Drawing.Size(467, 325);
+            this.panelSensorSearch.TabIndex = 55;
+            this.panelSensorSearch.Visible = false;
+            // 
+            // panelBoarderSensorSearch
+            // 
+            this.panelBoarderSensorSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearch.Controls.Add(this.panelBoarderSearchClose);
+            this.panelBoarderSensorSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBoarderSensorSearch.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.panelBoarderSensorSearch.Location = new System.Drawing.Point(0, 0);
+            this.panelBoarderSensorSearch.Name = "panelBoarderSensorSearch";
+            this.panelBoarderSensorSearch.Size = new System.Drawing.Size(467, 35);
+            this.panelBoarderSensorSearch.TabIndex = 58;
+            this.panelBoarderSensorSearch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBoarderSensorSearch_MouseDown);
+            // 
+            // panelBoarderSearchClose
+            // 
+            this.panelBoarderSearchClose.Controls.Add(this.pictureBoxSearchBoarderClose);
+            this.panelBoarderSearchClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBoarderSearchClose.Location = new System.Drawing.Point(432, 0);
+            this.panelBoarderSearchClose.Name = "panelBoarderSearchClose";
+            this.panelBoarderSearchClose.Size = new System.Drawing.Size(35, 35);
+            this.panelBoarderSearchClose.TabIndex = 0;
+            this.panelBoarderSearchClose.Click += new System.EventHandler(this.panelBoarderSearchClose_Click);
+            this.panelBoarderSearchClose.MouseEnter += new System.EventHandler(this.panelBoarderSearchClose_MouseEnter);
+            this.panelBoarderSearchClose.MouseLeave += new System.EventHandler(this.panelBoarderSearchClose_MouseLeave);
+            // 
+            // pictureBoxSearchBoarderClose
+            // 
+            this.pictureBoxSearchBoarderClose.Image = global::MyFirstWFApp.Properties.Resources.cancel;
+            this.pictureBoxSearchBoarderClose.Location = new System.Drawing.Point(8, 8);
+            this.pictureBoxSearchBoarderClose.Name = "pictureBoxSearchBoarderClose";
+            this.pictureBoxSearchBoarderClose.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxSearchBoarderClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSearchBoarderClose.TabIndex = 0;
+            this.pictureBoxSearchBoarderClose.TabStop = false;
+            this.pictureBoxSearchBoarderClose.Click += new System.EventHandler(this.pictureBoxSearchBoarderClose_Click);
+            this.pictureBoxSearchBoarderClose.MouseEnter += new System.EventHandler(this.pictureBoxSearchBoarderClose_MouseEnter);
+            this.pictureBoxSearchBoarderClose.MouseLeave += new System.EventHandler(this.pictureBoxSearchBoarderClose_MouseLeave);
+            // 
+            // panelSensorSearchListBackground
+            // 
+            this.panelSensorSearchListBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelSensorSearchListBackground.Controls.Add(this.listBoxSensorList);
+            this.panelSensorSearchListBackground.Location = new System.Drawing.Point(42, 58);
+            this.panelSensorSearchListBackground.Name = "panelSensorSearchListBackground";
+            this.panelSensorSearchListBackground.Size = new System.Drawing.Size(384, 161);
+            this.panelSensorSearchListBackground.TabIndex = 57;
+            // 
+            // listBoxSensorList
+            // 
+            this.listBoxSensorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.listBoxSensorList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxSensorList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBoxSensorList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listBoxSensorList.ForeColor = System.Drawing.SystemColors.Control;
+            this.listBoxSensorList.FormattingEnabled = true;
+            this.listBoxSensorList.ItemHeight = 21;
+            this.listBoxSensorList.Location = new System.Drawing.Point(8, 8);
+            this.listBoxSensorList.Name = "listBoxSensorList";
+            this.listBoxSensorList.Size = new System.Drawing.Size(402, 168);
+            this.listBoxSensorList.TabIndex = 6;
+            this.listBoxSensorList.SelectedValueChanged += new System.EventHandler(this.listBoxSensorList_SelectedValueChanged);
+            // 
+            // buttonSensorSearchCancle
+            // 
+            this.buttonSensorSearchCancle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
+            this.buttonSensorSearchCancle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSensorSearchCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSensorSearchCancle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSensorSearchCancle.Location = new System.Drawing.Point(56, 250);
+            this.buttonSensorSearchCancle.Name = "buttonSensorSearchCancle";
+            this.buttonSensorSearchCancle.Size = new System.Drawing.Size(165, 38);
+            this.buttonSensorSearchCancle.TabIndex = 56;
+            this.buttonSensorSearchCancle.Text = "Cancle";
+            this.buttonSensorSearchCancle.UseVisualStyleBackColor = false;
+            this.buttonSensorSearchCancle.Click += new System.EventHandler(this.buttonSensorSearchCancle_Click);
+            // 
+            // buttonSensorSearchConfirm
+            // 
+            this.buttonSensorSearchConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.buttonSensorSearchConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSensorSearchConfirm.Enabled = false;
+            this.buttonSensorSearchConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSensorSearchConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSensorSearchConfirm.Location = new System.Drawing.Point(237, 250);
+            this.buttonSensorSearchConfirm.Name = "buttonSensorSearchConfirm";
+            this.buttonSensorSearchConfirm.Size = new System.Drawing.Size(165, 38);
+            this.buttonSensorSearchConfirm.TabIndex = 55;
+            this.buttonSensorSearchConfirm.Text = "Confirm";
+            this.buttonSensorSearchConfirm.UseVisualStyleBackColor = false;
+            this.buttonSensorSearchConfirm.Click += new System.EventHandler(this.buttonSensorSearchConfirm_Click);
             // 
             // toolStripStatusLabel1
             // 
@@ -184,12 +302,11 @@
             this.comboBoxMeasureType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxMeasureType.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBoxMeasureType.FormattingEnabled = true;
-            this.comboBoxMeasureType.Location = new System.Drawing.Point(432, 737);
+            this.comboBoxMeasureType.Location = new System.Drawing.Point(664, 761);
             this.comboBoxMeasureType.Name = "comboBoxMeasureType";
             this.comboBoxMeasureType.Size = new System.Drawing.Size(315, 29);
             this.comboBoxMeasureType.TabIndex = 46;
             this.comboBoxMeasureType.Visible = false;
-            this.comboBoxMeasureType.SelectedIndexChanged += new System.EventHandler(this.comboBoxMeasureType_SelectedIndexChanged);
             // 
             // comboBoxSignalType
             // 
@@ -203,7 +320,7 @@
             "Analog",
             "Digital",
             "Fieldbus"});
-            this.comboBoxSignalType.Location = new System.Drawing.Point(73, 737);
+            this.comboBoxSignalType.Location = new System.Drawing.Point(5, 761);
             this.comboBoxSignalType.Name = "comboBoxSignalType";
             this.comboBoxSignalType.Size = new System.Drawing.Size(315, 29);
             this.comboBoxSignalType.TabIndex = 45;
@@ -438,7 +555,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::MyFirstWFApp.Properties.Resources.USN_logo_rgb_neg;
-            this.pictureBox3.Location = new System.Drawing.Point(500, 31);
+            this.pictureBox3.Location = new System.Drawing.Point(515, 31);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(445, 196);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -448,6 +565,7 @@
             // panelSensorNameBack
             // 
             this.panelSensorNameBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelSensorNameBack.Controls.Add(this.pictureBoxButtonSearch);
             this.panelSensorNameBack.Controls.Add(this.panel11);
             this.panelSensorNameBack.Controls.Add(this.panel4);
             this.panelSensorNameBack.Controls.Add(this.textBoxSensorName);
@@ -455,6 +573,20 @@
             this.panelSensorNameBack.Name = "panelSensorNameBack";
             this.panelSensorNameBack.Size = new System.Drawing.Size(466, 37);
             this.panelSensorNameBack.TabIndex = 24;
+            // 
+            // pictureBoxButtonSearch
+            // 
+            this.pictureBoxButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxButtonSearch.Image = global::MyFirstWFApp.Properties.Resources.search;
+            this.pictureBoxButtonSearch.Location = new System.Drawing.Point(432, 3);
+            this.pictureBoxButtonSearch.Name = "pictureBoxButtonSearch";
+            this.pictureBoxButtonSearch.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxButtonSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxButtonSearch.TabIndex = 54;
+            this.pictureBoxButtonSearch.TabStop = false;
+            this.pictureBoxButtonSearch.Click += new System.EventHandler(this.pictureBoxButtonSearch_Click);
+            this.pictureBoxButtonSearch.MouseEnter += new System.EventHandler(this.pictureBoxButtonSearch_MouseEnter);
+            this.pictureBoxButtonSearch.MouseLeave += new System.EventHandler(this.pictureBoxButtonSearch_MouseLeave);
             // 
             // panel11
             // 
@@ -503,7 +635,7 @@
             this.textBoxSensorName.ForeColor = System.Drawing.SystemColors.Control;
             this.textBoxSensorName.Location = new System.Drawing.Point(136, 8);
             this.textBoxSensorName.Name = "textBoxSensorName";
-            this.textBoxSensorName.Size = new System.Drawing.Size(329, 22);
+            this.textBoxSensorName.Size = new System.Drawing.Size(290, 22);
             this.textBoxSensorName.TabIndex = 0;
             this.textBoxSensorName.TextChanged += new System.EventHandler(this.textBoxSensorName_TextChanged);
             // 
@@ -1154,6 +1286,11 @@
             this.Load += new System.EventHandler(this.FormSensorData_Load);
             this.panelBackgroundTabSensorData.ResumeLayout(false);
             this.panelBackgroundTabSensorData.PerformLayout();
+            this.panelSensorSearch.ResumeLayout(false);
+            this.panelBoarderSensorSearch.ResumeLayout(false);
+            this.panelBoarderSearchClose.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchBoarderClose)).EndInit();
+            this.panelSensorSearchListBackground.ResumeLayout(false);
             this.panelOptionsCommentsBack.ResumeLayout(false);
             this.panelOptionsCommentsBack.PerformLayout();
             this.panel23.ResumeLayout(false);
@@ -1171,6 +1308,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelSensorNameBack.ResumeLayout(false);
             this.panelSensorNameBack.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panelValueRangesBack.ResumeLayout(false);
@@ -1286,5 +1424,14 @@
         private Label toolStripStatusLabel1;
         private ComboBox comboBoxMeasureType;
         private ComboBox comboBoxSignalType;
+        private PictureBox pictureBoxButtonSearch;
+        private Panel panelSensorSearch;
+        private Panel panelBoarderSensorSearch;
+        private Panel panelBoarderSearchClose;
+        private PictureBox pictureBoxSearchBoarderClose;
+        private Panel panelSensorSearchListBackground;
+        private ListBox listBoxSensorList;
+        private Button buttonSensorSearchCancle;
+        private Button buttonSensorSearchConfirm;
     }
 }

@@ -46,45 +46,8 @@ namespace MyFirstWFApp
 
         // Initialization end
 
+        bool connected = false;
 
-
-
-        
-
-        private void buttonSend_Click(object sender, EventArgs e)
-        {
-            //TCP Server start
-            // make an endpoint for communication:
-
-            IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), Convert.ToInt32(textBoxInputPort.Text));
-            Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-            client.Connect(endpoint);
-
-            if (client.Connected)
-            {
-
-                Form1 frm = new Form1();
-                frm.toolStripStatusLabel1.Text = "Connected";
-                textBoxCommunication.AppendText("Connected to server.");
-
-            }
-
-
-            //client send
-            client.Send(Encoding.ASCII.GetBytes(textBoxSend.Text));
-
-
-            //client recieve
-            byte[] buffer = new byte[1024];
-            int bytesRecieved = client.Receive(buffer);
-            textBoxCommunication.AppendText("Recieved: " + Encoding.ASCII.GetString(buffer, 0, bytesRecieved));
-
-
-
-            //output info
-            Console.WriteLine("Server started. Waiting for connection..");
-        }
 
         public void buttonConnect_Click(object sender, EventArgs e)
         {
@@ -92,9 +55,9 @@ namespace MyFirstWFApp
             if (textBoxIP.Text.Length == 0)
             {
                 SystemSounds.Beep.Play();
-                
+
                 textBoxIP.Focus();
-                
+
                 return;
 
             }
@@ -106,9 +69,13 @@ namespace MyFirstWFApp
                 return;
             }
 
+            else if (textBoxSend.Text.Length == 0)
+            {
+                SystemSounds.Beep.Play();
+                textBoxSend.Focus();
+                return;
 
-
-
+            }
 
             //TCP Server start
             // make an endpoint for communication:
@@ -116,17 +83,49 @@ namespace MyFirstWFApp
             IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), Convert.ToInt32(textBoxInputPort.Text));
             Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-              client.Connect(endpoint);
+            client.Connect(endpoint);
+            
 
             if (client.Connected)
             {
 
-                Form1 frm = new Form1();
-                frm.toolStripStatusLabel1.Text = "Connected";
-                textBoxCommunication.AppendText("Connected to server.");
+                
+
+                if (connected == false)
+                {
+                    textBoxCommunication.AppendText("Connected to server" + "\r\n");
+                    connected = true;
+                }
+                
+                
+                buttonSend.Enabled = true;
 
             }
 
+            //client send
+            if (textBoxSend.Text.Length >0)
+            {
+                client.Send(Encoding.ASCII.GetBytes(textBoxSend.Text));
+            }
+
+            else
+            {
+                client.Send(Encoding.ASCII.GetBytes("EMPTY"));
+            }
+                
+            
+
+
+            //client recieve
+            byte[] buffer = new byte[1024];
+            int bytesRecieved = client.Receive(buffer);
+            textBoxCommunication.AppendText(Encoding.ASCII.GetString(buffer, 0, bytesRecieved) + "\r\n");
+
+        }
+
+        private void buttonSend_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(buttonConnect, null);
         }
 
         private void textBoxSend_TextChanged(object sender, EventArgs e)
@@ -177,7 +176,7 @@ namespace MyFirstWFApp
           
         {
             panelIPSearch.Visible = true;
-            this.panelIPSearch.Location = new Point(243, 158);
+            this.panelIPSearch.Location = new Point(260, 209);
 
             IPAddress[] addresslist = Dns.GetHostAddresses(Dns.GetHostName());
             foreach (IPAddress address in addresslist)

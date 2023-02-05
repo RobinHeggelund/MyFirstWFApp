@@ -40,7 +40,11 @@ namespace MyFirstWFApp
 
         // Create sub panels
 
- 
+        private FormSensorData FrmSensorData;
+        private FormConnection FrmConnection;
+        private FormNetwork FrmNetwork;
+        private FormSettings FrmSettings;
+
 
 
 
@@ -87,9 +91,41 @@ namespace MyFirstWFApp
         {
             toolStripStatusLabel1.Text = "Ready - No Connection";
 
+
+
+
+            // create panel
+            
+            this.panelMain.Controls.Clear();
+            FrmSensorData = new FormSensorData();
+            FrmSensorData.TopLevel = false;
+            FrmSensorData.Dock = DockStyle.Fill;
+            FrmSensorData.TopMost = true;
+            this.panelMain.Controls.Add(FrmSensorData);
+
+            FrmConnection = new FormConnection();
+            FrmConnection.TopLevel = false;
+            FrmConnection.Dock = DockStyle.Fill;
+            FrmConnection.TopMost = true;
+            this.panelMain.Controls.Add(FrmConnection);
+
+            FrmNetwork = new FormNetwork();
+            FrmNetwork.TopLevel = false;
+            FrmNetwork.Dock = DockStyle.Fill;
+            FrmNetwork.TopMost = true;
+            this.panelMain.Controls.Add(FrmNetwork);
+
+            FrmSettings = new FormSettings();
+            FrmSettings.TopLevel = false;
+            FrmSettings.Dock = DockStyle.Fill;
+            FrmSettings.TopMost = true;
+            this.panelMain.Controls.Add(FrmSettings);
+
             // set defaut tab
 
             InvokeOnClick(panelSensorData, null);
+
+
 
 
             // get IP adresses
@@ -146,6 +182,8 @@ namespace MyFirstWFApp
             return newInstrument;
         }
 
+        
+        
 
        
 
@@ -539,29 +577,26 @@ namespace MyFirstWFApp
         private void panelSensorData_Click(object sender, EventArgs e)
         {
 
+
             // Switching Forms
 
             if (sensorDataPushed == false)
+
             {
-                // create panel
-
-                this.panelMain.Controls.Clear();
-                FormSensorData FrmSensorData = new FormSensorData();
-                FrmSensorData.TopLevel = false;
-                FrmSensorData.Dock = DockStyle.Fill;
-                FrmSensorData.TopMost = true;
-
-                this.panelMain.Controls.Add(FrmSensorData);
+                // Show Panel
+                
+                FrmSensorData.BringToFront();
                 FrmSensorData.Show();
 
-                // set pushed bool
+
+                // Set Pushed Bool
 
                 sensorDataPushed = true;
                 ConnectionPushed = false;
                 NetworkPushed = false;
                 SettingsPushed = false;
 
-                // darken background color
+                // Darken buttons background color
 
                 panelSensorData.BackColor = Dark;
                 panelConnection.BackColor = MediumDark;
@@ -569,6 +604,8 @@ namespace MyFirstWFApp
                 panelSettings.BackColor = MediumDark;
 
             }
+
+            
         }
 
         private void panelConnection_Click(object sender, EventArgs e)
@@ -578,25 +615,19 @@ namespace MyFirstWFApp
             if (ConnectionPushed == false)
 
             {
-                // create panel
+                // Show Panel
 
-                this.panelMain.Controls.Clear();
-                FormConnection FrmConnection = new FormConnection();
-                FrmConnection.TopLevel = false;
-                FrmConnection.Dock = DockStyle.Fill;
-                FrmConnection.TopMost = true;
-
-                this.panelMain.Controls.Add(FrmConnection);
+                FrmConnection.BringToFront();
                 FrmConnection.Show();
 
-                // set pushed bool
+                // Set Pushed Bool
 
                 sensorDataPushed = false;
                 ConnectionPushed = true;
                 NetworkPushed = false;
                 SettingsPushed = false;
 
-                // darken background color
+                // Darken buttons background color
 
                 panelSensorData.BackColor = MediumDark;
                 panelConnection.BackColor = Dark;
@@ -613,25 +644,18 @@ namespace MyFirstWFApp
 
             if (NetworkPushed == false)
             {
-                // create panel
 
-                this.panelMain.Controls.Clear();
-                FormNetwork FrmNetwork = new FormNetwork();
-                FrmNetwork.TopLevel = false;
-                FrmNetwork.Dock = DockStyle.Fill;
-                FrmNetwork.TopMost = true;
-
-                this.panelMain.Controls.Add(FrmNetwork);
+                FrmNetwork.BringToFront();
                 FrmNetwork.Show();
 
-                // set pushed bool
+                // Set Pushed Bool
 
                 sensorDataPushed = false;
                 ConnectionPushed = false;
                 NetworkPushed = true;
                 SettingsPushed = false;
 
-                // darken background color
+                // Darken buttons background color
 
                 panelSensorData.BackColor = MediumDark;
                 panelConnection.BackColor = MediumDark;
@@ -648,25 +672,18 @@ namespace MyFirstWFApp
 
             if (SettingsPushed == false)
             {
-                // create panel
-
-                this.panelMain.Controls.Clear();
-                FormSettings FrmSettings = new FormSettings();
-                FrmSettings.TopLevel = false;
-                FrmSettings.Dock = DockStyle.Fill;
-                FrmSettings.TopMost = true;
-
-                this.panelMain.Controls.Add(FrmSettings);
+                
+                FrmSettings.BringToFront();
                 FrmSettings.Show();
 
-                // set pushed bool
+                // Set Pushed Bool
 
                 sensorDataPushed = false;
                 ConnectionPushed = false;
                 NetworkPushed = false;
                 SettingsPushed = true;
 
-                // darken background color
+                // Darken buttons background color
 
                 panelSensorData.BackColor = MediumDark;
                 panelConnection.BackColor = MediumDark;

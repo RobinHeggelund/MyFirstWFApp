@@ -378,7 +378,7 @@ namespace MyFirstWFApp
 
                 instrumentList.Add(instrument);
 
-                // Update register preview
+                // Update register preview with standard values
 
                 RegisterIndex += 1;
                 textBoxPreview.AppendText("Sensor Index: " + RegisterIndex + "\r\n");
@@ -391,7 +391,7 @@ namespace MyFirstWFApp
                 textBoxPreview.AppendText("Protocol: " + listBoxOptions.Text + "\r\n");
                 textBoxPreview.AppendText("Comment: " + textBoxComments.Text + "\r\n");
 
-                // Specific sensor registration data
+                // Specific sensor registration with specific analog values
 
                 if (comboBoxSignalType.Text == "Analog")
                 {
@@ -403,24 +403,48 @@ namespace MyFirstWFApp
                     textBoxPreview.AppendText("Measure Unit: " + textBoxUnit.Text + "\r\n");
                 }
 
-                else if (comboBoxSignalType.Text == "Digital")
+                if (comboBoxSignalType.Text == "Digital")
                 {
                     digitalIndex += 1;
                 }
 
-                else if (comboBoxSignalType.Text == "Fieldbus")
+                if (comboBoxSignalType.Text == "Fieldbus")
                 {
                     fieldbusIndex += 1;
                 }
-                else { }
-
-                textBoxPreview.AppendText("----------------------------" + "\r\n");
 
             }
 
             else
             {
-                MessageBox.Show("Error: Sensor already registered", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Inform user about already registered sensor and ask if they want to overwrite said sensor in list
+
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show("Sensor already registered. Do you want to overwrite?", 
+                    "Sensor already registered", buttons, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Overwrite sensor in list
+
+                    instrumentList.RemoveAll(x => x.SensorName == textBoxSensorName.Text);
+
+                    // Create new instrument and add to list
+
+                    Instrument instrument = new Instrument(textBoxSensorName.Text,
+                                                      maskedTextBoxSerialNumber.Text,
+                                                      comboBoxSignalType.Text,
+                                                      comboBoxMeasureType.Text,
+                                                      listBoxOptions.Text,
+                                                      textBoxComments.Text,
+                                                      lvrValue,
+                                                      uvrValue,
+                                                      textBoxUnit.Text);
+                    instrumentList.Add(instrument);
+
+
+
+                }
             }
         }
 
@@ -939,37 +963,19 @@ namespace MyFirstWFApp
 
         private void comboBoxSignalType_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            comboBoxMeasureType.Text = "";
         }
 
-        private void comboBoxMeasureType_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void buttonRegisterNew_Click_1(object sender, EventArgs e)
         {
             if (DataEntryIsValid())
             {
                 // Register new sensor
-
-
-
                 EnterDataIntoTextPreviewBox();
 
-
-
             }
-
-
-
-
-
-
-
-
-
-
 
             else
             {
@@ -1015,6 +1021,208 @@ namespace MyFirstWFApp
 
 
             }
+
+        }
+
+        private void pictureBoxButtonSearch_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxButtonSearch.Image = Properties.Resources.loupe;
+        }
+
+        private void pictureBoxButtonSearch_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxButtonSearch.Image = Properties.Resources.search;
+        }
+
+        private void pictureBoxButtonSearch_Click(object sender, EventArgs e)
+        {
+            
+            // Show instrument search panel
+            
+            panelSensorSearch.Visible = true;
+            this.panelSensorSearch.Location = new Point(243, 158);
+
+
+
+            // clear sensor listbox and add each instrument in list
+
+            listBoxSensorList.Items.Clear();
+            int index = 0;
+            if (instrumentList.Count > 0)
+            {
+                foreach (Instrument instrument in instrumentList)
+                {
+
+                    listBoxSensorList.Items.Add(instrumentList[index].SensorName);
+                    index += 1;
+
+                }
+            }
+            
+        }
+
+        private void buttonSensorSearchCancle_Click(object sender, EventArgs e)
+        {
+            panelSensorSearch.Visible = false;
+            buttonSensorSearchConfirm.Enabled = false;
+        }
+
+        private void pictureBoxSearchBoarderClose_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(buttonSensorSearchCancle, null);
+        }
+
+        private void panelBoarderSearchClose_Click(object sender, EventArgs e)
+        {
+            InvokeOnClick(buttonSensorSearchCancle, null);
+        }
+
+        private void panelBoarderSearchClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderSearchClose.BackColor = Dark;
+        }
+
+        private void pictureBoxSearchBoarderClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelBoarderSearchClose.BackColor = Dark;
+        }
+
+        private void panelBoarderSearchClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderSearchClose.BackColor = MediumDark ;
+        }
+
+        private void pictureBoxSearchBoarderClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelBoarderSearchClose.BackColor = MediumDark;
+        }
+
+        private void panelBoarderSensorSearch_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(panelSensorSearch.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void listBoxSensorList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            buttonSensorSearchConfirm.Enabled = true;
+        }
+
+        private void buttonSensorSearchConfirm_Click(object sender, EventArgs e)
+        {
+            // Hide window
+
+            panelSensorSearch.Visible = false;
+
+            // Clear all boxes
+
+            textBoxSensorName.Clear();
+            maskedTextBoxSerialNumber.Clear();
+            textBoxComments.Clear();
+            textBoxLVR.Text = 0.0f.ToString();
+            textBoxURV.Text = 0.0f.ToString();
+            textBoxUnit.Clear();
+
+
+            // Fill boxes with selected sensor data
+
+            int index = listBoxSensorList.SelectedIndex;
+            textBoxSensorName.Text = instrumentList[index].SensorName;
+            maskedTextBoxSerialNumber.Text = instrumentList[index].SerialNumber;
+            textBoxComments.Text = instrumentList[index].Comment;
+            textBoxLVR.Text = instrumentList[index].LRV.ToString();
+            textBoxURV.Text = instrumentList[index].URV.ToString();
+            textBoxUnit.Text = instrumentList[index].Unit;
+
+            // Set Options to instrument data
+
+            string optionSelected;
+
+            optionSelected = instrumentList[index].Options;
+
+            foreach (var item in listBoxOptions.Items)
+            {
+                if (optionSelected == item.ToString())
+                {
+                    listBoxOptions.SelectedIndex = listBoxOptions.Items.IndexOf(item);
+                    break;
+                }
+            }
+
+            // Push Signal Type Buttons
+
+            if (instrumentList[index].SignalType == "Analog")
+            {
+                InvokeOnClick(buttonAnalog, null);
+            }
+            
+            if (instrumentList[index].SignalType == "Digital")
+            {
+                InvokeOnClick(buttonDigital, null);
+            }
+
+            if (instrumentList[index].SignalType == "Fieldbus")
+            {
+                InvokeOnClick(buttonFieldbus, null);
+            }
+
+            // Push Measure Type Buttons
+
+            if (instrumentList[index].MeasureType == analogSignals[0])
+                
+            {
+                InvokeOnClick(buttonMT_Analog_1, null);
+            }
+
+            if (instrumentList[index].MeasureType == analogSignals[1])
+            {
+                InvokeOnClick(buttonMT_Analog_2, null);
+            }
+
+            if (instrumentList[index].MeasureType == analogSignals[2])
+            {
+                InvokeOnClick(buttonMT_Analog_3, null);
+            }
+
+            if (instrumentList[index].MeasureType == digitalSignals[0])
+            {
+                InvokeOnClick(buttonMT_Digital_1, null);
+            }
+
+            if (instrumentList[index].MeasureType == digitalSignals[1])
+            {
+                InvokeOnClick(buttonMT_Digital_2, null);
+            }
+
+            if (instrumentList[index].MeasureType == fieldbusSignals[0])
+            {
+                InvokeOnClick(buttonMT_Fieldbus_1, null);
+            }
+
+            if (instrumentList[index].MeasureType == fieldbusSignals[1])
+            {
+                InvokeOnClick(buttonMT_Fieldbus_2, null);
+            }
+
+            if (instrumentList[index].MeasureType == fieldbusSignals[2])
+            {
+                InvokeOnClick(buttonMT_Fieldbus_3, null);
+            }
+
+            if (instrumentList[index].MeasureType == fieldbusSignals[3])
+            {
+                InvokeOnClick(buttonMT_Fieldbus_4, null);
+            }
+
+
+
+
+
+
+
+
+
+
 
         }
     }
