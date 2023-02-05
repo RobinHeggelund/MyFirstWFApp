@@ -61,6 +61,23 @@
             this.panel32 = new System.Windows.Forms.Panel();
             this.Comments = new System.Windows.Forms.Label();
             this.textBoxPreview = new System.Windows.Forms.TextBox();
+            this.panelMeasureTypeFieldbusBack = new System.Windows.Forms.Panel();
+            this.buttonMT_Fieldbus_4 = new System.Windows.Forms.Button();
+            this.buttonMT_Fieldbus_3 = new System.Windows.Forms.Button();
+            this.buttonMT_Fieldbus_2 = new System.Windows.Forms.Button();
+            this.buttonMT_Fieldbus_1 = new System.Windows.Forms.Button();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.labelMeasureTypeFieldbus = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panelMeasureTypeAnalogBack = new System.Windows.Forms.Panel();
+            this.buttonMT_Analog_3 = new System.Windows.Forms.Button();
+            this.buttonMT_Analog_2 = new System.Windows.Forms.Button();
+            this.buttonMT_Analog_1 = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.labelMeasureTypeAnalog = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSensorNameBack = new System.Windows.Forms.Panel();
             this.pictureBoxButtonSearch = new System.Windows.Forms.PictureBox();
@@ -96,23 +113,6 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.labelSignalType = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panelMeasureTypeAnalogBack = new System.Windows.Forms.Panel();
-            this.buttonMT_Analog_3 = new System.Windows.Forms.Button();
-            this.buttonMT_Analog_2 = new System.Windows.Forms.Button();
-            this.buttonMT_Analog_1 = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.labelMeasureTypeAnalog = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panelMeasureTypeFieldbusBack = new System.Windows.Forms.Panel();
-            this.buttonMT_Fieldbus_4 = new System.Windows.Forms.Button();
-            this.buttonMT_Fieldbus_3 = new System.Windows.Forms.Button();
-            this.buttonMT_Fieldbus_2 = new System.Windows.Forms.Button();
-            this.buttonMT_Fieldbus_1 = new System.Windows.Forms.Button();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.labelMeasureTypeFieldbus = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
             this.panelMeasureTypeDigitalBack = new System.Windows.Forms.Panel();
             this.buttonMT_Digital_2 = new System.Windows.Forms.Button();
             this.buttonMT_Digital_1 = new System.Windows.Forms.Button();
@@ -135,6 +135,10 @@
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panelMeasureTypeFieldbusBack.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panelMeasureTypeAnalogBack.SuspendLayout();
+            this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSensorNameBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).BeginInit();
@@ -147,10 +151,6 @@
             this.panel10.SuspendLayout();
             this.panelBackSignalType.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.panelMeasureTypeAnalogBack.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panelMeasureTypeFieldbusBack.SuspendLayout();
-            this.panel29.SuspendLayout();
             this.panelMeasureTypeDigitalBack.SuspendLayout();
             this.panel19.SuspendLayout();
             this.SuspendLayout();
@@ -164,14 +164,14 @@
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxSignalType);
             this.panelBackgroundTabSensorData.Controls.Add(this.button1);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelOptionsCommentsBack);
+            this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeFieldbusBack);
+            this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeAnalogBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.pictureBox3);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelSensorNameBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.buttonRegisterNew);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelValueRangesBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelSerialNumberBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelBackSignalType);
-            this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeAnalogBack);
-            this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeFieldbusBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeDigitalBack);
             this.panelBackgroundTabSensorData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackgroundTabSensorData.Location = new System.Drawing.Point(0, 0);
@@ -351,7 +351,7 @@
             this.panelOptionsCommentsBack.Location = new System.Drawing.Point(13, 266);
             this.panelOptionsCommentsBack.Name = "panelOptionsCommentsBack";
             this.panelOptionsCommentsBack.Size = new System.Drawing.Size(950, 306);
-            this.panelOptionsCommentsBack.TabIndex = 40;
+            this.panelOptionsCommentsBack.TabIndex = 10;
             // 
             // panel23
             // 
@@ -408,7 +408,7 @@
             this.panel34.Location = new System.Drawing.Point(0, 165);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(468, 121);
-            this.panel34.TabIndex = 39;
+            this.panel34.TabIndex = 8;
             // 
             // textBoxComments
             // 
@@ -420,7 +420,7 @@
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
             this.textBoxComments.Size = new System.Drawing.Size(458, 102);
-            this.textBoxComments.TabIndex = 7;
+            this.textBoxComments.TabIndex = 13;
             // 
             // panel5
             // 
@@ -477,7 +477,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 79);
-            this.panel3.TabIndex = 37;
+            this.panel3.TabIndex = 7;
             // 
             // listBoxOptions
             // 
@@ -495,7 +495,7 @@
             this.listBoxOptions.Location = new System.Drawing.Point(8, 8);
             this.listBoxOptions.Name = "listBoxOptions";
             this.listBoxOptions.Size = new System.Drawing.Size(137, 63);
-            this.listBoxOptions.TabIndex = 6;
+            this.listBoxOptions.TabIndex = 12;
             // 
             // panel9
             // 
@@ -552,6 +552,237 @@
             this.textBoxPreview.TabIndex = 20;
             this.textBoxPreview.TabStop = false;
             // 
+            // panelMeasureTypeFieldbusBack
+            // 
+            this.panelMeasureTypeFieldbusBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_4);
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_3);
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_2);
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_1);
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.panel29);
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.panel31);
+            this.panelMeasureTypeFieldbusBack.Location = new System.Drawing.Point(13, 166);
+            this.panelMeasureTypeFieldbusBack.Name = "panelMeasureTypeFieldbusBack";
+            this.panelMeasureTypeFieldbusBack.Size = new System.Drawing.Size(466, 37);
+            this.panelMeasureTypeFieldbusBack.TabIndex = 5;
+            this.panelMeasureTypeFieldbusBack.Visible = false;
+            // 
+            // buttonMT_Fieldbus_4
+            // 
+            this.buttonMT_Fieldbus_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Fieldbus_4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Fieldbus_4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Fieldbus_4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Fieldbus_4.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Fieldbus_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Fieldbus_4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Fieldbus_4.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Fieldbus_4.Location = new System.Drawing.Point(381, 0);
+            this.buttonMT_Fieldbus_4.Name = "buttonMT_Fieldbus_4";
+            this.buttonMT_Fieldbus_4.Size = new System.Drawing.Size(86, 37);
+            this.buttonMT_Fieldbus_4.TabIndex = 8;
+            this.buttonMT_Fieldbus_4.Text = "Profibus";
+            this.buttonMT_Fieldbus_4.UseVisualStyleBackColor = false;
+            this.buttonMT_Fieldbus_4.Click += new System.EventHandler(this.buttonMT_Fieldbus_4_Click_1);
+            // 
+            // buttonMT_Fieldbus_3
+            // 
+            this.buttonMT_Fieldbus_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Fieldbus_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Fieldbus_3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Fieldbus_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Fieldbus_3.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Fieldbus_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Fieldbus_3.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Fieldbus_3.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Fieldbus_3.Location = new System.Drawing.Point(295, 0);
+            this.buttonMT_Fieldbus_3.Name = "buttonMT_Fieldbus_3";
+            this.buttonMT_Fieldbus_3.Size = new System.Drawing.Size(86, 37);
+            this.buttonMT_Fieldbus_3.TabIndex = 7;
+            this.buttonMT_Fieldbus_3.Text = "Modbus TCP";
+            this.buttonMT_Fieldbus_3.UseVisualStyleBackColor = false;
+            this.buttonMT_Fieldbus_3.Click += new System.EventHandler(this.buttonMT_Fieldbus_3_Click_1);
+            // 
+            // buttonMT_Fieldbus_2
+            // 
+            this.buttonMT_Fieldbus_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Fieldbus_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Fieldbus_2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Fieldbus_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Fieldbus_2.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Fieldbus_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Fieldbus_2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Fieldbus_2.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Fieldbus_2.Location = new System.Drawing.Point(209, 0);
+            this.buttonMT_Fieldbus_2.Name = "buttonMT_Fieldbus_2";
+            this.buttonMT_Fieldbus_2.Size = new System.Drawing.Size(86, 37);
+            this.buttonMT_Fieldbus_2.TabIndex = 6;
+            this.buttonMT_Fieldbus_2.Text = "Modbus RTU";
+            this.buttonMT_Fieldbus_2.UseVisualStyleBackColor = false;
+            this.buttonMT_Fieldbus_2.Click += new System.EventHandler(this.buttonMT_Fieldbus_2_Click_1);
+            // 
+            // buttonMT_Fieldbus_1
+            // 
+            this.buttonMT_Fieldbus_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Fieldbus_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Fieldbus_1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Fieldbus_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Fieldbus_1.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Fieldbus_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Fieldbus_1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Fieldbus_1.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Fieldbus_1.Location = new System.Drawing.Point(124, 0);
+            this.buttonMT_Fieldbus_1.Name = "buttonMT_Fieldbus_1";
+            this.buttonMT_Fieldbus_1.Size = new System.Drawing.Size(85, 37);
+            this.buttonMT_Fieldbus_1.TabIndex = 5;
+            this.buttonMT_Fieldbus_1.Text = "BussRP";
+            this.buttonMT_Fieldbus_1.UseVisualStyleBackColor = false;
+            this.buttonMT_Fieldbus_1.Click += new System.EventHandler(this.buttonMT_Fieldbus_1_Click_1);
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel29.Controls.Add(this.panel30);
+            this.panel29.Controls.Add(this.labelMeasureTypeFieldbus);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(124, 37);
+            this.panel29.TabIndex = 26;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel30.Location = new System.Drawing.Point(283, 25);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(430, 37);
+            this.panel30.TabIndex = 25;
+            // 
+            // labelMeasureTypeFieldbus
+            // 
+            this.labelMeasureTypeFieldbus.AutoSize = true;
+            this.labelMeasureTypeFieldbus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMeasureTypeFieldbus.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelMeasureTypeFieldbus.Location = new System.Drawing.Point(4, 8);
+            this.labelMeasureTypeFieldbus.Name = "labelMeasureTypeFieldbus";
+            this.labelMeasureTypeFieldbus.Size = new System.Drawing.Size(108, 21);
+            this.labelMeasureTypeFieldbus.TabIndex = 15;
+            this.labelMeasureTypeFieldbus.Text = "MeasureType";
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel31.Location = new System.Drawing.Point(283, 25);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(430, 37);
+            this.panel31.TabIndex = 25;
+            // 
+            // panelMeasureTypeAnalogBack
+            // 
+            this.panelMeasureTypeAnalogBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelMeasureTypeAnalogBack.Controls.Add(this.buttonMT_Analog_3);
+            this.panelMeasureTypeAnalogBack.Controls.Add(this.buttonMT_Analog_2);
+            this.panelMeasureTypeAnalogBack.Controls.Add(this.buttonMT_Analog_1);
+            this.panelMeasureTypeAnalogBack.Controls.Add(this.panel16);
+            this.panelMeasureTypeAnalogBack.Controls.Add(this.panel18);
+            this.panelMeasureTypeAnalogBack.Location = new System.Drawing.Point(13, 166);
+            this.panelMeasureTypeAnalogBack.Name = "panelMeasureTypeAnalogBack";
+            this.panelMeasureTypeAnalogBack.Size = new System.Drawing.Size(466, 37);
+            this.panelMeasureTypeAnalogBack.TabIndex = 3;
+            this.panelMeasureTypeAnalogBack.Visible = false;
+            // 
+            // buttonMT_Analog_3
+            // 
+            this.buttonMT_Analog_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Analog_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Analog_3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Analog_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Analog_3.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Analog_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Analog_3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Analog_3.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Analog_3.Location = new System.Drawing.Point(352, 0);
+            this.buttonMT_Analog_3.Name = "buttonMT_Analog_3";
+            this.buttonMT_Analog_3.Size = new System.Drawing.Size(114, 37);
+            this.buttonMT_Analog_3.TabIndex = 7;
+            this.buttonMT_Analog_3.Text = "2-12V DC";
+            this.buttonMT_Analog_3.UseVisualStyleBackColor = false;
+            this.buttonMT_Analog_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonMT_Analog_3_Click_1);
+            // 
+            // buttonMT_Analog_2
+            // 
+            this.buttonMT_Analog_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Analog_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Analog_2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Analog_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Analog_2.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Analog_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Analog_2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Analog_2.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Analog_2.Location = new System.Drawing.Point(238, 0);
+            this.buttonMT_Analog_2.Name = "buttonMT_Analog_2";
+            this.buttonMT_Analog_2.Size = new System.Drawing.Size(114, 37);
+            this.buttonMT_Analog_2.TabIndex = 6;
+            this.buttonMT_Analog_2.Text = "230V AC";
+            this.buttonMT_Analog_2.UseVisualStyleBackColor = false;
+            this.buttonMT_Analog_2.Click += new System.EventHandler(this.buttonMT_Analog_2_Click_1);
+            // 
+            // buttonMT_Analog_1
+            // 
+            this.buttonMT_Analog_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonMT_Analog_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMT_Analog_1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMT_Analog_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonMT_Analog_1.FlatAppearance.BorderSize = 2;
+            this.buttonMT_Analog_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMT_Analog_1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMT_Analog_1.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMT_Analog_1.Location = new System.Drawing.Point(124, 0);
+            this.buttonMT_Analog_1.Name = "buttonMT_Analog_1";
+            this.buttonMT_Analog_1.Size = new System.Drawing.Size(114, 37);
+            this.buttonMT_Analog_1.TabIndex = 5;
+            this.buttonMT_Analog_1.Text = "0-5V DC";
+            this.buttonMT_Analog_1.UseVisualStyleBackColor = false;
+            this.buttonMT_Analog_1.Click += new System.EventHandler(this.buttonMT_Analog_1_Click_1);
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel16.Controls.Add(this.panel17);
+            this.panel16.Controls.Add(this.labelMeasureTypeAnalog);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(124, 37);
+            this.panel16.TabIndex = 26;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel17.Location = new System.Drawing.Point(283, 25);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(430, 37);
+            this.panel17.TabIndex = 25;
+            // 
+            // labelMeasureTypeAnalog
+            // 
+            this.labelMeasureTypeAnalog.AutoSize = true;
+            this.labelMeasureTypeAnalog.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMeasureTypeAnalog.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelMeasureTypeAnalog.Location = new System.Drawing.Point(4, 8);
+            this.labelMeasureTypeAnalog.Name = "labelMeasureTypeAnalog";
+            this.labelMeasureTypeAnalog.Size = new System.Drawing.Size(108, 21);
+            this.labelMeasureTypeAnalog.TabIndex = 15;
+            this.labelMeasureTypeAnalog.Text = "MeasureType";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel18.Location = new System.Drawing.Point(283, 25);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(430, 37);
+            this.panel18.TabIndex = 25;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::MyFirstWFApp.Properties.Resources.USN_logo_rgb_neg;
@@ -572,7 +803,7 @@
             this.panelSensorNameBack.Location = new System.Drawing.Point(13, 16);
             this.panelSensorNameBack.Name = "panelSensorNameBack";
             this.panelSensorNameBack.Size = new System.Drawing.Size(466, 37);
-            this.panelSensorNameBack.TabIndex = 24;
+            this.panelSensorNameBack.TabIndex = 0;
             // 
             // pictureBoxButtonSearch
             // 
@@ -665,7 +896,7 @@
             this.panelValueRangesBack.Location = new System.Drawing.Point(13, 216);
             this.panelValueRangesBack.Name = "panelValueRangesBack";
             this.panelValueRangesBack.Size = new System.Drawing.Size(468, 37);
-            this.panelValueRangesBack.TabIndex = 25;
+            this.panelValueRangesBack.TabIndex = 6;
             // 
             // panel39
             // 
@@ -763,7 +994,7 @@
             this.textBoxLVR.Location = new System.Drawing.Point(60, 8);
             this.textBoxLVR.Name = "textBoxLVR";
             this.textBoxLVR.Size = new System.Drawing.Size(63, 22);
-            this.textBoxLVR.TabIndex = 8;
+            this.textBoxLVR.TabIndex = 9;
             this.textBoxLVR.Text = "0.0";
             this.textBoxLVR.Click += new System.EventHandler(this.textBoxLVR_Click);
             this.textBoxLVR.Enter += new System.EventHandler(this.textBoxLVR_Enter);
@@ -777,7 +1008,7 @@
             this.textBoxURV.Location = new System.Drawing.Point(183, 8);
             this.textBoxURV.Name = "textBoxURV";
             this.textBoxURV.Size = new System.Drawing.Size(55, 22);
-            this.textBoxURV.TabIndex = 9;
+            this.textBoxURV.TabIndex = 10;
             this.textBoxURV.Text = "0.0";
             this.textBoxURV.Click += new System.EventHandler(this.textBoxURV_Click);
             this.textBoxURV.Enter += new System.EventHandler(this.textBoxURV_Enter);
@@ -791,7 +1022,7 @@
             this.textBoxUnit.Location = new System.Drawing.Point(308, 8);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.Size = new System.Drawing.Size(154, 22);
-            this.textBoxUnit.TabIndex = 10;
+            this.textBoxUnit.TabIndex = 11;
             // 
             // panelSerialNumberBack
             // 
@@ -801,7 +1032,7 @@
             this.panelSerialNumberBack.Location = new System.Drawing.Point(13, 66);
             this.panelSerialNumberBack.Name = "panelSerialNumberBack";
             this.panelSerialNumberBack.Size = new System.Drawing.Size(466, 37);
-            this.panelSerialNumberBack.TabIndex = 26;
+            this.panelSerialNumberBack.TabIndex = 1;
             // 
             // panel10
             // 
@@ -859,7 +1090,7 @@
             this.panelBackSignalType.Location = new System.Drawing.Point(13, 116);
             this.panelBackSignalType.Name = "panelBackSignalType";
             this.panelBackSignalType.Size = new System.Drawing.Size(466, 37);
-            this.panelBackSignalType.TabIndex = 28;
+            this.panelBackSignalType.TabIndex = 2;
             // 
             // buttonFieldbus
             // 
@@ -953,237 +1184,6 @@
             this.panel22.Size = new System.Drawing.Size(430, 37);
             this.panel22.TabIndex = 25;
             // 
-            // panelMeasureTypeAnalogBack
-            // 
-            this.panelMeasureTypeAnalogBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panelMeasureTypeAnalogBack.Controls.Add(this.buttonMT_Analog_3);
-            this.panelMeasureTypeAnalogBack.Controls.Add(this.buttonMT_Analog_2);
-            this.panelMeasureTypeAnalogBack.Controls.Add(this.buttonMT_Analog_1);
-            this.panelMeasureTypeAnalogBack.Controls.Add(this.panel16);
-            this.panelMeasureTypeAnalogBack.Controls.Add(this.panel18);
-            this.panelMeasureTypeAnalogBack.Location = new System.Drawing.Point(13, 166);
-            this.panelMeasureTypeAnalogBack.Name = "panelMeasureTypeAnalogBack";
-            this.panelMeasureTypeAnalogBack.Size = new System.Drawing.Size(466, 37);
-            this.panelMeasureTypeAnalogBack.TabIndex = 34;
-            this.panelMeasureTypeAnalogBack.Visible = false;
-            // 
-            // buttonMT_Analog_3
-            // 
-            this.buttonMT_Analog_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Analog_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Analog_3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Analog_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Analog_3.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Analog_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Analog_3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Analog_3.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Analog_3.Location = new System.Drawing.Point(352, 0);
-            this.buttonMT_Analog_3.Name = "buttonMT_Analog_3";
-            this.buttonMT_Analog_3.Size = new System.Drawing.Size(114, 37);
-            this.buttonMT_Analog_3.TabIndex = 33;
-            this.buttonMT_Analog_3.Text = "2-12V DC";
-            this.buttonMT_Analog_3.UseVisualStyleBackColor = false;
-            this.buttonMT_Analog_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonMT_Analog_3_Click_1);
-            // 
-            // buttonMT_Analog_2
-            // 
-            this.buttonMT_Analog_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Analog_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Analog_2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Analog_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Analog_2.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Analog_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Analog_2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Analog_2.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Analog_2.Location = new System.Drawing.Point(238, 0);
-            this.buttonMT_Analog_2.Name = "buttonMT_Analog_2";
-            this.buttonMT_Analog_2.Size = new System.Drawing.Size(114, 37);
-            this.buttonMT_Analog_2.TabIndex = 6;
-            this.buttonMT_Analog_2.Text = "230V AC";
-            this.buttonMT_Analog_2.UseVisualStyleBackColor = false;
-            this.buttonMT_Analog_2.Click += new System.EventHandler(this.buttonMT_Analog_2_Click_1);
-            // 
-            // buttonMT_Analog_1
-            // 
-            this.buttonMT_Analog_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Analog_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Analog_1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Analog_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Analog_1.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Analog_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Analog_1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Analog_1.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Analog_1.Location = new System.Drawing.Point(124, 0);
-            this.buttonMT_Analog_1.Name = "buttonMT_Analog_1";
-            this.buttonMT_Analog_1.Size = new System.Drawing.Size(114, 37);
-            this.buttonMT_Analog_1.TabIndex = 5;
-            this.buttonMT_Analog_1.Text = "0-5V DC";
-            this.buttonMT_Analog_1.UseVisualStyleBackColor = false;
-            this.buttonMT_Analog_1.Click += new System.EventHandler(this.buttonMT_Analog_1_Click_1);
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel16.Controls.Add(this.panel17);
-            this.panel16.Controls.Add(this.labelMeasureTypeAnalog);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(124, 37);
-            this.panel16.TabIndex = 26;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel17.Location = new System.Drawing.Point(283, 25);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(430, 37);
-            this.panel17.TabIndex = 25;
-            // 
-            // labelMeasureTypeAnalog
-            // 
-            this.labelMeasureTypeAnalog.AutoSize = true;
-            this.labelMeasureTypeAnalog.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelMeasureTypeAnalog.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelMeasureTypeAnalog.Location = new System.Drawing.Point(4, 8);
-            this.labelMeasureTypeAnalog.Name = "labelMeasureTypeAnalog";
-            this.labelMeasureTypeAnalog.Size = new System.Drawing.Size(108, 21);
-            this.labelMeasureTypeAnalog.TabIndex = 15;
-            this.labelMeasureTypeAnalog.Text = "MeasureType";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel18.Location = new System.Drawing.Point(283, 25);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(430, 37);
-            this.panel18.TabIndex = 25;
-            // 
-            // panelMeasureTypeFieldbusBack
-            // 
-            this.panelMeasureTypeFieldbusBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_4);
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_3);
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_2);
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_1);
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.panel29);
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.panel31);
-            this.panelMeasureTypeFieldbusBack.Location = new System.Drawing.Point(13, 166);
-            this.panelMeasureTypeFieldbusBack.Name = "panelMeasureTypeFieldbusBack";
-            this.panelMeasureTypeFieldbusBack.Size = new System.Drawing.Size(466, 37);
-            this.panelMeasureTypeFieldbusBack.TabIndex = 36;
-            this.panelMeasureTypeFieldbusBack.Visible = false;
-            // 
-            // buttonMT_Fieldbus_4
-            // 
-            this.buttonMT_Fieldbus_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Fieldbus_4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Fieldbus_4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Fieldbus_4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Fieldbus_4.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Fieldbus_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Fieldbus_4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Fieldbus_4.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Fieldbus_4.Location = new System.Drawing.Point(381, 0);
-            this.buttonMT_Fieldbus_4.Name = "buttonMT_Fieldbus_4";
-            this.buttonMT_Fieldbus_4.Size = new System.Drawing.Size(86, 37);
-            this.buttonMT_Fieldbus_4.TabIndex = 34;
-            this.buttonMT_Fieldbus_4.Text = "Profibus";
-            this.buttonMT_Fieldbus_4.UseVisualStyleBackColor = false;
-            this.buttonMT_Fieldbus_4.Click += new System.EventHandler(this.buttonMT_Fieldbus_4_Click_1);
-            // 
-            // buttonMT_Fieldbus_3
-            // 
-            this.buttonMT_Fieldbus_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Fieldbus_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Fieldbus_3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Fieldbus_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Fieldbus_3.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Fieldbus_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Fieldbus_3.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Fieldbus_3.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Fieldbus_3.Location = new System.Drawing.Point(295, 0);
-            this.buttonMT_Fieldbus_3.Name = "buttonMT_Fieldbus_3";
-            this.buttonMT_Fieldbus_3.Size = new System.Drawing.Size(86, 37);
-            this.buttonMT_Fieldbus_3.TabIndex = 33;
-            this.buttonMT_Fieldbus_3.Text = "Modbus TCP";
-            this.buttonMT_Fieldbus_3.UseVisualStyleBackColor = false;
-            this.buttonMT_Fieldbus_3.Click += new System.EventHandler(this.buttonMT_Fieldbus_3_Click_1);
-            // 
-            // buttonMT_Fieldbus_2
-            // 
-            this.buttonMT_Fieldbus_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Fieldbus_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Fieldbus_2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Fieldbus_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Fieldbus_2.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Fieldbus_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Fieldbus_2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Fieldbus_2.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Fieldbus_2.Location = new System.Drawing.Point(209, 0);
-            this.buttonMT_Fieldbus_2.Name = "buttonMT_Fieldbus_2";
-            this.buttonMT_Fieldbus_2.Size = new System.Drawing.Size(86, 37);
-            this.buttonMT_Fieldbus_2.TabIndex = 32;
-            this.buttonMT_Fieldbus_2.Text = "Modbus RTU";
-            this.buttonMT_Fieldbus_2.UseVisualStyleBackColor = false;
-            this.buttonMT_Fieldbus_2.Click += new System.EventHandler(this.buttonMT_Fieldbus_2_Click_1);
-            // 
-            // buttonMT_Fieldbus_1
-            // 
-            this.buttonMT_Fieldbus_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.buttonMT_Fieldbus_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMT_Fieldbus_1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonMT_Fieldbus_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.buttonMT_Fieldbus_1.FlatAppearance.BorderSize = 2;
-            this.buttonMT_Fieldbus_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMT_Fieldbus_1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonMT_Fieldbus_1.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMT_Fieldbus_1.Location = new System.Drawing.Point(124, 0);
-            this.buttonMT_Fieldbus_1.Name = "buttonMT_Fieldbus_1";
-            this.buttonMT_Fieldbus_1.Size = new System.Drawing.Size(85, 37);
-            this.buttonMT_Fieldbus_1.TabIndex = 31;
-            this.buttonMT_Fieldbus_1.Text = "BussRP";
-            this.buttonMT_Fieldbus_1.UseVisualStyleBackColor = false;
-            this.buttonMT_Fieldbus_1.Click += new System.EventHandler(this.buttonMT_Fieldbus_1_Click_1);
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel29.Controls.Add(this.panel30);
-            this.panel29.Controls.Add(this.labelMeasureTypeFieldbus);
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel29.Location = new System.Drawing.Point(0, 0);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(124, 37);
-            this.panel29.TabIndex = 26;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel30.Location = new System.Drawing.Point(283, 25);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(430, 37);
-            this.panel30.TabIndex = 25;
-            // 
-            // labelMeasureTypeFieldbus
-            // 
-            this.labelMeasureTypeFieldbus.AutoSize = true;
-            this.labelMeasureTypeFieldbus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelMeasureTypeFieldbus.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelMeasureTypeFieldbus.Location = new System.Drawing.Point(4, 8);
-            this.labelMeasureTypeFieldbus.Name = "labelMeasureTypeFieldbus";
-            this.labelMeasureTypeFieldbus.Size = new System.Drawing.Size(108, 21);
-            this.labelMeasureTypeFieldbus.TabIndex = 15;
-            this.labelMeasureTypeFieldbus.Text = "MeasureType";
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel31.Location = new System.Drawing.Point(283, 25);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(430, 37);
-            this.panel31.TabIndex = 25;
-            // 
             // panelMeasureTypeDigitalBack
             // 
             this.panelMeasureTypeDigitalBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
@@ -1194,7 +1194,7 @@
             this.panelMeasureTypeDigitalBack.Location = new System.Drawing.Point(13, 166);
             this.panelMeasureTypeDigitalBack.Name = "panelMeasureTypeDigitalBack";
             this.panelMeasureTypeDigitalBack.Size = new System.Drawing.Size(466, 37);
-            this.panelMeasureTypeDigitalBack.TabIndex = 35;
+            this.panelMeasureTypeDigitalBack.TabIndex = 4;
             this.panelMeasureTypeDigitalBack.Visible = false;
             // 
             // buttonMT_Digital_2
@@ -1210,7 +1210,7 @@
             this.buttonMT_Digital_2.Location = new System.Drawing.Point(295, 0);
             this.buttonMT_Digital_2.Name = "buttonMT_Digital_2";
             this.buttonMT_Digital_2.Size = new System.Drawing.Size(171, 37);
-            this.buttonMT_Digital_2.TabIndex = 32;
+            this.buttonMT_Digital_2.TabIndex = 6;
             this.buttonMT_Digital_2.Text = "Omega Digital";
             this.buttonMT_Digital_2.UseVisualStyleBackColor = false;
             this.buttonMT_Digital_2.Click += new System.EventHandler(this.buttonMT_Digital_2_Click_1);
@@ -1228,7 +1228,7 @@
             this.buttonMT_Digital_1.Location = new System.Drawing.Point(124, 0);
             this.buttonMT_Digital_1.Name = "buttonMT_Digital_1";
             this.buttonMT_Digital_1.Size = new System.Drawing.Size(171, 37);
-            this.buttonMT_Digital_1.TabIndex = 31;
+            this.buttonMT_Digital_1.TabIndex = 5;
             this.buttonMT_Digital_1.Text = "Digital TCP";
             this.buttonMT_Digital_1.UseVisualStyleBackColor = false;
             this.buttonMT_Digital_1.Click += new System.EventHandler(this.buttonMT_Digital_1_Click_1);
@@ -1305,6 +1305,12 @@
             this.panel9.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.panelMeasureTypeFieldbusBack.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            this.panelMeasureTypeAnalogBack.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelSensorNameBack.ResumeLayout(false);
             this.panelSensorNameBack.PerformLayout();
@@ -1326,12 +1332,6 @@
             this.panelBackSignalType.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            this.panelMeasureTypeAnalogBack.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panelMeasureTypeFieldbusBack.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
             this.panelMeasureTypeDigitalBack.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();

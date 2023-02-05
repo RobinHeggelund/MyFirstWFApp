@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Reflection.Metadata;
 
 namespace MyFirstWFApp
 {
@@ -78,8 +79,10 @@ namespace MyFirstWFApp
         {
             buttonRegisterNew.Enabled = true;
         }
+        
+        
 
-
+        
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '+')
@@ -345,6 +348,20 @@ namespace MyFirstWFApp
             {
                 // Register new sensor
                 EnterDataIntoTextPreviewBox();
+                
+                string filePath = @"C:\Users\Robin\source\repos\RobinHeggelund\MyFirstWFApp\WriteTextFile.txt";
+                using (StreamWriter outputFile = new StreamWriter(filePath))
+                    
+
+                {
+                    foreach (Instrument instrument in instrumentList)
+                        
+                    {
+                        outputFile.WriteLine(instrument);
+                    }
+
+                    outputFile.AutoFlush = true;
+                }
             }
 
             else
@@ -619,8 +636,7 @@ namespace MyFirstWFApp
                 return false;
 
             }
-
-
+            
         }
 
         private void textBoxPreview_TextChanged(object sender, EventArgs e)
@@ -638,9 +654,6 @@ namespace MyFirstWFApp
 
             maskedTextBoxSerialNumber.Select(maskedTextBoxSerialNumber.TextLength, 8);
         }
-
-
-
 
 
         private void radioButtonRegisterNew_CheckedChanged(object sender, EventArgs e)
@@ -665,7 +678,6 @@ namespace MyFirstWFApp
                     comboBoxMeasureType.Items.Clear();
                     comboBoxMeasureType.Items.AddRange(analogSignals);
                     panelValueRangesBack.Visible = true;
-                    //this.panelOptionsCommentsBack.Location = new Point(this.panelOptionsCommentsBack.213, this.panelOptionsCommentsBack.300);
 
                     this.panelOptionsCommentsBack.Location = new Point(13, 266);
 
@@ -974,6 +986,13 @@ namespace MyFirstWFApp
             {
                 // Register new sensor
                 EnterDataIntoTextPreviewBox();
+                
+                // Save data to file
+                
+                
+
+                
+                
 
             }
 

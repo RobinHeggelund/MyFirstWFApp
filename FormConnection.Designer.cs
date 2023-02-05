@@ -138,7 +138,7 @@
             this.buttonSend.Location = new System.Drawing.Point(306, 453);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(165, 38);
-            this.buttonSend.TabIndex = 6;
+            this.buttonSend.TabIndex = 4;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = false;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
@@ -152,7 +152,7 @@
             this.buttonConnect.Location = new System.Drawing.Point(125, 453);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(165, 38);
-            this.buttonConnect.TabIndex = 12;
+            this.buttonConnect.TabIndex = 3;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = false;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
@@ -167,7 +167,7 @@
             this.panelIPAdressBack.Location = new System.Drawing.Point(117, 330);
             this.panelIPAdressBack.Name = "panelIPAdressBack";
             this.panelIPAdressBack.Size = new System.Drawing.Size(354, 37);
-            this.panelIPAdressBack.TabIndex = 25;
+            this.panelIPAdressBack.TabIndex = 0;
             // 
             // panel11
             // 
@@ -231,7 +231,7 @@
             this.panel1.Location = new System.Drawing.Point(117, 382);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 37);
-            this.panel1.TabIndex = 27;
+            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -327,7 +327,7 @@
             this.panel7.Location = new System.Drawing.Point(534, 453);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(371, 37);
-            this.panel7.TabIndex = 46;
+            this.panel7.TabIndex = 2;
             // 
             // panel9
             // 
@@ -369,6 +369,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(188, 41);
             this.textBox1.TabIndex = 51;
+            this.textBox1.TabStop = false;
             this.textBox1.Text = "Leap Frog network technology is developed and trademarked by The University of Sø" +
     "r-Øst Norge, USN, Vestfold Norway";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -379,7 +380,7 @@
             this.panelIPSearch.Controls.Add(this.panel10);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchCancle);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchConfirm);
-            this.panelIPSearch.Location = new System.Drawing.Point(522, 265);
+            this.panelIPSearch.Location = new System.Drawing.Point(503, 76);
             this.panelIPSearch.Name = "panelIPSearch";
             this.panelIPSearch.Size = new System.Drawing.Size(467, 325);
             this.panelIPSearch.TabIndex = 54;
