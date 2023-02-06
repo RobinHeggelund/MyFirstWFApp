@@ -1010,21 +1010,7 @@ namespace MyFirstWFApp
 
                 // Save data to file
 
-                StreamWriter outputFile = new StreamWriter
-                    ("C:\\Users\\robin\\source\\repos\\RobinHeggelund\\Lizard\\bin\\Debug\\net6.0-windows\\instruments.csv");
-
-                foreach (Instrument instrument in instrumentList)
-                {
-                    outputFile.WriteLine(instrument.ToString());
-
-                }
-
-                outputFile.Close();
-
-
-
-
-
+                WriteDataToFile();
 
             }
 
@@ -1032,6 +1018,20 @@ namespace MyFirstWFApp
             {
                 SystemSounds.Beep.Play();
             }
+        }
+
+        private void WriteDataToFile()
+        {
+            StreamWriter outputFile = new StreamWriter
+                ("C:\\Users\\robin\\source\\repos\\RobinHeggelund\\Lizard\\bin\\Debug\\net6.0-windows\\instruments.csv");
+
+            foreach (Instrument instrument in instrumentList)
+            {
+                outputFile.WriteLine(instrument.ToString());
+
+            }
+
+            outputFile.Close();
         }
 
         private void textBoxLVR_Enter(object sender, EventArgs e)
@@ -1113,6 +1113,23 @@ namespace MyFirstWFApp
                     listBoxSensorList.Items.Add(instrumentList[index].SensorName);
                     index += 1;
 
+                    // Sort instrumentList alphabetically
+
+                    //instrumentList.Sort();
+
+                    /*
+                     int instrumentIndex = 0
+                    foreach (Instrument instrument in instrumentList)
+                    {
+
+                      stringCompareResult = instrumentList.[instrumentIndex].SensorName.CompareTo(instrumentList[instrumentIndex+1].SensorName) 
+                        instrumentIndex +=1
+                    }
+
+                   
+                     
+                     */
+
                 }
             }
         }
@@ -1133,7 +1150,17 @@ namespace MyFirstWFApp
 
                 instrumentList.RemoveAll(x => x.SensorName == listBoxSensorList.Text);
 
+                // Update list
+                
                 updateInstrumentListBox();
+
+                // Disable Confirm Button
+
+                buttonSensorSearchConfirm.Enabled = false;
+
+                // Write changes to file
+
+                WriteDataToFile();
 
 
 
