@@ -11,11 +11,13 @@ using System.Runtime.InteropServices;
 namespace MyFirstWFApp
 {
     public partial class Form1 : Form
+        
     {
-        
+        public string instrumentListFileLocation = (Environment.CurrentDirectory + "\\instruments.csv");
+
         // Creating Fonts
-        
-        
+
+
         Font fontNormal = new Font("Segoe UI", 9, FontStyle.Regular);
         Font fontBold = new Font("Segoe UI", 9, FontStyle.Bold);
 
@@ -44,9 +46,7 @@ namespace MyFirstWFApp
         private FormConnection FrmConnection;
         private FormNetwork FrmNetwork;
         private FormSettings FrmSettings;
-
-
-
+   
 
         // Creating Lists
 
@@ -62,6 +62,13 @@ namespace MyFirstWFApp
         {
             InitializeComponent();
         }
+
+        // Information bridge
+
+        public int AnalogSummary;
+        public int DigitalSummary;
+        public int FieldbusSummary;
+        public int TotalSummary;
 
         // Custom Boarder
 
@@ -97,6 +104,7 @@ namespace MyFirstWFApp
             // create panel
             
             this.panelMain.Controls.Clear();
+            
             FrmSensorData = new FormSensorData(this);
             FrmSensorData.TopLevel = false;
             FrmSensorData.Dock = DockStyle.Fill;
@@ -108,7 +116,7 @@ namespace MyFirstWFApp
             FrmConnection.Dock = DockStyle.Fill;
             FrmConnection.TopMost = true;
             this.panelMain.Controls.Add(FrmConnection);
-
+            
             FrmNetwork = new FormNetwork();
             FrmNetwork.TopLevel = false;
             FrmNetwork.Dock = DockStyle.Fill;
@@ -689,6 +697,10 @@ namespace MyFirstWFApp
                 panelConnection.BackColor = MediumDark;
                 panelNetwork.BackColor = MediumDark;
                 panelSettings.BackColor = Dark;
+
+                // Get summary from SensorData form
+
+                
 
             }
 

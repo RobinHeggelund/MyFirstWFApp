@@ -92,6 +92,10 @@
             this.radioButtonRegisterNew = new System.Windows.Forms.RadioButton();
             this.radioButtonSave = new System.Windows.Forms.RadioButton();
             this.radioButtonDelete = new System.Windows.Forms.RadioButton();
+            this.labelAnalogSummary = new System.Windows.Forms.Label();
+            this.labelDigitalSummary = new System.Windows.Forms.Label();
+            this.labelFieldbusSummary = new System.Windows.Forms.Label();
+            this.labelTotalSummary = new System.Windows.Forms.Label();
             this.panelDockLeft.SuspendLayout();
             this.panelSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettingsTab)).BeginInit();
@@ -122,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoarderFullscreen)).BeginInit();
             this.panelBoarderClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoarderClose)).BeginInit();
+            this.panelMain.SuspendLayout();
             this.List.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControlList.SuspendLayout();
@@ -734,6 +739,10 @@
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.panelMain.Controls.Add(this.labelTotalSummary);
+            this.panelMain.Controls.Add(this.labelFieldbusSummary);
+            this.panelMain.Controls.Add(this.labelDigitalSummary);
+            this.panelMain.Controls.Add(this.labelAnalogSummary);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(199, 35);
             this.panelMain.Name = "panelMain";
@@ -880,6 +889,46 @@
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
             // 
+            // labelAnalogSummary
+            // 
+            this.labelAnalogSummary.AutoSize = true;
+            this.labelAnalogSummary.Location = new System.Drawing.Point(134, 583);
+            this.labelAnalogSummary.Name = "labelAnalogSummary";
+            this.labelAnalogSummary.Size = new System.Drawing.Size(96, 15);
+            this.labelAnalogSummary.TabIndex = 0;
+            this.labelAnalogSummary.Text = "AnalogSummary";
+            this.labelAnalogSummary.Visible = false;
+            // 
+            // labelDigitalSummary
+            // 
+            this.labelDigitalSummary.AutoSize = true;
+            this.labelDigitalSummary.Location = new System.Drawing.Point(247, 583);
+            this.labelDigitalSummary.Name = "labelDigitalSummary";
+            this.labelDigitalSummary.Size = new System.Drawing.Size(92, 15);
+            this.labelDigitalSummary.TabIndex = 1;
+            this.labelDigitalSummary.Text = "DigitalSummary";
+            this.labelDigitalSummary.Visible = false;
+            // 
+            // labelFieldbusSummary
+            // 
+            this.labelFieldbusSummary.AutoSize = true;
+            this.labelFieldbusSummary.Location = new System.Drawing.Point(359, 583);
+            this.labelFieldbusSummary.Name = "labelFieldbusSummary";
+            this.labelFieldbusSummary.Size = new System.Drawing.Size(102, 15);
+            this.labelFieldbusSummary.TabIndex = 2;
+            this.labelFieldbusSummary.Text = "FieldbusSummary";
+            this.labelFieldbusSummary.Visible = false;
+            // 
+            // labelTotalSummary
+            // 
+            this.labelTotalSummary.AutoSize = true;
+            this.labelTotalSummary.Location = new System.Drawing.Point(474, 583);
+            this.labelTotalSummary.Name = "labelTotalSummary";
+            this.labelTotalSummary.Size = new System.Drawing.Size(83, 15);
+            this.labelTotalSummary.TabIndex = 3;
+            this.labelTotalSummary.Text = "TotalSummary";
+            this.labelTotalSummary.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -945,6 +994,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoarderFullscreen)).EndInit();
             this.panelBoarderClose.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoarderClose)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.List.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1018,5 +1069,9 @@
         private Panel panel7;
         private Panel panel6;
         private Panel panel5;
+        private Label labelTotalSummary;
+        private Label labelFieldbusSummary;
+        private Label labelDigitalSummary;
+        private Label labelAnalogSummary;
     }
 }

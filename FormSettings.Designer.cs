@@ -31,22 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSummary = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelSummaryTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelSummaryTotal = new System.Windows.Forms.Label();
+            this.labelSummaryFieldBus = new System.Windows.Forms.Label();
+            this.labelSummaryDigital = new System.Windows.Forms.Label();
+            this.labelSummaryAnalog = new System.Windows.Forms.Label();
             this.labelSummaryTotalDescription = new System.Windows.Forms.Label();
             this.labelSummaryFieldbusDescription = new System.Windows.Forms.Label();
             this.labelSummaryDigitalDescription = new System.Windows.Forms.Label();
             this.labelSummaryAnalogDescription = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBoxHelp = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -62,9 +57,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.labelSettings = new System.Windows.Forms.TextBox();
             this.panelSummary.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -78,92 +72,93 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panelSummary
             // 
             this.panelSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panelSummary.Controls.Add(this.label6);
+            this.panelSummary.Controls.Add(this.labelSummaryTime);
             this.panelSummary.Controls.Add(this.label5);
-            this.panelSummary.Controls.Add(this.label4);
-            this.panelSummary.Controls.Add(this.label3);
-            this.panelSummary.Controls.Add(this.label2);
-            this.panelSummary.Controls.Add(this.label1);
+            this.panelSummary.Controls.Add(this.labelSummaryTotal);
+            this.panelSummary.Controls.Add(this.labelSummaryFieldBus);
+            this.panelSummary.Controls.Add(this.labelSummaryDigital);
+            this.panelSummary.Controls.Add(this.labelSummaryAnalog);
             this.panelSummary.Controls.Add(this.labelSummaryTotalDescription);
             this.panelSummary.Controls.Add(this.labelSummaryFieldbusDescription);
             this.panelSummary.Controls.Add(this.labelSummaryDigitalDescription);
             this.panelSummary.Controls.Add(this.labelSummaryAnalogDescription);
             this.panelSummary.Location = new System.Drawing.Point(482, 130);
             this.panelSummary.Name = "panelSummary";
-            this.panelSummary.Size = new System.Drawing.Size(424, 143);
+            this.panelSummary.Size = new System.Drawing.Size(424, 204);
             this.panelSummary.TabIndex = 23;
             // 
-            // label6
+            // labelSummaryTime
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.label6.Location = new System.Drawing.Point(197, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 43);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "0";
+            this.labelSummaryTime.AutoSize = true;
+            this.labelSummaryTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSummaryTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelSummaryTime.Location = new System.Drawing.Point(210, 155);
+            this.labelSummaryTime.Name = "labelSummaryTime";
+            this.labelSummaryTime.Size = new System.Drawing.Size(145, 26);
+            this.labelSummaryTime.TabIndex = 9;
+            this.labelSummaryTime.Text = "0 Min, 0 Sec";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(16, 148);
+            this.label5.Location = new System.Drawing.Point(56, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 31);
+            this.label5.Size = new System.Drawing.Size(164, 26);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Session time:";
+            this.label5.Text = "Elapsed Time:";
             // 
-            // label4
+            // labelSummaryTotal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.label4.Location = new System.Drawing.Point(329, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 85);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "0";
+            this.labelSummaryTotal.AutoSize = true;
+            this.labelSummaryTotal.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSummaryTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelSummaryTotal.Location = new System.Drawing.Point(329, 48);
+            this.labelSummaryTotal.Name = "labelSummaryTotal";
+            this.labelSummaryTotal.Size = new System.Drawing.Size(72, 85);
+            this.labelSummaryTotal.TabIndex = 7;
+            this.labelSummaryTotal.Text = "0";
             // 
-            // label3
+            // labelSummaryFieldBus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.label3.Location = new System.Drawing.Point(229, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 85);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "0";
+            this.labelSummaryFieldBus.AutoSize = true;
+            this.labelSummaryFieldBus.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSummaryFieldBus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelSummaryFieldBus.Location = new System.Drawing.Point(229, 48);
+            this.labelSummaryFieldBus.Name = "labelSummaryFieldBus";
+            this.labelSummaryFieldBus.Size = new System.Drawing.Size(72, 85);
+            this.labelSummaryFieldBus.TabIndex = 6;
+            this.labelSummaryFieldBus.Text = "0";
             // 
-            // label2
+            // labelSummaryDigital
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.label2.Location = new System.Drawing.Point(129, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 85);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "0";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelSummaryDigital.AutoSize = true;
+            this.labelSummaryDigital.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSummaryDigital.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelSummaryDigital.Location = new System.Drawing.Point(129, 48);
+            this.labelSummaryDigital.Name = "labelSummaryDigital";
+            this.labelSummaryDigital.Size = new System.Drawing.Size(72, 85);
+            this.labelSummaryDigital.TabIndex = 5;
+            this.labelSummaryDigital.Text = "0";
+            this.labelSummaryDigital.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label1
+            // labelSummaryAnalog
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.label1.Location = new System.Drawing.Point(29, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 85);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "0";
+            this.labelSummaryAnalog.AutoSize = true;
+            this.labelSummaryAnalog.Font = new System.Drawing.Font("Segoe UI Emoji", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSummaryAnalog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelSummaryAnalog.Location = new System.Drawing.Point(29, 48);
+            this.labelSummaryAnalog.Name = "labelSummaryAnalog";
+            this.labelSummaryAnalog.Size = new System.Drawing.Size(72, 85);
+            this.labelSummaryAnalog.TabIndex = 4;
+            this.labelSummaryAnalog.Text = "0";
             // 
             // labelSummaryTotalDescription
             // 
@@ -214,77 +209,12 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(611, 86);
+            this.label7.Location = new System.Drawing.Point(576, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 31);
+            this.label7.Size = new System.Drawing.Size(248, 31);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Summary";
+            this.label7.Text = "Session Summary";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(482, 302);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(424, 47);
-            this.panel1.TabIndex = 24;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(259, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 47);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Light";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(94, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 47);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Dark";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(94, 47);
-            this.panel2.TabIndex = 25;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(18, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 21);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Theme";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBoxHelp
             // 
@@ -308,7 +238,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
@@ -321,6 +251,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
             this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             // 
@@ -469,19 +400,32 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // labelSettings
+            // 
+            this.labelSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.labelSettings.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.labelSettings.Enabled = false;
+            this.labelSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSettings.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelSettings.Location = new System.Drawing.Point(12, 473);
+            this.labelSettings.Name = "labelSettings";
+            this.labelSettings.Size = new System.Drawing.Size(464, 26);
+            this.labelSettings.TabIndex = 30;
+            this.labelSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(982, 635);
+            this.Controls.Add(this.labelSettings);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxHelp);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panelSummary);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -489,9 +433,6 @@
             this.Text = "FormSettings";
             this.panelSummary.ResumeLayout(false);
             this.panelSummary.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -511,21 +452,16 @@
         private System.Windows.Forms.Timer timer1;
         private Panel panelSummary;
         private Label labelSummaryAnalogDescription;
-        private Label label1;
+        private Label labelSummaryAnalog;
         private Label labelSummaryTotalDescription;
         private Label labelSummaryFieldbusDescription;
         private Label labelSummaryDigitalDescription;
-        private Label label3;
-        private Label label2;
-        private Label label6;
+        private Label labelSummaryFieldBus;
+        private Label labelSummaryDigital;
+        private Label labelSummaryTime;
         private Label label5;
-        private Label label4;
+        private Label labelSummaryTotal;
         private Label label7;
-        private Panel panel1;
-        private Panel panel2;
-        private Button button2;
-        private Button button1;
-        private Label label8;
         private PictureBox pictureBoxHelp;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
@@ -541,5 +477,6 @@
         private Panel panel6;
         private Label label10;
         private OpenFileDialog openFileDialog1;
+        private TextBox labelSettings;
     }
 }

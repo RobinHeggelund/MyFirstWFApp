@@ -22,6 +22,9 @@ namespace MyFirstWFApp
     public partial class FormSensorData : Form
     {
         Form1 mainForm;
+        
+
+        string instrumentListFileLocation = (Environment.CurrentDirectory + "\\instruments.csv");
 
         public FormSensorData(Form1 mainForm)
         {
@@ -107,6 +110,7 @@ namespace MyFirstWFApp
 
         private void FormSensorData_Load(object sender, EventArgs e)
         {
+
             toolStripStatusLabel1.Text = "Ready";
 
             comboBoxSignalType.SelectedIndex = 0;
@@ -121,10 +125,16 @@ namespace MyFirstWFApp
 
             //Import instrument list from file
 
+            ImportInstrumentListFromFile();
+        }
+
+        private void ImportInstrumentListFromFile()
+        {
             string instrumentLine = "";
             string[] instrumentLineParts;
+            instrumentList.Clear();
 
-            string fileNameInstrumentList = ("C:\\Users\\robin\\source\\repos\\RobinHeggelund\\Lizard\\bin\\Debug\\net6.0-windows\\instruments.csv");
+            string fileNameInstrumentList = (instrumentListFileLocation);
 
             if (File.Exists(fileNameInstrumentList))
             {
@@ -155,11 +165,17 @@ namespace MyFirstWFApp
                         textBoxPreview.Text = instrument.ToString();
 
                     }
-
+                    inputFile.Close();
                 }
 
-                inputFile.Close();
+                
             }
+            else
+            {
+                
+            }
+
+            PushInstrumentSummary();
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -1012,6 +1028,8 @@ namespace MyFirstWFApp
 
                 WriteDataToFile();
 
+                PushInstrumentSummary();
+
             }
 
             else
@@ -1022,8 +1040,8 @@ namespace MyFirstWFApp
 
         private void WriteDataToFile()
         {
-            StreamWriter outputFile = new StreamWriter
-                ("C:\\Users\\robin\\source\\repos\\RobinHeggelund\\Lizard\\bin\\Debug\\net6.0-windows\\instruments.csv");
+            StreamWriter outputFile = new StreamWriter(instrumentListFileLocation);
+               // ("C:\\Users\\Robin\\source\\repos\\RobinHeggelund\\MyFirstWFApp\\bin\\Debug\\net6.0-windows\\instruments.csv");
 
             foreach (Instrument instrument in instrumentList)
             {
@@ -1090,49 +1108,52 @@ namespace MyFirstWFApp
 
             // Show instrument search panel
 
+            instrumentListFileLocation = mainForm.instrumentListFileLocation;
+            ImportInstrumentListFromFile();
             panelSensorSearch.Visible = true;
             this.panelSensorSearch.Location = new Point(243, 158);
 
-
-
             // clear sensor listbox and add each instrument in list
 
-            updateInstrumentListBox();
+            UpdateInstrumentListBox();
 
+            // Create listbox scrollbar if needed
+
+            if (listBoxSensorList.Items.Count > 6)
+            {
+                listBoxSensorList.ScrollAlwaysVisible = true;
+            }
+  
         }
 
-        private void updateInstrumentListBox()
+        private void PushInstrumentSummary()
+        {
+            mainForm.AnalogSummary = analogIndex;
+            mainForm.DigitalSummary = digitalIndex;
+            mainForm.FieldbusSummary = fieldbusIndex;
+            mainForm.TotalSummary = RegisterIndex;
+        }
+
+        private void UpdateInstrumentListBox()
         {
             listBoxSensorList.Items.Clear();
             int index = 0;
             if (instrumentList.Count > 0)
             {
+                // Sort instrumentList alphabetically in a case-insensitive manner
+
+                instrumentList.Sort((x, y) => string.Compare(x.SensorName, y.SensorName, StringComparison.OrdinalIgnoreCase));
+
+                // Update listBoxSensorList
+
                 foreach (Instrument instrument in instrumentList)
                 {
-
-                    listBoxSensorList.Items.Add(instrumentList[index].SensorName);
+                    listBoxSensorList.Items.Add(instrument.SensorName);
                     index += 1;
-
-                    // Sort instrumentList alphabetically
-
-                    //instrumentList.Sort();
-
-                    /*
-                     int instrumentIndex = 0
-                    foreach (Instrument instrument in instrumentList)
-                    {
-
-                      stringCompareResult = instrumentList.[instrumentIndex].SensorName.CompareTo(instrumentList[instrumentIndex+1].SensorName) 
-                        instrumentIndex +=1
-                    }
-
-                   
-                     
-                     */
-
                 }
             }
         }
+
 
         private void buttonSensorSearchCancle_Click(object sender, EventArgs e)
         {
@@ -1152,7 +1173,7 @@ namespace MyFirstWFApp
 
                 // Update list
                 
-                updateInstrumentListBox();
+                UpdateInstrumentListBox();
 
                 // Disable Confirm Button
 
@@ -1171,12 +1192,14 @@ namespace MyFirstWFApp
         {
             panelSensorSearch.Visible = false;
             buttonSensorSearchConfirm.Enabled = false;
+            buttonSensorDelete.Enabled = false;
         }
 
         private void panelBoarderSearchClose_Click(object sender, EventArgs e)
         {
             panelSensorSearch.Visible = false;
             buttonSensorSearchConfirm.Enabled = false;
+            buttonSensorDelete.Enabled = false;
         }
 
         private void panelBoarderSearchClose_MouseEnter(object sender, EventArgs e)
@@ -1208,6 +1231,7 @@ namespace MyFirstWFApp
         private void listBoxSensorList_SelectedValueChanged(object sender, EventArgs e)
         {
             buttonSensorSearchConfirm.Enabled = true;
+            buttonSensorDelete.Enabled = true;
         }
 
         private void buttonSensorSearchConfirm_Click(object sender, EventArgs e)

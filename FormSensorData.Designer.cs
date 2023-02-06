@@ -256,6 +256,7 @@
             // 
             this.buttonSensorDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonSensorDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSensorDelete.Enabled = false;
             this.buttonSensorDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSensorDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSensorDelete.Location = new System.Drawing.Point(56, 250);
