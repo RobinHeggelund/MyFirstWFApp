@@ -35,7 +35,7 @@
             this.pictureBoxSearchBoarderClose = new System.Windows.Forms.PictureBox();
             this.panelSensorSearchListBackground = new System.Windows.Forms.Panel();
             this.listBoxSensorList = new System.Windows.Forms.ListBox();
-            this.buttonSensorSearchCancle = new System.Windows.Forms.Button();
+            this.buttonSensorDelete = new System.Windows.Forms.Button();
             this.buttonSensorSearchConfirm = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.Label();
             this.comboBoxMeasureType = new System.Windows.Forms.ComboBox();
@@ -183,7 +183,7 @@
             // 
             this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearch);
             this.panelSensorSearch.Controls.Add(this.panelSensorSearchListBackground);
-            this.panelSensorSearch.Controls.Add(this.buttonSensorSearchCancle);
+            this.panelSensorSearch.Controls.Add(this.buttonSensorDelete);
             this.panelSensorSearch.Controls.Add(this.buttonSensorSearchConfirm);
             this.panelSensorSearch.Location = new System.Drawing.Point(503, 24);
             this.panelSensorSearch.Name = "panelSensorSearch";
@@ -252,19 +252,19 @@
             this.listBoxSensorList.TabIndex = 6;
             this.listBoxSensorList.SelectedValueChanged += new System.EventHandler(this.listBoxSensorList_SelectedValueChanged);
             // 
-            // buttonSensorSearchCancle
+            // buttonSensorDelete
             // 
-            this.buttonSensorSearchCancle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
-            this.buttonSensorSearchCancle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSensorSearchCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSensorSearchCancle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSensorSearchCancle.Location = new System.Drawing.Point(56, 250);
-            this.buttonSensorSearchCancle.Name = "buttonSensorSearchCancle";
-            this.buttonSensorSearchCancle.Size = new System.Drawing.Size(165, 38);
-            this.buttonSensorSearchCancle.TabIndex = 56;
-            this.buttonSensorSearchCancle.Text = "Cancle";
-            this.buttonSensorSearchCancle.UseVisualStyleBackColor = false;
-            this.buttonSensorSearchCancle.Click += new System.EventHandler(this.buttonSensorSearchCancle_Click);
+            this.buttonSensorDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSensorDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSensorDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSensorDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSensorDelete.Location = new System.Drawing.Point(56, 250);
+            this.buttonSensorDelete.Name = "buttonSensorDelete";
+            this.buttonSensorDelete.Size = new System.Drawing.Size(165, 38);
+            this.buttonSensorDelete.TabIndex = 56;
+            this.buttonSensorDelete.Text = "Delete";
+            this.buttonSensorDelete.UseVisualStyleBackColor = false;
+            this.buttonSensorDelete.Click += new System.EventHandler(this.buttonSensorSearchCancle_Click);
             // 
             // buttonSensorSearchConfirm
             // 
@@ -1431,7 +1431,7 @@
         private PictureBox pictureBoxSearchBoarderClose;
         private Panel panelSensorSearchListBackground;
         private ListBox listBoxSensorList;
-        private Button buttonSensorSearchCancle;
+        private Button buttonSensorDelete;
         private Button buttonSensorSearchConfirm;
     }
 }

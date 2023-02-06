@@ -15,14 +15,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Reflection.Metadata;
+using System.IO;
 
 namespace MyFirstWFApp
 {
     public partial class FormSensorData : Form
     {
-        public FormSensorData()
+        Form1 mainForm;
+
+        public FormSensorData(Form1 mainForm)
         {
             InitializeComponent();
+            this.mainForm = mainForm;
         }
         Font fontNormal = new Font("Segoe UI", 9, FontStyle.Regular);
         Font fontBold = new Font("Segoe UI", 9, FontStyle.Bold);
@@ -62,6 +66,9 @@ namespace MyFirstWFApp
 
         List<string> servers = new List<string>();
         List<Instrument> instrumentList = new List<Instrument>();
+
+        
+
 
         // Setting DateTime
 
@@ -112,6 +119,47 @@ namespace MyFirstWFApp
 
             InvokeOnClick(buttonAnalog, null);
 
+            //Import instrument list from file
+
+            string instrumentLine = "";
+            string[] instrumentLineParts;
+
+            string fileNameInstrumentList = ("C:\\Users\\robin\\source\\repos\\RobinHeggelund\\Lizard\\bin\\Debug\\net6.0-windows\\instruments.csv");
+
+            if (File.Exists(fileNameInstrumentList))
+            {
+
+                var inputFile = new StreamReader(fileNameInstrumentList);
+
+                if (inputFile != null)
+
+                {
+
+                    while (!inputFile.EndOfStream)
+                    {
+
+                        instrumentLine = inputFile.ReadLine();
+                        instrumentLineParts = instrumentLine.Split(";");
+
+                        Instrument instrument = new Instrument(Convert.ToDateTime(instrumentLineParts[0]),
+                                                                instrumentLineParts[1],
+                                                                instrumentLineParts[2],
+                                                                instrumentLineParts[3],
+                                                                instrumentLineParts[4],
+                                                                instrumentLineParts[5],
+                                                                instrumentLineParts[6],
+                                                                Convert.ToDouble(instrumentLineParts[7]),
+                                                                Convert.ToDouble(instrumentLineParts[8]),
+                                                                Convert.ToString(instrumentLineParts[9]));
+                        instrumentList.Add(instrument);
+                        textBoxPreview.Text = instrument.ToString();
+
+                    }
+
+                }
+
+                inputFile.Close();
+            }
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -341,35 +389,6 @@ namespace MyFirstWFApp
             toolStripStatusLabel1.Text = "Ready";
         }
 
-        private void buttonRegisterNew_Click(object sender, EventArgs e)
-        {
-            if (DataEntryIsValid() == true)
-
-            {
-                // Register new sensor
-                EnterDataIntoTextPreviewBox();
-                
-                string filePath = @"C:\Users\Robin\source\repos\RobinHeggelund\MyFirstWFApp\WriteTextFile.txt";
-                using (StreamWriter outputFile = new StreamWriter(filePath))
-                    
-
-                {
-                    foreach (Instrument instrument in instrumentList)
-                        
-                    {
-                        outputFile.WriteLine(instrument);
-                    }
-
-                    outputFile.AutoFlush = true;
-                }
-            }
-
-            else
-            {
-                SystemSounds.Beep.Play();
-            }
-
-        }
 
         private void EnterDataIntoTextPreviewBox()
         {
@@ -382,7 +401,8 @@ namespace MyFirstWFApp
 
                 // Create new instrument and add to list
 
-                Instrument instrument = new Instrument(textBoxSensorName.Text,
+                Instrument instrument = new Instrument(DateTime.Now,
+                                                  textBoxSensorName.Text,
                                                   maskedTextBoxSerialNumber.Text,
                                                   comboBoxSignalType.Text,
                                                   comboBoxMeasureType.Text,
@@ -448,7 +468,8 @@ namespace MyFirstWFApp
 
                     // Create new instrument and add to list
 
-                    Instrument instrument = new Instrument(textBoxSensorName.Text,
+                    Instrument instrument = new Instrument(DateTime.Now,
+                                                      textBoxSensorName.Text,
                                                       maskedTextBoxSerialNumber.Text,
                                                       comboBoxSignalType.Text,
                                                       comboBoxMeasureType.Text,
@@ -986,13 +1007,24 @@ namespace MyFirstWFApp
             {
                 // Register new sensor
                 EnterDataIntoTextPreviewBox();
-                
-                // Save data to file
-                
-                
 
-                
-                
+                // Save data to file
+
+                StreamWriter outputFile = new StreamWriter
+                    ("C:\\Users\\robin\\source\\repos\\RobinHeggelund\\Lizard\\bin\\Debug\\net6.0-windows\\instruments.csv");
+
+                foreach (Instrument instrument in instrumentList)
+                {
+                    outputFile.WriteLine(instrument.ToString());
+
+                }
+
+                outputFile.Close();
+
+
+
+
+
 
             }
 
@@ -1055,9 +1087,9 @@ namespace MyFirstWFApp
 
         private void pictureBoxButtonSearch_Click(object sender, EventArgs e)
         {
-            
+
             // Show instrument search panel
-            
+
             panelSensorSearch.Visible = true;
             this.panelSensorSearch.Location = new Point(243, 158);
 
@@ -1065,6 +1097,12 @@ namespace MyFirstWFApp
 
             // clear sensor listbox and add each instrument in list
 
+            updateInstrumentListBox();
+
+        }
+
+        private void updateInstrumentListBox()
+        {
             listBoxSensorList.Items.Clear();
             int index = 0;
             if (instrumentList.Count > 0)
@@ -1077,23 +1115,41 @@ namespace MyFirstWFApp
 
                 }
             }
-            
         }
 
         private void buttonSensorSearchCancle_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to delete this instrument?";
+            string caption = "Confirm delete";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Warning;
+            DialogResult result;
+
+            result = MessageBox.Show(this, message, caption, buttons, icon);
+
+            if (result == DialogResult.Yes)
+            {
+                // Delete selected instrument
+
+                instrumentList.RemoveAll(x => x.SensorName == listBoxSensorList.Text);
+
+                updateInstrumentListBox();
+
+
+
+            }
+        }
+
+        private void pictureBoxSearchBoarderClose_Click(object sender, EventArgs e)
         {
             panelSensorSearch.Visible = false;
             buttonSensorSearchConfirm.Enabled = false;
         }
 
-        private void pictureBoxSearchBoarderClose_Click(object sender, EventArgs e)
-        {
-            InvokeOnClick(buttonSensorSearchCancle, null);
-        }
-
         private void panelBoarderSearchClose_Click(object sender, EventArgs e)
         {
-            InvokeOnClick(buttonSensorSearchCancle, null);
+            panelSensorSearch.Visible = false;
+            buttonSensorSearchConfirm.Enabled = false;
         }
 
         private void panelBoarderSearchClose_MouseEnter(object sender, EventArgs e)

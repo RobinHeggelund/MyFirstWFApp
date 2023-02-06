@@ -12,7 +12,7 @@ namespace MyFirstWFApp
     {
         //Class body
 
-        public DateTime RegisterDate { get; }
+        public DateTime RegisterDate { get; set; }
 
         private string sensorName; //field
 
@@ -35,7 +35,8 @@ namespace MyFirstWFApp
         public double URV { get; set; }
         public string Unit { get; set; }
 
-        public Instrument(string sensorName,
+        public Instrument(DateTime registerDateTime,
+                          string sensorName,
                           string serialNumber,
                           string signalType,
                           string measureType,
@@ -45,7 +46,7 @@ namespace MyFirstWFApp
                           double urv = 0.0,
                           string unit = null)
         {
-            this.RegisterDate= DateTime.Now;
+            this.RegisterDate = registerDateTime;
             this.SensorName = sensorName;
             this.SerialNumber= serialNumber;
             this.SignalType = signalType;
@@ -67,15 +68,16 @@ namespace MyFirstWFApp
 
         public override string ToString()
         {
-            return RegisterDate.ToString() + ";" + SensorName
-                                          + ";" + SerialNumber
-                                          + ";" + SignalType
-                                          + ";" + MeasureType
-                                          + ";" + Options
-                                          + ";" + Comment
-                                          + ";" + Convert.ToString(LRV, CultureInfo.InvariantCulture)
-                                          + ";" + Convert.ToString(URV, CultureInfo.InvariantCulture)
-                                          + ";" + Unit;
+            return  RegisterDate
+            + ";" + SensorName
+            + ";" + SerialNumber
+            + ";" + SignalType
+            + ";" + MeasureType
+            + ";" + Options
+            + ";" + Comment
+            + ";" + Convert.ToString(LRV, CultureInfo.InvariantCulture)
+            + ";" + Convert.ToString(URV, CultureInfo.InvariantCulture)
+            + ";" + Unit;
 
         }
 

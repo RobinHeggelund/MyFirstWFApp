@@ -97,13 +97,13 @@ namespace MyFirstWFApp
             // create panel
             
             this.panelMain.Controls.Clear();
-            FrmSensorData = new FormSensorData();
+            FrmSensorData = new FormSensorData(this);
             FrmSensorData.TopLevel = false;
             FrmSensorData.Dock = DockStyle.Fill;
             FrmSensorData.TopMost = true;
             this.panelMain.Controls.Add(FrmSensorData);
 
-            FrmConnection = new FormConnection();
+            FrmConnection = new FormConnection(this);
             FrmConnection.TopLevel = false;
             FrmConnection.Dock = DockStyle.Fill;
             FrmConnection.TopMost = true;
@@ -115,7 +115,7 @@ namespace MyFirstWFApp
             FrmNetwork.TopMost = true;
             this.panelMain.Controls.Add(FrmNetwork);
 
-            FrmSettings = new FormSettings();
+            FrmSettings = new FormSettings(this);
             FrmSettings.TopLevel = false;
             FrmSettings.Dock = DockStyle.Fill;
             FrmSettings.TopMost = true;

@@ -27,6 +27,8 @@ namespace MyFirstWFApp
         Color Medium = Color.FromArgb(54, 57, 62);
         Color MediumDark = Color.FromArgb(40, 43, 48);
         Color Dark = Color.FromArgb(30, 33, 36);
+
+        Form1 mainForm;
         
         // Creating lists
         
@@ -39,9 +41,10 @@ namespace MyFirstWFApp
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
 
-        public FormConnection()
+        public FormConnection(Form1 mainForm)
         {
             InitializeComponent();
+            this.mainForm = mainForm;
         }
 
         // Initialization end
@@ -88,8 +91,9 @@ namespace MyFirstWFApp
 
             if (client.Connected)
             {
+                mainForm.toolStripStatusLabel1.Text = "Connected";
 
-                
+
 
                 if (connected == false)
                 {

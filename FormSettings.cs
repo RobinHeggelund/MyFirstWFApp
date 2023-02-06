@@ -11,10 +11,14 @@ using System.Windows.Forms;
 namespace MyFirstWFApp
 {
     public partial class FormSettings : Form
+
     {
-        public FormSettings()
+        Form1 mainForm;
+
+        public FormSettings(Form1 mainForm)
         {
             InitializeComponent();
+            this.mainForm = mainForm;
         }
 
         private void buttonRefreshSummary_Click(object sender, EventArgs e)
@@ -46,26 +50,26 @@ namespace MyFirstWFApp
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            int x = pictureBox1.Location.X;
-            int y = pictureBox1.Location.Y;
+            int x = pictureBoxHelp.Location.X;
+            int y = pictureBoxHelp.Location.Y;
 
-            pictureBox1.Width = 150;
-            pictureBox1.Height = 150;
+            pictureBoxHelp.Width = 150;
+            pictureBoxHelp.Height = 150;
 
-            this.pictureBox1.Location = new Point(x - 5, y - 5);
+            this.pictureBoxHelp.Location = new Point(x - 5, y - 5);
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
 
         {
 
-            int x = pictureBox1.Location.X;
-            int y = pictureBox1.Location.Y;
+            int x = pictureBoxHelp.Location.X;
+            int y = pictureBoxHelp.Location.Y;
 
-            pictureBox1.Width = 140;
-            pictureBox1.Height = 140;
+            pictureBoxHelp.Width = 140;
+            pictureBoxHelp.Height = 140;
 
-            this.pictureBox1.Location = new Point(x + 5, y + 5);
+            this.pictureBoxHelp.Location = new Point(x + 5, y + 5);
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
@@ -132,6 +136,57 @@ namespace MyFirstWFApp
             pictureBox4.Height = 140;
 
             this.pictureBox4.Location = new Point(x + 5, y + 5);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // About Box
+
+            FormAboutBox FrmAboutBox = new FormAboutBox();
+            FrmAboutBox.ShowDialog();
+
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            // Open File Dialog
+
+
+            string fileName;
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 0;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.FileName = "";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileName = openFileDialog1.FileName;
+
+                string message = "Are you sure you want to import this file?";
+                string caption = "Confirm filename";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                MessageBoxIcon icon = MessageBoxIcon.Warning;
+                DialogResult result;
+
+                result = MessageBox.Show(this, message, caption, buttons, icon);
+                
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Filename: " + fileName + " imported.");
+                }
+            }
+
+            
+
+
+
+
+
+
         }
     }
 }

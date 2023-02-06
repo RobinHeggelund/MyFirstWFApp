@@ -9,6 +9,10 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageIcon></PackageIcon>
     <AssemblyName>Lizard</AssemblyName>
+    <Title>Lizard Seonsor Solution</Title>
+    <Description>State of the art sensor solution and management tool developet by Leap Frog.</Description>
+    <Company>Leap Frog</Company>
+    <Copyright>Leap Frog TM</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
