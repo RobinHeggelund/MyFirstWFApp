@@ -29,9 +29,19 @@ namespace MyFirstWFApp
         Color Dark = Color.FromArgb(30, 33, 36);
 
         Form1 mainForm;
-        
+
+        // Create variables for connected instrument
+
+        string instrumentScaled;
+        string instrumentAlarmLow;
+        string instrumentAlarmHigh;
+        string instrumentName;
+        string instrumentLRV;
+        string instrumentURV;
+        int instrumentStatus; // 0 = OK, 1 = Fail, 2 = Low Alarm, 3 = High Alarm
+
         // Creating lists
-        
+
         List<string> servers = new List<string>();
 
         // Custom Border
@@ -99,7 +109,7 @@ namespace MyFirstWFApp
 
                 if (connected == false)
                 {
-                    textBoxCommunication.AppendText("Connected to server" + "\r\n");
+                    textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Connected to server" + "\r\n");
                     connected = true;
                 }
                 
@@ -108,7 +118,7 @@ namespace MyFirstWFApp
 
             }
 
-            //client send
+            //Client send
             if (textBoxSend.Text.Length >0)
             {
                 client.Send(Encoding.ASCII.GetBytes(textBoxSend.Text));
@@ -122,10 +132,80 @@ namespace MyFirstWFApp
             
 
 
-            //client recieve
+            //Client recieve
+            
             byte[] buffer = new byte[1024];
             int bytesRecieved = client.Receive(buffer);
-            textBoxCommunication.AppendText(Encoding.ASCII.GetString(buffer, 0, bytesRecieved) + "\r\n");
+            string responseRecieved = Encoding.ASCII.GetString(buffer, 0, bytesRecieved);
+
+            //Split string
+
+            string[] responseRecievedArray = responseRecieved.Split(';');
+
+            //Check respons type, deligate values to variables
+            //and return a readable message to connection log
+
+            if (responseRecievedArray[0] == "readconf" && responseRecievedArray.Length == 6)
+            {
+                instrumentName = responseRecievedArray[1];
+                instrumentLRV = responseRecievedArray[2];
+                instrumentURV = responseRecievedArray[3];
+                instrumentAlarmLow = responseRecievedArray[4];
+                instrumentAlarmHigh = responseRecievedArray[5];
+
+                // Update connection log:
+
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Name: " + instrumentName + "\r\n");
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument LRV: " + instrumentLRV + "\r\n");
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument URV: " + instrumentURV + "\r\n");
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Alarm Floor: " + instrumentAlarmLow + "\r\n");
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Alarm Ceiling: " + instrumentAlarmHigh + "\r\n");
+            }
+
+            else if (responseRecievedArray[0] == "writeconf")
+            {
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument updated successfully!"+ "\r\n");
+
+            }
+
+            else if (responseRecievedArray[0] == "readscaled")
+            {
+                instrumentScaled = responseRecievedArray[1];
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument brightness reading: " + instrumentScaled + " [lux]\r\n");
+            }
+
+            else if (responseRecievedArray[0] == "readstatus")
+            {
+                instrumentStatus = int.Parse(responseRecievedArray[1]);
+
+                
+                if (instrumentStatus == 0)
+                {
+                    textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: OK\r\n");
+                }
+                
+                else if (instrumentStatus == 1)
+                {
+                    textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: FAIL\r\n");
+                }
+
+                else if (instrumentStatus == 2)
+                {
+                    textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: LOW ALARM\r\n");
+                }
+
+                else if (instrumentStatus == 3)
+                {
+                    textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: HIGH ALARM\r\n");
+                }
+                
+            }
+
+            else
+            {
+
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Error. No valid return from server.\r\n" +"[" + DateTime.Now.ToShortTimeString() + "] " + "Check instrumentBE.exe or logfile.\r\n");
+            }
 
         }
 
