@@ -37,6 +37,15 @@
             this.listBoxSensorList = new System.Windows.Forms.ListBox();
             this.buttonSensorDelete = new System.Windows.Forms.Button();
             this.buttonSensorSearchConfirm = new System.Windows.Forms.Button();
+            this.panelAlarmBackgroundPanel = new System.Windows.Forms.Panel();
+            this.panelAlarmCeilingTagBackgroundPanel = new System.Windows.Forms.Panel();
+            this.labelAlarmCeiling = new System.Windows.Forms.Label();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panelAlarmFloorTagBackgroundPanel = new System.Windows.Forms.Panel();
+            this.labelAlarmFloor = new System.Windows.Forms.Label();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.textBoxAlarmFloor = new System.Windows.Forms.TextBox();
+            this.textBoxAlarmCeiling = new System.Windows.Forms.TextBox();
             this.toolStripStatusLabel1 = new System.Windows.Forms.Label();
             this.comboBoxMeasureType = new System.Windows.Forms.ComboBox();
             this.comboBoxSignalType = new System.Windows.Forms.ComboBox();
@@ -126,6 +135,9 @@
             this.panelBoarderSearchClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchBoarderClose)).BeginInit();
             this.panelSensorSearchListBackground.SuspendLayout();
+            this.panelAlarmBackgroundPanel.SuspendLayout();
+            this.panelAlarmCeilingTagBackgroundPanel.SuspendLayout();
+            this.panelAlarmFloorTagBackgroundPanel.SuspendLayout();
             this.panelOptionsCommentsBack.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
@@ -159,6 +171,7 @@
             // 
             this.panelBackgroundTabSensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.panelBackgroundTabSensorData.Controls.Add(this.panelSensorSearch);
+            this.panelBackgroundTabSensorData.Controls.Add(this.panelAlarmBackgroundPanel);
             this.panelBackgroundTabSensorData.Controls.Add(this.toolStripStatusLabel1);
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxMeasureType);
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxSignalType);
@@ -282,6 +295,100 @@
             this.buttonSensorSearchConfirm.UseVisualStyleBackColor = false;
             this.buttonSensorSearchConfirm.Click += new System.EventHandler(this.buttonSensorSearchConfirm_Click);
             // 
+            // panelAlarmBackgroundPanel
+            // 
+            this.panelAlarmBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelAlarmBackgroundPanel.Controls.Add(this.panelAlarmCeilingTagBackgroundPanel);
+            this.panelAlarmBackgroundPanel.Controls.Add(this.panelAlarmFloorTagBackgroundPanel);
+            this.panelAlarmBackgroundPanel.Controls.Add(this.textBoxAlarmFloor);
+            this.panelAlarmBackgroundPanel.Controls.Add(this.textBoxAlarmCeiling);
+            this.panelAlarmBackgroundPanel.Location = new System.Drawing.Point(13, 266);
+            this.panelAlarmBackgroundPanel.Name = "panelAlarmBackgroundPanel";
+            this.panelAlarmBackgroundPanel.Size = new System.Drawing.Size(468, 37);
+            this.panelAlarmBackgroundPanel.TabIndex = 56;
+            // 
+            // panelAlarmCeilingTagBackgroundPanel
+            // 
+            this.panelAlarmCeilingTagBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelAlarmCeilingTagBackgroundPanel.Controls.Add(this.labelAlarmCeiling);
+            this.panelAlarmCeilingTagBackgroundPanel.Controls.Add(this.panel41);
+            this.panelAlarmCeilingTagBackgroundPanel.Location = new System.Drawing.Point(230, 0);
+            this.panelAlarmCeilingTagBackgroundPanel.Name = "panelAlarmCeilingTagBackgroundPanel";
+            this.panelAlarmCeilingTagBackgroundPanel.Size = new System.Drawing.Size(123, 37);
+            this.panelAlarmCeilingTagBackgroundPanel.TabIndex = 27;
+            // 
+            // labelAlarmCeiling
+            // 
+            this.labelAlarmCeiling.AutoSize = true;
+            this.labelAlarmCeiling.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelAlarmCeiling.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAlarmCeiling.Location = new System.Drawing.Point(10, 8);
+            this.labelAlarmCeiling.Name = "labelAlarmCeiling";
+            this.labelAlarmCeiling.Size = new System.Drawing.Size(107, 21);
+            this.labelAlarmCeiling.TabIndex = 26;
+            this.labelAlarmCeiling.Text = "Alarm Ceiling";
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel41.Location = new System.Drawing.Point(283, 25);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(430, 37);
+            this.panel41.TabIndex = 25;
+            // 
+            // panelAlarmFloorTagBackgroundPanel
+            // 
+            this.panelAlarmFloorTagBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelAlarmFloorTagBackgroundPanel.Controls.Add(this.labelAlarmFloor);
+            this.panelAlarmFloorTagBackgroundPanel.Controls.Add(this.panel43);
+            this.panelAlarmFloorTagBackgroundPanel.Location = new System.Drawing.Point(0, 0);
+            this.panelAlarmFloorTagBackgroundPanel.Name = "panelAlarmFloorTagBackgroundPanel";
+            this.panelAlarmFloorTagBackgroundPanel.Size = new System.Drawing.Size(123, 37);
+            this.panelAlarmFloorTagBackgroundPanel.TabIndex = 26;
+            // 
+            // labelAlarmFloor
+            // 
+            this.labelAlarmFloor.AutoSize = true;
+            this.labelAlarmFloor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelAlarmFloor.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAlarmFloor.Location = new System.Drawing.Point(10, 8);
+            this.labelAlarmFloor.Name = "labelAlarmFloor";
+            this.labelAlarmFloor.Size = new System.Drawing.Size(95, 21);
+            this.labelAlarmFloor.TabIndex = 26;
+            this.labelAlarmFloor.Text = "Alarm Floor";
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel43.Location = new System.Drawing.Point(283, 25);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(430, 37);
+            this.panel43.TabIndex = 25;
+            // 
+            // textBoxAlarmFloor
+            // 
+            this.textBoxAlarmFloor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxAlarmFloor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAlarmFloor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAlarmFloor.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxAlarmFloor.Location = new System.Drawing.Point(136, 8);
+            this.textBoxAlarmFloor.Name = "textBoxAlarmFloor";
+            this.textBoxAlarmFloor.Size = new System.Drawing.Size(63, 22);
+            this.textBoxAlarmFloor.TabIndex = 9;
+            this.textBoxAlarmFloor.Text = "0.0";
+            // 
+            // textBoxAlarmCeiling
+            // 
+            this.textBoxAlarmCeiling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxAlarmCeiling.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAlarmCeiling.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAlarmCeiling.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxAlarmCeiling.Location = new System.Drawing.Point(366, 8);
+            this.textBoxAlarmCeiling.Name = "textBoxAlarmCeiling";
+            this.textBoxAlarmCeiling.Size = new System.Drawing.Size(55, 22);
+            this.textBoxAlarmCeiling.TabIndex = 10;
+            this.textBoxAlarmCeiling.Text = "0.0";
+            // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.AutoSize = true;
@@ -349,9 +456,9 @@
             this.panelOptionsCommentsBack.Controls.Add(this.panel3);
             this.panelOptionsCommentsBack.Controls.Add(this.panel9);
             this.panelOptionsCommentsBack.Controls.Add(this.textBoxPreview);
-            this.panelOptionsCommentsBack.Location = new System.Drawing.Point(13, 266);
+            this.panelOptionsCommentsBack.Location = new System.Drawing.Point(13, 318);
             this.panelOptionsCommentsBack.Name = "panelOptionsCommentsBack";
-            this.panelOptionsCommentsBack.Size = new System.Drawing.Size(950, 306);
+            this.panelOptionsCommentsBack.Size = new System.Drawing.Size(950, 254);
             this.panelOptionsCommentsBack.TabIndex = 10;
             // 
             // panel23
@@ -408,7 +515,7 @@
             this.panel34.Controls.Add(this.textBoxComments);
             this.panel34.Location = new System.Drawing.Point(0, 165);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(468, 121);
+            this.panel34.Size = new System.Drawing.Size(468, 81);
             this.panel34.TabIndex = 8;
             // 
             // textBoxComments
@@ -1292,6 +1399,12 @@
             this.panelBoarderSearchClose.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchBoarderClose)).EndInit();
             this.panelSensorSearchListBackground.ResumeLayout(false);
+            this.panelAlarmBackgroundPanel.ResumeLayout(false);
+            this.panelAlarmBackgroundPanel.PerformLayout();
+            this.panelAlarmCeilingTagBackgroundPanel.ResumeLayout(false);
+            this.panelAlarmCeilingTagBackgroundPanel.PerformLayout();
+            this.panelAlarmFloorTagBackgroundPanel.ResumeLayout(false);
+            this.panelAlarmFloorTagBackgroundPanel.PerformLayout();
             this.panelOptionsCommentsBack.ResumeLayout(false);
             this.panelOptionsCommentsBack.PerformLayout();
             this.panel23.ResumeLayout(false);
@@ -1434,5 +1547,14 @@
         private ListBox listBoxSensorList;
         private Button buttonSensorDelete;
         private Button buttonSensorSearchConfirm;
+        private Panel panelAlarmBackgroundPanel;
+        private Panel panelAlarmCeilingTagBackgroundPanel;
+        private Label labelAlarmCeiling;
+        private Panel panel41;
+        private Panel panelAlarmFloorTagBackgroundPanel;
+        private Label labelAlarmFloor;
+        private Panel panel43;
+        private TextBox textBoxAlarmFloor;
+        private TextBox textBoxAlarmCeiling;
     }
 }

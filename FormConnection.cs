@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MyFirstWFApp
 {
@@ -55,6 +56,7 @@ namespace MyFirstWFApp
         {
             InitializeComponent();
             this.mainForm = mainForm;
+
         }
 
         // Initialization end
@@ -64,6 +66,7 @@ namespace MyFirstWFApp
 
         public void buttonConnect_Click(object sender, EventArgs e)
         {
+            
 
             if (textBoxIP.Text.Length == 0)
             {
@@ -71,7 +74,7 @@ namespace MyFirstWFApp
 
                 textBoxIP.Focus();
 
-                
+
 
                 return;
 
@@ -84,22 +87,39 @@ namespace MyFirstWFApp
                 return;
             }
 
-            else if (textBoxSend.Text.Length == 0)
+            else
             {
-                SystemSounds.Beep.Play();
-                textBoxSend.Focus();
-                return;
-
+                timerConnection_readscaled.Enabled = true;
             }
 
+            
+
+        }
+
+        private void SendCommandToBE(string commandToSend)
+        {
             //TCP Server start
             // make an endpoint for communication:
 
             IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), Convert.ToInt32(textBoxInputPort.Text));
             Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            client.Connect(endpoint);
+            try
+            {
+                client.Connect(endpoint);
+            }
+
+            catch (System.Net.Sockets.SocketException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                timerConnection_readscaled.Stop();
+                return;
+  
+            }
             
+         
+
 
             if (client.Connected)
             {
@@ -112,28 +132,22 @@ namespace MyFirstWFApp
                     textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Connected to server" + "\r\n");
                     connected = true;
                 }
-                
-                
-                buttonSend.Enabled = true;
+
+
+
 
             }
 
-            //Client send
-            if (textBoxSend.Text.Length >0)
-            {
-                client.Send(Encoding.ASCII.GetBytes(textBoxSend.Text));
-            }
-
-            else
-            {
-                client.Send(Encoding.ASCII.GetBytes("EMPTY"));
-            }
-                
+            //Client send confirmation
+   
             
+            client.Send(Encoding.ASCII.GetBytes(commandToSend));
+            
+
 
 
             //Client recieve
-            
+
             byte[] buffer = new byte[1024];
             int bytesRecieved = client.Receive(buffer);
             string responseRecieved = Encoding.ASCII.GetString(buffer, 0, bytesRecieved);
@@ -164,7 +178,7 @@ namespace MyFirstWFApp
 
             else if (responseRecievedArray[0] == "writeconf")
             {
-                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument updated successfully!"+ "\r\n");
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument updated successfully!" + "\r\n");
 
             }
 
@@ -178,12 +192,12 @@ namespace MyFirstWFApp
             {
                 instrumentStatus = int.Parse(responseRecievedArray[1]);
 
-                
+
                 if (instrumentStatus == 0)
                 {
                     textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: OK\r\n");
                 }
-                
+
                 else if (instrumentStatus == 1)
                 {
                     textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: FAIL\r\n");
@@ -198,15 +212,14 @@ namespace MyFirstWFApp
                 {
                     textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: HIGH ALARM\r\n");
                 }
-                
+
             }
 
             else
             {
 
-                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Error. No valid return from server.\r\n" +"[" + DateTime.Now.ToShortTimeString() + "] " + "Check instrumentBE.exe or logfile.\r\n");
+                textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Error. No valid return from server.\r\n" + "[" + DateTime.Now.ToShortTimeString() + "] " + "Check instrumentBE.exe or logfile.\r\n");
             }
-
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
@@ -357,6 +370,28 @@ namespace MyFirstWFApp
         private void pictureBoxSearchBoarderClose_Click(object sender, EventArgs e)
         {
             InvokeOnClick(buttonIPSearchCancle, null);
+        }
+
+        private void buttonAddPoint_Click(object sender, EventArgs e)
+        {
+            //chart1.Series[0].Points.AddXY(Convert.ToDouble(textBoxXvalue.Text), Convert.ToDouble(textBoxYvalue.Text));
+            //textBoxXvalue.Text = textBoxYvalue.Text = "";
+        }
+
+        private void panelBorderConnectionLog_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(panelConnectionLog.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void buttonDisconnect_Click(object sender, EventArgs e)
+        {
+            timerConnection_readscaled.Enabled = false;
+        }
+
+        private void timerConnection_readscaled_Tick(object sender, EventArgs e)
+        {
+            SendCommandToBE("readscaled");
         }
     }
 }
