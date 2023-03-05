@@ -78,6 +78,10 @@
             this.panelBoarderClose = new System.Windows.Forms.Panel();
             this.pictureBoxBoarderClose = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.labelTotalSummary = new System.Windows.Forms.Label();
+            this.labelFieldbusSummary = new System.Windows.Forms.Label();
+            this.labelDigitalSummary = new System.Windows.Forms.Label();
+            this.labelAnalogSummary = new System.Windows.Forms.Label();
             this.List = new System.Windows.Forms.TabPage();
             this.listBoxIpAdress = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -92,10 +96,6 @@
             this.radioButtonRegisterNew = new System.Windows.Forms.RadioButton();
             this.radioButtonSave = new System.Windows.Forms.RadioButton();
             this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.labelAnalogSummary = new System.Windows.Forms.Label();
-            this.labelDigitalSummary = new System.Windows.Forms.Label();
-            this.labelFieldbusSummary = new System.Windows.Forms.Label();
-            this.labelTotalSummary = new System.Windows.Forms.Label();
             this.panelDockLeft.SuspendLayout();
             this.panelSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettingsTab)).BeginInit();
@@ -275,9 +275,9 @@
             this.labelNetworkTab.ForeColor = System.Drawing.SystemColors.Control;
             this.labelNetworkTab.Location = new System.Drawing.Point(56, 25);
             this.labelNetworkTab.Name = "labelNetworkTab";
-            this.labelNetworkTab.Size = new System.Drawing.Size(83, 22);
+            this.labelNetworkTab.Size = new System.Drawing.Size(95, 22);
             this.labelNetworkTab.TabIndex = 27;
-            this.labelNetworkTab.Text = "Network";
+            this.labelNetworkTab.Text = "Database";
             this.labelNetworkTab.Click += new System.EventHandler(this.labelNetworkTab_Click);
             this.labelNetworkTab.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
             // 
@@ -749,6 +749,46 @@
             this.panelMain.Size = new System.Drawing.Size(982, 635);
             this.panelMain.TabIndex = 46;
             // 
+            // labelTotalSummary
+            // 
+            this.labelTotalSummary.AutoSize = true;
+            this.labelTotalSummary.Location = new System.Drawing.Point(474, 583);
+            this.labelTotalSummary.Name = "labelTotalSummary";
+            this.labelTotalSummary.Size = new System.Drawing.Size(83, 15);
+            this.labelTotalSummary.TabIndex = 3;
+            this.labelTotalSummary.Text = "TotalSummary";
+            this.labelTotalSummary.Visible = false;
+            // 
+            // labelFieldbusSummary
+            // 
+            this.labelFieldbusSummary.AutoSize = true;
+            this.labelFieldbusSummary.Location = new System.Drawing.Point(359, 583);
+            this.labelFieldbusSummary.Name = "labelFieldbusSummary";
+            this.labelFieldbusSummary.Size = new System.Drawing.Size(102, 15);
+            this.labelFieldbusSummary.TabIndex = 2;
+            this.labelFieldbusSummary.Text = "FieldbusSummary";
+            this.labelFieldbusSummary.Visible = false;
+            // 
+            // labelDigitalSummary
+            // 
+            this.labelDigitalSummary.AutoSize = true;
+            this.labelDigitalSummary.Location = new System.Drawing.Point(247, 583);
+            this.labelDigitalSummary.Name = "labelDigitalSummary";
+            this.labelDigitalSummary.Size = new System.Drawing.Size(92, 15);
+            this.labelDigitalSummary.TabIndex = 1;
+            this.labelDigitalSummary.Text = "DigitalSummary";
+            this.labelDigitalSummary.Visible = false;
+            // 
+            // labelAnalogSummary
+            // 
+            this.labelAnalogSummary.AutoSize = true;
+            this.labelAnalogSummary.Location = new System.Drawing.Point(134, 583);
+            this.labelAnalogSummary.Name = "labelAnalogSummary";
+            this.labelAnalogSummary.Size = new System.Drawing.Size(96, 15);
+            this.labelAnalogSummary.TabIndex = 0;
+            this.labelAnalogSummary.Text = "AnalogSummary";
+            this.labelAnalogSummary.Visible = false;
+            // 
             // List
             // 
             this.List.Controls.Add(this.listBoxIpAdress);
@@ -888,46 +928,6 @@
             this.radioButtonDelete.TabStop = true;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
-            // 
-            // labelAnalogSummary
-            // 
-            this.labelAnalogSummary.AutoSize = true;
-            this.labelAnalogSummary.Location = new System.Drawing.Point(134, 583);
-            this.labelAnalogSummary.Name = "labelAnalogSummary";
-            this.labelAnalogSummary.Size = new System.Drawing.Size(96, 15);
-            this.labelAnalogSummary.TabIndex = 0;
-            this.labelAnalogSummary.Text = "AnalogSummary";
-            this.labelAnalogSummary.Visible = false;
-            // 
-            // labelDigitalSummary
-            // 
-            this.labelDigitalSummary.AutoSize = true;
-            this.labelDigitalSummary.Location = new System.Drawing.Point(247, 583);
-            this.labelDigitalSummary.Name = "labelDigitalSummary";
-            this.labelDigitalSummary.Size = new System.Drawing.Size(92, 15);
-            this.labelDigitalSummary.TabIndex = 1;
-            this.labelDigitalSummary.Text = "DigitalSummary";
-            this.labelDigitalSummary.Visible = false;
-            // 
-            // labelFieldbusSummary
-            // 
-            this.labelFieldbusSummary.AutoSize = true;
-            this.labelFieldbusSummary.Location = new System.Drawing.Point(359, 583);
-            this.labelFieldbusSummary.Name = "labelFieldbusSummary";
-            this.labelFieldbusSummary.Size = new System.Drawing.Size(102, 15);
-            this.labelFieldbusSummary.TabIndex = 2;
-            this.labelFieldbusSummary.Text = "FieldbusSummary";
-            this.labelFieldbusSummary.Visible = false;
-            // 
-            // labelTotalSummary
-            // 
-            this.labelTotalSummary.AutoSize = true;
-            this.labelTotalSummary.Location = new System.Drawing.Point(474, 583);
-            this.labelTotalSummary.Name = "labelTotalSummary";
-            this.labelTotalSummary.Size = new System.Drawing.Size(83, 15);
-            this.labelTotalSummary.TabIndex = 3;
-            this.labelTotalSummary.Text = "TotalSummary";
-            this.labelTotalSummary.Visible = false;
             // 
             // Form1
             // 

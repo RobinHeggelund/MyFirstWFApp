@@ -272,7 +272,7 @@
             this.buttonSensorDelete.Enabled = false;
             this.buttonSensorDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSensorDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSensorDelete.Location = new System.Drawing.Point(56, 250);
+            this.buttonSensorDelete.Location = new System.Drawing.Point(237, 250);
             this.buttonSensorDelete.Name = "buttonSensorDelete";
             this.buttonSensorDelete.Size = new System.Drawing.Size(165, 38);
             this.buttonSensorDelete.TabIndex = 56;
@@ -287,7 +287,7 @@
             this.buttonSensorSearchConfirm.Enabled = false;
             this.buttonSensorSearchConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSensorSearchConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSensorSearchConfirm.Location = new System.Drawing.Point(237, 250);
+            this.buttonSensorSearchConfirm.Location = new System.Drawing.Point(56, 250);
             this.buttonSensorSearchConfirm.Name = "buttonSensorSearchConfirm";
             this.buttonSensorSearchConfirm.Size = new System.Drawing.Size(165, 38);
             this.buttonSensorSearchConfirm.TabIndex = 55;
@@ -441,7 +441,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(319, 578);
+            this.button1.Location = new System.Drawing.Point(497, 578);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 40);
             this.button1.TabIndex = 44;
@@ -984,7 +984,7 @@
             this.buttonRegisterNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRegisterNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegisterNew.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonRegisterNew.Location = new System.Drawing.Point(497, 578);
+            this.buttonRegisterNew.Location = new System.Drawing.Point(319, 578);
             this.buttonRegisterNew.Name = "buttonRegisterNew";
             this.buttonRegisterNew.Size = new System.Drawing.Size(159, 40);
             this.buttonRegisterNew.TabIndex = 14;
