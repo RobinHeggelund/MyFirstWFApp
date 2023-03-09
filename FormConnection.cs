@@ -15,6 +15,8 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms.DataVisualization.Charting;
 using Microsoft.VisualBasic.Devices;
 using System.Windows.Forms;
+using System.ComponentModel.Design;
+using System.Diagnostics.Metrics;
 
 namespace MyFirstWFApp
 {
@@ -22,6 +24,9 @@ namespace MyFirstWFApp
     public partial class FormConnection : Form
 
     {
+        // Folderpath dialog
+        
+        FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
 
         // Creating color pallet
 
@@ -48,6 +53,10 @@ namespace MyFirstWFApp
 
         List<string> servers = new List<string>();
 
+        List<(string instrumentScaled, DateTime timestamp)> scaledDataRecievedLogList = new List<(string, DateTime)>();
+        
+        List<InstrumentLog> instrumentLogList = new List<InstrumentLog>();
+        
         // Custom Border
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -305,6 +314,21 @@ namespace MyFirstWFApp
 
                     chart1.Series[0].Points.AddXY(DateTime.Now.ToLongTimeString(), instrumentScaled);
                     labelValueScaled.Text = instrumentScaled.Substring(0, 5);
+
+                    // Create new InstrumentLog and Update list
+
+                    try
+
+                    {
+                        InstrumentLog instrumentLog = new InstrumentLog(instrumentScaled.Substring(0, (instrumentScaled.Length - 2)), DateTime.Now);
+
+                        instrumentLogList.Add(instrumentLog);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
 
                 }
 
@@ -777,17 +801,57 @@ namespace MyFirstWFApp
         private void buttonSaveLog_Click(object sender, EventArgs e)
         {
 
+            // Define the output file path
+            
+            string folderPath;
+
+            folderBrowserDialog1.InitialDirectory = "c:\\";
+            folderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer;
+
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                folderPath = folderBrowserDialog1.SelectedPath + "\\instrumentScaledValueLog.csv";
+
+                string message = "Are you sure you want to save the instrumentScaledValueLog.csv file to this location?";
+                string caption = "Confirm save";
+                
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                MessageBoxIcon icon = MessageBoxIcon.Warning;
+                DialogResult result;
+
+                result = MessageBox.Show(this, message, caption, buttons, icon);
+
+                if (result == DialogResult.Yes)
+
+                    // Write the data to the CSV file
+
+                    try
+
+                    {
+                     StreamWriter outputFile = new StreamWriter(folderPath);
+
+                        {
+
+                            // Write each instrumentLog to a new line in the CSV file
+
+                            foreach (InstrumentLog instrumentLog in instrumentLogList)
+                            {
+                                outputFile.WriteLine(instrumentLog.ToString());
+                            }
+
+                            outputFile.Close();
+
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+            }
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelAlarmLow_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
     

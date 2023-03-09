@@ -14,9 +14,11 @@ namespace MyFirstWFApp
 
     {
         Form1 mainForm;
-        
-        
+
+        List<Instrument> instrumentList = new List<Instrument>();
         FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+
+        public string instrumentListFileLocation = (Environment.CurrentDirectory + "\\instruments.csv");
 
         int sessionTime = 0;
         DateTime sessionStartTime = DateTime.Now;
@@ -276,8 +278,10 @@ namespace MyFirstWFApp
                                                                         Convert.ToDouble(instrumentLineParts[7]),
                                                                         Convert.ToDouble(instrumentLineParts[8]),
                                                                         Convert.ToString(instrumentLineParts[9]));
-                                //instrumentList.Add(instrument);
-                                //formSensorData.textBoxPreview.Text = instrument.ToString();
+                                instrumentList.Add(instrument);
+                                
+                                
+                                
 
                             }
 

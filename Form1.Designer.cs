@@ -623,7 +623,7 @@
             this.buttonUserProfileCancle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUserProfileCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserProfileCancle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonUserProfileCancle.Location = new System.Drawing.Point(222, 423);
+            this.buttonUserProfileCancle.Location = new System.Drawing.Point(403, 423);
             this.buttonUserProfileCancle.Name = "buttonUserProfileCancle";
             this.buttonUserProfileCancle.Size = new System.Drawing.Size(165, 38);
             this.buttonUserProfileCancle.TabIndex = 56;
@@ -637,7 +637,7 @@
             this.buttonIPSearchConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIPSearchConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIPSearchConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonIPSearchConfirm.Location = new System.Drawing.Point(403, 423);
+            this.buttonIPSearchConfirm.Location = new System.Drawing.Point(222, 423);
             this.buttonIPSearchConfirm.Name = "buttonIPSearchConfirm";
             this.buttonIPSearchConfirm.Size = new System.Drawing.Size(165, 38);
             this.buttonIPSearchConfirm.TabIndex = 55;

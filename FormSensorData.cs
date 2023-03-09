@@ -116,8 +116,7 @@ namespace MyFirstWFApp
             comboBoxSignalType.SelectedIndex = 0;
             listBoxOptions.SelectedIndex = 0;
 
-            //textBoxLVR.Text = 0.0.ToString();
-            //textBoxURV.Text = 0.0.ToString();
+ 
 
             sessionStartTime = DateTime.Now;
 
@@ -162,7 +161,7 @@ namespace MyFirstWFApp
                                                                 Convert.ToDouble(instrumentLineParts[8]),
                                                                 Convert.ToString(instrumentLineParts[9]));
                         instrumentList.Add(instrument);
-                        textBoxPreview.Text = instrument.ToString();
+                        
 
                     }
                     inputFile.Close();
@@ -1040,8 +1039,8 @@ namespace MyFirstWFApp
 
         private void WriteDataToFile()
         {
+            try { 
             StreamWriter outputFile = new StreamWriter(instrumentListFileLocation);
-               // ("C:\\Users\\Robin\\source\\repos\\RobinHeggelund\\MyFirstWFApp\\bin\\Debug\\net6.0-windows\\instruments.csv");
 
             foreach (Instrument instrument in instrumentList)
             {
@@ -1050,6 +1049,11 @@ namespace MyFirstWFApp
             }
 
             outputFile.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void textBoxLVR_Enter(object sender, EventArgs e)

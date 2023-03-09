@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 240D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 450D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 310D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 150D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 240D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 450D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 310D);
             this.textBoxSend = new System.Windows.Forms.TextBox();
             this.textBoxCommunication = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
@@ -597,54 +597,54 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.chart1.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
-            chartArea2.AxisX.LabelStyle.Format = "\"\"";
-            chartArea2.AxisX.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.MinorTickMark.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.Title = "Time of day";
-            chartArea2.AxisX.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX2.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX2.MajorGrid.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX2.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
-            chartArea2.AxisY.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea2.AxisY.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisY2.LineColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisY2.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            chartArea2.BorderColor = System.Drawing.SystemColors.Control;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
+            chartArea1.AxisX.LabelStyle.Format = "\"\"";
+            chartArea1.AxisX.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX.Title = "Time of day";
+            chartArea1.AxisX.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX2.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
+            chartArea1.AxisY.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisY2.LineColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            chartArea1.BorderColor = System.Drawing.SystemColors.Control;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.IsVisibleInLegend = false;
-            series2.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series2.LabelForeColor = System.Drawing.SystemColors.ControlDark;
-            series2.Legend = "Legend1";
-            series2.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series2.MarkerImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series2.Name = "Series1";
-            series2.Points.Add(dataPoint6);
-            series2.Points.Add(dataPoint7);
-            series2.Points.Add(dataPoint8);
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            this.chart1.Series.Add(series2);
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsVisibleInLegend = false;
+            series1.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series1.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series1.LabelForeColor = System.Drawing.SystemColors.ControlDark;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series1.MarkerImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series1.Name = "Series1";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(448, 245);
             this.chart1.TabIndex = 56;
             this.chart1.Text = "chart1";
@@ -856,7 +856,6 @@
             this.labelAlarmLow.Size = new System.Drawing.Size(76, 19);
             this.labelAlarmLow.TabIndex = 68;
             this.labelAlarmLow.Text = "Alarm Low";
-            this.labelAlarmLow.Click += new System.EventHandler(this.labelAlarmLow_Click);
             // 
             // label10
             // 
@@ -868,7 +867,6 @@
             this.label10.Size = new System.Drawing.Size(43, 19);
             this.label10.TabIndex = 70;
             this.label10.Text = "Value";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBoxAlarmHigh
             // 
