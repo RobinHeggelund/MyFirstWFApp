@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 240D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 450D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 310D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 150D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 240D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 450D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 310D);
             this.textBoxSend = new System.Windows.Forms.TextBox();
             this.textBoxCommunication = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
@@ -60,6 +60,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelIPSearch = new System.Windows.Forms.Panel();
+            this.panelIPListBorderThin03 = new System.Windows.Forms.Panel();
+            this.panelIPListBorderThin02 = new System.Windows.Forms.Panel();
+            this.panelIPListBorderThin01 = new System.Windows.Forms.Panel();
             this.panelBoarderSearch = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelBoarderSearchClose = new System.Windows.Forms.Panel();
@@ -72,6 +75,9 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timerConnection_readscaled = new System.Windows.Forms.Timer(this.components);
             this.panelConnectionLog = new System.Windows.Forms.Panel();
+            this.panelConnectionLogBoarderThin03 = new System.Windows.Forms.Panel();
+            this.panelConnectionLogBoarderThin02 = new System.Windows.Forms.Panel();
+            this.panelConnectionLogBoarderThin01 = new System.Windows.Forms.Panel();
             this.panelBorderConnectionLog = new System.Windows.Forms.Panel();
             this.panelConnectionLogClose = new System.Windows.Forms.Panel();
             this.pictureBoxConnectionLogClose = new System.Windows.Forms.PictureBox();
@@ -82,13 +88,18 @@
             this.panelChartStatus = new System.Windows.Forms.Panel();
             this.labelChartStatus = new System.Windows.Forms.Label();
             this.pictureBoxChartStatus = new System.Windows.Forms.PictureBox();
-            this.pictureBoxShowConnectionLog = new System.Windows.Forms.PictureBox();
-            this.pictureBoxNewWindowChart = new System.Windows.Forms.PictureBox();
             this.panelChart = new System.Windows.Forms.Panel();
+            this.panelInstrumentStatus = new System.Windows.Forms.Panel();
+            this.labelValueScaled = new System.Windows.Forms.Label();
             this.labelAlarmLow = new System.Windows.Forms.Label();
-            this.pictureBoxAlarmLow = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBoxAlarmHigh = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAlarmLow = new System.Windows.Forms.PictureBox();
             this.labelAlarmHigh = new System.Windows.Forms.Label();
+            this.buttonFullscreen = new System.Windows.Forms.Button();
+            this.buttonConnectionLog = new System.Windows.Forms.Button();
+            this.buttonSaveLog = new System.Windows.Forms.Button();
+            this.buttonConfigureInstrument = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -127,6 +138,17 @@
             this.pictureBoxMinimizeFullscreen = new System.Windows.Forms.PictureBox();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
+            this.panelConfigureInstrument = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panelConfigureInstrumentBoarder = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panelConfigureInstrumentClose = new System.Windows.Forms.Panel();
+            this.pictureBoxConfigureInstrumentClose = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.labelMonitor = new System.Windows.Forms.Label();
+            this.paneMonitorHeadline = new System.Windows.Forms.Panel();
             this.panelIPAdressBack.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).BeginInit();
@@ -149,11 +171,10 @@
             this.panelChartBackground.SuspendLayout();
             this.panelChartStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChartStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowConnectionLog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNewWindowChart)).BeginInit();
             this.panelChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmLow)).BeginInit();
+            this.panelInstrumentStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmHigh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmLow)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -168,6 +189,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizeFullscreen)).BeginInit();
             this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
+            this.panelConfigureInstrument.SuspendLayout();
+            this.panelConfigureInstrumentBoarder.SuspendLayout();
+            this.panelConfigureInstrumentClose.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigureInstrumentClose)).BeginInit();
+            this.paneMonitorHeadline.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxSend
@@ -417,15 +443,45 @@
             // 
             // panelIPSearch
             // 
+            this.panelIPSearch.Controls.Add(this.panelIPListBorderThin03);
+            this.panelIPSearch.Controls.Add(this.panelIPListBorderThin02);
+            this.panelIPSearch.Controls.Add(this.panelIPListBorderThin01);
             this.panelIPSearch.Controls.Add(this.panelBoarderSearch);
             this.panelIPSearch.Controls.Add(this.panel10);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchCancle);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchConfirm);
-            this.panelIPSearch.Location = new System.Drawing.Point(12, 590);
+            this.panelIPSearch.Location = new System.Drawing.Point(27, 574);
             this.panelIPSearch.Name = "panelIPSearch";
             this.panelIPSearch.Size = new System.Drawing.Size(467, 325);
             this.panelIPSearch.TabIndex = 54;
             this.panelIPSearch.Visible = false;
+            // 
+            // panelIPListBorderThin03
+            // 
+            this.panelIPListBorderThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelIPListBorderThin03.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelIPListBorderThin03.Location = new System.Drawing.Point(5, 320);
+            this.panelIPListBorderThin03.Name = "panelIPListBorderThin03";
+            this.panelIPListBorderThin03.Size = new System.Drawing.Size(457, 5);
+            this.panelIPListBorderThin03.TabIndex = 61;
+            // 
+            // panelIPListBorderThin02
+            // 
+            this.panelIPListBorderThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelIPListBorderThin02.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelIPListBorderThin02.Location = new System.Drawing.Point(462, 35);
+            this.panelIPListBorderThin02.Name = "panelIPListBorderThin02";
+            this.panelIPListBorderThin02.Size = new System.Drawing.Size(5, 290);
+            this.panelIPListBorderThin02.TabIndex = 60;
+            // 
+            // panelIPListBorderThin01
+            // 
+            this.panelIPListBorderThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelIPListBorderThin01.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIPListBorderThin01.Location = new System.Drawing.Point(0, 35);
+            this.panelIPListBorderThin01.Name = "panelIPListBorderThin01";
+            this.panelIPListBorderThin01.Size = new System.Drawing.Size(5, 290);
+            this.panelIPListBorderThin01.TabIndex = 59;
             // 
             // panelBoarderSearch
             // 
@@ -532,64 +588,64 @@
             // panelConnectionLogBackground
             // 
             this.panelConnectionLogBackground.Controls.Add(this.panelConnectionLogBackgroundPanel);
-            this.panelConnectionLogBackground.Location = new System.Drawing.Point(15, 52);
+            this.panelConnectionLogBackground.Location = new System.Drawing.Point(26, 52);
             this.panelConnectionLogBackground.Name = "panelConnectionLogBackground";
-            this.panelConnectionLogBackground.Size = new System.Drawing.Size(435, 198);
+            this.panelConnectionLogBackground.Size = new System.Drawing.Size(417, 198);
             this.panelConnectionLogBackground.TabIndex = 55;
             // 
             // chart1
             // 
-            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.chart1.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.IsMarginVisible = false;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisX.LabelStyle.Format = "\"\"";
-            chartArea1.AxisX.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.Title = "Time of day";
-            chartArea1.AxisX.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX2.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX2.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisY.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
-            chartArea1.AxisY.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisY2.LineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisY2.TitleForeColor = System.Drawing.SystemColors.Control;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            chartArea1.BorderColor = System.Drawing.SystemColors.Control;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea2.AxisX.IsMarginVisible = false;
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisX.LabelStyle.Format = "\"\"";
+            chartArea2.AxisX.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX.MinorTickMark.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX.Title = "Time of day";
+            chartArea2.AxisX.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX2.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX2.MajorGrid.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX2.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisY.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ControlDark;
+            chartArea2.AxisY.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisY2.LineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisY2.TitleForeColor = System.Drawing.SystemColors.Control;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            chartArea2.BorderColor = System.Drawing.SystemColors.Control;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.IsVisibleInLegend = false;
-            series1.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series1.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series1.LabelForeColor = System.Drawing.SystemColors.ControlDark;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series1.MarkerImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            series1.Name = "Series1";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(371, 214);
+            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.IsVisibleInLegend = false;
+            series2.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series2.LabelForeColor = System.Drawing.SystemColors.ControlDark;
+            series2.Legend = "Legend1";
+            series2.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series2.MarkerImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            series2.Name = "Series1";
+            series2.Points.Add(dataPoint6);
+            series2.Points.Add(dataPoint7);
+            series2.Points.Add(dataPoint8);
+            series2.Points.Add(dataPoint9);
+            series2.Points.Add(dataPoint10);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(448, 245);
             this.chart1.TabIndex = 56;
             this.chart1.Text = "chart1";
             // 
@@ -600,14 +656,44 @@
             // 
             // panelConnectionLog
             // 
+            this.panelConnectionLog.Controls.Add(this.panelConnectionLogBoarderThin03);
+            this.panelConnectionLog.Controls.Add(this.panelConnectionLogBoarderThin02);
+            this.panelConnectionLog.Controls.Add(this.panelConnectionLogBoarderThin01);
             this.panelConnectionLog.Controls.Add(this.panelConnectionLogBackground);
             this.panelConnectionLog.Controls.Add(this.panelBorderConnectionLog);
             this.panelConnectionLog.Controls.Add(this.buttonOKConnectionLog);
-            this.panelConnectionLog.Location = new System.Drawing.Point(351, 570);
+            this.panelConnectionLog.Location = new System.Drawing.Point(966, 574);
             this.panelConnectionLog.Name = "panelConnectionLog";
             this.panelConnectionLog.Size = new System.Drawing.Size(467, 325);
             this.panelConnectionLog.TabIndex = 57;
             this.panelConnectionLog.Visible = false;
+            // 
+            // panelConnectionLogBoarderThin03
+            // 
+            this.panelConnectionLogBoarderThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConnectionLogBoarderThin03.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelConnectionLogBoarderThin03.Location = new System.Drawing.Point(5, 320);
+            this.panelConnectionLogBoarderThin03.Name = "panelConnectionLogBoarderThin03";
+            this.panelConnectionLogBoarderThin03.Size = new System.Drawing.Size(457, 5);
+            this.panelConnectionLogBoarderThin03.TabIndex = 61;
+            // 
+            // panelConnectionLogBoarderThin02
+            // 
+            this.panelConnectionLogBoarderThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConnectionLogBoarderThin02.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelConnectionLogBoarderThin02.Location = new System.Drawing.Point(462, 35);
+            this.panelConnectionLogBoarderThin02.Name = "panelConnectionLogBoarderThin02";
+            this.panelConnectionLogBoarderThin02.Size = new System.Drawing.Size(5, 290);
+            this.panelConnectionLogBoarderThin02.TabIndex = 60;
+            // 
+            // panelConnectionLogBoarderThin01
+            // 
+            this.panelConnectionLogBoarderThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConnectionLogBoarderThin01.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelConnectionLogBoarderThin01.Location = new System.Drawing.Point(0, 35);
+            this.panelConnectionLogBoarderThin01.Name = "panelConnectionLogBoarderThin01";
+            this.panelConnectionLogBoarderThin01.Size = new System.Drawing.Size(5, 290);
+            this.panelConnectionLogBoarderThin01.TabIndex = 59;
             // 
             // panelBorderConnectionLog
             // 
@@ -685,19 +771,19 @@
             // 
             this.panelChartBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.panelChartBackground.Controls.Add(this.chart1);
-            this.panelChartBackground.Location = new System.Drawing.Point(43, 5);
+            this.panelChartBackground.Location = new System.Drawing.Point(3, 3);
             this.panelChartBackground.Name = "panelChartBackground";
-            this.panelChartBackground.Size = new System.Drawing.Size(371, 214);
+            this.panelChartBackground.Size = new System.Drawing.Size(448, 245);
             this.panelChartBackground.TabIndex = 60;
             // 
             // panelChartStatus
             // 
-            this.panelChartStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.panelChartStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.panelChartStatus.Controls.Add(this.labelChartStatus);
             this.panelChartStatus.Controls.Add(this.pictureBoxChartStatus);
-            this.panelChartStatus.Location = new System.Drawing.Point(33, 3);
+            this.panelChartStatus.Location = new System.Drawing.Point(471, 135);
             this.panelChartStatus.Name = "panelChartStatus";
-            this.panelChartStatus.Size = new System.Drawing.Size(466, 236);
+            this.panelChartStatus.Size = new System.Drawing.Size(454, 307);
             this.panelChartStatus.TabIndex = 61;
             // 
             // labelChartStatus
@@ -705,7 +791,7 @@
             this.labelChartStatus.AutoSize = true;
             this.labelChartStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelChartStatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelChartStatus.Location = new System.Drawing.Point(171, 85);
+            this.labelChartStatus.Location = new System.Drawing.Point(180, 129);
             this.labelChartStatus.Name = "labelChartStatus";
             this.labelChartStatus.Size = new System.Drawing.Size(170, 31);
             this.labelChartStatus.TabIndex = 1;
@@ -714,102 +800,180 @@
             // pictureBoxChartStatus
             // 
             this.pictureBoxChartStatus.Image = global::MyFirstWFApp.Properties.Resources.no_connection;
-            this.pictureBoxChartStatus.Location = new System.Drawing.Point(60, 62);
+            this.pictureBoxChartStatus.Location = new System.Drawing.Point(69, 106);
             this.pictureBoxChartStatus.Name = "pictureBoxChartStatus";
             this.pictureBoxChartStatus.Size = new System.Drawing.Size(105, 75);
             this.pictureBoxChartStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxChartStatus.TabIndex = 0;
             this.pictureBoxChartStatus.TabStop = false;
             // 
-            // pictureBoxShowConnectionLog
-            // 
-            this.pictureBoxShowConnectionLog.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxShowConnectionLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.pictureBoxShowConnectionLog.Image = global::MyFirstWFApp.Properties.Resources.connectionLogBlack;
-            this.pictureBoxShowConnectionLog.Location = new System.Drawing.Point(413, 168);
-            this.pictureBoxShowConnectionLog.Name = "pictureBoxShowConnectionLog";
-            this.pictureBoxShowConnectionLog.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxShowConnectionLog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxShowConnectionLog.TabIndex = 57;
-            this.pictureBoxShowConnectionLog.TabStop = false;
-            this.pictureBoxShowConnectionLog.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBoxShowConnectionLog.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            this.pictureBoxShowConnectionLog.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            // 
-            // pictureBoxNewWindowChart
-            // 
-            this.pictureBoxNewWindowChart.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxNewWindowChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.pictureBoxNewWindowChart.Image = global::MyFirstWFApp.Properties.Resources.newWindowBlack;
-            this.pictureBoxNewWindowChart.Location = new System.Drawing.Point(449, 168);
-            this.pictureBoxNewWindowChart.Name = "pictureBoxNewWindowChart";
-            this.pictureBoxNewWindowChart.Size = new System.Drawing.Size(29, 29);
-            this.pictureBoxNewWindowChart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxNewWindowChart.TabIndex = 62;
-            this.pictureBoxNewWindowChart.TabStop = false;
-            this.pictureBoxNewWindowChart.Click += new System.EventHandler(this.pictureBoxNewWindowChart_Click);
-            this.pictureBoxNewWindowChart.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
-            this.pictureBoxNewWindowChart.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            // 
             // panelChart
             // 
-            this.panelChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.panelChart.Controls.Add(this.panelChartStatus);
-            this.panelChart.Controls.Add(this.labelAlarmLow);
-            this.panelChart.Controls.Add(this.pictureBoxAlarmLow);
-            this.panelChart.Controls.Add(this.pictureBoxAlarmHigh);
-            this.panelChart.Controls.Add(this.labelAlarmHigh);
-            this.panelChart.Controls.Add(this.pictureBoxNewWindowChart);
-            this.panelChart.Controls.Add(this.pictureBoxShowConnectionLog);
+            this.panelChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelChart.Controls.Add(this.panelInstrumentStatus);
             this.panelChart.Controls.Add(this.panelChartBackground);
-            this.panelChart.Location = new System.Drawing.Point(444, 75);
+            this.panelChart.Controls.Add(this.buttonFullscreen);
+            this.panelChart.Controls.Add(this.buttonConnectionLog);
+            this.panelChart.Controls.Add(this.buttonSaveLog);
+            this.panelChart.Controls.Add(this.buttonConfigureInstrument);
+            this.panelChart.Location = new System.Drawing.Point(471, 135);
             this.panelChart.Name = "panelChart";
-            this.panelChart.Size = new System.Drawing.Size(502, 248);
+            this.panelChart.Size = new System.Drawing.Size(454, 385);
             this.panelChart.TabIndex = 63;
+            // 
+            // panelInstrumentStatus
+            // 
+            this.panelInstrumentStatus.Controls.Add(this.labelValueScaled);
+            this.panelInstrumentStatus.Controls.Add(this.labelAlarmLow);
+            this.panelInstrumentStatus.Controls.Add(this.label10);
+            this.panelInstrumentStatus.Controls.Add(this.pictureBoxAlarmHigh);
+            this.panelInstrumentStatus.Controls.Add(this.pictureBoxAlarmLow);
+            this.panelInstrumentStatus.Controls.Add(this.labelAlarmHigh);
+            this.panelInstrumentStatus.Location = new System.Drawing.Point(80, 247);
+            this.panelInstrumentStatus.Name = "panelInstrumentStatus";
+            this.panelInstrumentStatus.Size = new System.Drawing.Size(287, 57);
+            this.panelInstrumentStatus.TabIndex = 71;
+            // 
+            // labelValueScaled
+            // 
+            this.labelValueScaled.AutoSize = true;
+            this.labelValueScaled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelValueScaled.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelValueScaled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelValueScaled.Location = new System.Drawing.Point(16, 20);
+            this.labelValueScaled.Name = "labelValueScaled";
+            this.labelValueScaled.Size = new System.Drawing.Size(62, 28);
+            this.labelValueScaled.TabIndex = 71;
+            this.labelValueScaled.Text = "202.4";
             // 
             // labelAlarmLow
             // 
             this.labelAlarmLow.AutoSize = true;
             this.labelAlarmLow.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelAlarmLow.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAlarmLow.Location = new System.Drawing.Point(408, 111);
+            this.labelAlarmLow.Location = new System.Drawing.Point(100, 0);
             this.labelAlarmLow.Name = "labelAlarmLow";
             this.labelAlarmLow.Size = new System.Drawing.Size(76, 19);
             this.labelAlarmLow.TabIndex = 68;
             this.labelAlarmLow.Text = "Alarm Low";
+            this.labelAlarmLow.Click += new System.EventHandler(this.labelAlarmLow_Click);
             // 
-            // pictureBoxAlarmLow
+            // label10
             // 
-            this.pictureBoxAlarmLow.Image = global::MyFirstWFApp.Properties.Resources.alarmBlack;
-            this.pictureBoxAlarmLow.Location = new System.Drawing.Point(430, 81);
-            this.pictureBoxAlarmLow.Name = "pictureBoxAlarmLow";
-            this.pictureBoxAlarmLow.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxAlarmLow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAlarmLow.TabIndex = 67;
-            this.pictureBoxAlarmLow.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(22, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 19);
+            this.label10.TabIndex = 70;
+            this.label10.Text = "Value";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBoxAlarmHigh
             // 
             this.pictureBoxAlarmHigh.Image = global::MyFirstWFApp.Properties.Resources.alarmBlack;
-            this.pictureBoxAlarmHigh.Location = new System.Drawing.Point(430, 25);
+            this.pictureBoxAlarmHigh.Location = new System.Drawing.Point(225, 22);
             this.pictureBoxAlarmHigh.Name = "pictureBoxAlarmHigh";
-            this.pictureBoxAlarmHigh.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxAlarmHigh.Size = new System.Drawing.Size(26, 26);
             this.pictureBoxAlarmHigh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAlarmHigh.TabIndex = 65;
             this.pictureBoxAlarmHigh.TabStop = false;
             this.pictureBoxAlarmHigh.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBoxAlarmLow
+            // 
+            this.pictureBoxAlarmLow.Image = global::MyFirstWFApp.Properties.Resources.alarmBlack;
+            this.pictureBoxAlarmLow.Location = new System.Drawing.Point(125, 22);
+            this.pictureBoxAlarmLow.Name = "pictureBoxAlarmLow";
+            this.pictureBoxAlarmLow.Size = new System.Drawing.Size(26, 26);
+            this.pictureBoxAlarmLow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxAlarmLow.TabIndex = 67;
+            this.pictureBoxAlarmLow.TabStop = false;
             // 
             // labelAlarmHigh
             // 
             this.labelAlarmHigh.AutoSize = true;
             this.labelAlarmHigh.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelAlarmHigh.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAlarmHigh.Location = new System.Drawing.Point(408, 55);
+            this.labelAlarmHigh.Location = new System.Drawing.Point(200, 0);
             this.labelAlarmHigh.Name = "labelAlarmHigh";
             this.labelAlarmHigh.Size = new System.Drawing.Size(80, 19);
             this.labelAlarmHigh.TabIndex = 63;
             this.labelAlarmHigh.Text = "Alarm High";
             this.labelAlarmHigh.Click += new System.EventHandler(this.labelAlarmHigh_Click);
+            // 
+            // buttonFullscreen
+            // 
+            this.buttonFullscreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonFullscreen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFullscreen.Enabled = false;
+            this.buttonFullscreen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonFullscreen.FlatAppearance.BorderSize = 2;
+            this.buttonFullscreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFullscreen.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonFullscreen.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonFullscreen.Location = new System.Drawing.Point(218, 310);
+            this.buttonFullscreen.Name = "buttonFullscreen";
+            this.buttonFullscreen.Size = new System.Drawing.Size(236, 38);
+            this.buttonFullscreen.TabIndex = 74;
+            this.buttonFullscreen.Text = "Fullscreen";
+            this.buttonFullscreen.UseVisualStyleBackColor = false;
+            this.buttonFullscreen.Click += new System.EventHandler(this.buttonFullscreen_Click);
+            // 
+            // buttonConnectionLog
+            // 
+            this.buttonConnectionLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonConnectionLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConnectionLog.Enabled = false;
+            this.buttonConnectionLog.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonConnectionLog.FlatAppearance.BorderSize = 2;
+            this.buttonConnectionLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConnectionLog.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonConnectionLog.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonConnectionLog.Location = new System.Drawing.Point(218, 346);
+            this.buttonConnectionLog.Name = "buttonConnectionLog";
+            this.buttonConnectionLog.Size = new System.Drawing.Size(236, 38);
+            this.buttonConnectionLog.TabIndex = 73;
+            this.buttonConnectionLog.Text = "Show Log";
+            this.buttonConnectionLog.UseVisualStyleBackColor = false;
+            this.buttonConnectionLog.Click += new System.EventHandler(this.buttonConnectionLog_Click);
+            // 
+            // buttonSaveLog
+            // 
+            this.buttonSaveLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonSaveLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveLog.Enabled = false;
+            this.buttonSaveLog.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonSaveLog.FlatAppearance.BorderSize = 2;
+            this.buttonSaveLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveLog.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSaveLog.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSaveLog.Location = new System.Drawing.Point(0, 346);
+            this.buttonSaveLog.Name = "buttonSaveLog";
+            this.buttonSaveLog.Size = new System.Drawing.Size(220, 38);
+            this.buttonSaveLog.TabIndex = 72;
+            this.buttonSaveLog.Text = "Save log to file";
+            this.buttonSaveLog.UseVisualStyleBackColor = false;
+            this.buttonSaveLog.Click += new System.EventHandler(this.buttonSaveLog_Click);
+            // 
+            // buttonConfigureInstrument
+            // 
+            this.buttonConfigureInstrument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonConfigureInstrument.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfigureInstrument.Enabled = false;
+            this.buttonConfigureInstrument.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonConfigureInstrument.FlatAppearance.BorderSize = 2;
+            this.buttonConfigureInstrument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfigureInstrument.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfigureInstrument.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonConfigureInstrument.Location = new System.Drawing.Point(0, 310);
+            this.buttonConfigureInstrument.Name = "buttonConfigureInstrument";
+            this.buttonConfigureInstrument.Size = new System.Drawing.Size(220, 38);
+            this.buttonConfigureInstrument.TabIndex = 71;
+            this.buttonConfigureInstrument.Text = "Configure Instrument";
+            this.buttonConfigureInstrument.UseVisualStyleBackColor = false;
+            this.buttonConfigureInstrument.Click += new System.EventHandler(this.buttonConfigureInstrument_Click);
             // 
             // panel1
             // 
@@ -1164,9 +1328,9 @@
             this.panelInstrumentConfig.Controls.Add(this.panel17);
             this.panelInstrumentConfig.Controls.Add(this.panel13);
             this.panelInstrumentConfig.Controls.Add(this.panel1);
-            this.panelInstrumentConfig.Location = new System.Drawing.Point(31, 91);
+            this.panelInstrumentConfig.Location = new System.Drawing.Point(16, 41);
             this.panelInstrumentConfig.Name = "panelInstrumentConfig";
-            this.panelInstrumentConfig.Size = new System.Drawing.Size(433, 217);
+            this.panelInstrumentConfig.Size = new System.Drawing.Size(433, 188);
             this.panelInstrumentConfig.TabIndex = 66;
             // 
             // button4
@@ -1206,10 +1370,11 @@
             // pictureBoxMinimizeFullscreen
             // 
             this.pictureBoxMinimizeFullscreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxMinimizeFullscreen.Image = global::MyFirstWFApp.Properties.Resources.minimizeBlack1;
-            this.pictureBoxMinimizeFullscreen.Location = new System.Drawing.Point(935, 12);
+            this.pictureBoxMinimizeFullscreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.pictureBoxMinimizeFullscreen.Image = global::MyFirstWFApp.Properties.Resources.minimizeFromFullscreenBlack;
+            this.pictureBoxMinimizeFullscreen.Location = new System.Drawing.Point(953, 5);
             this.pictureBoxMinimizeFullscreen.Name = "pictureBoxMinimizeFullscreen";
-            this.pictureBoxMinimizeFullscreen.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxMinimizeFullscreen.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxMinimizeFullscreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMinimizeFullscreen.TabIndex = 67;
             this.pictureBoxMinimizeFullscreen.TabStop = false;
@@ -1223,7 +1388,7 @@
             this.panel29.Controls.Add(this.textBox1);
             this.panel29.Controls.Add(this.label2);
             this.panel29.Controls.Add(this.pictureBoxLeapFrog);
-            this.panel29.Location = new System.Drawing.Point(560, 325);
+            this.panel29.Location = new System.Drawing.Point(104, 95);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(268, 210);
             this.panel29.TabIndex = 68;
@@ -1234,10 +1399,135 @@
             this.panel30.Controls.Add(this.panelPortBackground);
             this.panel30.Controls.Add(this.panelIPAdressBack);
             this.panel30.Controls.Add(this.buttonConnect);
-            this.panel30.Location = new System.Drawing.Point(31, 314);
+            this.panel30.Location = new System.Drawing.Point(52, 331);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(381, 204);
             this.panel30.TabIndex = 69;
+            // 
+            // panelConfigureInstrument
+            // 
+            this.panelConfigureInstrument.Controls.Add(this.panel32);
+            this.panelConfigureInstrument.Controls.Add(this.panel33);
+            this.panelConfigureInstrument.Controls.Add(this.panel34);
+            this.panelConfigureInstrument.Controls.Add(this.panelConfigureInstrumentBoarder);
+            this.panelConfigureInstrument.Controls.Add(this.panelInstrumentConfig);
+            this.panelConfigureInstrument.Controls.Add(this.button6);
+            this.panelConfigureInstrument.Location = new System.Drawing.Point(967, 162);
+            this.panelConfigureInstrument.Name = "panelConfigureInstrument";
+            this.panelConfigureInstrument.Size = new System.Drawing.Size(466, 325);
+            this.panelConfigureInstrument.TabIndex = 70;
+            this.panelConfigureInstrument.Visible = false;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel32.Location = new System.Drawing.Point(5, 320);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(456, 5);
+            this.panel32.TabIndex = 61;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel33.Location = new System.Drawing.Point(461, 35);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(5, 290);
+            this.panel33.TabIndex = 60;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel34.Location = new System.Drawing.Point(0, 35);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(5, 290);
+            this.panel34.TabIndex = 59;
+            // 
+            // panelConfigureInstrumentBoarder
+            // 
+            this.panelConfigureInstrumentBoarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConfigureInstrumentBoarder.Controls.Add(this.label4);
+            this.panelConfigureInstrumentBoarder.Controls.Add(this.panelConfigureInstrumentClose);
+            this.panelConfigureInstrumentBoarder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConfigureInstrumentBoarder.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.panelConfigureInstrumentBoarder.Location = new System.Drawing.Point(0, 0);
+            this.panelConfigureInstrumentBoarder.Name = "panelConfigureInstrumentBoarder";
+            this.panelConfigureInstrumentBoarder.Size = new System.Drawing.Size(466, 35);
+            this.panelConfigureInstrumentBoarder.TabIndex = 58;
+            this.panelConfigureInstrumentBoarder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelConfigureInstrumentBoarder_MouseDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(8, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(167, 21);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Configure Instrument";
+            // 
+            // panelConfigureInstrumentClose
+            // 
+            this.panelConfigureInstrumentClose.Controls.Add(this.pictureBoxConfigureInstrumentClose);
+            this.panelConfigureInstrumentClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelConfigureInstrumentClose.Location = new System.Drawing.Point(431, 0);
+            this.panelConfigureInstrumentClose.Name = "panelConfigureInstrumentClose";
+            this.panelConfigureInstrumentClose.Size = new System.Drawing.Size(35, 35);
+            this.panelConfigureInstrumentClose.TabIndex = 0;
+            this.panelConfigureInstrumentClose.Click += new System.EventHandler(this.panelConfigureInstrumentClose_Click);
+            this.panelConfigureInstrumentClose.MouseEnter += new System.EventHandler(this.panelConfigureInstrumentClose_MouseEnter);
+            this.panelConfigureInstrumentClose.MouseLeave += new System.EventHandler(this.panelConfigureInstrumentClose_MouseLeave);
+            // 
+            // pictureBoxConfigureInstrumentClose
+            // 
+            this.pictureBoxConfigureInstrumentClose.Image = global::MyFirstWFApp.Properties.Resources.cancel;
+            this.pictureBoxConfigureInstrumentClose.Location = new System.Drawing.Point(8, 8);
+            this.pictureBoxConfigureInstrumentClose.Name = "pictureBoxConfigureInstrumentClose";
+            this.pictureBoxConfigureInstrumentClose.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxConfigureInstrumentClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxConfigureInstrumentClose.TabIndex = 0;
+            this.pictureBoxConfigureInstrumentClose.TabStop = false;
+            this.pictureBoxConfigureInstrumentClose.Click += new System.EventHandler(this.pictureBoxConfigureInstrumentClose_Click);
+            this.pictureBoxConfigureInstrumentClose.MouseEnter += new System.EventHandler(this.pictureBoxConfigureInstrumentClose_MouseEnter);
+            this.pictureBoxConfigureInstrumentClose.MouseLeave += new System.EventHandler(this.pictureBoxConfigureInstrumentClose_MouseLeave);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Location = new System.Drawing.Point(146, 254);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(165, 38);
+            this.button6.TabIndex = 55;
+            this.button6.Text = "Close";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // labelMonitor
+            // 
+            this.labelMonitor.AutoSize = true;
+            this.labelMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelMonitor.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMonitor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.labelMonitor.Location = new System.Drawing.Point(130, 9);
+            this.labelMonitor.Name = "labelMonitor";
+            this.labelMonitor.Size = new System.Drawing.Size(182, 25);
+            this.labelMonitor.TabIndex = 71;
+            this.labelMonitor.Text = "Instrument Monitor";
+            // 
+            // paneMonitorHeadline
+            // 
+            this.paneMonitorHeadline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.paneMonitorHeadline.Controls.Add(this.labelMonitor);
+            this.paneMonitorHeadline.Location = new System.Drawing.Point(471, 98);
+            this.paneMonitorHeadline.Name = "paneMonitorHeadline";
+            this.paneMonitorHeadline.Size = new System.Drawing.Size(454, 37);
+            this.paneMonitorHeadline.TabIndex = 73;
             // 
             // FormConnection
             // 
@@ -1246,9 +1536,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(982, 635);
             this.Controls.Add(this.panelConnectionLog);
+            this.Controls.Add(this.panelConfigureInstrument);
             this.Controls.Add(this.panelIPSearch);
+            this.Controls.Add(this.paneMonitorHeadline);
+            this.Controls.Add(this.panelChartStatus);
             this.Controls.Add(this.pictureBoxMinimizeFullscreen);
-            this.Controls.Add(this.panelInstrumentConfig);
             this.Controls.Add(this.panelChart);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel30);
@@ -1287,12 +1579,11 @@
             this.panelChartStatus.ResumeLayout(false);
             this.panelChartStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChartStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowConnectionLog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNewWindowChart)).EndInit();
             this.panelChart.ResumeLayout(false);
-            this.panelChart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmLow)).EndInit();
+            this.panelInstrumentStatus.ResumeLayout(false);
+            this.panelInstrumentStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmHigh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmLow)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1318,6 +1609,13 @@
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
             this.panel30.ResumeLayout(false);
+            this.panelConfigureInstrument.ResumeLayout(false);
+            this.panelConfigureInstrumentBoarder.ResumeLayout(false);
+            this.panelConfigureInstrumentBoarder.PerformLayout();
+            this.panelConfigureInstrumentClose.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigureInstrumentClose)).EndInit();
+            this.paneMonitorHeadline.ResumeLayout(false);
+            this.paneMonitorHeadline.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1369,8 +1667,6 @@
         private Label labelChartStatus;
         private PictureBox pictureBoxChartStatus;
         private Label label3;
-        private PictureBox pictureBoxShowConnectionLog;
-        private PictureBox pictureBoxNewWindowChart;
         private Panel panelChart;
         private Panel panel1;
         private Panel panel6;
@@ -1414,5 +1710,31 @@
         private PictureBox pictureBoxMinimizeFullscreen;
         private Panel panel29;
         private Panel panel30;
+        private Panel panelIPListBorderThin01;
+        private Panel panelIPListBorderThin03;
+        private Panel panelIPListBorderThin02;
+        private Panel panelConnectionLogBoarderThin03;
+        private Panel panelConnectionLogBoarderThin02;
+        private Panel panelConnectionLogBoarderThin01;
+        private Panel panelConfigureInstrument;
+        private Panel panel32;
+        private Panel panel33;
+        private Panel panel34;
+        private Panel panelConfigureInstrumentBoarder;
+        private Label label4;
+        private Panel panelConfigureInstrumentClose;
+        private PictureBox pictureBoxConfigureInstrumentClose;
+        private Button button6;
+        private Label label10;
+        private Button buttonFullscreen;
+        private Button buttonConnectionLog;
+        private Button buttonSaveLog;
+        private Button buttonConfigureInstrument;
+        private Panel panelInstrumentStatus;
+        private Label labelValueScaled;
+        private Button buttonMonitor;
+        private Label label11;
+        private Label labelMonitor;
+        private Panel paneMonitorHeadline;
     }
 }

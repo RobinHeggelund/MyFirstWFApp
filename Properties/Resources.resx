@@ -136,8 +136,8 @@
   <data name="alarmGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarmGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connectionLogBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connectionLogBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alarmYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarmYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exportWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exportWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +151,8 @@
   <data name="newWindowBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newWindowBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alarmYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarmYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="connectionLogBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connectionLogBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="log-file-format" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\log-file-format.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +175,23 @@
   <data name="border_rounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\border_rounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Avatar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngfind.com-privacy-icon-png-4703547" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngfind.com-privacy-icon-png-4703547.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizeBlue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizeBlue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="border_rounded1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\border_rounded1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizeFromFullscreenBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizeFromFullscreenBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="motion-sensor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\motion-sensor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +202,8 @@
   <data name="Avatar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizeBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizeBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Avatar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +241,8 @@
   <data name="sensor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sensor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Avatar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Avatar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monitorBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitorBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="USN_logo_rgb_neg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\USN_logo_rgb_neg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,16 +286,19 @@
   <data name="alarmGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarmGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimizeBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizeBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Avatar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Avatar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizeBlue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizeBlue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimizeFromFullscreenBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizeFromFullscreenBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monitorTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitorTop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

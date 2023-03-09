@@ -278,6 +278,15 @@ namespace MyFirstWFApp
                     waitingForConnection = false;
                     labelChartStatus.Text = "No Connection";
 
+                    // Display Controls
+                    
+                    buttonConfigureInstrument.Enabled = true;
+                    buttonFullscreen.Enabled = true;
+                    buttonSaveLog.Enabled = true;
+                    buttonConnectionLog.Enabled = true;
+                    labelMonitor.Visible = true;
+
+
                     // Update Connection Log
 
                     instrumentScaled = responseRecievedArray[1];
@@ -295,6 +304,7 @@ namespace MyFirstWFApp
                     }
 
                     chart1.Series[0].Points.AddXY(DateTime.Now.ToLongTimeString(), instrumentScaled);
+                    labelValueScaled.Text = instrumentScaled.Substring(0, 5);
 
                 }
 
@@ -569,70 +579,6 @@ namespace MyFirstWFApp
             panelConnectionLogClose.BackColor = MediumDark;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            panelConnectionLog.Visible = true;
-            this.panelConnectionLog.Location = new Point(409,177);
-
-        }
-
-        private void pictureBox3_MouseEnter(object sender, EventArgs e)
-        {
-            pictureBoxShowConnectionLog.Image = Properties.Resources.connectionLogBlue;
-        }
-
-        private void pictureBox3_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxShowConnectionLog.Image = Properties.Resources.connectionLogBlack;
-        }
-
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-            if (panelChart.Dock == DockStyle.None)
-            {
-                pictureBoxNewWindowChart.Image = Properties.Resources.newWindowBlue;
-            }
-            else
-            {
-                pictureBoxNewWindowChart.Image = Properties.Resources.minimizeBlue;
-            }
-            
-
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            if (panelChart.Dock == DockStyle.None)
-            {
-                pictureBoxNewWindowChart.Image = Properties.Resources.newWindowBlack;
-            }
-            else
-            {
-                pictureBoxNewWindowChart.Image = Properties.Resources.minimizeBlack;
-            }
-        }
-
-        private void pictureBoxNewWindowChart_Click(object sender, EventArgs e)
-        {
-            
-                // dock graph
-                panelChart.Dock = DockStyle.Fill;
-                panelChartStatus.Dock = DockStyle.Fill;
-                panelChartBackground.Dock = DockStyle.Fill;
-                
-                // Hide elements
-                panelInstrumentConfig.Visible = false;
-                pictureBoxAlarmHigh.Visible = false;
-                pictureBoxAlarmLow.Visible = false;
-                labelAlarmHigh.Visible = false;
-                labelAlarmLow.Visible = false;
-                pictureBoxShowConnectionLog.Visible = false;
-                pictureBoxNewWindowChart.Visible = false;
-
-                pictureBoxMinimizeFullscreen.Visible = true;
-                pictureBoxNewWindowChart.Image = Properties.Resources.newWindowBlack;
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -717,12 +663,12 @@ namespace MyFirstWFApp
 
         private void pictureBoxMinimizeFullscreen_MouseEnter(object sender, EventArgs e)
         {
-            pictureBoxMinimizeFullscreen.Image = Properties.Resources.minimizeBlue1;
+            pictureBoxMinimizeFullscreen.Image = Properties.Resources.minimizeFromFullscreenBlue;
         }
 
         private void pictureBoxMinimizeFullscreen_MouseLeave(object sender, EventArgs e)
         {
-            pictureBoxMinimizeFullscreen.Image = Properties.Resources.minimizeBlack1;
+            pictureBoxMinimizeFullscreen.Image = Properties.Resources.minimizeFromFullscreenBlack;
         }
 
         private void pictureBoxMinimizeFullscreen_Click(object sender, EventArgs e)
@@ -731,7 +677,7 @@ namespace MyFirstWFApp
             panelChart.Dock = DockStyle.None;
             panelChartStatus.Dock = DockStyle.None;
             panelChartBackground.Dock = DockStyle.None;
-            pictureBoxNewWindowChart.Image = Properties.Resources.minimizeBlack;
+   
 
             // Show elements
             panelInstrumentConfig.Visible = true;
@@ -739,10 +685,108 @@ namespace MyFirstWFApp
             pictureBoxAlarmLow.Visible = true;
             labelAlarmHigh.Visible = true;
             labelAlarmLow.Visible = true;
-            pictureBoxShowConnectionLog.Visible = true;
-            pictureBoxNewWindowChart.Visible = true;
+            panelInstrumentStatus.Visible = true;
+            labelMonitor.Visible = true;
+            paneMonitorHeadline.Visible = true;
+
 
             pictureBoxMinimizeFullscreen.Visible = false;
+        }
+
+        private void buttonConfigureInstrument_Click(object sender, EventArgs e)
+        {
+            panelConfigureInstrument.Visible = true;
+            this.panelConfigureInstrument.Location = new Point(260, 209);
+        }
+
+
+
+        private void panelConfigureInstrumentBoarder_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(panelConfigureInstrument.Handle, 0x112, 0xf012, 0);
+        }
+
+
+
+        private void pictureBoxConfigureInstrumentClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelConfigureInstrumentClose.BackColor = Dark;
+        }
+
+        private void panelConfigureInstrumentClose_MouseEnter(object sender, EventArgs e)
+        {
+            panelConfigureInstrumentClose.BackColor = Dark;
+        }
+
+        private void panelConfigureInstrumentClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelConfigureInstrumentClose.BackColor = MediumDark;
+        }
+
+        private void pictureBoxConfigureInstrumentClose_MouseLeave(object sender, EventArgs e)
+        {
+            panelConfigureInstrumentClose.BackColor = MediumDark;
+        }
+
+        private void pictureBoxConfigureInstrumentClose_Click(object sender, EventArgs e)
+        {
+            panelConfigureInstrument.Visible = false;
+        }
+
+        private void panelConfigureInstrumentClose_Click(object sender, EventArgs e)
+        {
+            panelConfigureInstrument.Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panelConfigureInstrument.Visible = false;
+        }
+
+        private void buttonFullscreen_Click(object sender, EventArgs e)
+        {
+            // dock graph
+            panelChart.Dock = DockStyle.Fill;
+            panelChartStatus.Dock = DockStyle.Fill;
+            panelChartBackground.Dock = DockStyle.Fill;
+
+            // Hide elements
+            panelInstrumentConfig.Visible = false;
+            pictureBoxAlarmHigh.Visible = false;
+            pictureBoxAlarmLow.Visible = false;
+            labelAlarmHigh.Visible = false;
+            labelAlarmLow.Visible = false;
+            panelChartStatus.Visible = false;
+            panelInstrumentStatus.Visible = false;
+            labelMonitor.Visible = false;
+            paneMonitorHeadline.Visible = false;
+
+
+
+            pictureBoxMinimizeFullscreen.Visible = true;
+           
+        }
+
+        private void buttonConnectionLog_Click(object sender, EventArgs e)
+        {
+            panelConnectionLog.Visible = true;
+            this.panelConnectionLog.Location = new Point(409, 177);
+        }
+
+        private void buttonSaveLog_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAlarmLow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

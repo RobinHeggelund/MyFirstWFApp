@@ -493,6 +493,46 @@ namespace MyFirstWFApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minimizeFromFullscreenBlack {
+            get {
+                object obj = ResourceManager.GetObject("minimizeFromFullscreenBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimizeFromFullscreenBlue {
+            get {
+                object obj = ResourceManager.GetObject("minimizeFromFullscreenBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap monitorBackground {
+            get {
+                object obj = ResourceManager.GetObject("monitorBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap monitorTop {
+            get {
+                object obj = ResourceManager.GetObject("monitorTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap motion_sensor {
             get {
                 object obj = ResourceManager.GetObject("motion-sensor", resourceCulture);
