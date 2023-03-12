@@ -255,7 +255,8 @@
             this.textBoxIP.Location = new System.Drawing.Point(111, 7);
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.Size = new System.Drawing.Size(190, 22);
-            this.textBoxIP.TabIndex = 8;
+            this.textBoxIP.TabIndex = 0;
+            this.textBoxIP.Text = "127.0.0.1";
             this.textBoxIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIP_KeyPress);
             // 
             // textBoxInputPort
@@ -267,7 +268,7 @@
             this.textBoxInputPort.Location = new System.Drawing.Point(111, 8);
             this.textBoxInputPort.Name = "textBoxInputPort";
             this.textBoxInputPort.Size = new System.Drawing.Size(224, 22);
-            this.textBoxInputPort.TabIndex = 7;
+            this.textBoxInputPort.TabIndex = 1;
             this.textBoxInputPort.Text = "5000";
             this.textBoxInputPort.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxInputPort_KeyPress);
             // 
@@ -280,7 +281,7 @@
             this.buttonConnect.Location = new System.Drawing.Point(18, 151);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(165, 38);
-            this.buttonConnect.TabIndex = 3;
+            this.buttonConnect.TabIndex = 2;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = false;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
@@ -775,7 +776,7 @@
             this.buttonDisconnect.Location = new System.Drawing.Point(189, 151);
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(165, 38);
-            this.buttonDisconnect.TabIndex = 59;
+            this.buttonDisconnect.TabIndex = 3;
             this.buttonDisconnect.Text = "Disconnect";
             this.buttonDisconnect.UseVisualStyleBackColor = false;
             this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
@@ -940,7 +941,7 @@
             this.textBoxBaud.Location = new System.Drawing.Point(101, 8);
             this.textBoxBaud.Name = "textBoxBaud";
             this.textBoxBaud.Size = new System.Drawing.Size(65, 22);
-            this.textBoxBaud.TabIndex = 7;
+            this.textBoxBaud.TabIndex = 11;
             this.textBoxBaud.Text = "9600";
             this.textBoxBaud.TextChanged += new System.EventHandler(this.textBoxBaud_TextChanged);
             this.textBoxBaud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBaud_KeyPress);
@@ -1007,7 +1008,7 @@
             this.textBoxCOM.Location = new System.Drawing.Point(78, 8);
             this.textBoxCOM.Name = "textBoxCOM";
             this.textBoxCOM.Size = new System.Drawing.Size(123, 22);
-            this.textBoxCOM.TabIndex = 7;
+            this.textBoxCOM.TabIndex = 10;
             this.textBoxCOM.Text = "3";
             this.textBoxCOM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCOM_KeyPress);
             // 
@@ -1104,7 +1105,7 @@
             this.buttonFullscreen.Location = new System.Drawing.Point(218, 310);
             this.buttonFullscreen.Name = "buttonFullscreen";
             this.buttonFullscreen.Size = new System.Drawing.Size(236, 38);
-            this.buttonFullscreen.TabIndex = 74;
+            this.buttonFullscreen.TabIndex = 13;
             this.buttonFullscreen.Text = "Fullscreen";
             this.buttonFullscreen.UseVisualStyleBackColor = false;
             this.buttonFullscreen.Click += new System.EventHandler(this.buttonFullscreen_Click);
@@ -1122,7 +1123,7 @@
             this.buttonConnectionLog.Location = new System.Drawing.Point(218, 346);
             this.buttonConnectionLog.Name = "buttonConnectionLog";
             this.buttonConnectionLog.Size = new System.Drawing.Size(236, 38);
-            this.buttonConnectionLog.TabIndex = 73;
+            this.buttonConnectionLog.TabIndex = 15;
             this.buttonConnectionLog.Text = "Show Log";
             this.buttonConnectionLog.UseVisualStyleBackColor = false;
             this.buttonConnectionLog.Click += new System.EventHandler(this.buttonConnectionLog_Click);
@@ -1140,7 +1141,7 @@
             this.buttonSaveLog.Location = new System.Drawing.Point(0, 346);
             this.buttonSaveLog.Name = "buttonSaveLog";
             this.buttonSaveLog.Size = new System.Drawing.Size(220, 38);
-            this.buttonSaveLog.TabIndex = 72;
+            this.buttonSaveLog.TabIndex = 14;
             this.buttonSaveLog.Text = "Save log to file";
             this.buttonSaveLog.UseVisualStyleBackColor = false;
             this.buttonSaveLog.Click += new System.EventHandler(this.buttonSaveLog_Click);
@@ -1158,7 +1159,7 @@
             this.buttonConfigureInstrument.Location = new System.Drawing.Point(0, 310);
             this.buttonConfigureInstrument.Name = "buttonConfigureInstrument";
             this.buttonConfigureInstrument.Size = new System.Drawing.Size(220, 38);
-            this.buttonConfigureInstrument.TabIndex = 71;
+            this.buttonConfigureInstrument.TabIndex = 12;
             this.buttonConfigureInstrument.Text = "Configure Instrument";
             this.buttonConfigureInstrument.UseVisualStyleBackColor = false;
             this.buttonConfigureInstrument.Click += new System.EventHandler(this.buttonConfigureInstrument_Click);
@@ -1222,7 +1223,7 @@
             this.textBoxInstrumentName.Location = new System.Drawing.Point(117, 8);
             this.textBoxInstrumentName.Name = "textBoxInstrumentName";
             this.textBoxInstrumentName.Size = new System.Drawing.Size(192, 22);
-            this.textBoxInstrumentName.TabIndex = 7;
+            this.textBoxInstrumentName.TabIndex = 20;
             // 
             // panel13
             // 
@@ -1283,7 +1284,7 @@
             this.textBoxLRV.Location = new System.Drawing.Point(52, 8);
             this.textBoxLRV.Name = "textBoxLRV";
             this.textBoxLRV.Size = new System.Drawing.Size(40, 22);
-            this.textBoxLRV.TabIndex = 7;
+            this.textBoxLRV.TabIndex = 21;
             this.textBoxLRV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLRV_KeyPress);
             // 
             // panel17
@@ -1345,7 +1346,7 @@
             this.textBoxURV.Location = new System.Drawing.Point(52, 8);
             this.textBoxURV.Name = "textBoxURV";
             this.textBoxURV.Size = new System.Drawing.Size(40, 22);
-            this.textBoxURV.TabIndex = 7;
+            this.textBoxURV.TabIndex = 22;
             // 
             // buttonWriteConf
             // 
@@ -1359,7 +1360,7 @@
             this.buttonWriteConf.Location = new System.Drawing.Point(211, 177);
             this.buttonWriteConf.Name = "buttonWriteConf";
             this.buttonWriteConf.Size = new System.Drawing.Size(208, 38);
-            this.buttonWriteConf.TabIndex = 65;
+            this.buttonWriteConf.TabIndex = 30;
             this.buttonWriteConf.Text = "Write Configuration";
             this.buttonWriteConf.UseVisualStyleBackColor = false;
             this.buttonWriteConf.Click += new System.EventHandler(this.button1_Click);
@@ -1376,7 +1377,7 @@
             this.buttonReadConf.Location = new System.Drawing.Point(10, 177);
             this.buttonReadConf.Name = "buttonReadConf";
             this.buttonReadConf.Size = new System.Drawing.Size(203, 38);
-            this.buttonReadConf.TabIndex = 64;
+            this.buttonReadConf.TabIndex = 29;
             this.buttonReadConf.Text = "Read Configuration";
             this.buttonReadConf.UseVisualStyleBackColor = false;
             this.buttonReadConf.Click += new System.EventHandler(this.button2_Click);
@@ -1440,7 +1441,7 @@
             this.textBoxAlarmLow.Location = new System.Drawing.Point(120, 8);
             this.textBoxAlarmLow.Name = "textBoxAlarmLow";
             this.textBoxAlarmLow.Size = new System.Drawing.Size(83, 22);
-            this.textBoxAlarmLow.TabIndex = 7;
+            this.textBoxAlarmLow.TabIndex = 24;
             this.textBoxAlarmLow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlarmLow_KeyPress);
             // 
             // panel25
@@ -1502,7 +1503,7 @@
             this.textBoxAlarmHigh.Location = new System.Drawing.Point(120, 8);
             this.textBoxAlarmHigh.Name = "textBoxAlarmHigh";
             this.textBoxAlarmHigh.Size = new System.Drawing.Size(77, 22);
-            this.textBoxAlarmHigh.TabIndex = 7;
+            this.textBoxAlarmHigh.TabIndex = 25;
             this.textBoxAlarmHigh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlarmHigh_KeyPress);
             // 
             // panelInstrumentConfig
@@ -1535,7 +1536,7 @@
             this.buttonLoadSSC.Location = new System.Drawing.Point(173, 136);
             this.buttonLoadSSC.Name = "buttonLoadSSC";
             this.buttonLoadSSC.Size = new System.Drawing.Size(165, 38);
-            this.buttonLoadSSC.TabIndex = 70;
+            this.buttonLoadSSC.TabIndex = 27;
             this.buttonLoadSSC.Text = "Load SSC";
             this.buttonLoadSSC.UseVisualStyleBackColor = false;
             this.buttonLoadSSC.Click += new System.EventHandler(this.buttonLoadSSC_Click);
@@ -1552,7 +1553,7 @@
             this.buttonSaveSSC.Location = new System.Drawing.Point(10, 136);
             this.buttonSaveSSC.Name = "buttonSaveSSC";
             this.buttonSaveSSC.Size = new System.Drawing.Size(165, 38);
-            this.buttonSaveSSC.TabIndex = 69;
+            this.buttonSaveSSC.TabIndex = 26;
             this.buttonSaveSSC.Text = "Save SSC";
             this.buttonSaveSSC.UseVisualStyleBackColor = false;
             this.buttonSaveSSC.Click += new System.EventHandler(this.buttonSaveSSC_Click);
@@ -1616,7 +1617,7 @@
             this.textBoxUnit.Location = new System.Drawing.Point(54, 8);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.Size = new System.Drawing.Size(149, 22);
-            this.textBoxUnit.TabIndex = 7;
+            this.textBoxUnit.TabIndex = 23;
             // 
             // buttonImportInstrumentData
             // 
@@ -1631,7 +1632,7 @@
             this.buttonImportInstrumentData.Location = new System.Drawing.Point(335, 136);
             this.buttonImportInstrumentData.Name = "buttonImportInstrumentData";
             this.buttonImportInstrumentData.Size = new System.Drawing.Size(84, 38);
-            this.buttonImportInstrumentData.TabIndex = 67;
+            this.buttonImportInstrumentData.TabIndex = 28;
             this.buttonImportInstrumentData.Text = "Import";
             this.buttonImportInstrumentData.UseVisualStyleBackColor = false;
             this.buttonImportInstrumentData.Click += new System.EventHandler(this.buttonImportInstrumentData_Click);
@@ -1682,7 +1683,7 @@
             this.panelConfigureInstrument.Controls.Add(this.panelConfigureInstrumentBoarder);
             this.panelConfigureInstrument.Controls.Add(this.panelInstrumentConfig);
             this.panelConfigureInstrument.Controls.Add(this.buttonConfigureInstrumentClose);
-            this.panelConfigureInstrument.Location = new System.Drawing.Point(24, 609);
+            this.panelConfigureInstrument.Location = new System.Drawing.Point(23, 593);
             this.panelConfigureInstrument.Name = "panelConfigureInstrument";
             this.panelConfigureInstrument.Size = new System.Drawing.Size(466, 359);
             this.panelConfigureInstrument.TabIndex = 70;
@@ -1693,7 +1694,7 @@
             this.panelInstrumentSearchList.Controls.Add(this.buttonInstrumentListCancle);
             this.panelInstrumentSearchList.Controls.Add(this.buttonInstrumentListConfirm);
             this.panelInstrumentSearchList.Controls.Add(this.panel42);
-            this.panelInstrumentSearchList.Location = new System.Drawing.Point(10, 42);
+            this.panelInstrumentSearchList.Location = new System.Drawing.Point(8, 41);
             this.panelInstrumentSearchList.Name = "panelInstrumentSearchList";
             this.panelInstrumentSearchList.Size = new System.Drawing.Size(451, 306);
             this.panelInstrumentSearchList.TabIndex = 67;
@@ -1836,7 +1837,7 @@
             this.buttonConfigureInstrumentClose.Location = new System.Drawing.Point(146, 300);
             this.buttonConfigureInstrumentClose.Name = "buttonConfigureInstrumentClose";
             this.buttonConfigureInstrumentClose.Size = new System.Drawing.Size(165, 38);
-            this.buttonConfigureInstrumentClose.TabIndex = 55;
+            this.buttonConfigureInstrumentClose.TabIndex = 31;
             this.buttonConfigureInstrumentClose.Text = "Close";
             this.buttonConfigureInstrumentClose.UseVisualStyleBackColor = false;
             this.buttonConfigureInstrumentClose.Click += new System.EventHandler(this.button6_Click);
@@ -1871,7 +1872,7 @@
             this.buttonStartMonitor.Location = new System.Drawing.Point(467, 482);
             this.buttonStartMonitor.Name = "buttonStartMonitor";
             this.buttonStartMonitor.Size = new System.Drawing.Size(454, 38);
-            this.buttonStartMonitor.TabIndex = 74;
+            this.buttonStartMonitor.TabIndex = 16;
             this.buttonStartMonitor.Text = "Start Monitor";
             this.buttonStartMonitor.UseVisualStyleBackColor = false;
             this.buttonStartMonitor.Visible = false;

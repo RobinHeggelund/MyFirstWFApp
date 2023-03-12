@@ -369,6 +369,8 @@ namespace MyFirstWFApp
                     {
                         chart1.Series[0].Points.RemoveAt(0);
                     }
+                   
+                    //
 
                     chart1.Series[0].Points.AddXY(DateTime.Now.ToLongTimeString(), instrumentScaled);
 
@@ -553,7 +555,7 @@ namespace MyFirstWFApp
                     {
                         usbTimeout += 1;
 
-                        if (usbTimeout > 3)
+                        if (usbTimeout == 3)
                         {
                             MessageBox.Show("USB Timeout. Check connection and try again.");
 
@@ -561,6 +563,7 @@ namespace MyFirstWFApp
                             
                             InvokeOnClick(buttonStopMonitor, null);
 
+                            usbTimeout = 0;
 
                         }
                     }

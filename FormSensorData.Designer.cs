@@ -30,6 +30,9 @@
         {
             this.panelBackgroundTabSensorData = new System.Windows.Forms.Panel();
             this.panelSensorSearch = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearchThin01 = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearchThin02 = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearchThin03 = new System.Windows.Forms.Panel();
             this.panelBoarderSensorSearch = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelBoarderSearchClose = new System.Windows.Forms.Panel();
@@ -137,9 +140,6 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.labelMeasureTypeDigital = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.panelBoarderSensorSearchThin03 = new System.Windows.Forms.Panel();
-            this.panelBoarderSensorSearchThin02 = new System.Windows.Forms.Panel();
-            this.panelBoarderSensorSearchThin01 = new System.Windows.Forms.Panel();
             this.panelBackgroundTabSensorData.SuspendLayout();
             this.panelSensorSearch.SuspendLayout();
             this.panelBoarderSensorSearch.SuspendLayout();
@@ -220,6 +220,33 @@
             this.panelSensorSearch.Size = new System.Drawing.Size(467, 325);
             this.panelSensorSearch.TabIndex = 55;
             this.panelSensorSearch.Visible = false;
+            // 
+            // panelBoarderSensorSearchThin01
+            // 
+            this.panelBoarderSensorSearchThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearchThin01.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBoarderSensorSearchThin01.Location = new System.Drawing.Point(0, 35);
+            this.panelBoarderSensorSearchThin01.Name = "panelBoarderSensorSearchThin01";
+            this.panelBoarderSensorSearchThin01.Size = new System.Drawing.Size(5, 285);
+            this.panelBoarderSensorSearchThin01.TabIndex = 62;
+            // 
+            // panelBoarderSensorSearchThin02
+            // 
+            this.panelBoarderSensorSearchThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearchThin02.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBoarderSensorSearchThin02.Location = new System.Drawing.Point(0, 320);
+            this.panelBoarderSensorSearchThin02.Name = "panelBoarderSensorSearchThin02";
+            this.panelBoarderSensorSearchThin02.Size = new System.Drawing.Size(462, 5);
+            this.panelBoarderSensorSearchThin02.TabIndex = 61;
+            // 
+            // panelBoarderSensorSearchThin03
+            // 
+            this.panelBoarderSensorSearchThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearchThin03.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBoarderSensorSearchThin03.Location = new System.Drawing.Point(462, 35);
+            this.panelBoarderSensorSearchThin03.Name = "panelBoarderSensorSearchThin03";
+            this.panelBoarderSensorSearchThin03.Size = new System.Drawing.Size(5, 290);
+            this.panelBoarderSensorSearchThin03.TabIndex = 60;
             // 
             // panelBoarderSensorSearch
             // 
@@ -369,7 +396,7 @@
             this.button4.Location = new System.Drawing.Point(145, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(160, 37);
-            this.button4.TabIndex = 2;
+            this.button4.TabIndex = 16;
             this.button4.Text = "Local";
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -421,7 +448,7 @@
             this.panelAlarmBackgroundPanel.Location = new System.Drawing.Point(13, 266);
             this.panelAlarmBackgroundPanel.Name = "panelAlarmBackgroundPanel";
             this.panelAlarmBackgroundPanel.Size = new System.Drawing.Size(468, 37);
-            this.panelAlarmBackgroundPanel.TabIndex = 56;
+            this.panelAlarmBackgroundPanel.TabIndex = 12;
             // 
             // panelAlarmCeilingTagBackgroundPanel
             // 
@@ -490,7 +517,7 @@
             this.textBoxAlarmFloor.Location = new System.Drawing.Point(136, 8);
             this.textBoxAlarmFloor.Name = "textBoxAlarmFloor";
             this.textBoxAlarmFloor.Size = new System.Drawing.Size(63, 22);
-            this.textBoxAlarmFloor.TabIndex = 9;
+            this.textBoxAlarmFloor.TabIndex = 12;
             this.textBoxAlarmFloor.Text = "0";
             // 
             // textBoxAlarmCeiling
@@ -502,7 +529,7 @@
             this.textBoxAlarmCeiling.Location = new System.Drawing.Point(366, 8);
             this.textBoxAlarmCeiling.Name = "textBoxAlarmCeiling";
             this.textBoxAlarmCeiling.Size = new System.Drawing.Size(55, 22);
-            this.textBoxAlarmCeiling.TabIndex = 10;
+            this.textBoxAlarmCeiling.TabIndex = 13;
             this.textBoxAlarmCeiling.Text = "0";
             // 
             // toolStripStatusLabel1
@@ -560,7 +587,7 @@
             this.buttonClear.Location = new System.Drawing.Point(497, 578);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(159, 40);
-            this.buttonClear.TabIndex = 44;
+            this.buttonClear.TabIndex = 17;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
@@ -576,7 +603,7 @@
             this.panelOptionsCommentsBack.Location = new System.Drawing.Point(13, 318);
             this.panelOptionsCommentsBack.Name = "panelOptionsCommentsBack";
             this.panelOptionsCommentsBack.Size = new System.Drawing.Size(950, 254);
-            this.panelOptionsCommentsBack.TabIndex = 10;
+            this.panelOptionsCommentsBack.TabIndex = 13;
             // 
             // panel23
             // 
@@ -633,7 +660,7 @@
             this.panel34.Location = new System.Drawing.Point(0, 165);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(468, 81);
-            this.panel34.TabIndex = 8;
+            this.panel34.TabIndex = 15;
             // 
             // textBoxComments
             // 
@@ -645,7 +672,7 @@
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
             this.textBoxComments.Size = new System.Drawing.Size(458, 102);
-            this.textBoxComments.TabIndex = 13;
+            this.textBoxComments.TabIndex = 15;
             // 
             // panel5
             // 
@@ -702,7 +729,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 79);
-            this.panel3.TabIndex = 7;
+            this.panel3.TabIndex = 14;
             // 
             // listBoxOptions
             // 
@@ -720,7 +747,7 @@
             this.listBoxOptions.Location = new System.Drawing.Point(8, 8);
             this.listBoxOptions.Name = "listBoxOptions";
             this.listBoxOptions.Size = new System.Drawing.Size(137, 63);
-            this.listBoxOptions.TabIndex = 12;
+            this.listBoxOptions.TabIndex = 14;
             // 
             // panel9
             // 
@@ -774,7 +801,7 @@
             this.textBoxPreview.Name = "textBoxPreview";
             this.textBoxPreview.ReadOnly = true;
             this.textBoxPreview.Size = new System.Drawing.Size(442, 249);
-            this.textBoxPreview.TabIndex = 20;
+            this.textBoxPreview.TabIndex = 17;
             this.textBoxPreview.TabStop = false;
             // 
             // panelMeasureTypeFieldbusBack
@@ -1104,7 +1131,7 @@
             this.buttonRegisterNew.Location = new System.Drawing.Point(319, 578);
             this.buttonRegisterNew.Name = "buttonRegisterNew";
             this.buttonRegisterNew.Size = new System.Drawing.Size(159, 40);
-            this.buttonRegisterNew.TabIndex = 14;
+            this.buttonRegisterNew.TabIndex = 16;
             this.buttonRegisterNew.Text = "Confirm";
             this.buttonRegisterNew.UseVisualStyleBackColor = false;
             this.buttonRegisterNew.Click += new System.EventHandler(this.buttonRegisterNew_Click_1);
@@ -1495,33 +1522,6 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(430, 37);
             this.panel28.TabIndex = 25;
-            // 
-            // panelBoarderSensorSearchThin03
-            // 
-            this.panelBoarderSensorSearchThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panelBoarderSensorSearchThin03.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBoarderSensorSearchThin03.Location = new System.Drawing.Point(462, 35);
-            this.panelBoarderSensorSearchThin03.Name = "panelBoarderSensorSearchThin03";
-            this.panelBoarderSensorSearchThin03.Size = new System.Drawing.Size(5, 290);
-            this.panelBoarderSensorSearchThin03.TabIndex = 60;
-            // 
-            // panelBoarderSensorSearchThin02
-            // 
-            this.panelBoarderSensorSearchThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panelBoarderSensorSearchThin02.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBoarderSensorSearchThin02.Location = new System.Drawing.Point(0, 320);
-            this.panelBoarderSensorSearchThin02.Name = "panelBoarderSensorSearchThin02";
-            this.panelBoarderSensorSearchThin02.Size = new System.Drawing.Size(462, 5);
-            this.panelBoarderSensorSearchThin02.TabIndex = 61;
-            // 
-            // panelBoarderSensorSearchThin01
-            // 
-            this.panelBoarderSensorSearchThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panelBoarderSensorSearchThin01.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelBoarderSensorSearchThin01.Location = new System.Drawing.Point(0, 35);
-            this.panelBoarderSensorSearchThin01.Name = "panelBoarderSensorSearchThin01";
-            this.panelBoarderSensorSearchThin01.Size = new System.Drawing.Size(5, 285);
-            this.panelBoarderSensorSearchThin01.TabIndex = 62;
             // 
             // FormSensorData
             // 
