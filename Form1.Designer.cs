@@ -53,14 +53,14 @@
             this.pictureBoxUserImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelUserProfile = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelBoarderSearchThin02 = new System.Windows.Forms.Panel();
+            this.panelBoarderSearchThin03 = new System.Windows.Forms.Panel();
+            this.panelBoarderSearchThin01 = new System.Windows.Forms.Panel();
             this.pictureBoxUserImageBig = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelUsernameBackground = new System.Windows.Forms.Panel();
             this.textBoxUpdateUserName = new System.Windows.Forms.TextBox();
             this.labelUserNumber = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelAvatarBackground = new System.Windows.Forms.Panel();
             this.pictureBoxAvatar4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAvatar3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAvatar2 = new System.Windows.Forms.PictureBox();
@@ -68,8 +68,8 @@
             this.panelBoarderSearch = new System.Windows.Forms.Panel();
             this.panelBoarderUserProfileClose = new System.Windows.Forms.Panel();
             this.pictureBoxSearchBoarderClose = new System.Windows.Forms.PictureBox();
-            this.buttonUserProfileCancle = new System.Windows.Forms.Button();
-            this.buttonIPSearchConfirm = new System.Windows.Forms.Button();
+            this.buttonCancleUserProfile = new System.Windows.Forms.Button();
+            this.buttonConfirmUserProfile = new System.Windows.Forms.Button();
             this.panelBoarder = new System.Windows.Forms.Panel();
             this.panelBoarderMinimize = new System.Windows.Forms.Panel();
             this.pictureBoxBoarderMinimize = new System.Windows.Forms.PictureBox();
@@ -110,8 +110,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.panelUserProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImageBig)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelUsernameBackground.SuspendLayout();
+            this.panelAvatarBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar2)).BeginInit();
@@ -271,11 +271,11 @@
             // labelNetworkTab
             // 
             this.labelNetworkTab.AutoSize = true;
-            this.labelNetworkTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNetworkTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelNetworkTab.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelNetworkTab.Location = new System.Drawing.Point(56, 25);
+            this.labelNetworkTab.Location = new System.Drawing.Point(56, 27);
             this.labelNetworkTab.Name = "labelNetworkTab";
-            this.labelNetworkTab.Size = new System.Drawing.Size(95, 22);
+            this.labelNetworkTab.Size = new System.Drawing.Size(89, 20);
             this.labelNetworkTab.TabIndex = 27;
             this.labelNetworkTab.Text = "Database";
             this.labelNetworkTab.Click += new System.EventHandler(this.labelNetworkTab_Click);
@@ -300,7 +300,7 @@
             this.panelConnection.Controls.Add(this.pictureBoxConnectionTab);
             this.panelConnection.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelConnection.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConnection.Location = new System.Drawing.Point(0, 248);
+            this.panelConnection.Location = new System.Drawing.Point(0, 173);
             this.panelConnection.Name = "panelConnection";
             this.panelConnection.Size = new System.Drawing.Size(199, 75);
             this.panelConnection.TabIndex = 3;
@@ -311,11 +311,11 @@
             // labelConnectionTab
             // 
             this.labelConnectionTab.AutoSize = true;
-            this.labelConnectionTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelConnectionTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelConnectionTab.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelConnectionTab.Location = new System.Drawing.Point(56, 25);
+            this.labelConnectionTab.Location = new System.Drawing.Point(56, 27);
             this.labelConnectionTab.Name = "labelConnectionTab";
-            this.labelConnectionTab.Size = new System.Drawing.Size(111, 22);
+            this.labelConnectionTab.Size = new System.Drawing.Size(103, 20);
             this.labelConnectionTab.TabIndex = 25;
             this.labelConnectionTab.Text = "Connection";
             this.labelConnectionTab.Click += new System.EventHandler(this.labelConnectionTab_Click);
@@ -339,8 +339,7 @@
             this.panelSensorData.Controls.Add(this.labelSensorDataTab);
             this.panelSensorData.Controls.Add(this.pictureBoxSensorDataTab);
             this.panelSensorData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSensorData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSensorData.Location = new System.Drawing.Point(0, 173);
+            this.panelSensorData.Location = new System.Drawing.Point(0, 248);
             this.panelSensorData.Name = "panelSensorData";
             this.panelSensorData.Size = new System.Drawing.Size(199, 75);
             this.panelSensorData.TabIndex = 2;
@@ -351,13 +350,13 @@
             // labelSensorDataTab
             // 
             this.labelSensorDataTab.AutoSize = true;
-            this.labelSensorDataTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSensorDataTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelSensorDataTab.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSensorDataTab.Location = new System.Drawing.Point(56, 25);
+            this.labelSensorDataTab.Location = new System.Drawing.Point(56, 28);
             this.labelSensorDataTab.Name = "labelSensorDataTab";
-            this.labelSensorDataTab.Size = new System.Drawing.Size(121, 22);
+            this.labelSensorDataTab.Size = new System.Drawing.Size(127, 18);
             this.labelSensorDataTab.TabIndex = 23;
-            this.labelSensorDataTab.Text = "Sensor Data";
+            this.labelSensorDataTab.Text = "Instrument Data";
             this.labelSensorDataTab.Click += new System.EventHandler(this.labelSensorDataTab_Click);
             this.labelSensorDataTab.MouseEnter += new System.EventHandler(this.labelSensorDataTab_MouseEnter);
             // 
@@ -423,47 +422,47 @@
             // panelUserProfile
             // 
             this.panelUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.panelUserProfile.Controls.Add(this.panel7);
-            this.panelUserProfile.Controls.Add(this.panel6);
-            this.panelUserProfile.Controls.Add(this.panel5);
+            this.panelUserProfile.Controls.Add(this.panelBoarderSearchThin02);
+            this.panelUserProfile.Controls.Add(this.panelBoarderSearchThin03);
+            this.panelUserProfile.Controls.Add(this.panelBoarderSearchThin01);
             this.panelUserProfile.Controls.Add(this.pictureBoxUserImageBig);
-            this.panelUserProfile.Controls.Add(this.panel4);
-            this.panelUserProfile.Controls.Add(this.panel3);
+            this.panelUserProfile.Controls.Add(this.panelUsernameBackground);
+            this.panelUserProfile.Controls.Add(this.panelAvatarBackground);
             this.panelUserProfile.Controls.Add(this.panelBoarderSearch);
-            this.panelUserProfile.Controls.Add(this.buttonUserProfileCancle);
-            this.panelUserProfile.Controls.Add(this.buttonIPSearchConfirm);
+            this.panelUserProfile.Controls.Add(this.buttonCancleUserProfile);
+            this.panelUserProfile.Controls.Add(this.buttonConfirmUserProfile);
             this.panelUserProfile.Location = new System.Drawing.Point(280, 85);
             this.panelUserProfile.Name = "panelUserProfile";
             this.panelUserProfile.Size = new System.Drawing.Size(806, 496);
             this.panelUserProfile.TabIndex = 55;
             this.panelUserProfile.Visible = false;
             // 
-            // panel7
+            // panelBoarderSearchThin02
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(10, 486);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(786, 10);
-            this.panel7.TabIndex = 63;
+            this.panelBoarderSearchThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSearchThin02.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBoarderSearchThin02.Location = new System.Drawing.Point(10, 486);
+            this.panelBoarderSearchThin02.Name = "panelBoarderSearchThin02";
+            this.panelBoarderSearchThin02.Size = new System.Drawing.Size(786, 10);
+            this.panelBoarderSearchThin02.TabIndex = 63;
             // 
-            // panel6
+            // panelBoarderSearchThin03
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(796, 35);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 461);
-            this.panel6.TabIndex = 63;
+            this.panelBoarderSearchThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSearchThin03.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBoarderSearchThin03.Location = new System.Drawing.Point(796, 35);
+            this.panelBoarderSearchThin03.Name = "panelBoarderSearchThin03";
+            this.panelBoarderSearchThin03.Size = new System.Drawing.Size(10, 461);
+            this.panelBoarderSearchThin03.TabIndex = 63;
             // 
-            // panel5
+            // panelBoarderSearchThin01
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 35);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 461);
-            this.panel5.TabIndex = 62;
+            this.panelBoarderSearchThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSearchThin01.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBoarderSearchThin01.Location = new System.Drawing.Point(0, 35);
+            this.panelBoarderSearchThin01.Name = "panelBoarderSearchThin01";
+            this.panelBoarderSearchThin01.Size = new System.Drawing.Size(10, 461);
+            this.panelBoarderSearchThin01.TabIndex = 62;
             // 
             // pictureBoxUserImageBig
             // 
@@ -476,15 +475,15 @@
             this.pictureBoxUserImageBig.TabIndex = 61;
             this.pictureBoxUserImageBig.TabStop = false;
             // 
-            // panel4
+            // panelUsernameBackground
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel4.Controls.Add(this.textBoxUpdateUserName);
-            this.panel4.Controls.Add(this.labelUserNumber);
-            this.panel4.Location = new System.Drawing.Point(70, 326);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 53);
-            this.panel4.TabIndex = 60;
+            this.panelUsernameBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelUsernameBackground.Controls.Add(this.textBoxUpdateUserName);
+            this.panelUsernameBackground.Controls.Add(this.labelUserNumber);
+            this.panelUsernameBackground.Location = new System.Drawing.Point(70, 326);
+            this.panelUsernameBackground.Name = "panelUsernameBackground";
+            this.panelUsernameBackground.Size = new System.Drawing.Size(273, 53);
+            this.panelUsernameBackground.TabIndex = 60;
             // 
             // textBoxUpdateUserName
             // 
@@ -511,17 +510,17 @@
             this.labelUserNumber.TabIndex = 2;
             this.labelUserNumber.Text = "#0001";
             // 
-            // panel3
+            // panelAvatarBackground
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel3.Controls.Add(this.pictureBoxAvatar4);
-            this.panel3.Controls.Add(this.pictureBoxAvatar3);
-            this.panel3.Controls.Add(this.pictureBoxAvatar2);
-            this.panel3.Controls.Add(this.pictureBoxAvatar1);
-            this.panel3.Location = new System.Drawing.Point(423, 82);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(310, 297);
-            this.panel3.TabIndex = 59;
+            this.panelAvatarBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelAvatarBackground.Controls.Add(this.pictureBoxAvatar4);
+            this.panelAvatarBackground.Controls.Add(this.pictureBoxAvatar3);
+            this.panelAvatarBackground.Controls.Add(this.pictureBoxAvatar2);
+            this.panelAvatarBackground.Controls.Add(this.pictureBoxAvatar1);
+            this.panelAvatarBackground.Location = new System.Drawing.Point(423, 82);
+            this.panelAvatarBackground.Name = "panelAvatarBackground";
+            this.panelAvatarBackground.Size = new System.Drawing.Size(310, 297);
+            this.panelAvatarBackground.TabIndex = 59;
             // 
             // pictureBoxAvatar4
             // 
@@ -617,33 +616,33 @@
             this.pictureBoxSearchBoarderClose.MouseEnter += new System.EventHandler(this.pictureBoxSearchBoarderClose_MouseEnter);
             this.pictureBoxSearchBoarderClose.MouseLeave += new System.EventHandler(this.pictureBoxSearchBoarderClose_MouseLeave);
             // 
-            // buttonUserProfileCancle
+            // buttonCancleUserProfile
             // 
-            this.buttonUserProfileCancle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
-            this.buttonUserProfileCancle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUserProfileCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUserProfileCancle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonUserProfileCancle.Location = new System.Drawing.Point(403, 423);
-            this.buttonUserProfileCancle.Name = "buttonUserProfileCancle";
-            this.buttonUserProfileCancle.Size = new System.Drawing.Size(165, 38);
-            this.buttonUserProfileCancle.TabIndex = 56;
-            this.buttonUserProfileCancle.Text = "Cancle";
-            this.buttonUserProfileCancle.UseVisualStyleBackColor = false;
-            this.buttonUserProfileCancle.Click += new System.EventHandler(this.buttonIPSearchCancle_Click);
+            this.buttonCancleUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
+            this.buttonCancleUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCancleUserProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancleUserProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCancleUserProfile.Location = new System.Drawing.Point(403, 423);
+            this.buttonCancleUserProfile.Name = "buttonCancleUserProfile";
+            this.buttonCancleUserProfile.Size = new System.Drawing.Size(165, 38);
+            this.buttonCancleUserProfile.TabIndex = 56;
+            this.buttonCancleUserProfile.Text = "Cancle";
+            this.buttonCancleUserProfile.UseVisualStyleBackColor = false;
+            this.buttonCancleUserProfile.Click += new System.EventHandler(this.buttonIPSearchCancle_Click);
             // 
-            // buttonIPSearchConfirm
+            // buttonConfirmUserProfile
             // 
-            this.buttonIPSearchConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.buttonIPSearchConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonIPSearchConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonIPSearchConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonIPSearchConfirm.Location = new System.Drawing.Point(222, 423);
-            this.buttonIPSearchConfirm.Name = "buttonIPSearchConfirm";
-            this.buttonIPSearchConfirm.Size = new System.Drawing.Size(165, 38);
-            this.buttonIPSearchConfirm.TabIndex = 55;
-            this.buttonIPSearchConfirm.Text = "Confirm";
-            this.buttonIPSearchConfirm.UseVisualStyleBackColor = false;
-            this.buttonIPSearchConfirm.Click += new System.EventHandler(this.buttonIPSearchConfirm_Click);
+            this.buttonConfirmUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.buttonConfirmUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfirmUserProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmUserProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfirmUserProfile.Location = new System.Drawing.Point(222, 423);
+            this.buttonConfirmUserProfile.Name = "buttonConfirmUserProfile";
+            this.buttonConfirmUserProfile.Size = new System.Drawing.Size(165, 38);
+            this.buttonConfirmUserProfile.TabIndex = 55;
+            this.buttonConfirmUserProfile.Text = "Confirm";
+            this.buttonConfirmUserProfile.UseVisualStyleBackColor = false;
+            this.buttonConfirmUserProfile.Click += new System.EventHandler(this.buttonIPSearchConfirm_Click);
             // 
             // panelBoarder
             // 
@@ -977,9 +976,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).EndInit();
             this.panelUserProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImageBig)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panelUsernameBackground.ResumeLayout(false);
+            this.panelUsernameBackground.PerformLayout();
+            this.panelAvatarBackground.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar2)).EndInit();
@@ -1054,21 +1053,21 @@
         private Panel panelBoarderSearch;
         private Panel panelBoarderUserProfileClose;
         private PictureBox pictureBoxSearchBoarderClose;
-        private Button buttonUserProfileCancle;
-        private Button buttonIPSearchConfirm;
-        private Panel panel3;
+        private Button buttonCancleUserProfile;
+        private Button buttonConfirmUserProfile;
+        private Panel panelAvatarBackground;
         private PictureBox pictureBoxAvatar4;
         private PictureBox pictureBoxAvatar3;
         private PictureBox pictureBoxAvatar2;
         private PictureBox pictureBoxAvatar1;
-        private Panel panel4;
+        private Panel panelUsernameBackground;
         private PictureBox pictureBoxUserImageBig;
         private TextBox textBoxUpdateUserName;
         public Label labelUserNumber;
         private TextBox textBoxUserName;
-        private Panel panel7;
-        private Panel panel6;
-        private Panel panel5;
+        private Panel panelBoarderSearchThin02;
+        private Panel panelBoarderSearchThin03;
+        private Panel panelBoarderSearchThin01;
         private Label labelTotalSummary;
         private Label labelFieldbusSummary;
         private Label labelDigitalSummary;

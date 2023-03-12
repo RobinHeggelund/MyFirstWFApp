@@ -76,13 +76,13 @@ namespace MyFirstWFApp
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            int x = pictureBoxHelp.Location.X;
-            int y = pictureBoxHelp.Location.Y;
+            int x = pictureBoxSettings1.Location.X;
+            int y = pictureBoxSettings1.Location.Y;
 
-            pictureBoxHelp.Width = 150;
-            pictureBoxHelp.Height = 150;
+            pictureBoxSettings1.Width = 150;
+            pictureBoxSettings1.Height = 150;
 
-            this.pictureBoxHelp.Location = new Point(x - 5, y - 5);
+            this.pictureBoxSettings1.Location = new Point(x - 5, y - 5);
 
             labelSettings.Text = "About";
         }
@@ -91,93 +91,93 @@ namespace MyFirstWFApp
 
         {
 
-            int x = pictureBoxHelp.Location.X;
-            int y = pictureBoxHelp.Location.Y;
+            int x = pictureBoxSettings1.Location.X;
+            int y = pictureBoxSettings1.Location.Y;
 
-            pictureBoxHelp.Width = 140;
-            pictureBoxHelp.Height = 140;
+            pictureBoxSettings1.Width = 140;
+            pictureBoxSettings1.Height = 140;
 
-            this.pictureBoxHelp.Location = new Point(x + 5, y + 5);
+            this.pictureBoxSettings1.Location = new Point(x + 5, y + 5);
 
             labelSettings.Text = "";
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
-            int x = pictureBox2.Location.X;
-            int y = pictureBox2.Location.Y;
+            int x = pictureBoxSettings2.Location.X;
+            int y = pictureBoxSettings2.Location.Y;
 
-            pictureBox2.Width = 174;
-            pictureBox2.Height = 160;
+            pictureBoxSettings2.Width = 174;
+            pictureBoxSettings2.Height = 160;
 
-            this.pictureBox2.Location = new Point(x - 5, y - 5);
+            this.pictureBoxSettings2.Location = new Point(x - 5, y - 5);
 
             labelSettings.Text = "Change instrument directory";
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            int x = pictureBox2.Location.X;
-            int y = pictureBox2.Location.Y;
+            int x = pictureBoxSettings2.Location.X;
+            int y = pictureBoxSettings2.Location.Y;
 
-            pictureBox2.Width = 164;
-            pictureBox2.Height = 150;
+            pictureBoxSettings2.Width = 164;
+            pictureBoxSettings2.Height = 150;
 
-            this.pictureBox2.Location = new Point(x + 5, y + 5);
+            this.pictureBoxSettings2.Location = new Point(x + 5, y + 5);
 
             labelSettings.Text = "";
         }
 
         private void pictureBox3_MouseEnter(object sender, EventArgs e)
         {
-            int x = pictureBox3.Location.X;
-            int y = pictureBox3.Location.Y;
+            int x = pictureBoxSettings3.Location.X;
+            int y = pictureBoxSettings3.Location.Y;
 
-            pictureBox3.Width = 150;
-            pictureBox3.Height = 150;
+            pictureBoxSettings3.Width = 150;
+            pictureBoxSettings3.Height = 150;
 
-            this.pictureBox3.Location = new Point(x - 5, y - 5);
+            this.pictureBoxSettings3.Location = new Point(x - 5, y - 5);
 
-            labelSettings.Text = "Load instrument file from directory";
+            labelSettings.Text = "Import instrument list from directory";
 
 
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            int x = pictureBox3.Location.X;
-            int y = pictureBox3.Location.Y;
+            int x = pictureBoxSettings3.Location.X;
+            int y = pictureBoxSettings3.Location.Y;
 
-            pictureBox3.Width = 140;
-            pictureBox3.Height = 140;
+            pictureBoxSettings3.Width = 140;
+            pictureBoxSettings3.Height = 140;
 
-            this.pictureBox3.Location = new Point(x + 5, y + 5);
+            this.pictureBoxSettings3.Location = new Point(x + 5, y + 5);
 
             labelSettings.Text = "";
         }
 
         private void pictureBox4_MouseEnter(object sender, EventArgs e)
         {
-            int x = pictureBox4.Location.X;
-            int y = pictureBox4.Location.Y;
+            int x = pictureBoxSettings4.Location.X;
+            int y = pictureBoxSettings4.Location.Y;
 
-            pictureBox4.Width = 150;
-            pictureBox4.Height = 150;
+            pictureBoxSettings4.Width = 150;
+            pictureBoxSettings4.Height = 150;
 
-            this.pictureBox4.Location = new Point(x - 5, y - 5);
+            this.pictureBoxSettings4.Location = new Point(x - 5, y - 5);
 
-            labelSettings.Text = "Load instrument file from Cloud";
+            labelSettings.Text = "Import instrument list from database";
         }
 
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
-            int x = pictureBox4.Location.X;
-            int y = pictureBox4.Location.Y;
+            int x = pictureBoxSettings4.Location.X;
+            int y = pictureBoxSettings4.Location.Y;
 
-            pictureBox4.Width = 140;
-            pictureBox4.Height = 140;
+            pictureBoxSettings4.Width = 140;
+            pictureBoxSettings4.Height = 140;
 
-            this.pictureBox4.Location = new Point(x + 5, y + 5);
+            this.pictureBoxSettings4.Location = new Point(x + 5, y + 5);
 
             labelSettings.Text = "";
         }
@@ -277,7 +277,9 @@ namespace MyFirstWFApp
                                                                         instrumentLineParts[6],
                                                                         Convert.ToDouble(instrumentLineParts[7]),
                                                                         Convert.ToDouble(instrumentLineParts[8]),
-                                                                        Convert.ToString(instrumentLineParts[9]));
+                                                                        Convert.ToInt32(instrumentLineParts[9]),
+                                                                        Convert.ToInt32(instrumentLineParts[10]),
+                                                                        Convert.ToString(instrumentLineParts[11]));
                                 instrumentList.Add(instrument);
                                 
                                 

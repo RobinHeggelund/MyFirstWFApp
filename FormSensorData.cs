@@ -57,6 +57,8 @@ namespace MyFirstWFApp
 
         double lvrValue = 0.0;
         double uvrValue = 0.0;
+        int alarmFloorValue = 0;
+        int alarmCeilingValue = 0;
         double spanRange = 0.0;
         string unitValue = string.Empty;
 
@@ -159,7 +161,9 @@ namespace MyFirstWFApp
                                                                 instrumentLineParts[6],
                                                                 Convert.ToDouble(instrumentLineParts[7]),
                                                                 Convert.ToDouble(instrumentLineParts[8]),
-                                                                Convert.ToString(instrumentLineParts[9]));
+                                                                int.Parse(instrumentLineParts[9]),
+                                                                int.Parse(instrumentLineParts[10]),
+                                                                Convert.ToString(instrumentLineParts[11]));
                         instrumentList.Add(instrument);
                         
 
@@ -405,7 +409,7 @@ namespace MyFirstWFApp
         }
 
 
-        private void EnterDataIntoTextPreviewBox()
+        private void RegisterNewInstrument()
         {
             // General sensor registration data
 
@@ -425,6 +429,8 @@ namespace MyFirstWFApp
                                                   textBoxComments.Text,
                                                   lvrValue,
                                                   uvrValue,
+                                                  alarmFloorValue,
+                                                  alarmCeilingValue,
                                                   textBoxUnit.Text);
 
 
@@ -492,6 +498,8 @@ namespace MyFirstWFApp
                                                       textBoxComments.Text,
                                                       lvrValue,
                                                       uvrValue,
+                                                      alarmFloorValue,
+                                                      alarmCeilingValue,
                                                       textBoxUnit.Text);
                     instrumentList.Add(instrument);
 
@@ -524,6 +532,9 @@ namespace MyFirstWFApp
 
             lvrValue = Convert.ToDouble(textBoxLVR.Text, CultureInfo.InvariantCulture);
             uvrValue = Convert.ToDouble(textBoxURV.Text, CultureInfo.InvariantCulture);
+            alarmFloorValue = int.Parse(textBoxAlarmFloor.Text);
+            alarmCeilingValue = int.Parse(textBoxAlarmCeiling.Text);
+
             spanRange = uvrValue - lvrValue;
 
             bool sensorNameValid = false;
@@ -1021,7 +1032,7 @@ namespace MyFirstWFApp
             if (DataEntryIsValid())
             {
                 // Register new sensor
-                EnterDataIntoTextPreviewBox();
+                RegisterNewInstrument();
 
                 // Save data to file
 
@@ -1234,8 +1245,11 @@ namespace MyFirstWFApp
 
         private void listBoxSensorList_SelectedValueChanged(object sender, EventArgs e)
         {
-            buttonSensorSearchConfirm.Enabled = true;
-            buttonSensorDelete.Enabled = true;
+            if (listBoxSensorList.SelectedItems.Count > 0)
+            {
+                buttonSensorSearchConfirm.Enabled = true;
+                buttonSensorDelete.Enabled = true;
+            }
         }
 
         private void buttonSensorSearchConfirm_Click(object sender, EventArgs e)
@@ -1243,6 +1257,10 @@ namespace MyFirstWFApp
             // Hide window
 
             panelSensorSearch.Visible = false;
+
+            // Disable button
+
+            buttonSensorSearchConfirm.Enabled = false;
 
             // Clear all boxes
 
@@ -1252,6 +1270,8 @@ namespace MyFirstWFApp
             textBoxLVR.Text = 0.0f.ToString();
             textBoxURV.Text = 0.0f.ToString();
             textBoxUnit.Clear();
+            textBoxAlarmFloor.Clear();
+            textBoxAlarmCeiling.Clear();
 
 
             // Fill boxes with selected sensor data
@@ -1263,7 +1283,8 @@ namespace MyFirstWFApp
             textBoxLVR.Text = instrumentList[index].LRV.ToString();
             textBoxURV.Text = instrumentList[index].URV.ToString();
             textBoxUnit.Text = instrumentList[index].Unit;
-
+            textBoxAlarmFloor.Text = instrumentList[index].AlarmFloor.ToString();
+            textBoxAlarmCeiling.Text = instrumentList[index].AlarmCeiling.ToString();
             // Set Options to instrument data
 
             string optionSelected;
@@ -1351,6 +1372,32 @@ namespace MyFirstWFApp
 
 
 
+
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            // Clear all boxes
+
+            textBoxSensorName.Clear();
+            maskedTextBoxSerialNumber.Clear();
+            textBoxComments.Clear();
+            textBoxLVR.Text = 0.0f.ToString();
+            textBoxURV.Text = 0.0f.ToString();
+            textBoxUnit.Clear();
+            textBoxAlarmFloor.Clear();
+            textBoxAlarmCeiling.Clear();
+            listBoxOptions.SelectedIndex = 0;
+            InvokeOnClick(buttonAnalog, null);
+            InvokeOnClick(buttonMT_Analog_1, null);
+            
 
 
 

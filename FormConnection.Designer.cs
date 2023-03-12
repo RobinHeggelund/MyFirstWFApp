@@ -37,7 +37,6 @@
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 240D);
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 450D);
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 310D);
-            this.textBoxSend = new System.Windows.Forms.TextBox();
             this.textBoxCommunication = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
             this.textBoxInputPort = new System.Windows.Forms.TextBox();
@@ -54,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panelConnectionLogBackgroundPanel = new System.Windows.Forms.Panel();
             this.pictureBoxLeapFrog = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,10 +83,25 @@
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.timerConnection_readstatus = new System.Windows.Forms.Timer(this.components);
             this.panelChartBackground = new System.Windows.Forms.Panel();
+            this.pictureBoxAlarmText = new System.Windows.Forms.PictureBox();
+            this.labelInstrumentUnit = new System.Windows.Forms.Label();
             this.panelChartStatus = new System.Windows.Forms.Panel();
             this.labelChartStatus = new System.Windows.Forms.Label();
             this.pictureBoxChartStatus = new System.Windows.Forms.PictureBox();
             this.panelChart = new System.Windows.Forms.Panel();
+            this.panelComAndBitrateBackground = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panelBaudRateBackground = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.labelBaudRate = new System.Windows.Forms.Label();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.textBoxBaud = new System.Windows.Forms.TextBox();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panelCOMBackground = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.labelCOM = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.textBoxCOM = new System.Windows.Forms.TextBox();
             this.panelInstrumentStatus = new System.Windows.Forms.Panel();
             this.labelValueScaled = new System.Windows.Forms.Label();
             this.labelAlarmLow = new System.Windows.Forms.Label();
@@ -118,8 +131,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.textBoxURV = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonWriteConf = new System.Windows.Forms.Button();
+            this.buttonReadConf = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -133,28 +146,42 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.textBoxAlarmHigh = new System.Windows.Forms.TextBox();
             this.panelInstrumentConfig = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonLoadSSC = new System.Windows.Forms.Button();
+            this.buttonSaveSSC = new System.Windows.Forms.Button();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.labelUnit = new System.Windows.Forms.Label();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.textBoxUnit = new System.Windows.Forms.TextBox();
+            this.buttonImportInstrumentData = new System.Windows.Forms.Button();
             this.pictureBoxMinimizeFullscreen = new System.Windows.Forms.PictureBox();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
+            this.panelLogoBackground = new System.Windows.Forms.Panel();
+            this.panelIPBackground = new System.Windows.Forms.Panel();
             this.panelConfigureInstrument = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
+            this.panelInstrumentSearchList = new System.Windows.Forms.Panel();
+            this.buttonInstrumentListCancle = new System.Windows.Forms.Button();
+            this.buttonInstrumentListConfirm = new System.Windows.Forms.Button();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.listBoxInstrumentList = new System.Windows.Forms.ListBox();
+            this.panelConfigureInstrumentBoarderThin02 = new System.Windows.Forms.Panel();
+            this.panelConfigureInstrumentBoarderThin03 = new System.Windows.Forms.Panel();
+            this.panelConfigureInstrumentBoarderThin01 = new System.Windows.Forms.Panel();
             this.panelConfigureInstrumentBoarder = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelConfigureInstrument = new System.Windows.Forms.Label();
             this.panelConfigureInstrumentClose = new System.Windows.Forms.Panel();
             this.pictureBoxConfigureInstrumentClose = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonConfigureInstrumentClose = new System.Windows.Forms.Button();
             this.labelMonitor = new System.Windows.Forms.Label();
             this.paneMonitorHeadline = new System.Windows.Forms.Panel();
+            this.buttonStartMonitor = new System.Windows.Forms.Button();
+            this.buttonStopMonitor = new System.Windows.Forms.Button();
+            this.buttonStartMonitorDisabled = new System.Windows.Forms.Button();
             this.panelIPAdressBack.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).BeginInit();
             this.panelPortBackground.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panelConnectionLogBackgroundPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeapFrog)).BeginInit();
             this.panelIPSearch.SuspendLayout();
@@ -169,9 +196,15 @@
             this.panelConnectionLogClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConnectionLogClose)).BeginInit();
             this.panelChartBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmText)).BeginInit();
             this.panelChartStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChartStatus)).BeginInit();
             this.panelChart.SuspendLayout();
+            this.panelComAndBitrateBackground.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panelBaudRateBackground.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panelCOMBackground.SuspendLayout();
             this.panelInstrumentStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmHigh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmLow)).BeginInit();
@@ -186,26 +219,19 @@
             this.panel25.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panelInstrumentConfig.SuspendLayout();
+            this.panel43.SuspendLayout();
+            this.panel44.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizeFullscreen)).BeginInit();
-            this.panel29.SuspendLayout();
-            this.panel30.SuspendLayout();
+            this.panelLogoBackground.SuspendLayout();
+            this.panelIPBackground.SuspendLayout();
             this.panelConfigureInstrument.SuspendLayout();
+            this.panelInstrumentSearchList.SuspendLayout();
+            this.panel42.SuspendLayout();
             this.panelConfigureInstrumentBoarder.SuspendLayout();
             this.panelConfigureInstrumentClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigureInstrumentClose)).BeginInit();
             this.paneMonitorHeadline.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBoxSend
-            // 
-            this.textBoxSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.textBoxSend.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSend.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSend.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxSend.Location = new System.Drawing.Point(8, 8);
-            this.textBoxSend.Name = "textBoxSend";
-            this.textBoxSend.Size = new System.Drawing.Size(353, 22);
-            this.textBoxSend.TabIndex = 11;
             // 
             // textBoxCommunication
             // 
@@ -295,7 +321,7 @@
             this.labelIPAdress.AutoSize = true;
             this.labelIPAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.labelIPAdress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelIPAdress.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelIPAdress.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelIPAdress.Location = new System.Drawing.Point(4, 8);
             this.labelIPAdress.Name = "labelIPAdress";
             this.labelIPAdress.Size = new System.Drawing.Size(88, 21);
@@ -385,16 +411,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Connection Log";
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel7.Controls.Add(this.textBoxSend);
-            this.panel7.Location = new System.Drawing.Point(519, 630);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(429, 37);
-            this.panel7.TabIndex = 2;
-            this.panel7.Visible = false;
-            // 
             // panelConnectionLogBackgroundPanel
             // 
             this.panelConnectionLogBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
@@ -450,7 +466,7 @@
             this.panelIPSearch.Controls.Add(this.panel10);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchCancle);
             this.panelIPSearch.Controls.Add(this.buttonIPSearchConfirm);
-            this.panelIPSearch.Location = new System.Drawing.Point(27, 574);
+            this.panelIPSearch.Location = new System.Drawing.Point(966, 104);
             this.panelIPSearch.Name = "panelIPSearch";
             this.panelIPSearch.Size = new System.Drawing.Size(467, 325);
             this.panelIPSearch.TabIndex = 54;
@@ -644,10 +660,12 @@
             series1.Points.Add(dataPoint3);
             series1.Points.Add(dataPoint4);
             series1.Points.Add(dataPoint5);
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(448, 245);
             this.chart1.TabIndex = 56;
             this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // timerConnection_readscaled
             // 
@@ -662,7 +680,7 @@
             this.panelConnectionLog.Controls.Add(this.panelConnectionLogBackground);
             this.panelConnectionLog.Controls.Add(this.panelBorderConnectionLog);
             this.panelConnectionLog.Controls.Add(this.buttonOKConnectionLog);
-            this.panelConnectionLog.Location = new System.Drawing.Point(966, 574);
+            this.panelConnectionLog.Location = new System.Drawing.Point(951, 609);
             this.panelConnectionLog.Name = "panelConnectionLog";
             this.panelConnectionLog.Size = new System.Drawing.Size(467, 325);
             this.panelConnectionLog.TabIndex = 57;
@@ -764,26 +782,54 @@
             // 
             // timerConnection_readstatus
             // 
-            this.timerConnection_readstatus.Interval = 10000;
+            this.timerConnection_readstatus.Interval = 5000;
             this.timerConnection_readstatus.Tick += new System.EventHandler(this.timerConnection_readstatus_Tick);
             // 
             // panelChartBackground
             // 
             this.panelChartBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelChartBackground.Controls.Add(this.pictureBoxAlarmText);
+            this.panelChartBackground.Controls.Add(this.labelInstrumentUnit);
             this.panelChartBackground.Controls.Add(this.chart1);
             this.panelChartBackground.Location = new System.Drawing.Point(3, 3);
             this.panelChartBackground.Name = "panelChartBackground";
             this.panelChartBackground.Size = new System.Drawing.Size(448, 245);
             this.panelChartBackground.TabIndex = 60;
             // 
+            // pictureBoxAlarmText
+            // 
+            this.pictureBoxAlarmText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxAlarmText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.pictureBoxAlarmText.Image = global::MyFirstWFApp.Properties.Resources.alarmLetters;
+            this.pictureBoxAlarmText.Location = new System.Drawing.Point(93, 76);
+            this.pictureBoxAlarmText.Name = "pictureBoxAlarmText";
+            this.pictureBoxAlarmText.Size = new System.Drawing.Size(300, 91);
+            this.pictureBoxAlarmText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxAlarmText.TabIndex = 77;
+            this.pictureBoxAlarmText.TabStop = false;
+            this.pictureBoxAlarmText.Visible = false;
+            // 
+            // labelInstrumentUnit
+            // 
+            this.labelInstrumentUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelInstrumentUnit.AutoSize = true;
+            this.labelInstrumentUnit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelInstrumentUnit.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.labelInstrumentUnit.Location = new System.Drawing.Point(10, 215);
+            this.labelInstrumentUnit.Name = "labelInstrumentUnit";
+            this.labelInstrumentUnit.Size = new System.Drawing.Size(100, 19);
+            this.labelInstrumentUnit.TabIndex = 72;
+            this.labelInstrumentUnit.Text = "Not Registered";
+            // 
             // panelChartStatus
             // 
             this.panelChartStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.panelChartStatus.Controls.Add(this.labelChartStatus);
             this.panelChartStatus.Controls.Add(this.pictureBoxChartStatus);
-            this.panelChartStatus.Location = new System.Drawing.Point(471, 135);
+            this.panelChartStatus.Location = new System.Drawing.Point(0, 0);
             this.panelChartStatus.Name = "panelChartStatus";
-            this.panelChartStatus.Size = new System.Drawing.Size(454, 307);
+            this.panelChartStatus.Size = new System.Drawing.Size(454, 277);
             this.panelChartStatus.TabIndex = 61;
             // 
             // labelChartStatus
@@ -791,7 +837,7 @@
             this.labelChartStatus.AutoSize = true;
             this.labelChartStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelChartStatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelChartStatus.Location = new System.Drawing.Point(180, 129);
+            this.labelChartStatus.Location = new System.Drawing.Point(197, 112);
             this.labelChartStatus.Name = "labelChartStatus";
             this.labelChartStatus.Size = new System.Drawing.Size(170, 31);
             this.labelChartStatus.TabIndex = 1;
@@ -800,7 +846,7 @@
             // pictureBoxChartStatus
             // 
             this.pictureBoxChartStatus.Image = global::MyFirstWFApp.Properties.Resources.no_connection;
-            this.pictureBoxChartStatus.Location = new System.Drawing.Point(69, 106);
+            this.pictureBoxChartStatus.Location = new System.Drawing.Point(86, 89);
             this.pictureBoxChartStatus.Name = "pictureBoxChartStatus";
             this.pictureBoxChartStatus.Size = new System.Drawing.Size(105, 75);
             this.pictureBoxChartStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -810,16 +856,160 @@
             // panelChart
             // 
             this.panelChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelChart.Controls.Add(this.panelChartStatus);
+            this.panelChart.Controls.Add(this.panelComAndBitrateBackground);
             this.panelChart.Controls.Add(this.panelInstrumentStatus);
             this.panelChart.Controls.Add(this.panelChartBackground);
             this.panelChart.Controls.Add(this.buttonFullscreen);
             this.panelChart.Controls.Add(this.buttonConnectionLog);
             this.panelChart.Controls.Add(this.buttonSaveLog);
             this.panelChart.Controls.Add(this.buttonConfigureInstrument);
-            this.panelChart.Location = new System.Drawing.Point(471, 135);
+            this.panelChart.Location = new System.Drawing.Point(467, 101);
             this.panelChart.Name = "panelChart";
             this.panelChart.Size = new System.Drawing.Size(454, 385);
             this.panelChart.TabIndex = 63;
+            // 
+            // panelComAndBitrateBackground
+            // 
+            this.panelComAndBitrateBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelComAndBitrateBackground.Controls.Add(this.panel38);
+            this.panelComAndBitrateBackground.Controls.Add(this.panel31);
+            this.panelComAndBitrateBackground.Location = new System.Drawing.Point(0, 274);
+            this.panelComAndBitrateBackground.Name = "panelComAndBitrateBackground";
+            this.panelComAndBitrateBackground.Size = new System.Drawing.Size(454, 36);
+            this.panelComAndBitrateBackground.TabIndex = 76;
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel38.Controls.Add(this.panelBaudRateBackground);
+            this.panel38.Controls.Add(this.panel41);
+            this.panel38.Controls.Add(this.textBoxBaud);
+            this.panel38.Location = new System.Drawing.Point(220, 0);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(232, 37);
+            this.panel38.TabIndex = 3;
+            // 
+            // panelBaudRateBackground
+            // 
+            this.panelBaudRateBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.panelBaudRateBackground.Controls.Add(this.panel40);
+            this.panelBaudRateBackground.Controls.Add(this.labelBaudRate);
+            this.panelBaudRateBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBaudRateBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelBaudRateBackground.Name = "panelBaudRateBackground";
+            this.panelBaudRateBackground.Size = new System.Drawing.Size(95, 37);
+            this.panelBaudRateBackground.TabIndex = 26;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel40.Location = new System.Drawing.Point(283, 25);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(430, 37);
+            this.panel40.TabIndex = 25;
+            // 
+            // labelBaudRate
+            // 
+            this.labelBaudRate.AutoSize = true;
+            this.labelBaudRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.labelBaudRate.Enabled = false;
+            this.labelBaudRate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelBaudRate.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelBaudRate.Location = new System.Drawing.Point(4, 8);
+            this.labelBaudRate.Name = "labelBaudRate";
+            this.labelBaudRate.Size = new System.Drawing.Size(84, 21);
+            this.labelBaudRate.TabIndex = 7;
+            this.labelBaudRate.Text = "Baud Rate";
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel41.Location = new System.Drawing.Point(283, 25);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(430, 37);
+            this.panel41.TabIndex = 25;
+            // 
+            // textBoxBaud
+            // 
+            this.textBoxBaud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxBaud.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBaud.Enabled = false;
+            this.textBoxBaud.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxBaud.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxBaud.Location = new System.Drawing.Point(101, 8);
+            this.textBoxBaud.Name = "textBoxBaud";
+            this.textBoxBaud.Size = new System.Drawing.Size(65, 22);
+            this.textBoxBaud.TabIndex = 7;
+            this.textBoxBaud.Text = "9600";
+            this.textBoxBaud.TextChanged += new System.EventHandler(this.textBoxBaud_TextChanged);
+            this.textBoxBaud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBaud_KeyPress);
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel31.Controls.Add(this.panelCOMBackground);
+            this.panel31.Controls.Add(this.panel37);
+            this.panel31.Controls.Add(this.textBoxCOM);
+            this.panel31.Location = new System.Drawing.Point(2, 0);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(216, 37);
+            this.panel31.TabIndex = 2;
+            // 
+            // panelCOMBackground
+            // 
+            this.panelCOMBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.panelCOMBackground.Controls.Add(this.panel36);
+            this.panelCOMBackground.Controls.Add(this.labelCOM);
+            this.panelCOMBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCOMBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelCOMBackground.Name = "panelCOMBackground";
+            this.panelCOMBackground.Size = new System.Drawing.Size(72, 37);
+            this.panelCOMBackground.TabIndex = 26;
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel36.Location = new System.Drawing.Point(283, 25);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(430, 37);
+            this.panel36.TabIndex = 25;
+            // 
+            // labelCOM
+            // 
+            this.labelCOM.AutoSize = true;
+            this.labelCOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.labelCOM.Enabled = false;
+            this.labelCOM.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCOM.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCOM.Location = new System.Drawing.Point(4, 8);
+            this.labelCOM.Name = "labelCOM";
+            this.labelCOM.Size = new System.Drawing.Size(47, 21);
+            this.labelCOM.TabIndex = 7;
+            this.labelCOM.Text = "COM";
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel37.Location = new System.Drawing.Point(283, 25);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(430, 37);
+            this.panel37.TabIndex = 25;
+            // 
+            // textBoxCOM
+            // 
+            this.textBoxCOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxCOM.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCOM.Enabled = false;
+            this.textBoxCOM.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCOM.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxCOM.Location = new System.Drawing.Point(78, 8);
+            this.textBoxCOM.Name = "textBoxCOM";
+            this.textBoxCOM.Size = new System.Drawing.Size(123, 22);
+            this.textBoxCOM.TabIndex = 7;
+            this.textBoxCOM.Text = "3";
+            this.textBoxCOM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCOM_KeyPress);
             // 
             // panelInstrumentStatus
             // 
@@ -910,7 +1100,7 @@
             this.buttonFullscreen.FlatAppearance.BorderSize = 2;
             this.buttonFullscreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFullscreen.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonFullscreen.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonFullscreen.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonFullscreen.Location = new System.Drawing.Point(218, 310);
             this.buttonFullscreen.Name = "buttonFullscreen";
             this.buttonFullscreen.Size = new System.Drawing.Size(236, 38);
@@ -928,7 +1118,7 @@
             this.buttonConnectionLog.FlatAppearance.BorderSize = 2;
             this.buttonConnectionLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConnectionLog.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonConnectionLog.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonConnectionLog.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonConnectionLog.Location = new System.Drawing.Point(218, 346);
             this.buttonConnectionLog.Name = "buttonConnectionLog";
             this.buttonConnectionLog.Size = new System.Drawing.Size(236, 38);
@@ -946,7 +1136,7 @@
             this.buttonSaveLog.FlatAppearance.BorderSize = 2;
             this.buttonSaveLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveLog.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSaveLog.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSaveLog.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonSaveLog.Location = new System.Drawing.Point(0, 346);
             this.buttonSaveLog.Name = "buttonSaveLog";
             this.buttonSaveLog.Size = new System.Drawing.Size(220, 38);
@@ -964,7 +1154,7 @@
             this.buttonConfigureInstrument.FlatAppearance.BorderSize = 2;
             this.buttonConfigureInstrument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfigureInstrument.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonConfigureInstrument.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonConfigureInstrument.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonConfigureInstrument.Location = new System.Drawing.Point(0, 310);
             this.buttonConfigureInstrument.Name = "buttonConfigureInstrument";
             this.buttonConfigureInstrument.Size = new System.Drawing.Size(220, 38);
@@ -1042,7 +1232,7 @@
             this.panel13.Controls.Add(this.textBoxLRV);
             this.panel13.Location = new System.Drawing.Point(10, 50);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(207, 37);
+            this.panel13.Size = new System.Drawing.Size(93, 37);
             this.panel13.TabIndex = 28;
             // 
             // panel14
@@ -1053,7 +1243,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(114, 37);
+            this.panel14.Size = new System.Drawing.Size(48, 37);
             this.panel14.TabIndex = 26;
             // 
             // panel15
@@ -1090,9 +1280,9 @@
             this.textBoxLRV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLRV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxLRV.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxLRV.Location = new System.Drawing.Point(120, 8);
+            this.textBoxLRV.Location = new System.Drawing.Point(52, 8);
             this.textBoxLRV.Name = "textBoxLRV";
-            this.textBoxLRV.Size = new System.Drawing.Size(83, 22);
+            this.textBoxLRV.Size = new System.Drawing.Size(40, 22);
             this.textBoxLRV.TabIndex = 7;
             this.textBoxLRV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLRV_KeyPress);
             // 
@@ -1102,9 +1292,9 @@
             this.panel17.Controls.Add(this.panel18);
             this.panel17.Controls.Add(this.panel20);
             this.panel17.Controls.Add(this.textBoxURV);
-            this.panel17.Location = new System.Drawing.Point(219, 50);
+            this.panel17.Location = new System.Drawing.Point(109, 50);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(200, 37);
+            this.panel17.Size = new System.Drawing.Size(93, 37);
             this.panel17.TabIndex = 29;
             // 
             // panel18
@@ -1115,7 +1305,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(114, 37);
+            this.panel18.Size = new System.Drawing.Size(48, 37);
             this.panel18.TabIndex = 26;
             // 
             // panel19
@@ -1152,44 +1342,44 @@
             this.textBoxURV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxURV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxURV.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxURV.Location = new System.Drawing.Point(120, 8);
+            this.textBoxURV.Location = new System.Drawing.Point(52, 8);
             this.textBoxURV.Name = "textBoxURV";
-            this.textBoxURV.Size = new System.Drawing.Size(72, 22);
+            this.textBoxURV.Size = new System.Drawing.Size(40, 22);
             this.textBoxURV.TabIndex = 7;
             // 
-            // button1
+            // buttonWriteConf
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(172, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 38);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "Write Configuration";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonWriteConf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonWriteConf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonWriteConf.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonWriteConf.FlatAppearance.BorderSize = 2;
+            this.buttonWriteConf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWriteConf.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonWriteConf.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonWriteConf.Location = new System.Drawing.Point(211, 177);
+            this.buttonWriteConf.Name = "buttonWriteConf";
+            this.buttonWriteConf.Size = new System.Drawing.Size(208, 38);
+            this.buttonWriteConf.TabIndex = 65;
+            this.buttonWriteConf.Text = "Write Configuration";
+            this.buttonWriteConf.UseVisualStyleBackColor = false;
+            this.buttonWriteConf.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonReadConf
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(10, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 38);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Read Configuration";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonReadConf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonReadConf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonReadConf.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonReadConf.FlatAppearance.BorderSize = 2;
+            this.buttonReadConf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReadConf.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonReadConf.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonReadConf.Location = new System.Drawing.Point(10, 177);
+            this.buttonReadConf.Name = "buttonReadConf";
+            this.buttonReadConf.Size = new System.Drawing.Size(203, 38);
+            this.buttonReadConf.TabIndex = 64;
+            this.buttonReadConf.Text = "Read Configuration";
+            this.buttonReadConf.UseVisualStyleBackColor = false;
+            this.buttonReadConf.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel21
             // 
@@ -1317,53 +1507,134 @@
             // 
             // panelInstrumentConfig
             // 
-            this.panelInstrumentConfig.Controls.Add(this.button4);
-            this.panelInstrumentConfig.Controls.Add(this.button3);
+            this.panelInstrumentConfig.Controls.Add(this.buttonLoadSSC);
+            this.panelInstrumentConfig.Controls.Add(this.buttonSaveSSC);
+            this.panelInstrumentConfig.Controls.Add(this.panel43);
+            this.panelInstrumentConfig.Controls.Add(this.buttonImportInstrumentData);
             this.panelInstrumentConfig.Controls.Add(this.panel25);
             this.panelInstrumentConfig.Controls.Add(this.panel21);
-            this.panelInstrumentConfig.Controls.Add(this.button1);
-            this.panelInstrumentConfig.Controls.Add(this.button2);
+            this.panelInstrumentConfig.Controls.Add(this.buttonWriteConf);
+            this.panelInstrumentConfig.Controls.Add(this.buttonReadConf);
             this.panelInstrumentConfig.Controls.Add(this.panel17);
             this.panelInstrumentConfig.Controls.Add(this.panel13);
             this.panelInstrumentConfig.Controls.Add(this.panel1);
             this.panelInstrumentConfig.Location = new System.Drawing.Point(16, 41);
             this.panelInstrumentConfig.Name = "panelInstrumentConfig";
-            this.panelInstrumentConfig.Size = new System.Drawing.Size(433, 188);
+            this.panelInstrumentConfig.Size = new System.Drawing.Size(433, 230);
             this.panelInstrumentConfig.TabIndex = 66;
             // 
-            // button4
+            // buttonLoadSSC
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button4.BackgroundImage = global::MyFirstWFApp.Properties.Resources.importWhite1;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(381, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(38, 38);
-            this.button4.TabIndex = 67;
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonLoadSSC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonLoadSSC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLoadSSC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonLoadSSC.FlatAppearance.BorderSize = 2;
+            this.buttonLoadSSC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoadSSC.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLoadSSC.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonLoadSSC.Location = new System.Drawing.Point(173, 136);
+            this.buttonLoadSSC.Name = "buttonLoadSSC";
+            this.buttonLoadSSC.Size = new System.Drawing.Size(165, 38);
+            this.buttonLoadSSC.TabIndex = 70;
+            this.buttonLoadSSC.Text = "Load SSC";
+            this.buttonLoadSSC.UseVisualStyleBackColor = false;
+            this.buttonLoadSSC.Click += new System.EventHandler(this.buttonLoadSSC_Click);
             // 
-            // button3
+            // buttonSaveSSC
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button3.BackgroundImage = global::MyFirstWFApp.Properties.Resources.exportWhite1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(343, 136);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 38);
-            this.button3.TabIndex = 66;
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonSaveSSC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonSaveSSC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveSSC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonSaveSSC.FlatAppearance.BorderSize = 2;
+            this.buttonSaveSSC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveSSC.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSaveSSC.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSaveSSC.Location = new System.Drawing.Point(10, 136);
+            this.buttonSaveSSC.Name = "buttonSaveSSC";
+            this.buttonSaveSSC.Size = new System.Drawing.Size(165, 38);
+            this.buttonSaveSSC.TabIndex = 69;
+            this.buttonSaveSSC.Text = "Save SSC";
+            this.buttonSaveSSC.UseVisualStyleBackColor = false;
+            this.buttonSaveSSC.Click += new System.EventHandler(this.buttonSaveSSC_Click);
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel43.Controls.Add(this.panel44);
+            this.panel43.Controls.Add(this.panel46);
+            this.panel43.Controls.Add(this.textBoxUnit);
+            this.panel43.Location = new System.Drawing.Point(207, 50);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(212, 37);
+            this.panel43.TabIndex = 68;
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel44.Controls.Add(this.panel45);
+            this.panel44.Controls.Add(this.labelUnit);
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel44.Location = new System.Drawing.Point(0, 0);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(48, 37);
+            this.panel44.TabIndex = 26;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel45.Location = new System.Drawing.Point(283, 25);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(430, 37);
+            this.panel45.TabIndex = 25;
+            // 
+            // labelUnit
+            // 
+            this.labelUnit.AutoSize = true;
+            this.labelUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelUnit.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelUnit.Location = new System.Drawing.Point(4, 8);
+            this.labelUnit.Name = "labelUnit";
+            this.labelUnit.Size = new System.Drawing.Size(40, 21);
+            this.labelUnit.TabIndex = 7;
+            this.labelUnit.Text = "Unit";
+            // 
+            // panel46
+            // 
+            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel46.Location = new System.Drawing.Point(283, 25);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(430, 37);
+            this.panel46.TabIndex = 25;
+            // 
+            // textBoxUnit
+            // 
+            this.textBoxUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUnit.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxUnit.Location = new System.Drawing.Point(54, 8);
+            this.textBoxUnit.Name = "textBoxUnit";
+            this.textBoxUnit.Size = new System.Drawing.Size(149, 22);
+            this.textBoxUnit.TabIndex = 7;
+            // 
+            // buttonImportInstrumentData
+            // 
+            this.buttonImportInstrumentData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonImportInstrumentData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonImportInstrumentData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonImportInstrumentData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonImportInstrumentData.FlatAppearance.BorderSize = 2;
+            this.buttonImportInstrumentData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonImportInstrumentData.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonImportInstrumentData.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonImportInstrumentData.Location = new System.Drawing.Point(335, 136);
+            this.buttonImportInstrumentData.Name = "buttonImportInstrumentData";
+            this.buttonImportInstrumentData.Size = new System.Drawing.Size(84, 38);
+            this.buttonImportInstrumentData.TabIndex = 67;
+            this.buttonImportInstrumentData.Text = "Import";
+            this.buttonImportInstrumentData.UseVisualStyleBackColor = false;
+            this.buttonImportInstrumentData.Click += new System.EventHandler(this.buttonImportInstrumentData_Click);
             // 
             // pictureBoxMinimizeFullscreen
             // 
@@ -1381,72 +1652,136 @@
             this.pictureBoxMinimizeFullscreen.MouseEnter += new System.EventHandler(this.pictureBoxMinimizeFullscreen_MouseEnter);
             this.pictureBoxMinimizeFullscreen.MouseLeave += new System.EventHandler(this.pictureBoxMinimizeFullscreen_MouseLeave);
             // 
-            // panel29
+            // panelLogoBackground
             // 
-            this.panel29.Controls.Add(this.textBox1);
-            this.panel29.Controls.Add(this.label2);
-            this.panel29.Controls.Add(this.pictureBoxLeapFrog);
-            this.panel29.Location = new System.Drawing.Point(104, 95);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(268, 210);
-            this.panel29.TabIndex = 68;
+            this.panelLogoBackground.Controls.Add(this.textBox1);
+            this.panelLogoBackground.Controls.Add(this.label2);
+            this.panelLogoBackground.Controls.Add(this.pictureBoxLeapFrog);
+            this.panelLogoBackground.Location = new System.Drawing.Point(104, 95);
+            this.panelLogoBackground.Name = "panelLogoBackground";
+            this.panelLogoBackground.Size = new System.Drawing.Size(268, 210);
+            this.panelLogoBackground.TabIndex = 68;
             // 
-            // panel30
+            // panelIPBackground
             // 
-            this.panel30.Controls.Add(this.buttonDisconnect);
-            this.panel30.Controls.Add(this.panelPortBackground);
-            this.panel30.Controls.Add(this.panelIPAdressBack);
-            this.panel30.Controls.Add(this.buttonConnect);
-            this.panel30.Location = new System.Drawing.Point(52, 331);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(381, 204);
-            this.panel30.TabIndex = 69;
+            this.panelIPBackground.Controls.Add(this.buttonDisconnect);
+            this.panelIPBackground.Controls.Add(this.panelPortBackground);
+            this.panelIPBackground.Controls.Add(this.panelIPAdressBack);
+            this.panelIPBackground.Controls.Add(this.buttonConnect);
+            this.panelIPBackground.Location = new System.Drawing.Point(52, 331);
+            this.panelIPBackground.Name = "panelIPBackground";
+            this.panelIPBackground.Size = new System.Drawing.Size(381, 204);
+            this.panelIPBackground.TabIndex = 69;
             // 
             // panelConfigureInstrument
             // 
-            this.panelConfigureInstrument.Controls.Add(this.panel32);
-            this.panelConfigureInstrument.Controls.Add(this.panel33);
-            this.panelConfigureInstrument.Controls.Add(this.panel34);
+            this.panelConfigureInstrument.Controls.Add(this.panelInstrumentSearchList);
+            this.panelConfigureInstrument.Controls.Add(this.panelConfigureInstrumentBoarderThin02);
+            this.panelConfigureInstrument.Controls.Add(this.panelConfigureInstrumentBoarderThin03);
+            this.panelConfigureInstrument.Controls.Add(this.panelConfigureInstrumentBoarderThin01);
             this.panelConfigureInstrument.Controls.Add(this.panelConfigureInstrumentBoarder);
             this.panelConfigureInstrument.Controls.Add(this.panelInstrumentConfig);
-            this.panelConfigureInstrument.Controls.Add(this.button6);
-            this.panelConfigureInstrument.Location = new System.Drawing.Point(967, 162);
+            this.panelConfigureInstrument.Controls.Add(this.buttonConfigureInstrumentClose);
+            this.panelConfigureInstrument.Location = new System.Drawing.Point(24, 609);
             this.panelConfigureInstrument.Name = "panelConfigureInstrument";
-            this.panelConfigureInstrument.Size = new System.Drawing.Size(466, 325);
+            this.panelConfigureInstrument.Size = new System.Drawing.Size(466, 359);
             this.panelConfigureInstrument.TabIndex = 70;
             this.panelConfigureInstrument.Visible = false;
             // 
-            // panel32
+            // panelInstrumentSearchList
             // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel32.Location = new System.Drawing.Point(5, 320);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(456, 5);
-            this.panel32.TabIndex = 61;
+            this.panelInstrumentSearchList.Controls.Add(this.buttonInstrumentListCancle);
+            this.panelInstrumentSearchList.Controls.Add(this.buttonInstrumentListConfirm);
+            this.panelInstrumentSearchList.Controls.Add(this.panel42);
+            this.panelInstrumentSearchList.Location = new System.Drawing.Point(10, 42);
+            this.panelInstrumentSearchList.Name = "panelInstrumentSearchList";
+            this.panelInstrumentSearchList.Size = new System.Drawing.Size(451, 306);
+            this.panelInstrumentSearchList.TabIndex = 67;
+            this.panelInstrumentSearchList.Visible = false;
             // 
-            // panel33
+            // buttonInstrumentListCancle
             // 
-            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel33.Location = new System.Drawing.Point(461, 35);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(5, 290);
-            this.panel33.TabIndex = 60;
+            this.buttonInstrumentListCancle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
+            this.buttonInstrumentListCancle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInstrumentListCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInstrumentListCancle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonInstrumentListCancle.Location = new System.Drawing.Point(229, 235);
+            this.buttonInstrumentListCancle.Name = "buttonInstrumentListCancle";
+            this.buttonInstrumentListCancle.Size = new System.Drawing.Size(165, 38);
+            this.buttonInstrumentListCancle.TabIndex = 60;
+            this.buttonInstrumentListCancle.Text = "Cancle";
+            this.buttonInstrumentListCancle.UseVisualStyleBackColor = false;
+            this.buttonInstrumentListCancle.Click += new System.EventHandler(this.buttonInstrumentListCancle_Click);
             // 
-            // panel34
+            // buttonInstrumentListConfirm
             // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel34.Location = new System.Drawing.Point(0, 35);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(5, 290);
-            this.panel34.TabIndex = 59;
+            this.buttonInstrumentListConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.buttonInstrumentListConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInstrumentListConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInstrumentListConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonInstrumentListConfirm.Location = new System.Drawing.Point(48, 235);
+            this.buttonInstrumentListConfirm.Name = "buttonInstrumentListConfirm";
+            this.buttonInstrumentListConfirm.Size = new System.Drawing.Size(165, 38);
+            this.buttonInstrumentListConfirm.TabIndex = 59;
+            this.buttonInstrumentListConfirm.Text = "Confirm";
+            this.buttonInstrumentListConfirm.UseVisualStyleBackColor = false;
+            this.buttonInstrumentListConfirm.Click += new System.EventHandler(this.buttonInstrumentListConfirm_Click);
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel42.Controls.Add(this.listBoxInstrumentList);
+            this.panel42.Location = new System.Drawing.Point(34, 17);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(384, 202);
+            this.panel42.TabIndex = 58;
+            // 
+            // listBoxInstrumentList
+            // 
+            this.listBoxInstrumentList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.listBoxInstrumentList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxInstrumentList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBoxInstrumentList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listBoxInstrumentList.ForeColor = System.Drawing.SystemColors.Control;
+            this.listBoxInstrumentList.FormattingEnabled = true;
+            this.listBoxInstrumentList.ItemHeight = 21;
+            this.listBoxInstrumentList.Location = new System.Drawing.Point(8, 8);
+            this.listBoxInstrumentList.Name = "listBoxInstrumentList";
+            this.listBoxInstrumentList.Size = new System.Drawing.Size(373, 147);
+            this.listBoxInstrumentList.TabIndex = 6;
+            this.listBoxInstrumentList.SelectedValueChanged += new System.EventHandler(this.listBoxInstrumentList_SelectedValueChanged);
+            // 
+            // panelConfigureInstrumentBoarderThin02
+            // 
+            this.panelConfigureInstrumentBoarderThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConfigureInstrumentBoarderThin02.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelConfigureInstrumentBoarderThin02.Location = new System.Drawing.Point(5, 354);
+            this.panelConfigureInstrumentBoarderThin02.Name = "panelConfigureInstrumentBoarderThin02";
+            this.panelConfigureInstrumentBoarderThin02.Size = new System.Drawing.Size(456, 5);
+            this.panelConfigureInstrumentBoarderThin02.TabIndex = 61;
+            // 
+            // panelConfigureInstrumentBoarderThin03
+            // 
+            this.panelConfigureInstrumentBoarderThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConfigureInstrumentBoarderThin03.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelConfigureInstrumentBoarderThin03.Location = new System.Drawing.Point(461, 35);
+            this.panelConfigureInstrumentBoarderThin03.Name = "panelConfigureInstrumentBoarderThin03";
+            this.panelConfigureInstrumentBoarderThin03.Size = new System.Drawing.Size(5, 324);
+            this.panelConfigureInstrumentBoarderThin03.TabIndex = 60;
+            // 
+            // panelConfigureInstrumentBoarderThin01
+            // 
+            this.panelConfigureInstrumentBoarderThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConfigureInstrumentBoarderThin01.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelConfigureInstrumentBoarderThin01.Location = new System.Drawing.Point(0, 35);
+            this.panelConfigureInstrumentBoarderThin01.Name = "panelConfigureInstrumentBoarderThin01";
+            this.panelConfigureInstrumentBoarderThin01.Size = new System.Drawing.Size(5, 324);
+            this.panelConfigureInstrumentBoarderThin01.TabIndex = 59;
             // 
             // panelConfigureInstrumentBoarder
             // 
             this.panelConfigureInstrumentBoarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panelConfigureInstrumentBoarder.Controls.Add(this.label4);
+            this.panelConfigureInstrumentBoarder.Controls.Add(this.labelConfigureInstrument);
             this.panelConfigureInstrumentBoarder.Controls.Add(this.panelConfigureInstrumentClose);
             this.panelConfigureInstrumentBoarder.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConfigureInstrumentBoarder.ImeMode = System.Windows.Forms.ImeMode.Alpha;
@@ -1456,16 +1791,16 @@
             this.panelConfigureInstrumentBoarder.TabIndex = 58;
             this.panelConfigureInstrumentBoarder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelConfigureInstrumentBoarder_MouseDown);
             // 
-            // label4
+            // labelConfigureInstrument
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(8, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 21);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Configure Instrument";
+            this.labelConfigureInstrument.AutoSize = true;
+            this.labelConfigureInstrument.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelConfigureInstrument.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelConfigureInstrument.Location = new System.Drawing.Point(8, 7);
+            this.labelConfigureInstrument.Name = "labelConfigureInstrument";
+            this.labelConfigureInstrument.Size = new System.Drawing.Size(167, 21);
+            this.labelConfigureInstrument.TabIndex = 62;
+            this.labelConfigureInstrument.Text = "Configure Instrument";
             // 
             // panelConfigureInstrumentClose
             // 
@@ -1492,19 +1827,19 @@
             this.pictureBoxConfigureInstrumentClose.MouseEnter += new System.EventHandler(this.pictureBoxConfigureInstrumentClose_MouseEnter);
             this.pictureBoxConfigureInstrumentClose.MouseLeave += new System.EventHandler(this.pictureBoxConfigureInstrumentClose_MouseLeave);
             // 
-            // button6
+            // buttonConfigureInstrumentClose
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(146, 254);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(165, 38);
-            this.button6.TabIndex = 55;
-            this.button6.Text = "Close";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonConfigureInstrumentClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.buttonConfigureInstrumentClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfigureInstrumentClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfigureInstrumentClose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfigureInstrumentClose.Location = new System.Drawing.Point(146, 300);
+            this.buttonConfigureInstrumentClose.Name = "buttonConfigureInstrumentClose";
+            this.buttonConfigureInstrumentClose.Size = new System.Drawing.Size(165, 38);
+            this.buttonConfigureInstrumentClose.TabIndex = 55;
+            this.buttonConfigureInstrumentClose.Text = "Close";
+            this.buttonConfigureInstrumentClose.UseVisualStyleBackColor = false;
+            this.buttonConfigureInstrumentClose.Click += new System.EventHandler(this.button6_Click);
             // 
             // labelMonitor
             // 
@@ -1522,10 +1857,55 @@
             // 
             this.paneMonitorHeadline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.paneMonitorHeadline.Controls.Add(this.labelMonitor);
-            this.paneMonitorHeadline.Location = new System.Drawing.Point(471, 98);
+            this.paneMonitorHeadline.Location = new System.Drawing.Point(467, 64);
             this.paneMonitorHeadline.Name = "paneMonitorHeadline";
             this.paneMonitorHeadline.Size = new System.Drawing.Size(454, 37);
             this.paneMonitorHeadline.TabIndex = 73;
+            // 
+            // buttonStartMonitor
+            // 
+            this.buttonStartMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.buttonStartMonitor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStartMonitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStartMonitor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonStartMonitor.Location = new System.Drawing.Point(467, 482);
+            this.buttonStartMonitor.Name = "buttonStartMonitor";
+            this.buttonStartMonitor.Size = new System.Drawing.Size(454, 38);
+            this.buttonStartMonitor.TabIndex = 74;
+            this.buttonStartMonitor.Text = "Start Monitor";
+            this.buttonStartMonitor.UseVisualStyleBackColor = false;
+            this.buttonStartMonitor.Visible = false;
+            this.buttonStartMonitor.Click += new System.EventHandler(this.buttonStartMonitor_Click);
+            // 
+            // buttonStopMonitor
+            // 
+            this.buttonStopMonitor.BackColor = System.Drawing.Color.Red;
+            this.buttonStopMonitor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStopMonitor.Enabled = false;
+            this.buttonStopMonitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStopMonitor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonStopMonitor.Location = new System.Drawing.Point(467, 482);
+            this.buttonStopMonitor.Name = "buttonStopMonitor";
+            this.buttonStopMonitor.Size = new System.Drawing.Size(454, 38);
+            this.buttonStopMonitor.TabIndex = 75;
+            this.buttonStopMonitor.Text = "Stop Monitor";
+            this.buttonStopMonitor.UseVisualStyleBackColor = false;
+            this.buttonStopMonitor.Visible = false;
+            this.buttonStopMonitor.Click += new System.EventHandler(this.buttonStopMonitor_Click);
+            // 
+            // buttonStartMonitorDisabled
+            // 
+            this.buttonStartMonitorDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonStartMonitorDisabled.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStartMonitorDisabled.Enabled = false;
+            this.buttonStartMonitorDisabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStartMonitorDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonStartMonitorDisabled.Location = new System.Drawing.Point(467, 482);
+            this.buttonStartMonitorDisabled.Name = "buttonStartMonitorDisabled";
+            this.buttonStartMonitorDisabled.Size = new System.Drawing.Size(454, 38);
+            this.buttonStartMonitorDisabled.TabIndex = 76;
+            this.buttonStartMonitorDisabled.Text = "Start Monitor";
+            this.buttonStartMonitorDisabled.UseVisualStyleBackColor = false;
             // 
             // FormConnection
             // 
@@ -1533,16 +1913,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(982, 635);
+            this.Controls.Add(this.panelIPSearch);
             this.Controls.Add(this.panelConnectionLog);
             this.Controls.Add(this.panelConfigureInstrument);
-            this.Controls.Add(this.panelIPSearch);
             this.Controls.Add(this.paneMonitorHeadline);
-            this.Controls.Add(this.panelChartStatus);
+            this.Controls.Add(this.buttonStartMonitor);
+            this.Controls.Add(this.buttonStartMonitorDisabled);
+            this.Controls.Add(this.buttonStopMonitor);
             this.Controls.Add(this.pictureBoxMinimizeFullscreen);
             this.Controls.Add(this.panelChart);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel30);
-            this.Controls.Add(this.panel29);
+            this.Controls.Add(this.panelIPBackground);
+            this.Controls.Add(this.panelLogoBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConnection";
             this.Text = "FormConnection";
@@ -1555,8 +1936,6 @@
             this.panelPortBackground.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panelConnectionLogBackgroundPanel.ResumeLayout(false);
             this.panelConnectionLogBackgroundPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeapFrog)).EndInit();
@@ -1574,10 +1953,21 @@
             this.panelConnectionLogClose.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConnectionLogClose)).EndInit();
             this.panelChartBackground.ResumeLayout(false);
+            this.panelChartBackground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmText)).EndInit();
             this.panelChartStatus.ResumeLayout(false);
             this.panelChartStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChartStatus)).EndInit();
             this.panelChart.ResumeLayout(false);
+            this.panelComAndBitrateBackground.ResumeLayout(false);
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panelBaudRateBackground.ResumeLayout(false);
+            this.panelBaudRateBackground.PerformLayout();
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
+            this.panelCOMBackground.ResumeLayout(false);
+            this.panelCOMBackground.PerformLayout();
             this.panelInstrumentStatus.ResumeLayout(false);
             this.panelInstrumentStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmHigh)).EndInit();
@@ -1603,11 +1993,17 @@
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             this.panelInstrumentConfig.ResumeLayout(false);
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
+            this.panel44.ResumeLayout(false);
+            this.panel44.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizeFullscreen)).EndInit();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            this.panel30.ResumeLayout(false);
+            this.panelLogoBackground.ResumeLayout(false);
+            this.panelLogoBackground.PerformLayout();
+            this.panelIPBackground.ResumeLayout(false);
             this.panelConfigureInstrument.ResumeLayout(false);
+            this.panelInstrumentSearchList.ResumeLayout(false);
+            this.panel42.ResumeLayout(false);
             this.panelConfigureInstrumentBoarder.ResumeLayout(false);
             this.panelConfigureInstrumentBoarder.PerformLayout();
             this.panelConfigureInstrumentClose.ResumeLayout(false);
@@ -1619,8 +2015,6 @@
         }
 
         #endregion
-
-        private TextBox textBoxSend;
         private TextBox textBoxCommunication;
         private TextBox textBoxIP;
         private TextBox textBoxInputPort;
@@ -1636,7 +2030,6 @@
         private Label label1;
         private Panel panel5;
         private Label label6;
-        private Panel panel7;
         private Panel panelConnectionLogBackgroundPanel;
         private PictureBox pictureBoxLeapFrog;
         private Label label2;
@@ -1684,8 +2077,8 @@
         private Label label7;
         private Panel panel20;
         private TextBox textBoxURV;
-        private Button button1;
-        private Button button2;
+        private Button buttonWriteConf;
+        private Button buttonReadConf;
         private Panel panel21;
         private Panel panel22;
         private Panel panel23;
@@ -1699,15 +2092,14 @@
         private Panel panel28;
         private TextBox textBoxAlarmHigh;
         private Panel panelInstrumentConfig;
-        private Button button4;
-        private Button button3;
+        private Button buttonImportInstrumentData;
         private PictureBox pictureBoxAlarmHigh;
         private Label labelAlarmHigh;
         private Label labelAlarmLow;
         private PictureBox pictureBoxAlarmLow;
         private PictureBox pictureBoxMinimizeFullscreen;
-        private Panel panel29;
-        private Panel panel30;
+        private Panel panelLogoBackground;
+        private Panel panelIPBackground;
         private Panel panelIPListBorderThin01;
         private Panel panelIPListBorderThin03;
         private Panel panelIPListBorderThin02;
@@ -1715,14 +2107,14 @@
         private Panel panelConnectionLogBoarderThin02;
         private Panel panelConnectionLogBoarderThin01;
         private Panel panelConfigureInstrument;
-        private Panel panel32;
-        private Panel panel33;
-        private Panel panel34;
+        private Panel panelConfigureInstrumentBoarderThin02;
+        private Panel panelConfigureInstrumentBoarderThin03;
+        private Panel panelConfigureInstrumentBoarderThin01;
         private Panel panelConfigureInstrumentBoarder;
-        private Label label4;
+        private Label labelConfigureInstrument;
         private Panel panelConfigureInstrumentClose;
         private PictureBox pictureBoxConfigureInstrumentClose;
-        private Button button6;
+        private Button buttonConfigureInstrumentClose;
         private Label label10;
         private Button buttonFullscreen;
         private Button buttonConnectionLog;
@@ -1734,5 +2126,36 @@
         private Label label11;
         private Label labelMonitor;
         private Panel paneMonitorHeadline;
+        private Button buttonStartMonitor;
+        private Button buttonStopMonitor;
+        private Panel panelComAndBitrateBackground;
+        private Panel panel38;
+        private Panel panelBaudRateBackground;
+        private Panel panel40;
+        private Label labelBaudRate;
+        private Panel panel41;
+        private TextBox textBoxBaud;
+        private Panel panel31;
+        private Panel panelCOMBackground;
+        private Panel panel36;
+        private Label labelCOM;
+        private Panel panel37;
+        private TextBox textBoxCOM;
+        private Button buttonStartMonitorDisabled;
+        private Panel panelInstrumentSearchList;
+        private Panel panel42;
+        private ListBox listBoxInstrumentList;
+        private Button buttonInstrumentListCancle;
+        private Button buttonInstrumentListConfirm;
+        private Panel panel43;
+        private Panel panel44;
+        private Panel panel45;
+        private Label labelUnit;
+        private Panel panel46;
+        private TextBox textBoxUnit;
+        private Label labelInstrumentUnit;
+        private PictureBox pictureBoxAlarmText;
+        private Button buttonLoadSSC;
+        private Button buttonSaveSSC;
     }
 }

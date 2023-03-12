@@ -33,6 +33,10 @@ namespace MyFirstWFApp
 
         public double LRV { get; set; }
         public double URV { get; set; }
+
+        public int AlarmFloor { get; set; }
+        public int AlarmCeiling { get; set; }
+        
         public string Unit { get; set; }
 
         public Instrument(DateTime registerDateTime,
@@ -44,6 +48,8 @@ namespace MyFirstWFApp
                           string comment=null,
                           double lrv = 0.0,
                           double urv = 0.0,
+                          int alarmFloor = 0,
+                          int alarmCeiling = 0,
                           string unit = null)
         {
             this.RegisterDate = registerDateTime;
@@ -55,6 +61,8 @@ namespace MyFirstWFApp
             this.Comment = comment;
             this.LRV = lrv;
             this.URV = urv;
+            this.AlarmFloor = alarmFloor;
+            this.AlarmCeiling = alarmCeiling;
             this.Unit = unit;
 
 
@@ -77,6 +85,8 @@ namespace MyFirstWFApp
             + ";" + Comment
             + ";" + Convert.ToString(LRV, CultureInfo.InvariantCulture)
             + ";" + Convert.ToString(URV, CultureInfo.InvariantCulture)
+            + ";" + AlarmFloor.ToString()
+            + ";" + AlarmCeiling.ToString()
             + ";" + Unit;
 
         }

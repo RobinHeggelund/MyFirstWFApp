@@ -31,12 +31,20 @@
             this.panelBackgroundTabSensorData = new System.Windows.Forms.Panel();
             this.panelSensorSearch = new System.Windows.Forms.Panel();
             this.panelBoarderSensorSearch = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelBoarderSearchClose = new System.Windows.Forms.Panel();
             this.pictureBoxSearchBoarderClose = new System.Windows.Forms.PictureBox();
             this.panelSensorSearchListBackground = new System.Windows.Forms.Panel();
             this.listBoxSensorList = new System.Windows.Forms.ListBox();
             this.buttonSensorDelete = new System.Windows.Forms.Button();
             this.buttonSensorSearchConfirm = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panelConfigLocationBackground = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel36 = new System.Windows.Forms.Panel();
             this.panelAlarmBackgroundPanel = new System.Windows.Forms.Panel();
             this.panelAlarmCeilingTagBackgroundPanel = new System.Windows.Forms.Panel();
             this.labelAlarmCeiling = new System.Windows.Forms.Label();
@@ -49,24 +57,24 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.Label();
             this.comboBoxMeasureType = new System.Windows.Forms.ComboBox();
             this.comboBoxSignalType = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.panelOptionsCommentsBack = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.panelOptionsBackground = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.labelOptions = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.textBoxComments = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelPreviewBackground = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.listBoxOptions = new System.Windows.Forms.ListBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelCommentsBackground = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.Comments = new System.Windows.Forms.Label();
             this.textBoxPreview = new System.Windows.Forms.TextBox();
@@ -75,7 +83,7 @@
             this.buttonMT_Fieldbus_3 = new System.Windows.Forms.Button();
             this.buttonMT_Fieldbus_2 = new System.Windows.Forms.Button();
             this.buttonMT_Fieldbus_1 = new System.Windows.Forms.Button();
-            this.panel29 = new System.Windows.Forms.Panel();
+            this.panelMeasureTypeBackground = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.labelMeasureTypeFieldbus = new System.Windows.Forms.Label();
             this.panel31 = new System.Windows.Forms.Panel();
@@ -90,27 +98,27 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSensorNameBack = new System.Windows.Forms.Panel();
             this.pictureBoxButtonSearch = new System.Windows.Forms.PictureBox();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panelInstrumentNameBackground = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.labelSensorName = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxSensorName = new System.Windows.Forms.TextBox();
             this.buttonRegisterNew = new System.Windows.Forms.Button();
             this.panelValueRangesBack = new System.Windows.Forms.Panel();
-            this.panel39 = new System.Windows.Forms.Panel();
+            this.panelUnitsBackground = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.panel37 = new System.Windows.Forms.Panel();
+            this.panelURVBackground = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelLRVBackground = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxLVR = new System.Windows.Forms.TextBox();
             this.textBoxURV = new System.Windows.Forms.TextBox();
             this.textBoxUnit = new System.Windows.Forms.TextBox();
             this.panelSerialNumberBack = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelSerialNumberBackground = new System.Windows.Forms.Panel();
             this.labelSerialNumber = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.maskedTextBoxSerialNumber = new System.Windows.Forms.MaskedTextBox();
@@ -118,7 +126,7 @@
             this.buttonFieldbus = new System.Windows.Forms.Button();
             this.buttonDigital = new System.Windows.Forms.Button();
             this.buttonAnalog = new System.Windows.Forms.Button();
-            this.panel20 = new System.Windows.Forms.Panel();
+            this.panelSignalTypeBackground = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.labelSignalType = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -129,40 +137,45 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.labelMeasureTypeDigital = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearchThin03 = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearchThin02 = new System.Windows.Forms.Panel();
+            this.panelBoarderSensorSearchThin01 = new System.Windows.Forms.Panel();
             this.panelBackgroundTabSensorData.SuspendLayout();
             this.panelSensorSearch.SuspendLayout();
             this.panelBoarderSensorSearch.SuspendLayout();
             this.panelBoarderSearchClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchBoarderClose)).BeginInit();
             this.panelSensorSearchListBackground.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelConfigLocationBackground.SuspendLayout();
             this.panelAlarmBackgroundPanel.SuspendLayout();
             this.panelAlarmCeilingTagBackgroundPanel.SuspendLayout();
             this.panelAlarmFloorTagBackgroundPanel.SuspendLayout();
             this.panelOptionsCommentsBack.SuspendLayout();
             this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
+            this.panelOptionsBackground.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelPreviewBackground.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.panelCommentsBackground.SuspendLayout();
             this.panelMeasureTypeFieldbusBack.SuspendLayout();
-            this.panel29.SuspendLayout();
+            this.panelMeasureTypeBackground.SuspendLayout();
             this.panelMeasureTypeAnalogBack.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSensorNameBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).BeginInit();
-            this.panel11.SuspendLayout();
+            this.panelInstrumentNameBackground.SuspendLayout();
             this.panelValueRangesBack.SuspendLayout();
-            this.panel39.SuspendLayout();
-            this.panel37.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panelUnitsBackground.SuspendLayout();
+            this.panelURVBackground.SuspendLayout();
+            this.panelLRVBackground.SuspendLayout();
             this.panelSerialNumberBack.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.panelSerialNumberBackground.SuspendLayout();
             this.panelBackSignalType.SuspendLayout();
-            this.panel20.SuspendLayout();
+            this.panelSignalTypeBackground.SuspendLayout();
             this.panelMeasureTypeDigitalBack.SuspendLayout();
             this.panel19.SuspendLayout();
             this.SuspendLayout();
@@ -171,11 +184,12 @@
             // 
             this.panelBackgroundTabSensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.panelBackgroundTabSensorData.Controls.Add(this.panelSensorSearch);
+            this.panelBackgroundTabSensorData.Controls.Add(this.panel1);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelAlarmBackgroundPanel);
             this.panelBackgroundTabSensorData.Controls.Add(this.toolStripStatusLabel1);
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxMeasureType);
             this.panelBackgroundTabSensorData.Controls.Add(this.comboBoxSignalType);
-            this.panelBackgroundTabSensorData.Controls.Add(this.button1);
+            this.panelBackgroundTabSensorData.Controls.Add(this.buttonClear);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelOptionsCommentsBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeFieldbusBack);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelMeasureTypeAnalogBack);
@@ -194,11 +208,14 @@
             // 
             // panelSensorSearch
             // 
+            this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearchThin01);
+            this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearchThin02);
+            this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearchThin03);
             this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearch);
             this.panelSensorSearch.Controls.Add(this.panelSensorSearchListBackground);
             this.panelSensorSearch.Controls.Add(this.buttonSensorDelete);
             this.panelSensorSearch.Controls.Add(this.buttonSensorSearchConfirm);
-            this.panelSensorSearch.Location = new System.Drawing.Point(503, 24);
+            this.panelSensorSearch.Location = new System.Drawing.Point(852, 16);
             this.panelSensorSearch.Name = "panelSensorSearch";
             this.panelSensorSearch.Size = new System.Drawing.Size(467, 325);
             this.panelSensorSearch.TabIndex = 55;
@@ -207,6 +224,7 @@
             // panelBoarderSensorSearch
             // 
             this.panelBoarderSensorSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearch.Controls.Add(this.label2);
             this.panelBoarderSensorSearch.Controls.Add(this.panelBoarderSearchClose);
             this.panelBoarderSensorSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBoarderSensorSearch.ImeMode = System.Windows.Forms.ImeMode.Alpha;
@@ -215,6 +233,18 @@
             this.panelBoarderSensorSearch.Size = new System.Drawing.Size(467, 35);
             this.panelBoarderSensorSearch.TabIndex = 58;
             this.panelBoarderSensorSearch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBoarderSensorSearch_MouseDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(3, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 21);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Local instrument list";
             // 
             // panelBoarderSearchClose
             // 
@@ -294,6 +324,92 @@
             this.buttonSensorSearchConfirm.Text = "Confirm";
             this.buttonSensorSearchConfirm.UseVisualStyleBackColor = false;
             this.buttonSensorSearchConfirm.Click += new System.EventHandler(this.buttonSensorSearchConfirm_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.panelConfigLocationBackground);
+            this.panel1.Controls.Add(this.panel36);
+            this.panel1.Location = new System.Drawing.Point(497, 266);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(466, 37);
+            this.panel1.TabIndex = 57;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.Enabled = false;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(305, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 37);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Database";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Location = new System.Drawing.Point(145, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(160, 37);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Local";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panelConfigLocationBackground
+            // 
+            this.panelConfigLocationBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelConfigLocationBackground.Controls.Add(this.panel35);
+            this.panelConfigLocationBackground.Controls.Add(this.label1);
+            this.panelConfigLocationBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelConfigLocationBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelConfigLocationBackground.Name = "panelConfigLocationBackground";
+            this.panelConfigLocationBackground.Size = new System.Drawing.Size(145, 37);
+            this.panelConfigLocationBackground.TabIndex = 26;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel35.Location = new System.Drawing.Point(283, 25);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(430, 37);
+            this.panel35.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(6, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 21);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Config Location";
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel36.Location = new System.Drawing.Point(283, 25);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(430, 37);
+            this.panel36.TabIndex = 25;
             // 
             // panelAlarmBackgroundPanel
             // 
@@ -375,7 +491,7 @@
             this.textBoxAlarmFloor.Name = "textBoxAlarmFloor";
             this.textBoxAlarmFloor.Size = new System.Drawing.Size(63, 22);
             this.textBoxAlarmFloor.TabIndex = 9;
-            this.textBoxAlarmFloor.Text = "0.0";
+            this.textBoxAlarmFloor.Text = "0";
             // 
             // textBoxAlarmCeiling
             // 
@@ -387,7 +503,7 @@
             this.textBoxAlarmCeiling.Name = "textBoxAlarmCeiling";
             this.textBoxAlarmCeiling.Size = new System.Drawing.Size(55, 22);
             this.textBoxAlarmCeiling.TabIndex = 10;
-            this.textBoxAlarmCeiling.Text = "0.0";
+            this.textBoxAlarmCeiling.Text = "0";
             // 
             // toolStripStatusLabel1
             // 
@@ -435,18 +551,19 @@
             this.comboBoxSignalType.Visible = false;
             this.comboBoxSignalType.SelectedIndexChanged += new System.EventHandler(this.comboBoxSignalType_SelectedIndexChanged_1);
             // 
-            // button1
+            // buttonClear
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(497, 578);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 40);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(125)))), ((int)(((byte)(128)))));
+            this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClear.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonClear.Location = new System.Drawing.Point(497, 578);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(159, 40);
+            this.buttonClear.TabIndex = 44;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // panelOptionsCommentsBack
             // 
@@ -464,23 +581,23 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel23.Controls.Add(this.panel24);
+            this.panel23.Controls.Add(this.panelOptionsBackground);
             this.panel23.Controls.Add(this.panel26);
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(118, 37);
             this.panel23.TabIndex = 29;
             // 
-            // panel24
+            // panelOptionsBackground
             // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel24.Controls.Add(this.panel25);
-            this.panel24.Controls.Add(this.labelOptions);
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(124, 37);
-            this.panel24.TabIndex = 26;
+            this.panelOptionsBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelOptionsBackground.Controls.Add(this.panel25);
+            this.panelOptionsBackground.Controls.Add(this.labelOptions);
+            this.panelOptionsBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelOptionsBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelOptionsBackground.Name = "panelOptionsBackground";
+            this.panelOptionsBackground.Size = new System.Drawing.Size(124, 37);
+            this.panelOptionsBackground.TabIndex = 26;
             // 
             // panel25
             // 
@@ -533,23 +650,23 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel5.Controls.Add(this.panel8);
+            this.panel5.Controls.Add(this.panelPreviewBackground);
             this.panel5.Controls.Add(this.panel33);
             this.panel5.Location = new System.Drawing.Point(483, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(89, 37);
             this.panel5.TabIndex = 43;
             // 
-            // panel8
+            // panelPreviewBackground
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel8.Controls.Add(this.panel14);
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(95, 37);
-            this.panel8.TabIndex = 26;
+            this.panelPreviewBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelPreviewBackground.Controls.Add(this.panel14);
+            this.panelPreviewBackground.Controls.Add(this.label6);
+            this.panelPreviewBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelPreviewBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelPreviewBackground.Name = "panelPreviewBackground";
+            this.panelPreviewBackground.Size = new System.Drawing.Size(95, 37);
+            this.panelPreviewBackground.TabIndex = 26;
             // 
             // panel14
             // 
@@ -608,22 +725,22 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel9.Controls.Add(this.panel15);
+            this.panel9.Controls.Add(this.panelCommentsBackground);
             this.panel9.Location = new System.Drawing.Point(0, 129);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(118, 37);
             this.panel9.TabIndex = 38;
             // 
-            // panel15
+            // panelCommentsBackground
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel15.Controls.Add(this.panel32);
-            this.panel15.Controls.Add(this.Comments);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(125, 37);
-            this.panel15.TabIndex = 26;
+            this.panelCommentsBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelCommentsBackground.Controls.Add(this.panel32);
+            this.panelCommentsBackground.Controls.Add(this.Comments);
+            this.panelCommentsBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCommentsBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelCommentsBackground.Name = "panelCommentsBackground";
+            this.panelCommentsBackground.Size = new System.Drawing.Size(125, 37);
+            this.panelCommentsBackground.TabIndex = 26;
             // 
             // panel32
             // 
@@ -667,7 +784,7 @@
             this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_3);
             this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_2);
             this.panelMeasureTypeFieldbusBack.Controls.Add(this.buttonMT_Fieldbus_1);
-            this.panelMeasureTypeFieldbusBack.Controls.Add(this.panel29);
+            this.panelMeasureTypeFieldbusBack.Controls.Add(this.panelMeasureTypeBackground);
             this.panelMeasureTypeFieldbusBack.Controls.Add(this.panel31);
             this.panelMeasureTypeFieldbusBack.Location = new System.Drawing.Point(13, 166);
             this.panelMeasureTypeFieldbusBack.Name = "panelMeasureTypeFieldbusBack";
@@ -747,16 +864,16 @@
             this.buttonMT_Fieldbus_1.UseVisualStyleBackColor = false;
             this.buttonMT_Fieldbus_1.Click += new System.EventHandler(this.buttonMT_Fieldbus_1_Click_1);
             // 
-            // panel29
+            // panelMeasureTypeBackground
             // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel29.Controls.Add(this.panel30);
-            this.panel29.Controls.Add(this.labelMeasureTypeFieldbus);
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel29.Location = new System.Drawing.Point(0, 0);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(124, 37);
-            this.panel29.TabIndex = 26;
+            this.panelMeasureTypeBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelMeasureTypeBackground.Controls.Add(this.panel30);
+            this.panelMeasureTypeBackground.Controls.Add(this.labelMeasureTypeFieldbus);
+            this.panelMeasureTypeBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMeasureTypeBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelMeasureTypeBackground.Name = "panelMeasureTypeBackground";
+            this.panelMeasureTypeBackground.Size = new System.Drawing.Size(124, 37);
+            this.panelMeasureTypeBackground.TabIndex = 26;
             // 
             // panel30
             // 
@@ -905,7 +1022,7 @@
             // 
             this.panelSensorNameBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
             this.panelSensorNameBack.Controls.Add(this.pictureBoxButtonSearch);
-            this.panelSensorNameBack.Controls.Add(this.panel11);
+            this.panelSensorNameBack.Controls.Add(this.panelInstrumentNameBackground);
             this.panelSensorNameBack.Controls.Add(this.panel4);
             this.panelSensorNameBack.Controls.Add(this.textBoxSensorName);
             this.panelSensorNameBack.Location = new System.Drawing.Point(13, 16);
@@ -927,16 +1044,16 @@
             this.pictureBoxButtonSearch.MouseEnter += new System.EventHandler(this.pictureBoxButtonSearch_MouseEnter);
             this.pictureBoxButtonSearch.MouseLeave += new System.EventHandler(this.pictureBoxButtonSearch_MouseLeave);
             // 
-            // panel11
+            // panelInstrumentNameBackground
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.labelSensorName);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(124, 37);
-            this.panel11.TabIndex = 26;
+            this.panelInstrumentNameBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelInstrumentNameBackground.Controls.Add(this.panel12);
+            this.panelInstrumentNameBackground.Controls.Add(this.labelSensorName);
+            this.panelInstrumentNameBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelInstrumentNameBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelInstrumentNameBackground.Name = "panelInstrumentNameBackground";
+            this.panelInstrumentNameBackground.Size = new System.Drawing.Size(124, 37);
+            this.panelInstrumentNameBackground.TabIndex = 26;
             // 
             // panel12
             // 
@@ -950,13 +1067,13 @@
             // 
             this.labelSensorName.AutoSize = true;
             this.labelSensorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.labelSensorName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSensorName.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelSensorName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSensorName.Location = new System.Drawing.Point(4, 8);
+            this.labelSensorName.Location = new System.Drawing.Point(4, 9);
             this.labelSensorName.Name = "labelSensorName";
-            this.labelSensorName.Size = new System.Drawing.Size(107, 21);
+            this.labelSensorName.Size = new System.Drawing.Size(118, 19);
             this.labelSensorName.TabIndex = 7;
-            this.labelSensorName.Text = "Sensor Name";
+            this.labelSensorName.Text = "Instrument Name";
             // 
             // panel4
             // 
@@ -995,9 +1112,9 @@
             // panelValueRangesBack
             // 
             this.panelValueRangesBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panelValueRangesBack.Controls.Add(this.panel39);
-            this.panelValueRangesBack.Controls.Add(this.panel37);
-            this.panelValueRangesBack.Controls.Add(this.panel6);
+            this.panelValueRangesBack.Controls.Add(this.panelUnitsBackground);
+            this.panelValueRangesBack.Controls.Add(this.panelURVBackground);
+            this.panelValueRangesBack.Controls.Add(this.panelLRVBackground);
             this.panelValueRangesBack.Controls.Add(this.textBoxLVR);
             this.panelValueRangesBack.Controls.Add(this.textBoxURV);
             this.panelValueRangesBack.Controls.Add(this.textBoxUnit);
@@ -1006,15 +1123,15 @@
             this.panelValueRangesBack.Size = new System.Drawing.Size(468, 37);
             this.panelValueRangesBack.TabIndex = 6;
             // 
-            // panel39
+            // panelUnitsBackground
             // 
-            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel39.Controls.Add(this.label5);
-            this.panel39.Controls.Add(this.panel40);
-            this.panel39.Location = new System.Drawing.Point(240, 0);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(62, 37);
-            this.panel39.TabIndex = 27;
+            this.panelUnitsBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelUnitsBackground.Controls.Add(this.label5);
+            this.panelUnitsBackground.Controls.Add(this.panel40);
+            this.panelUnitsBackground.Location = new System.Drawing.Point(240, 0);
+            this.panelUnitsBackground.Name = "panelUnitsBackground";
+            this.panelUnitsBackground.Size = new System.Drawing.Size(62, 37);
+            this.panelUnitsBackground.TabIndex = 27;
             // 
             // label5
             // 
@@ -1035,15 +1152,15 @@
             this.panel40.Size = new System.Drawing.Size(430, 37);
             this.panel40.TabIndex = 25;
             // 
-            // panel37
+            // panelURVBackground
             // 
-            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel37.Controls.Add(this.label4);
-            this.panel37.Controls.Add(this.panel38);
-            this.panel37.Location = new System.Drawing.Point(120, 0);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(56, 37);
-            this.panel37.TabIndex = 27;
+            this.panelURVBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelURVBackground.Controls.Add(this.label4);
+            this.panelURVBackground.Controls.Add(this.panel38);
+            this.panelURVBackground.Location = new System.Drawing.Point(120, 0);
+            this.panelURVBackground.Name = "panelURVBackground";
+            this.panelURVBackground.Size = new System.Drawing.Size(56, 37);
+            this.panelURVBackground.TabIndex = 27;
             // 
             // label4
             // 
@@ -1064,15 +1181,15 @@
             this.panel38.Size = new System.Drawing.Size(430, 37);
             this.panel38.TabIndex = 25;
             // 
-            // panel6
+            // panelLRVBackground
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(56, 37);
-            this.panel6.TabIndex = 26;
+            this.panelLRVBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelLRVBackground.Controls.Add(this.label3);
+            this.panelLRVBackground.Controls.Add(this.panel7);
+            this.panelLRVBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelLRVBackground.Name = "panelLRVBackground";
+            this.panelLRVBackground.Size = new System.Drawing.Size(56, 37);
+            this.panelLRVBackground.TabIndex = 26;
             // 
             // label3
             // 
@@ -1135,23 +1252,23 @@
             // panelSerialNumberBack
             // 
             this.panelSerialNumberBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panelSerialNumberBack.Controls.Add(this.panel10);
+            this.panelSerialNumberBack.Controls.Add(this.panelSerialNumberBackground);
             this.panelSerialNumberBack.Controls.Add(this.maskedTextBoxSerialNumber);
             this.panelSerialNumberBack.Location = new System.Drawing.Point(13, 66);
             this.panelSerialNumberBack.Name = "panelSerialNumberBack";
             this.panelSerialNumberBack.Size = new System.Drawing.Size(466, 37);
             this.panelSerialNumberBack.TabIndex = 1;
             // 
-            // panel10
+            // panelSerialNumberBackground
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel10.Controls.Add(this.labelSerialNumber);
-            this.panel10.Controls.Add(this.panel13);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(124, 37);
-            this.panel10.TabIndex = 26;
+            this.panelSerialNumberBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelSerialNumberBackground.Controls.Add(this.labelSerialNumber);
+            this.panelSerialNumberBackground.Controls.Add(this.panel13);
+            this.panelSerialNumberBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSerialNumberBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelSerialNumberBackground.Name = "panelSerialNumberBackground";
+            this.panelSerialNumberBackground.Size = new System.Drawing.Size(124, 37);
+            this.panelSerialNumberBackground.TabIndex = 26;
             // 
             // labelSerialNumber
             // 
@@ -1193,7 +1310,7 @@
             this.panelBackSignalType.Controls.Add(this.buttonFieldbus);
             this.panelBackSignalType.Controls.Add(this.buttonDigital);
             this.panelBackSignalType.Controls.Add(this.buttonAnalog);
-            this.panelBackSignalType.Controls.Add(this.panel20);
+            this.panelBackSignalType.Controls.Add(this.panelSignalTypeBackground);
             this.panelBackSignalType.Controls.Add(this.panel22);
             this.panelBackSignalType.Location = new System.Drawing.Point(13, 116);
             this.panelBackSignalType.Name = "panelBackSignalType";
@@ -1254,16 +1371,16 @@
             this.buttonAnalog.UseVisualStyleBackColor = false;
             this.buttonAnalog.Click += new System.EventHandler(this.buttonAnalog_Click_1);
             // 
-            // panel20
+            // panelSignalTypeBackground
             // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel20.Controls.Add(this.panel21);
-            this.panel20.Controls.Add(this.labelSignalType);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(124, 37);
-            this.panel20.TabIndex = 26;
+            this.panelSignalTypeBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelSignalTypeBackground.Controls.Add(this.panel21);
+            this.panelSignalTypeBackground.Controls.Add(this.labelSignalType);
+            this.panelSignalTypeBackground.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSignalTypeBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelSignalTypeBackground.Name = "panelSignalTypeBackground";
+            this.panelSignalTypeBackground.Size = new System.Drawing.Size(124, 37);
+            this.panelSignalTypeBackground.TabIndex = 26;
             // 
             // panel21
             // 
@@ -1379,6 +1496,33 @@
             this.panel28.Size = new System.Drawing.Size(430, 37);
             this.panel28.TabIndex = 25;
             // 
+            // panelBoarderSensorSearchThin03
+            // 
+            this.panelBoarderSensorSearchThin03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearchThin03.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBoarderSensorSearchThin03.Location = new System.Drawing.Point(462, 35);
+            this.panelBoarderSensorSearchThin03.Name = "panelBoarderSensorSearchThin03";
+            this.panelBoarderSensorSearchThin03.Size = new System.Drawing.Size(5, 290);
+            this.panelBoarderSensorSearchThin03.TabIndex = 60;
+            // 
+            // panelBoarderSensorSearchThin02
+            // 
+            this.panelBoarderSensorSearchThin02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearchThin02.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBoarderSensorSearchThin02.Location = new System.Drawing.Point(0, 320);
+            this.panelBoarderSensorSearchThin02.Name = "panelBoarderSensorSearchThin02";
+            this.panelBoarderSensorSearchThin02.Size = new System.Drawing.Size(462, 5);
+            this.panelBoarderSensorSearchThin02.TabIndex = 61;
+            // 
+            // panelBoarderSensorSearchThin01
+            // 
+            this.panelBoarderSensorSearchThin01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelBoarderSensorSearchThin01.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBoarderSensorSearchThin01.Location = new System.Drawing.Point(0, 35);
+            this.panelBoarderSensorSearchThin01.Name = "panelBoarderSensorSearchThin01";
+            this.panelBoarderSensorSearchThin01.Size = new System.Drawing.Size(5, 285);
+            this.panelBoarderSensorSearchThin01.TabIndex = 62;
+            // 
             // FormSensorData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1396,9 +1540,13 @@
             this.panelBackgroundTabSensorData.PerformLayout();
             this.panelSensorSearch.ResumeLayout(false);
             this.panelBoarderSensorSearch.ResumeLayout(false);
+            this.panelBoarderSensorSearch.PerformLayout();
             this.panelBoarderSearchClose.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchBoarderClose)).EndInit();
             this.panelSensorSearchListBackground.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panelConfigLocationBackground.ResumeLayout(false);
+            this.panelConfigLocationBackground.PerformLayout();
             this.panelAlarmBackgroundPanel.ResumeLayout(false);
             this.panelAlarmBackgroundPanel.PerformLayout();
             this.panelAlarmCeilingTagBackgroundPanel.ResumeLayout(false);
@@ -1408,20 +1556,20 @@
             this.panelOptionsCommentsBack.ResumeLayout(false);
             this.panelOptionsCommentsBack.PerformLayout();
             this.panel23.ResumeLayout(false);
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
+            this.panelOptionsBackground.ResumeLayout(false);
+            this.panelOptionsBackground.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panelPreviewBackground.ResumeLayout(false);
+            this.panelPreviewBackground.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.panelCommentsBackground.ResumeLayout(false);
+            this.panelCommentsBackground.PerformLayout();
             this.panelMeasureTypeFieldbusBack.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
+            this.panelMeasureTypeBackground.ResumeLayout(false);
+            this.panelMeasureTypeBackground.PerformLayout();
             this.panelMeasureTypeAnalogBack.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
@@ -1429,23 +1577,23 @@
             this.panelSensorNameBack.ResumeLayout(false);
             this.panelSensorNameBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonSearch)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.panelInstrumentNameBackground.ResumeLayout(false);
+            this.panelInstrumentNameBackground.PerformLayout();
             this.panelValueRangesBack.ResumeLayout(false);
             this.panelValueRangesBack.PerformLayout();
-            this.panel39.ResumeLayout(false);
-            this.panel39.PerformLayout();
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelUnitsBackground.ResumeLayout(false);
+            this.panelUnitsBackground.PerformLayout();
+            this.panelURVBackground.ResumeLayout(false);
+            this.panelURVBackground.PerformLayout();
+            this.panelLRVBackground.ResumeLayout(false);
+            this.panelLRVBackground.PerformLayout();
             this.panelSerialNumberBack.ResumeLayout(false);
             this.panelSerialNumberBack.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panelSerialNumberBackground.ResumeLayout(false);
+            this.panelSerialNumberBackground.PerformLayout();
             this.panelBackSignalType.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
+            this.panelSignalTypeBackground.ResumeLayout(false);
+            this.panelSignalTypeBackground.PerformLayout();
             this.panelMeasureTypeDigitalBack.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -1456,50 +1604,50 @@
         #endregion
 
         private Panel panelBackgroundTabSensorData;
-        private Button button1;
+        private Button buttonClear;
         private Panel panelOptionsCommentsBack;
         private Panel panel23;
-        private Panel panel24;
+        private Panel panelOptionsBackground;
         private Panel panel25;
         private Label labelOptions;
         private Panel panel26;
         private Panel panel34;
         private TextBox textBoxComments;
         private Panel panel5;
-        private Panel panel8;
+        private Panel panelPreviewBackground;
         private Panel panel14;
         private Label label6;
         private Panel panel33;
         private Panel panel3;
         private ListBox listBoxOptions;
         private Panel panel9;
-        private Panel panel15;
+        private Panel panelCommentsBackground;
         private Panel panel32;
         private Label Comments;
         private TextBox textBoxPreview;
         private PictureBox pictureBox3;
         private Panel panelSensorNameBack;
-        private Panel panel11;
+        private Panel panelInstrumentNameBackground;
         private Panel panel12;
         private Label labelSensorName;
         private Panel panel4;
         private TextBox textBoxSensorName;
         private Button buttonRegisterNew;
         private Panel panelValueRangesBack;
-        private Panel panel39;
+        private Panel panelUnitsBackground;
         private Label label5;
         private Panel panel40;
-        private Panel panel37;
+        private Panel panelURVBackground;
         private Label label4;
         private Panel panel38;
-        private Panel panel6;
+        private Panel panelLRVBackground;
         private Label label3;
         private Panel panel7;
         private TextBox textBoxLVR;
         private TextBox textBoxURV;
         private TextBox textBoxUnit;
         private Panel panelSerialNumberBack;
-        private Panel panel10;
+        private Panel panelSerialNumberBackground;
         private Label labelSerialNumber;
         private Panel panel13;
         private MaskedTextBox maskedTextBoxSerialNumber;
@@ -1507,7 +1655,7 @@
         private Button buttonFieldbus;
         private Button buttonDigital;
         private Button buttonAnalog;
-        private Panel panel20;
+        private Panel panelSignalTypeBackground;
         private Panel panel21;
         private Label labelSignalType;
         private Panel panel22;
@@ -1524,7 +1672,7 @@
         private Button buttonMT_Fieldbus_3;
         private Button buttonMT_Fieldbus_2;
         private Button buttonMT_Fieldbus_1;
-        private Panel panel29;
+        private Panel panelMeasureTypeBackground;
         private Panel panel30;
         private Label labelMeasureTypeFieldbus;
         private Panel panel31;
@@ -1556,5 +1704,16 @@
         private Panel panel43;
         private TextBox textBoxAlarmFloor;
         private TextBox textBoxAlarmCeiling;
+        private Panel panel1;
+        private Button button3;
+        private Button button4;
+        private Panel panelConfigLocationBackground;
+        private Panel panel35;
+        private Label label1;
+        private Panel panel36;
+        private Label label2;
+        private Panel panelBoarderSensorSearchThin01;
+        private Panel panelBoarderSensorSearchThin02;
+        private Panel panelBoarderSensorSearchThin03;
     }
 }

@@ -103,6 +103,16 @@ namespace MyFirstWFApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alarmLetters {
+            get {
+                object obj = ResourceManager.GetObject("alarmLetters", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alarmRed {
             get {
                 object obj = ResourceManager.GetObject("alarmRed", resourceCulture);
@@ -193,6 +203,26 @@ namespace MyFirstWFApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chartStatusConnected {
+            get {
+                object obj = ResourceManager.GetObject("chartStatusConnected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chartStatusDisconnected {
+            get {
+                object obj = ResourceManager.GetObject("chartStatusDisconnected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -206,6 +236,16 @@ namespace MyFirstWFApp.Properties {
         internal static System.Drawing.Bitmap cogwheel {
             get {
                 object obj = ResourceManager.GetObject("cogwheel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connected {
+            get {
+                object obj = ResourceManager.GetObject("connected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +466,26 @@ namespace MyFirstWFApp.Properties {
         internal static System.Drawing.Bitmap loupe {
             get {
                 object obj = ResourceManager.GetObject("loupe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lux {
+            get {
+                object obj = ResourceManager.GetObject("lux", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lux1 {
+            get {
+                object obj = ResourceManager.GetObject("lux1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

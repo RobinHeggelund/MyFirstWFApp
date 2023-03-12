@@ -42,31 +42,17 @@
             this.labelSummaryDigitalDescription = new System.Windows.Forms.Label();
             this.labelSummaryAnalogDescription = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBoxHelp = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBoxSettings1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSettings2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSettings3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSettings4 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.labelSettings = new System.Windows.Forms.TextBox();
             this.panelSummary.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -216,185 +202,57 @@
             this.label7.Text = "Session Summary";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // pictureBoxHelp
+            // pictureBoxSettings1
             // 
-            this.pictureBoxHelp.Image = global::MyFirstWFApp.Properties.Resources.folder;
-            this.pictureBoxHelp.Location = new System.Drawing.Point(84, 130);
-            this.pictureBoxHelp.Name = "pictureBoxHelp";
-            this.pictureBoxHelp.Size = new System.Drawing.Size(140, 140);
-            this.pictureBoxHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxHelp.TabIndex = 25;
-            this.pictureBoxHelp.TabStop = false;
-            this.pictureBoxHelp.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBoxHelp.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.pictureBoxHelp.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBoxSettings1.Image = global::MyFirstWFApp.Properties.Resources.folder;
+            this.pictureBoxSettings1.Location = new System.Drawing.Point(84, 130);
+            this.pictureBoxSettings1.Name = "pictureBoxSettings1";
+            this.pictureBoxSettings1.Size = new System.Drawing.Size(140, 140);
+            this.pictureBoxSettings1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSettings1.TabIndex = 25;
+            this.pictureBoxSettings1.TabStop = false;
+            this.pictureBoxSettings1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBoxSettings1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBoxSettings1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
-            // pictureBox2
+            // pictureBoxSettings2
             // 
-            this.pictureBox2.Image = global::MyFirstWFApp.Properties.Resources.folder__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(234, 123);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(164, 150);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBoxSettings2.Image = global::MyFirstWFApp.Properties.Resources.folder__1_;
+            this.pictureBoxSettings2.Location = new System.Drawing.Point(234, 123);
+            this.pictureBoxSettings2.Name = "pictureBoxSettings2";
+            this.pictureBoxSettings2.Size = new System.Drawing.Size(164, 150);
+            this.pictureBoxSettings2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSettings2.TabIndex = 26;
+            this.pictureBoxSettings2.TabStop = false;
+            this.pictureBoxSettings2.Click += new System.EventHandler(this.PictureBox2_Click);
+            this.pictureBoxSettings2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBoxSettings2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
-            // pictureBox3
+            // pictureBoxSettings3
             // 
-            this.pictureBox3.Image = global::MyFirstWFApp.Properties.Resources.folder__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(84, 302);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(140, 140);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBoxSettings3.Image = global::MyFirstWFApp.Properties.Resources.folder__2_;
+            this.pictureBoxSettings3.Location = new System.Drawing.Point(84, 302);
+            this.pictureBoxSettings3.Name = "pictureBoxSettings3";
+            this.pictureBoxSettings3.Size = new System.Drawing.Size(140, 140);
+            this.pictureBoxSettings3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSettings3.TabIndex = 27;
+            this.pictureBoxSettings3.TabStop = false;
+            this.pictureBoxSettings3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBoxSettings3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
+            this.pictureBoxSettings3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             // 
-            // pictureBox4
+            // pictureBoxSettings4
             // 
-            this.pictureBox4.ErrorImage = global::MyFirstWFApp.Properties.Resources.folder__3_;
-            this.pictureBox4.Image = global::MyFirstWFApp.Properties.Resources.folder__3_;
-            this.pictureBox4.Location = new System.Drawing.Point(250, 302);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(140, 140);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 28;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(482, 364);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(424, 47);
-            this.panel3.TabIndex = 28;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(259, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 47);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Light";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(94, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 47);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Dark";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(94, 47);
-            this.panel4.TabIndex = 25;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(18, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 21);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Theme";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(482, 426);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(424, 47);
-            this.panel5.TabIndex = 28;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(259, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(165, 47);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Light";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button6.FlatAppearance.BorderSize = 2;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(94, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(165, 47);
-            this.button6.TabIndex = 26;
-            this.button6.Text = "Dark";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(94, 47);
-            this.panel6.TabIndex = 25;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(18, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 21);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Theme";
+            this.pictureBoxSettings4.ErrorImage = global::MyFirstWFApp.Properties.Resources.folder__3_;
+            this.pictureBoxSettings4.Image = global::MyFirstWFApp.Properties.Resources.folder__3_;
+            this.pictureBoxSettings4.Location = new System.Drawing.Point(250, 302);
+            this.pictureBoxSettings4.Name = "pictureBoxSettings4";
+            this.pictureBoxSettings4.Size = new System.Drawing.Size(140, 140);
+            this.pictureBoxSettings4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSettings4.TabIndex = 28;
+            this.pictureBoxSettings4.TabStop = false;
+            this.pictureBoxSettings4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            this.pictureBoxSettings4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             // 
             // openFileDialog1
             // 
@@ -420,12 +278,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(982, 635);
             this.Controls.Add(this.labelSettings);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBoxHelp);
+            this.Controls.Add(this.pictureBoxSettings4);
+            this.Controls.Add(this.pictureBoxSettings3);
+            this.Controls.Add(this.pictureBoxSettings2);
+            this.Controls.Add(this.pictureBoxSettings1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panelSummary);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -433,16 +289,10 @@
             this.Text = "FormSettings";
             this.panelSummary.ResumeLayout(false);
             this.panelSummary.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,20 +312,10 @@
         private Label label5;
         private Label labelSummaryTotal;
         private Label label7;
-        private PictureBox pictureBoxHelp;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private Panel panel3;
-        private Button button3;
-        private Button button4;
-        private Panel panel4;
-        private Label label9;
-        private Panel panel5;
-        private Button button5;
-        private Button button6;
-        private Panel panel6;
-        private Label label10;
+        private PictureBox pictureBoxSettings1;
+        private PictureBox pictureBoxSettings2;
+        private PictureBox pictureBoxSettings3;
+        private PictureBox pictureBoxSettings4;
         private OpenFileDialog openFileDialog1;
         private TextBox labelSettings;
     }

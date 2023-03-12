@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageIcon></PackageIcon>
-    <AssemblyName>Lizard</AssemblyName>
+    <AssemblyName>instrumentFE</AssemblyName>
     <Title>Lizard Seonsor Solution</Title>
     <Description>State of the art sensor solution and management tool developet by Leap Frog.</Description>
     <Company>Leap Frog</Company>

@@ -46,7 +46,6 @@ namespace MyFirstWFApp
         private FormConnection FrmConnection;
         private FormNetwork FrmNetwork;
         private FormSettings FrmSettings;
-   
 
         // Creating Lists
 
@@ -63,12 +62,20 @@ namespace MyFirstWFApp
             InitializeComponent();
         }
 
-        // Information bridge
+        // Session Summary Bridge
 
         public int AnalogSummary;
         public int DigitalSummary;
         public int FieldbusSummary;
         public int TotalSummary;
+
+        // Instrument Data Bridge
+
+        public string instrumentName = "";
+        public string lrv = "";
+        public string urv = "";
+        public string alarmFloor = "";
+        public string alarmCeiling = "";
 
         // Custom Boarder
 
@@ -96,7 +103,7 @@ namespace MyFirstWFApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Ready - No Connection";
+            toolStripStatusLabel1.Text = "No Connection";
 
 
 
@@ -131,7 +138,7 @@ namespace MyFirstWFApp
 
             // set defaut tab
 
-            InvokeOnClick(panelSensorData, null);
+            InvokeOnClick(panelConnection, null);
 
 
 
@@ -166,7 +173,7 @@ namespace MyFirstWFApp
 
         private void Form1_Activated(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Ready - No Connection";
+            toolStripStatusLabel1.Text = "No Connection";
         }
 
        
@@ -917,12 +924,12 @@ namespace MyFirstWFApp
 
         private void panelBoarderUserProfileClose_Click(object sender, EventArgs e)
         {
-            InvokeOnClick(buttonUserProfileCancle, null);
+            InvokeOnClick(buttonCancleUserProfile, null);
         }
 
         private void pictureBoxSearchBoarderClose_Click(object sender, EventArgs e)
         {
-            InvokeOnClick(buttonUserProfileCancle, null);
+            InvokeOnClick(buttonCancleUserProfile, null);
 
         }
 
@@ -961,7 +968,7 @@ namespace MyFirstWFApp
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                InvokeOnClick(buttonIPSearchConfirm, null);
+                InvokeOnClick(buttonConfirmUserProfile, null);
             }
         }
 
