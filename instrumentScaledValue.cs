@@ -15,7 +15,7 @@ namespace MyFirstWFApp
         public string InstrumentScaledValue { get; set; }
         public DateTime LoggingDate { get; set; }
 
-        public InstrumentLog(string instrumentScaledValue, DateTime loggingDate)
+        public InstrumentLog(DateTime loggingDate, string instrumentScaledValue)
         {
             this.InstrumentScaledValue = instrumentScaledValue;
             this.LoggingDate = loggingDate;
@@ -23,8 +23,11 @@ namespace MyFirstWFApp
 
         public override string ToString()
         {
-            return InstrumentScaledValue
-            + ";" + LoggingDate;
+            
+            return LoggingDate
+           + ";" + InstrumentScaledValue;
+
+           
         }
 
 

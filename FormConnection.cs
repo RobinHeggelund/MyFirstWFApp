@@ -17,6 +17,7 @@ using Microsoft.VisualBasic.Devices;
 using System.Windows.Forms;
 using System.ComponentModel.Design;
 using System.Diagnostics.Metrics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace MyFirstWFApp
 {
@@ -376,16 +377,18 @@ namespace MyFirstWFApp
 
                     // Set chart maximum and minimum values from instrument config
 
+                    if (instrumentURV != null && instrumentLRV != null)
+                    {
+                        string[] maxArray = instrumentURV.Split('.');
+                        string[] minArray = instrumentLRV.Split('.');
 
-                    string[] maxArray = instrumentURV.Split('.');
-                    string[] minArray = instrumentLRV.Split('.');
-
-                    int max = int.Parse(maxArray[0]);
-                    int min = int.Parse(minArray[0]);
+                        int max = int.Parse(maxArray[0]);
+                        int min = int.Parse(minArray[0]);
 
 
-                    chart1.ChartAreas[0].AxisY.Maximum = max;
-                    chart1.ChartAreas[0].AxisY.Minimum = min;
+                        chart1.ChartAreas[0].AxisY.Maximum = max;
+                        chart1.ChartAreas[0].AxisY.Minimum = min;
+                    }
 
                     // Display instrument name
 
@@ -451,7 +454,7 @@ namespace MyFirstWFApp
                     try
 
                     {
-                        InstrumentLog instrumentLog = new InstrumentLog(instrumentScaled.Substring(0, (instrumentScaled.Length - 2)), DateTime.Now);
+                        InstrumentLog instrumentLog = new InstrumentLog( DateTime.Now, instrumentScaled.Substring(0, (instrumentScaled.Length - 2)));
 
                         instrumentLogList.Add(instrumentLog);
 
@@ -1101,6 +1104,9 @@ namespace MyFirstWFApp
 
         private void buttonSaveLog_Click(object sender, EventArgs e)
         {
+            
+
+            
 
             // Define the output file path
 
@@ -1132,11 +1138,16 @@ namespace MyFirstWFApp
                         StreamWriter outputFile = new StreamWriter(folderPath);
 
                         {
+                            // Write overhead to file
+
+                            outputFile.WriteLine("Time" + ";" + "Scaled");
+                            
 
                             // Write each instrumentLog to a new line in the CSV file
 
                             foreach (InstrumentLog instrumentLog in instrumentLogList)
                             {
+                                
                                 outputFile.WriteLine(instrumentLog.ToString());
                             }
 
