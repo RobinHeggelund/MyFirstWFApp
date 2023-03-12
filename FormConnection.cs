@@ -1577,7 +1577,7 @@ namespace MyFirstWFApp
                 if (result == DialogResult.Yes)
                 {
                     string instrumentConfigString = "";
-                    string[] instrumentConfigArray = new string[6];
+                    string[] instrumentConfigArray = new string[7];
 
                     // check if file exists
 
