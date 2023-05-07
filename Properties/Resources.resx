@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="alarmLetters" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarmLetters.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngegg (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +133,8 @@
   <data name="newWindowBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newWindowBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngfind.com-privacy-icon-png-4703547" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngfind.com-privacy-icon-png-4703547.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chartStatusDisconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chartStatusDisconnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Avatar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,20 +157,26 @@
   <data name="connectionLogBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connectionLogBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="water-frog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\water-frog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exportWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exportWhite1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monitorTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monitorTop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="470-4703547_icon-user-icon-hd-png-download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\470-4703547_icon-user-icon-hd-png-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizeBlue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizeBlue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="house" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\house.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="neural-network" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neural-network.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,17 +196,23 @@
   <data name="motion-sensor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\motion-sensor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pngfind.com-privacy-icon-png-4703547" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngfind.com-privacy-icon-png-4703547.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exportWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exportWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Avatar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="databaseFailed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\databaseFailed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizeBlue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizeBlue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Avatar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -219,9 +234,6 @@
   </data>
   <data name="minimizeFromFullscreenBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizeFromFullscreenBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chartStatusDisconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chartStatusDisconnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="log-file_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\log-file_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,6 +280,9 @@
   <data name="minimizeBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizeBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconSummaryAnalog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconSummaryAnalog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="no-connection" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no-connection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -298,8 +313,8 @@
   <data name="chartStatusConnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chartStatusConnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconSummaryAnalog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconSummaryAnalog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="databaseNotConnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\databaseNotConnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Avatar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,13 +325,13 @@
   <data name="monitorBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monitorBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="water-frog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\water-frog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monitorTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitorTop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alarmLetters" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarmLetters.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

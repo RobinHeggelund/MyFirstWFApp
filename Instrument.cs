@@ -30,6 +30,7 @@ namespace MyFirstWFApp
         public string MeasureType { get; set; }
         public string Options { get; set; }
         public string Comment { get; set; }
+        public string Location { get; set; }
 
         public double LRV { get; set; }
         public double URV { get; set; }
@@ -44,8 +45,9 @@ namespace MyFirstWFApp
                           string serialNumber,
                           string signalType,
                           string measureType,
-                          string options=null,
-                          string comment=null,
+                          string options = null,
+                          string comment = null,
+                          string location = null,
                           double lrv = 0.0,
                           double urv = 0.0,
                           int alarmFloor = 0,
@@ -59,6 +61,7 @@ namespace MyFirstWFApp
             this.MeasureType = measureType;
             this.Options = options;
             this.Comment = comment;
+            this.Location = location;
             this.LRV = lrv;
             this.URV = urv;
             this.AlarmFloor = alarmFloor;
@@ -83,6 +86,7 @@ namespace MyFirstWFApp
             + ";" + MeasureType
             + ";" + Options
             + ";" + Comment
+            + ";" + Location
             + ";" + Convert.ToString(LRV, CultureInfo.InvariantCulture)
             + ";" + Convert.ToString(URV, CultureInfo.InvariantCulture)
             + ";" + AlarmFloor.ToString()

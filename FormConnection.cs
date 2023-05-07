@@ -489,6 +489,7 @@ namespace MyFirstWFApp
                     {
                         textBoxCommunication.AppendText("[" + DateTime.Now.ToShortTimeString() + "] " + "Instrument Status: FAIL\r\n");
                         pictureBoxAlarmHigh.Image = Properties.Resources.alarmYellow;
+                        pictureBoxAlarmHigh.Image = Properties.Resources.alarmYellow;
                         pictureBoxAlarmLow.Image = Properties.Resources.alarmYellow;
 
                         pictureBoxAlarmText.Visible = false;
@@ -1331,11 +1332,12 @@ namespace MyFirstWFApp
                                                                 instrumentLineParts[4],
                                                                 instrumentLineParts[5],
                                                                 instrumentLineParts[6],
-                                                                Convert.ToDouble(instrumentLineParts[7]),
+                                                                instrumentLineParts[7],
                                                                 Convert.ToDouble(instrumentLineParts[8]),
-                                                                Convert.ToInt32(instrumentLineParts[9]),
+                                                                Convert.ToDouble(instrumentLineParts[9]),
                                                                 Convert.ToInt32(instrumentLineParts[10]),
-                                                                Convert.ToString(instrumentLineParts[11]));
+                                                                Convert.ToInt32(instrumentLineParts[11]),
+                                                                Convert.ToString(instrumentLineParts[12]));
                         instrumentList.Add(instrument);
 
 

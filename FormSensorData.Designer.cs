@@ -28,13 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelBackgroundTabSensorData = new System.Windows.Forms.Panel();
+            this.panelLocalOnlineSelectionBackground = new System.Windows.Forms.Panel();
+            this.panelSelectDatabaseOnline = new System.Windows.Forms.Panel();
+            this.labelDatabaseOnline = new System.Windows.Forms.Label();
+            this.pictureBoxDatabaseOnline = new System.Windows.Forms.PictureBox();
+            this.labelSelectDatabase = new System.Windows.Forms.Label();
+            this.panelSelectDatabaseLocal = new System.Windows.Forms.Panel();
+            this.labelDatabaseLocal = new System.Windows.Forms.Label();
+            this.pictureBoxDatabaseLocal = new System.Windows.Forms.PictureBox();
+            this.panelDatabaseLogin = new System.Windows.Forms.Panel();
+            this.panelIPBackground = new System.Windows.Forms.Panel();
+            this.pictureBoxDatabaseConnectionFailed = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDatabaseConnected = new System.Windows.Forms.PictureBox();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.textBoxDatabaseLoginPassword = new System.Windows.Forms.TextBox();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.textBoxDatabaseLoginUsername = new System.Windows.Forms.TextBox();
+            this.buttonDisconnect = new System.Windows.Forms.Button();
+            this.panelPortBackground = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.textBoxDatabaseLoginPort = new System.Windows.Forms.TextBox();
+            this.panelIPAdressBack = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.labelIPAdress = new System.Windows.Forms.Label();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.textBoxDatabaseLoginIP = new System.Windows.Forms.TextBox();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panelDatabaseLoginBorder = new System.Windows.Forms.Panel();
+            this.labelDatabaseLoginBorderText = new System.Windows.Forms.Label();
+            this.panelDatabaseBorderClose = new System.Windows.Forms.Panel();
+            this.pictureBoxDatabaseBorderClose = new System.Windows.Forms.PictureBox();
             this.panelSensorSearch = new System.Windows.Forms.Panel();
             this.panelBoarderSensorSearchThin01 = new System.Windows.Forms.Panel();
             this.panelBoarderSensorSearchThin02 = new System.Windows.Forms.Panel();
             this.panelBoarderSensorSearchThin03 = new System.Windows.Forms.Panel();
             this.panelBoarderSensorSearch = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelInstrumentSearchBorder = new System.Windows.Forms.Label();
             this.panelBoarderSearchClose = new System.Windows.Forms.Panel();
             this.pictureBoxSearchBoarderClose = new System.Windows.Forms.PictureBox();
             this.panelSensorSearchListBackground = new System.Windows.Forms.Panel();
@@ -42,8 +89,8 @@
             this.buttonSensorDelete = new System.Windows.Forms.Button();
             this.buttonSensorSearchConfirm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonOnlineDatabase = new System.Windows.Forms.Button();
+            this.buttonLocalDatabase = new System.Windows.Forms.Button();
             this.panelConfigLocationBackground = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,12 +109,18 @@
             this.comboBoxSignalType = new System.Windows.Forms.ComboBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.panelOptionsCommentsBack = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.labelLocation = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panelOptionsBackground = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.labelOptions = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
+            this.panelCommentsTextBackground = new System.Windows.Forms.Panel();
             this.textBoxComments = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelPreviewBackground = new System.Windows.Forms.Panel();
@@ -140,7 +193,29 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.labelMeasureTypeDigital = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
+            this.timerDataBasePing = new System.Windows.Forms.Timer(this.components);
             this.panelBackgroundTabSensorData.SuspendLayout();
+            this.panelLocalOnlineSelectionBackground.SuspendLayout();
+            this.panelSelectDatabaseOnline.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseOnline)).BeginInit();
+            this.panelSelectDatabaseLocal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseLocal)).BeginInit();
+            this.panelDatabaseLogin.SuspendLayout();
+            this.panelIPBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseConnectionFailed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseConnected)).BeginInit();
+            this.panel49.SuspendLayout();
+            this.panel50.SuspendLayout();
+            this.panel45.SuspendLayout();
+            this.panel46.SuspendLayout();
+            this.panelPortBackground.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panelIPAdressBack.SuspendLayout();
+            this.panel39.SuspendLayout();
+            this.panelDatabaseLoginBorder.SuspendLayout();
+            this.panelDatabaseBorderClose.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseBorderClose)).BeginInit();
             this.panelSensorSearch.SuspendLayout();
             this.panelBoarderSensorSearch.SuspendLayout();
             this.panelBoarderSearchClose.SuspendLayout();
@@ -152,9 +227,11 @@
             this.panelAlarmCeilingTagBackgroundPanel.SuspendLayout();
             this.panelAlarmFloorTagBackgroundPanel.SuspendLayout();
             this.panelOptionsCommentsBack.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panelOptionsBackground.SuspendLayout();
-            this.panel34.SuspendLayout();
+            this.panelCommentsTextBackground.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelPreviewBackground.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -183,6 +260,7 @@
             // panelBackgroundTabSensorData
             // 
             this.panelBackgroundTabSensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.panelBackgroundTabSensorData.Controls.Add(this.panelLocalOnlineSelectionBackground);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelSensorSearch);
             this.panelBackgroundTabSensorData.Controls.Add(this.panel1);
             this.panelBackgroundTabSensorData.Controls.Add(this.panelAlarmBackgroundPanel);
@@ -206,6 +284,519 @@
             this.panelBackgroundTabSensorData.Size = new System.Drawing.Size(982, 635);
             this.panelBackgroundTabSensorData.TabIndex = 46;
             // 
+            // panelLocalOnlineSelectionBackground
+            // 
+            this.panelLocalOnlineSelectionBackground.Controls.Add(this.panelDatabaseLogin);
+            this.panelLocalOnlineSelectionBackground.Controls.Add(this.panelSelectDatabaseOnline);
+            this.panelLocalOnlineSelectionBackground.Controls.Add(this.labelSelectDatabase);
+            this.panelLocalOnlineSelectionBackground.Controls.Add(this.panelSelectDatabaseLocal);
+            this.panelLocalOnlineSelectionBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelLocalOnlineSelectionBackground.Name = "panelLocalOnlineSelectionBackground";
+            this.panelLocalOnlineSelectionBackground.Size = new System.Drawing.Size(982, 635);
+            this.panelLocalOnlineSelectionBackground.TabIndex = 59;
+            // 
+            // panelSelectDatabaseOnline
+            // 
+            this.panelSelectDatabaseOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelSelectDatabaseOnline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSelectDatabaseOnline.Controls.Add(this.labelDatabaseOnline);
+            this.panelSelectDatabaseOnline.Controls.Add(this.pictureBoxDatabaseOnline);
+            this.panelSelectDatabaseOnline.Location = new System.Drawing.Point(523, 75);
+            this.panelSelectDatabaseOnline.Name = "panelSelectDatabaseOnline";
+            this.panelSelectDatabaseOnline.Size = new System.Drawing.Size(327, 383);
+            this.panelSelectDatabaseOnline.TabIndex = 2;
+            this.panelSelectDatabaseOnline.Click += new System.EventHandler(this.panelSelectDatabaseOnline_Click);
+            this.panelSelectDatabaseOnline.MouseEnter += new System.EventHandler(this.panelSelectDatabaseOnline_MouseEnter);
+            this.panelSelectDatabaseOnline.MouseLeave += new System.EventHandler(this.panelSelectDatabaseOnline_MouseLeave);
+            // 
+            // labelDatabaseOnline
+            // 
+            this.labelDatabaseOnline.AutoSize = true;
+            this.labelDatabaseOnline.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDatabaseOnline.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelDatabaseOnline.Location = new System.Drawing.Point(81, 290);
+            this.labelDatabaseOnline.Name = "labelDatabaseOnline";
+            this.labelDatabaseOnline.Size = new System.Drawing.Size(163, 46);
+            this.labelDatabaseOnline.TabIndex = 1;
+            this.labelDatabaseOnline.Text = "Database";
+            this.labelDatabaseOnline.MouseEnter += new System.EventHandler(this.labelDatabaseOnline_MouseEnter);
+            this.labelDatabaseOnline.MouseLeave += new System.EventHandler(this.labelDatabaseOnline_MouseLeave);
+            // 
+            // pictureBoxDatabaseOnline
+            // 
+            this.pictureBoxDatabaseOnline.Image = global::MyFirstWFApp.Properties.Resources.cloud;
+            this.pictureBoxDatabaseOnline.Location = new System.Drawing.Point(60, 35);
+            this.pictureBoxDatabaseOnline.Name = "pictureBoxDatabaseOnline";
+            this.pictureBoxDatabaseOnline.Size = new System.Drawing.Size(205, 205);
+            this.pictureBoxDatabaseOnline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDatabaseOnline.TabIndex = 0;
+            this.pictureBoxDatabaseOnline.TabStop = false;
+            this.pictureBoxDatabaseOnline.MouseEnter += new System.EventHandler(this.pictureBoxDatabaseOnline_MouseEnter);
+            this.pictureBoxDatabaseOnline.MouseLeave += new System.EventHandler(this.pictureBoxDatabaseOnline_MouseLeave);
+            // 
+            // labelSelectDatabase
+            // 
+            this.labelSelectDatabase.AutoSize = true;
+            this.labelSelectDatabase.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSelectDatabase.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelSelectDatabase.Location = new System.Drawing.Point(321, 515);
+            this.labelSelectDatabase.Name = "labelSelectDatabase";
+            this.labelSelectDatabase.Size = new System.Drawing.Size(357, 46);
+            this.labelSelectDatabase.TabIndex = 2;
+            this.labelSelectDatabase.Text = "Select database mode";
+            // 
+            // panelSelectDatabaseLocal
+            // 
+            this.panelSelectDatabaseLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelSelectDatabaseLocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSelectDatabaseLocal.Controls.Add(this.labelDatabaseLocal);
+            this.panelSelectDatabaseLocal.Controls.Add(this.pictureBoxDatabaseLocal);
+            this.panelSelectDatabaseLocal.Location = new System.Drawing.Point(134, 75);
+            this.panelSelectDatabaseLocal.Name = "panelSelectDatabaseLocal";
+            this.panelSelectDatabaseLocal.Size = new System.Drawing.Size(327, 383);
+            this.panelSelectDatabaseLocal.TabIndex = 0;
+            this.panelSelectDatabaseLocal.Click += new System.EventHandler(this.panelSelectDatabaseLocal_Click);
+            this.panelSelectDatabaseLocal.MouseEnter += new System.EventHandler(this.panelSelectDatabaseLocal_MouseEnter);
+            this.panelSelectDatabaseLocal.MouseLeave += new System.EventHandler(this.panelSelectDatabaseLocal_MouseLeave);
+            // 
+            // labelDatabaseLocal
+            // 
+            this.labelDatabaseLocal.AutoSize = true;
+            this.labelDatabaseLocal.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDatabaseLocal.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelDatabaseLocal.Location = new System.Drawing.Point(115, 290);
+            this.labelDatabaseLocal.Name = "labelDatabaseLocal";
+            this.labelDatabaseLocal.Size = new System.Drawing.Size(100, 46);
+            this.labelDatabaseLocal.TabIndex = 1;
+            this.labelDatabaseLocal.Text = "Local";
+            this.labelDatabaseLocal.MouseEnter += new System.EventHandler(this.labelDatabaseLocal_MouseEnter);
+            this.labelDatabaseLocal.MouseLeave += new System.EventHandler(this.labelDatabaseLocal_MouseLeave);
+            // 
+            // pictureBoxDatabaseLocal
+            // 
+            this.pictureBoxDatabaseLocal.Image = global::MyFirstWFApp.Properties.Resources.house;
+            this.pictureBoxDatabaseLocal.Location = new System.Drawing.Point(60, 35);
+            this.pictureBoxDatabaseLocal.Name = "pictureBoxDatabaseLocal";
+            this.pictureBoxDatabaseLocal.Size = new System.Drawing.Size(205, 205);
+            this.pictureBoxDatabaseLocal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDatabaseLocal.TabIndex = 0;
+            this.pictureBoxDatabaseLocal.TabStop = false;
+            this.pictureBoxDatabaseLocal.MouseEnter += new System.EventHandler(this.pictureBoxDatabaseLocal_MouseEnter);
+            this.pictureBoxDatabaseLocal.MouseLeave += new System.EventHandler(this.pictureBoxDatabaseLocal_MouseLeave);
+            // 
+            // panelDatabaseLogin
+            // 
+            this.panelDatabaseLogin.Controls.Add(this.panelIPBackground);
+            this.panelDatabaseLogin.Controls.Add(this.panel15);
+            this.panelDatabaseLogin.Controls.Add(this.panel20);
+            this.panelDatabaseLogin.Controls.Add(this.panel24);
+            this.panelDatabaseLogin.Controls.Add(this.panelDatabaseLoginBorder);
+            this.panelDatabaseLogin.Location = new System.Drawing.Point(149, 41);
+            this.panelDatabaseLogin.Name = "panelDatabaseLogin";
+            this.panelDatabaseLogin.Size = new System.Drawing.Size(680, 480);
+            this.panelDatabaseLogin.TabIndex = 58;
+            this.panelDatabaseLogin.Visible = false;
+            // 
+            // panelIPBackground
+            // 
+            this.panelIPBackground.Controls.Add(this.pictureBoxDatabaseConnectionFailed);
+            this.panelIPBackground.Controls.Add(this.pictureBox4);
+            this.panelIPBackground.Controls.Add(this.pictureBoxDatabaseConnected);
+            this.panelIPBackground.Controls.Add(this.panel49);
+            this.panelIPBackground.Controls.Add(this.panel45);
+            this.panelIPBackground.Controls.Add(this.buttonDisconnect);
+            this.panelIPBackground.Controls.Add(this.panelPortBackground);
+            this.panelIPBackground.Controls.Add(this.panelIPAdressBack);
+            this.panelIPBackground.Controls.Add(this.buttonConnect);
+            this.panelIPBackground.Location = new System.Drawing.Point(11, 44);
+            this.panelIPBackground.Name = "panelIPBackground";
+            this.panelIPBackground.Size = new System.Drawing.Size(658, 420);
+            this.panelIPBackground.TabIndex = 70;
+            // 
+            // pictureBoxDatabaseConnectionFailed
+            // 
+            this.pictureBoxDatabaseConnectionFailed.Image = global::MyFirstWFApp.Properties.Resources.databaseFailed;
+            this.pictureBoxDatabaseConnectionFailed.Location = new System.Drawing.Point(343, 50);
+            this.pictureBoxDatabaseConnectionFailed.Name = "pictureBoxDatabaseConnectionFailed";
+            this.pictureBoxDatabaseConnectionFailed.Size = new System.Drawing.Size(279, 138);
+            this.pictureBoxDatabaseConnectionFailed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDatabaseConnectionFailed.TabIndex = 45;
+            this.pictureBoxDatabaseConnectionFailed.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MyFirstWFApp.Properties.Resources.water_frog;
+            this.pictureBox4.Location = new System.Drawing.Point(59, 50);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(279, 138);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 44;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBoxDatabaseConnected
+            // 
+            this.pictureBoxDatabaseConnected.Image = global::MyFirstWFApp.Properties.Resources.database;
+            this.pictureBoxDatabaseConnected.Location = new System.Drawing.Point(343, 50);
+            this.pictureBoxDatabaseConnected.Name = "pictureBoxDatabaseConnected";
+            this.pictureBoxDatabaseConnected.Size = new System.Drawing.Size(279, 138);
+            this.pictureBoxDatabaseConnected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDatabaseConnected.TabIndex = 43;
+            this.pictureBoxDatabaseConnected.TabStop = false;
+            // 
+            // panel49
+            // 
+            this.panel49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel49.Controls.Add(this.panel50);
+            this.panel49.Controls.Add(this.panel52);
+            this.panel49.Controls.Add(this.textBoxDatabaseLoginPassword);
+            this.panel49.Location = new System.Drawing.Point(337, 296);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(270, 37);
+            this.panel49.TabIndex = 5;
+            // 
+            // panel50
+            // 
+            this.panel50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel50.Controls.Add(this.panel51);
+            this.panel50.Controls.Add(this.label9);
+            this.panel50.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel50.Location = new System.Drawing.Point(0, 0);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(105, 37);
+            this.panel50.TabIndex = 26;
+            // 
+            // panel51
+            // 
+            this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel51.Location = new System.Drawing.Point(283, 25);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(430, 37);
+            this.panel51.TabIndex = 25;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(4, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Password";
+            // 
+            // panel52
+            // 
+            this.panel52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel52.Location = new System.Drawing.Point(283, 25);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(430, 37);
+            this.panel52.TabIndex = 25;
+            // 
+            // textBoxDatabaseLoginPassword
+            // 
+            this.textBoxDatabaseLoginPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxDatabaseLoginPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDatabaseLoginPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDatabaseLoginPassword.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxDatabaseLoginPassword.Location = new System.Drawing.Point(111, 8);
+            this.textBoxDatabaseLoginPassword.Name = "textBoxDatabaseLoginPassword";
+            this.textBoxDatabaseLoginPassword.Size = new System.Drawing.Size(159, 22);
+            this.textBoxDatabaseLoginPassword.TabIndex = 1;
+            this.textBoxDatabaseLoginPassword.Text = "S3cur3P@ssW0rd!";
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel45.Controls.Add(this.panel46);
+            this.panel45.Controls.Add(this.panel48);
+            this.panel45.Controls.Add(this.textBoxDatabaseLoginUsername);
+            this.panel45.Location = new System.Drawing.Point(54, 296);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(277, 37);
+            this.panel45.TabIndex = 4;
+            // 
+            // panel46
+            // 
+            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel46.Controls.Add(this.panel47);
+            this.panel46.Controls.Add(this.label7);
+            this.panel46.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel46.Location = new System.Drawing.Point(0, 0);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(105, 37);
+            this.panel46.TabIndex = 26;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel47.Location = new System.Drawing.Point(283, 25);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(430, 37);
+            this.panel47.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(4, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Username";
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel48.Location = new System.Drawing.Point(283, 25);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(430, 37);
+            this.panel48.TabIndex = 25;
+            // 
+            // textBoxDatabaseLoginUsername
+            // 
+            this.textBoxDatabaseLoginUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxDatabaseLoginUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDatabaseLoginUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDatabaseLoginUsername.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxDatabaseLoginUsername.Location = new System.Drawing.Point(111, 8);
+            this.textBoxDatabaseLoginUsername.Name = "textBoxDatabaseLoginUsername";
+            this.textBoxDatabaseLoginUsername.Size = new System.Drawing.Size(159, 22);
+            this.textBoxDatabaseLoginUsername.TabIndex = 1;
+            this.textBoxDatabaseLoginUsername.Text = "sa";
+            // 
+            // buttonDisconnect
+            // 
+            this.buttonDisconnect.BackColor = System.Drawing.Color.Red;
+            this.buttonDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDisconnect.Enabled = false;
+            this.buttonDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDisconnect.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonDisconnect.Location = new System.Drawing.Point(337, 365);
+            this.buttonDisconnect.Name = "buttonDisconnect";
+            this.buttonDisconnect.Size = new System.Drawing.Size(165, 38);
+            this.buttonDisconnect.TabIndex = 3;
+            this.buttonDisconnect.Text = "Disconnect";
+            this.buttonDisconnect.UseVisualStyleBackColor = false;
+            this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
+            // 
+            // panelPortBackground
+            // 
+            this.panelPortBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelPortBackground.Controls.Add(this.panel11);
+            this.panelPortBackground.Controls.Add(this.panel37);
+            this.panelPortBackground.Controls.Add(this.textBoxDatabaseLoginPort);
+            this.panelPortBackground.Location = new System.Drawing.Point(337, 247);
+            this.panelPortBackground.Name = "panelPortBackground";
+            this.panelPortBackground.Size = new System.Drawing.Size(241, 37);
+            this.panelPortBackground.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel11.Controls.Add(this.panel29);
+            this.panel11.Controls.Add(this.label8);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(105, 37);
+            this.panel11.TabIndex = 26;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel29.Location = new System.Drawing.Point(283, 25);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(430, 37);
+            this.panel29.TabIndex = 25;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(4, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 21);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Port";
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel37.Location = new System.Drawing.Point(283, 25);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(430, 37);
+            this.panel37.TabIndex = 25;
+            // 
+            // textBoxDatabaseLoginPort
+            // 
+            this.textBoxDatabaseLoginPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxDatabaseLoginPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDatabaseLoginPort.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDatabaseLoginPort.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxDatabaseLoginPort.Location = new System.Drawing.Point(111, 8);
+            this.textBoxDatabaseLoginPort.Name = "textBoxDatabaseLoginPort";
+            this.textBoxDatabaseLoginPort.Size = new System.Drawing.Size(67, 22);
+            this.textBoxDatabaseLoginPort.TabIndex = 1;
+            this.textBoxDatabaseLoginPort.Text = "1433";
+            // 
+            // panelIPAdressBack
+            // 
+            this.panelIPAdressBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelIPAdressBack.Controls.Add(this.panel39);
+            this.panelIPAdressBack.Controls.Add(this.panel44);
+            this.panelIPAdressBack.Controls.Add(this.textBoxDatabaseLoginIP);
+            this.panelIPAdressBack.Location = new System.Drawing.Point(91, 247);
+            this.panelIPAdressBack.Name = "panelIPAdressBack";
+            this.panelIPAdressBack.Size = new System.Drawing.Size(240, 37);
+            this.panelIPAdressBack.TabIndex = 0;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel39.Controls.Add(this.panel42);
+            this.panel39.Controls.Add(this.labelIPAdress);
+            this.panel39.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel39.Location = new System.Drawing.Point(0, 0);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(105, 37);
+            this.panel39.TabIndex = 26;
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel42.Location = new System.Drawing.Point(283, 25);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(430, 37);
+            this.panel42.TabIndex = 25;
+            // 
+            // labelIPAdress
+            // 
+            this.labelIPAdress.AutoSize = true;
+            this.labelIPAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelIPAdress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelIPAdress.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelIPAdress.Location = new System.Drawing.Point(4, 8);
+            this.labelIPAdress.Name = "labelIPAdress";
+            this.labelIPAdress.Size = new System.Drawing.Size(88, 21);
+            this.labelIPAdress.TabIndex = 7;
+            this.labelIPAdress.Text = "IP Address";
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel44.Location = new System.Drawing.Point(283, 25);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(430, 37);
+            this.panel44.TabIndex = 25;
+            // 
+            // textBoxDatabaseLoginIP
+            // 
+            this.textBoxDatabaseLoginIP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxDatabaseLoginIP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDatabaseLoginIP.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDatabaseLoginIP.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxDatabaseLoginIP.Location = new System.Drawing.Point(111, 7);
+            this.textBoxDatabaseLoginIP.Name = "textBoxDatabaseLoginIP";
+            this.textBoxDatabaseLoginIP.Size = new System.Drawing.Size(112, 22);
+            this.textBoxDatabaseLoginIP.TabIndex = 0;
+            this.textBoxDatabaseLoginIP.Text = "127.0.0.1";
+            // 
+            // buttonConnect
+            // 
+            this.buttonConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.buttonConnect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConnect.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonConnect.Location = new System.Drawing.Point(166, 365);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(165, 38);
+            this.buttonConnect.TabIndex = 2;
+            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.UseVisualStyleBackColor = false;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel15.Location = new System.Drawing.Point(0, 35);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 440);
+            this.panel15.TabIndex = 62;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel20.Location = new System.Drawing.Point(0, 475);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(675, 5);
+            this.panel20.TabIndex = 61;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel24.Location = new System.Drawing.Point(675, 35);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(5, 445);
+            this.panel24.TabIndex = 60;
+            // 
+            // panelDatabaseLoginBorder
+            // 
+            this.panelDatabaseLoginBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panelDatabaseLoginBorder.Controls.Add(this.labelDatabaseLoginBorderText);
+            this.panelDatabaseLoginBorder.Controls.Add(this.panelDatabaseBorderClose);
+            this.panelDatabaseLoginBorder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDatabaseLoginBorder.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.panelDatabaseLoginBorder.Location = new System.Drawing.Point(0, 0);
+            this.panelDatabaseLoginBorder.Name = "panelDatabaseLoginBorder";
+            this.panelDatabaseLoginBorder.Size = new System.Drawing.Size(680, 35);
+            this.panelDatabaseLoginBorder.TabIndex = 58;
+            this.panelDatabaseLoginBorder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDatabaseLoginBorder_MouseDown);
+            // 
+            // labelDatabaseLoginBorderText
+            // 
+            this.labelDatabaseLoginBorderText.AutoSize = true;
+            this.labelDatabaseLoginBorderText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelDatabaseLoginBorderText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDatabaseLoginBorderText.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelDatabaseLoginBorderText.Location = new System.Drawing.Point(3, 7);
+            this.labelDatabaseLoginBorderText.Name = "labelDatabaseLoginBorderText";
+            this.labelDatabaseLoginBorderText.Size = new System.Drawing.Size(122, 21);
+            this.labelDatabaseLoginBorderText.TabIndex = 30;
+            this.labelDatabaseLoginBorderText.Text = "Database Login";
+            // 
+            // panelDatabaseBorderClose
+            // 
+            this.panelDatabaseBorderClose.Controls.Add(this.pictureBoxDatabaseBorderClose);
+            this.panelDatabaseBorderClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelDatabaseBorderClose.Location = new System.Drawing.Point(645, 0);
+            this.panelDatabaseBorderClose.Name = "panelDatabaseBorderClose";
+            this.panelDatabaseBorderClose.Size = new System.Drawing.Size(35, 35);
+            this.panelDatabaseBorderClose.TabIndex = 0;
+            this.panelDatabaseBorderClose.Click += new System.EventHandler(this.panelDatabaseBorderClose_Click);
+            this.panelDatabaseBorderClose.MouseEnter += new System.EventHandler(this.panelDatabaseBorderClose_MouseEnter);
+            this.panelDatabaseBorderClose.MouseLeave += new System.EventHandler(this.panelDatabaseBorderClose_MouseLeave);
+            // 
+            // pictureBoxDatabaseBorderClose
+            // 
+            this.pictureBoxDatabaseBorderClose.Image = global::MyFirstWFApp.Properties.Resources.cancel;
+            this.pictureBoxDatabaseBorderClose.Location = new System.Drawing.Point(8, 8);
+            this.pictureBoxDatabaseBorderClose.Name = "pictureBoxDatabaseBorderClose";
+            this.pictureBoxDatabaseBorderClose.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxDatabaseBorderClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDatabaseBorderClose.TabIndex = 0;
+            this.pictureBoxDatabaseBorderClose.TabStop = false;
+            this.pictureBoxDatabaseBorderClose.Click += new System.EventHandler(this.pictureBoxDatabaseBorderClose_Click);
+            this.pictureBoxDatabaseBorderClose.MouseEnter += new System.EventHandler(this.pictureBoxDatabaseBorderClose_MouseEnter);
+            this.pictureBoxDatabaseBorderClose.MouseLeave += new System.EventHandler(this.pictureBoxDatabaseBorderClose_MouseLeave);
+            // 
             // panelSensorSearch
             // 
             this.panelSensorSearch.Controls.Add(this.panelBoarderSensorSearchThin01);
@@ -215,7 +806,7 @@
             this.panelSensorSearch.Controls.Add(this.panelSensorSearchListBackground);
             this.panelSensorSearch.Controls.Add(this.buttonSensorDelete);
             this.panelSensorSearch.Controls.Add(this.buttonSensorSearchConfirm);
-            this.panelSensorSearch.Location = new System.Drawing.Point(852, 16);
+            this.panelSensorSearch.Location = new System.Drawing.Point(962, 244);
             this.panelSensorSearch.Name = "panelSensorSearch";
             this.panelSensorSearch.Size = new System.Drawing.Size(467, 325);
             this.panelSensorSearch.TabIndex = 55;
@@ -251,7 +842,7 @@
             // panelBoarderSensorSearch
             // 
             this.panelBoarderSensorSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.panelBoarderSensorSearch.Controls.Add(this.label2);
+            this.panelBoarderSensorSearch.Controls.Add(this.labelInstrumentSearchBorder);
             this.panelBoarderSensorSearch.Controls.Add(this.panelBoarderSearchClose);
             this.panelBoarderSensorSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBoarderSensorSearch.ImeMode = System.Windows.Forms.ImeMode.Alpha;
@@ -261,17 +852,17 @@
             this.panelBoarderSensorSearch.TabIndex = 58;
             this.panelBoarderSensorSearch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBoarderSensorSearch_MouseDown);
             // 
-            // label2
+            // labelInstrumentSearchBorder
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(3, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 21);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Local instrument list";
+            this.labelInstrumentSearchBorder.AutoSize = true;
+            this.labelInstrumentSearchBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelInstrumentSearchBorder.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelInstrumentSearchBorder.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelInstrumentSearchBorder.Location = new System.Drawing.Point(3, 7);
+            this.labelInstrumentSearchBorder.Name = "labelInstrumentSearchBorder";
+            this.labelInstrumentSearchBorder.Size = new System.Drawing.Size(156, 21);
+            this.labelInstrumentSearchBorder.TabIndex = 30;
+            this.labelInstrumentSearchBorder.Text = "Local instrument list";
             // 
             // panelBoarderSearchClose
             // 
@@ -318,7 +909,7 @@
             this.listBoxSensorList.ItemHeight = 21;
             this.listBoxSensorList.Location = new System.Drawing.Point(8, 8);
             this.listBoxSensorList.Name = "listBoxSensorList";
-            this.listBoxSensorList.Size = new System.Drawing.Size(402, 168);
+            this.listBoxSensorList.Size = new System.Drawing.Size(373, 147);
             this.listBoxSensorList.TabIndex = 6;
             this.listBoxSensorList.SelectedValueChanged += new System.EventHandler(this.listBoxSensorList_SelectedValueChanged);
             // 
@@ -355,8 +946,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.buttonOnlineDatabase);
+            this.panel1.Controls.Add(this.buttonLocalDatabase);
             this.panel1.Controls.Add(this.panelConfigLocationBackground);
             this.panel1.Controls.Add(this.panel36);
             this.panel1.Location = new System.Drawing.Point(497, 266);
@@ -365,40 +956,41 @@
             this.panel1.TabIndex = 57;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button3
+            // buttonOnlineDatabase
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(305, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Database";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonOnlineDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonOnlineDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOnlineDatabase.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonOnlineDatabase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonOnlineDatabase.FlatAppearance.BorderSize = 2;
+            this.buttonOnlineDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOnlineDatabase.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonOnlineDatabase.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonOnlineDatabase.Location = new System.Drawing.Point(305, 0);
+            this.buttonOnlineDatabase.Name = "buttonOnlineDatabase";
+            this.buttonOnlineDatabase.Size = new System.Drawing.Size(160, 37);
+            this.buttonOnlineDatabase.TabIndex = 3;
+            this.buttonOnlineDatabase.Text = "Database";
+            this.buttonOnlineDatabase.UseVisualStyleBackColor = false;
+            this.buttonOnlineDatabase.Click += new System.EventHandler(this.buttonDatabase_Click);
             // 
-            // button4
+            // buttonLocalDatabase
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(145, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 37);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Local";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonLocalDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
+            this.buttonLocalDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLocalDatabase.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonLocalDatabase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.buttonLocalDatabase.FlatAppearance.BorderSize = 2;
+            this.buttonLocalDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLocalDatabase.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLocalDatabase.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonLocalDatabase.Location = new System.Drawing.Point(145, 0);
+            this.buttonLocalDatabase.Name = "buttonLocalDatabase";
+            this.buttonLocalDatabase.Size = new System.Drawing.Size(160, 37);
+            this.buttonLocalDatabase.TabIndex = 16;
+            this.buttonLocalDatabase.Text = "Local";
+            this.buttonLocalDatabase.UseVisualStyleBackColor = false;
+            this.buttonLocalDatabase.Click += new System.EventHandler(this.buttonLocalDatabase_Click);
             // 
             // panelConfigLocationBackground
             // 
@@ -594,8 +1186,9 @@
             // 
             // panelOptionsCommentsBack
             // 
+            this.panelOptionsCommentsBack.Controls.Add(this.panel2);
             this.panelOptionsCommentsBack.Controls.Add(this.panel23);
-            this.panelOptionsCommentsBack.Controls.Add(this.panel34);
+            this.panelOptionsCommentsBack.Controls.Add(this.panelCommentsTextBackground);
             this.panelOptionsCommentsBack.Controls.Add(this.panel5);
             this.panelOptionsCommentsBack.Controls.Add(this.panel3);
             this.panelOptionsCommentsBack.Controls.Add(this.panel9);
@@ -605,14 +1198,75 @@
             this.panelOptionsCommentsBack.Size = new System.Drawing.Size(950, 254);
             this.panelOptionsCommentsBack.TabIndex = 13;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.textBoxLocation);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(468, 34);
+            this.panel2.TabIndex = 44;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.labelLocation);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(124, 34);
+            this.panel6.TabIndex = 26;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel8.Location = new System.Drawing.Point(283, 25);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(430, 37);
+            this.panel8.TabIndex = 25;
+            // 
+            // labelLocation
+            // 
+            this.labelLocation.AutoSize = true;
+            this.labelLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.labelLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelLocation.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelLocation.Location = new System.Drawing.Point(10, 7);
+            this.labelLocation.Name = "labelLocation";
+            this.labelLocation.Size = new System.Drawing.Size(73, 21);
+            this.labelLocation.TabIndex = 7;
+            this.labelLocation.Text = "Location";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panel10.Location = new System.Drawing.Point(283, 25);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(430, 37);
+            this.panel10.TabIndex = 25;
+            // 
+            // textBoxLocation
+            // 
+            this.textBoxLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.textBoxLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLocation.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxLocation.Location = new System.Drawing.Point(130, 8);
+            this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.Size = new System.Drawing.Size(296, 22);
+            this.textBoxLocation.TabIndex = 0;
+            // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
             this.panel23.Controls.Add(this.panelOptionsBackground);
             this.panel23.Controls.Add(this.panel26);
-            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Location = new System.Drawing.Point(0, 50);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(118, 37);
+            this.panel23.Size = new System.Drawing.Size(122, 37);
             this.panel23.TabIndex = 29;
             // 
             // panelOptionsBackground
@@ -639,7 +1293,7 @@
             this.labelOptions.AutoSize = true;
             this.labelOptions.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelOptions.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelOptions.Location = new System.Drawing.Point(4, 8);
+            this.labelOptions.Location = new System.Drawing.Point(10, 7);
             this.labelOptions.Name = "labelOptions";
             this.labelOptions.Size = new System.Drawing.Size(68, 21);
             this.labelOptions.TabIndex = 11;
@@ -653,14 +1307,14 @@
             this.panel26.Size = new System.Drawing.Size(430, 37);
             this.panel26.TabIndex = 25;
             // 
-            // panel34
+            // panelCommentsTextBackground
             // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
-            this.panel34.Controls.Add(this.textBoxComments);
-            this.panel34.Location = new System.Drawing.Point(0, 165);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(468, 81);
-            this.panel34.TabIndex = 15;
+            this.panelCommentsTextBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
+            this.panelCommentsTextBackground.Controls.Add(this.textBoxComments);
+            this.panelCommentsTextBackground.Location = new System.Drawing.Point(0, 217);
+            this.panelCommentsTextBackground.Name = "panelCommentsTextBackground";
+            this.panelCommentsTextBackground.Size = new System.Drawing.Size(468, 37);
+            this.panelCommentsTextBackground.TabIndex = 15;
             // 
             // textBoxComments
             // 
@@ -671,7 +1325,7 @@
             this.textBoxComments.Location = new System.Drawing.Point(4, 7);
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
-            this.textBoxComments.Size = new System.Drawing.Size(458, 102);
+            this.textBoxComments.Size = new System.Drawing.Size(458, 27);
             this.textBoxComments.TabIndex = 15;
             // 
             // panel5
@@ -726,7 +1380,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
             this.panel3.Controls.Add(this.listBoxOptions);
-            this.panel3.Location = new System.Drawing.Point(0, 37);
+            this.panel3.Location = new System.Drawing.Point(0, 86);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 79);
             this.panel3.TabIndex = 14;
@@ -753,9 +1407,9 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(73)))));
             this.panel9.Controls.Add(this.panelCommentsBackground);
-            this.panel9.Location = new System.Drawing.Point(0, 129);
+            this.panel9.Location = new System.Drawing.Point(0, 181);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(118, 37);
+            this.panel9.Size = new System.Drawing.Size(123, 37);
             this.panel9.TabIndex = 38;
             // 
             // panelCommentsBackground
@@ -783,7 +1437,7 @@
             this.Comments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Comments.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Comments.ForeColor = System.Drawing.SystemColors.Control;
-            this.Comments.Location = new System.Drawing.Point(4, 8);
+            this.Comments.Location = new System.Drawing.Point(10, 7);
             this.Comments.Name = "Comments";
             this.Comments.Size = new System.Drawing.Size(89, 21);
             this.Comments.TabIndex = 7;
@@ -800,7 +1454,7 @@
             this.textBoxPreview.Multiline = true;
             this.textBoxPreview.Name = "textBoxPreview";
             this.textBoxPreview.ReadOnly = true;
-            this.textBoxPreview.Size = new System.Drawing.Size(442, 249);
+            this.textBoxPreview.Size = new System.Drawing.Size(464, 249);
             this.textBoxPreview.TabIndex = 17;
             this.textBoxPreview.TabStop = false;
             // 
@@ -1523,6 +2177,11 @@
             this.panel28.Size = new System.Drawing.Size(430, 37);
             this.panel28.TabIndex = 25;
             // 
+            // timerDataBasePing
+            // 
+            this.timerDataBasePing.Interval = 5000;
+            this.timerDataBasePing.Tick += new System.EventHandler(this.timerDataBasePing_Tick);
+            // 
             // FormSensorData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1538,6 +2197,39 @@
             this.Load += new System.EventHandler(this.FormSensorData_Load);
             this.panelBackgroundTabSensorData.ResumeLayout(false);
             this.panelBackgroundTabSensorData.PerformLayout();
+            this.panelLocalOnlineSelectionBackground.ResumeLayout(false);
+            this.panelLocalOnlineSelectionBackground.PerformLayout();
+            this.panelSelectDatabaseOnline.ResumeLayout(false);
+            this.panelSelectDatabaseOnline.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseOnline)).EndInit();
+            this.panelSelectDatabaseLocal.ResumeLayout(false);
+            this.panelSelectDatabaseLocal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseLocal)).EndInit();
+            this.panelDatabaseLogin.ResumeLayout(false);
+            this.panelIPBackground.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseConnectionFailed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseConnected)).EndInit();
+            this.panel49.ResumeLayout(false);
+            this.panel49.PerformLayout();
+            this.panel50.ResumeLayout(false);
+            this.panel50.PerformLayout();
+            this.panel45.ResumeLayout(false);
+            this.panel45.PerformLayout();
+            this.panel46.ResumeLayout(false);
+            this.panel46.PerformLayout();
+            this.panelPortBackground.ResumeLayout(false);
+            this.panelPortBackground.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panelIPAdressBack.ResumeLayout(false);
+            this.panelIPAdressBack.PerformLayout();
+            this.panel39.ResumeLayout(false);
+            this.panel39.PerformLayout();
+            this.panelDatabaseLoginBorder.ResumeLayout(false);
+            this.panelDatabaseLoginBorder.PerformLayout();
+            this.panelDatabaseBorderClose.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDatabaseBorderClose)).EndInit();
             this.panelSensorSearch.ResumeLayout(false);
             this.panelBoarderSensorSearch.ResumeLayout(false);
             this.panelBoarderSensorSearch.PerformLayout();
@@ -1555,11 +2247,15 @@
             this.panelAlarmFloorTagBackgroundPanel.PerformLayout();
             this.panelOptionsCommentsBack.ResumeLayout(false);
             this.panelOptionsCommentsBack.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panelOptionsBackground.ResumeLayout(false);
             this.panelOptionsBackground.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
+            this.panelCommentsTextBackground.ResumeLayout(false);
+            this.panelCommentsTextBackground.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panelPreviewBackground.ResumeLayout(false);
             this.panelPreviewBackground.PerformLayout();
@@ -1611,7 +2307,7 @@
         private Panel panel25;
         private Label labelOptions;
         private Panel panel26;
-        private Panel panel34;
+        private Panel panelCommentsTextBackground;
         private TextBox textBoxComments;
         private Panel panel5;
         private Panel panelPreviewBackground;
@@ -1705,15 +2401,68 @@
         private TextBox textBoxAlarmFloor;
         private TextBox textBoxAlarmCeiling;
         private Panel panel1;
-        private Button button3;
-        private Button button4;
+        private Button buttonOnlineDatabase;
+        private Button buttonLocalDatabase;
         private Panel panelConfigLocationBackground;
         private Panel panel35;
         private Label label1;
         private Panel panel36;
-        private Label label2;
+        private Label labelInstrumentSearchBorder;
         private Panel panelBoarderSensorSearchThin01;
         private Panel panelBoarderSensorSearchThin02;
         private Panel panelBoarderSensorSearchThin03;
+        private Panel panel2;
+        private Panel panel6;
+        private Panel panel8;
+        private Label labelLocation;
+        private Panel panel10;
+        private TextBox textBoxLocation;
+        private Panel panelDatabaseLogin;
+        private Panel panel15;
+        private Panel panel20;
+        private Panel panel24;
+        private Panel panelDatabaseLoginBorder;
+        private Label labelDatabaseLoginBorderText;
+        private Panel panelDatabaseBorderClose;
+        private PictureBox pictureBoxDatabaseBorderClose;
+        private Panel panelIPBackground;
+        private Button buttonDisconnect;
+        private Panel panelPortBackground;
+        private Panel panel11;
+        private Panel panel29;
+        private Label label8;
+        private Panel panel37;
+        private TextBox textBoxDatabaseLoginPort;
+        private Panel panelIPAdressBack;
+        private Panel panel39;
+        private Panel panel42;
+        private Label labelIPAdress;
+        private Panel panel44;
+        private TextBox textBoxDatabaseLoginIP;
+        private Button buttonConnect;
+        private Panel panel49;
+        private Panel panel50;
+        private Panel panel51;
+        private Label label9;
+        private Panel panel52;
+        private TextBox textBoxDatabaseLoginPassword;
+        private Panel panel45;
+        private Panel panel46;
+        private Panel panel47;
+        private Label label7;
+        private Panel panel48;
+        private TextBox textBoxDatabaseLoginUsername;
+        private PictureBox pictureBoxDatabaseConnected;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBoxDatabaseConnectionFailed;
+        private System.Windows.Forms.Timer timerDataBasePing;
+        private Panel panelLocalOnlineSelectionBackground;
+        private Panel panelSelectDatabaseLocal;
+        private PictureBox pictureBoxDatabaseLocal;
+        private Label labelDatabaseLocal;
+        private Panel panelSelectDatabaseOnline;
+        private Label labelDatabaseOnline;
+        private PictureBox pictureBoxDatabaseOnline;
+        private Label labelSelectDatabase;
     }
 }
